@@ -1,0 +1,35 @@
+name: Blog content integrity
+
+permissions:
+  contents: read
+
+on:
+  pull_request:
+    paths:
+      - "src/data/blog/**/*.md"
+
+jobs:
+  astro-check-strict:
+    name: Astro check with source integrity
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.11.1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - run: pnpm install
+
+      - name: Schema check (strict sources)
+        env:
+          CONTENT_INTEGRITY_REQUIRE_SOURCES: "true"
+          CONTENT_INTEGRITY_MIN_SOURCES: "2"
+        run: pnpm exec astro check

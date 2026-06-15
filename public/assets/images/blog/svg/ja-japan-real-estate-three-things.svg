@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 405" role="img" aria-label="東京小型賃貸の年間コスト構造の例" style="max-width:100%;height:auto;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;font-family:'Inter', 'Outfit', system-ui, -apple-system, sans-serif">
+  <!-- Header Section -->
+  <rect x="0" y="0" width="780" height="76" fill="#f9f9f6" />
+  <line x1="0" y1="76" x2="780" y2="76" stroke="#e5e7eb" stroke-width="1" />
+  <rect x="18" y="20" width="4" height="36" fill="#047857" rx="2" />
+  <text x="30" y="38" font-size="16" font-weight="700" fill="#111827">年間コスト・収益構造（賃料収入100基準）</text>
+  <text x="30" y="58" font-size="12" fill="#6b7280">東京小型賃貸マンションの年間コストおよび手取りキャッシュフローシミュレーション例</text>
+
+  <!-- Left Bracket (Total Gross Rent) -->
+  <path d="M 210,110 L 195,110 L 195,360 L 210,360" fill="none" stroke="#9ca3af" stroke-width="1.5" />
+  <line x1="195" y1="235" x2="185" y2="235" stroke="#9ca3af" stroke-width="1.5" />
+  <text x="175" y="231" font-size="13" font-weight="700" fill="#111827" text-anchor="end">総賃料収入 : 100</text>
+  <text x="175" y="247" font-size="11" fill="#6b7280" text-anchor="end">(100% Gross Rent)</text>
+
+  <!-- Stacked Bar Chart -->
+  <rect x="230" y="110" width="80" height="250" fill="none" stroke="#e5e7eb" stroke-width="1" rx="4" />
+
+  <!-- 1. Net Cash Flow: 30 (y=110 to 185) -->
+  <rect x="230" y="110" width="80" height="75" fill="#059669" stroke="#ffffff" stroke-width="1.5" rx="2" />
+  <!-- 2. Financing: 24 (y=185 to 245) -->
+  <rect x="230" y="185" width="80" height="60" fill="#4f46e5" stroke="#ffffff" stroke-width="1.5" rx="2" />
+  <!-- 3. Taxes: 14 (y=245 to 280) -->
+  <rect x="230" y="245" width="80" height="35" fill="#e11d48" stroke="#ffffff" stroke-width="1.5" rx="2" />
+  <!-- 4. Repair Reserve: 12 (y=280 to 310) -->
+  <rect x="230" y="280" width="80" height="30" fill="#d97706" stroke="#ffffff" stroke-width="1.5" rx="2" />
+  <!-- 5. Vacancy: 10 (y=310 to 335) -->
+  <rect x="230" y="310" width="80" height="25" fill="#0d9488" stroke="#ffffff" stroke-width="1.5" rx="2" />
+  <!-- 6. Management: 10 (y=335 to 360) -->
+  <rect x="230" y="335" width="80" height="25" fill="#4b5563" stroke="#ffffff" stroke-width="1.5" rx="2" />
+
+  <!-- Connector Lines -->
+  <line x1="315" y1="147.5" x2="345" y2="147.5" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 2" />
+  <line x1="315" y1="215" x2="345" y2="215" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 2" />
+  <line x1="315" y1="262.5" x2="345" y2="262.5" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 2" />
+  <line x1="315" y1="295" x2="345" y2="295" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 2" />
+  <line x1="315" y1="322.5" x2="345" y2="322.5" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 2" />
+  <line x1="315" y1="347.5" x2="345" y2="347.5" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 2" />
+
+  <!-- Right-side Labels -->
+  <text x="355" y="152" font-size="13" font-weight="700" fill="#059669">所得税前手取り (純キャッシュフロー) : 30%</text>
+  <text x="355" y="219" font-size="13" font-weight="600" fill="#374151">金融コスト &lt;tspan fill="#6b7280" font-weight="normal"&gt;(LTV 50〜60%の融資金利想定)&lt;/tspan&gt; : 24%</text>
+  <text x="355" y="266" font-size="13" font-weight="600" fill="#374151">保有税 &lt;tspan fill="#6b7280" font-weight="normal"&gt;(固定資産税および都市計画税)&lt;/tspan&gt; : 14%</text>
+  <text x="355" y="299" font-size="13" font-weight="600" fill="#374151">修繕積立金 &lt;tspan fill="#6b7280" font-weight="normal"&gt;(長期修繕に備えた計画積立)&lt;/tspan&gt; : 12%</text>
+  <text x="355" y="326" font-size="13" font-weight="600" fill="#374151">空室および募集経費 &lt;tspan fill="#6b7280" font-weight="normal"&gt;(テナント入れ替え/空室想定)&lt;/tspan&gt; : 10%</text>
+  <text x="355" y="351" font-size="13" font-weight="600" fill="#374151">管理委託費および運営経費 &lt;tspan fill="#6b7280" font-weight="normal"&gt;(PM委託管理手数料等)&lt;/tspan&gt; : 10%</text>
+
+  <!-- Footnote -->
+  <text x="18" y="390" font-size="11" fill="#9ca3af" font-style="italic">* 修繕積立金および空室コストは、東京都心の小型マンションの平均的な運営指標に基づいた計画シミュレーションの例です。</text>
+</svg>

@@ -1,0 +1,19 @@
+{
+  "name": "GSF-Blog Source-Gated Claim 정책 + HIGH 위험 포스트 3건 수정 완료",
+  "event_type": "content_integrity_remediation",
+  "created_at": "2026-05-13T09:17:00Z",
+  "summary": "GSF-Blog 포스트 내 AI 생성 허위 통계 수치(환각)를 발견하고, Source-Gated Claim 정책을 수립한 뒤 HIGH 위험 포스트 3건을 검증된 공공 데이터로 수정 완료. 향후 신규 포스팅 시 준수해야 할 워크플로우와 교체 패턴이 정립됨.",
+  "posts_remediated": [
+    "tokyo-korean-community-beyond-shinokubo (db3b283)",
+    "tokyo-6-wards-real-estate-insight (d233f98)",
+    "tokyo-real-estate-investment-complete-guide (17d2ec8)"
+  ],
+  "references": [
+    "https://www.kantei.ne.jp/",
+    "https://www.mlit.go.jp/en/",
+    "https://www.e-miki.com/market/",
+    "https://www.reinfolib.mlit.go.jp/",
+    "https://www.k-startup.go.kr/"
+  ],
+  "spec_artifact": "brain/5abb6ea9-9a9c-45e5-af52-5d36b95837e1/spec-content-source-integrity.md"
+}

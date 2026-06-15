@@ -1,0 +1,7 @@
+[
+  "/wp-includes/:path*",
+  "/wp-content/:path*",
+  "/wp-admin/:path*",
+  "/wp-login.php",
+  "/wp-json/:path*"
+]

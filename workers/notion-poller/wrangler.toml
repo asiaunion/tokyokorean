@@ -1,0 +1,16 @@
+name = "gsf-notion-poller"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+# ── 환경변수 (민감 정보는 wrangler secret으로 별도 등록) ─────────────
+# wrangler secret put NOTION_TOKEN
+# wrangler secret put WIFE_NOTION_TOKEN
+# wrangler secret put CF_WORKER_GITHUB_TOKEN
+
+[vars]
+# 다중 블로그 설정 배열 (민감 token은 제외 — secret으로 주입됨)
+# 실제 배포 시 token 필드는 wrangler secret으로 오버라이드
+BLOGS_CONFIG = '[{"id":"gsf-blog","notionDatabaseId":"3719ded28b0f81109dc8e5d80c2f2c47","githubRepo":"asiaunion/GSF-Blog","workflowFile":"notion-publish.yml","imageStorage":"vercel-blob","domain":"gsfark.com"},{"id":"wife-blog","notionDatabaseId":"REPLACE_WITH_WIFE_DB_ID","githubRepo":"asiaunion/wife-blog","workflowFile":"notion-publish.yml","imageStorage":"cf-r2","domain":"mayumiphoebe.com"}]'
+
+[triggers]
+crons = ["* * * * *"]  # 1분마다 실행

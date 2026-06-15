@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" role="img" aria-label="일본 영주권 취득 소요 기간 비교" style="max-width:100%;height:auto;border:1px solid #e5e7eb;border-radius:8px;background:#fff;margin: 20px 0;">
+  <text x="24" y="35" font-size="16" font-weight="700" fill="#111827">일본 영주권(PR) 취득까지 걸리는 시간</text>
+  
+  <!-- General Path -->
+  <rect x="120" y="70" width="550" height="25" fill="#f3f4f6" rx="4" />
+  <rect x="120" y="70" width="550" height="25" fill="#9ca3af" rx="4" opacity="0.3" />
+  <text x="24" y="88" font-size="12" fill="#374151">일반 취업/경영</text>
+  <text x="630" y="88" font-size="12" font-weight="700" fill="#111827">10년</text>
+  
+  <!-- HSP 70 Path -->
+  <rect x="120" y="110" width="165" height="25" fill="#60a5fa" rx="4" />
+  <text x="24" y="128" font-size="12" fill="#374151">고도인재 70점</text>
+  <text x="250" y="128" font-size="12" font-weight="700" fill="#1d4ed8">3년</text>
+  
+  <!-- HSP 80 Path -->
+  <rect x="120" y="150" width="55" height="25" fill="#3b82f6" rx="4" />
+  <text x="24" y="168" font-size="12" fill="#374151">고도인재 80점</text>
+  <text x="140" y="168" font-size="12" font-weight="700" fill="#1e3a8a">1년</text>
+  
+  <!-- Timeline Legend -->
+  <line x1="120" y1="195" x2="670" y2="195" stroke="#e5e7eb" stroke-width="1" />
+  <text x="115" y="210" font-size="10" fill="#9ca3af">0</text>
+  <text x="280" y="210" font-size="10" fill="#9ca3af">3년</text>
+  <text x="660" y="210" font-size="10" fill="#9ca3af">10년</text>
+</svg>

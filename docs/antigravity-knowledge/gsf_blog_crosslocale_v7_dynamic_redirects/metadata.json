@@ -1,0 +1,18 @@
+{
+  "title": "GSF-Blog V7: 동적 Cross-Locale 태그 리다이렉트 파이프라인 (674 routes, frontmatter 기반)",
+  "summary": "GSF-Blog AdSense 보류의 근본 원인: cross-locale 태그 404가 무한 생성 패턴(잠재 700개+)인데 하드코딩 10개 태그만 리다이렉트 = 커버리지 10%. 해결: src/data/blog/{en,ko,ja}/*.md frontmatter에서 태그를 동적 추출 + slugifyStr 적용 + vercel.json에 674개 정적 리다이렉트 자동 생성. Astro config redirects는 Vercel trailing slash 버그로 사용 불가 → vercel.json만 유효. middleware.ts에도 3패턴 추가(서버사이드 폴백). 404.astro에 robotsMeta='noindex, nofollow' 추가, Layout에 isErrorPage 조건부로 canonical/hreflang/JSON-LD 억제. 라이브 검증 전 패턴 308 확인 완료.",
+  "createdAt": "2026-05-13T11:28:00+09:00",
+  "updatedAt": "2026-05-13T11:28:00+09:00",
+  "eventType": "hard-troubleshooting",
+  "references": [
+    "conversation:d73b6dd8-6138-42ca-a76d-294f1930cec1",
+    "file:apps/blog-agent/src/build/crossLocaleTagRedirects.ts",
+    "file:apps/blog-agent/src/middleware.ts",
+    "file:apps/blog-agent/src/pages/404.astro",
+    "file:apps/blog-agent/src/layouts/Layout.astro",
+    "file:apps/blog-agent/vercel.json",
+    "ki:gsf_blog_404_crosslocale_fix",
+    "ki:gsf_blog_adsense_v6_debug_and_reverse_tag_404",
+    "ki:gsf_blog_vercel_redirect_trailing_slash"
+  ]
+}

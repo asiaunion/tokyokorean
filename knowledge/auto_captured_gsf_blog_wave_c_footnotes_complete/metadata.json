@@ -1,0 +1,11 @@
+{
+  "event_type": "footnote_rollout_complete",
+  "summary": "GSF-Blog Wave C 각주(citeSources+source-ref) 24 slug 완료. Wave A/B/C 전체 완료, Wave D 없음. 36 ko posts citeSources 보유. T3 P0-only·상단 면책·WebP 다이어그램 정책 유지.",
+  "source_files": [
+    "docs/GSF_BLOG_WAVE_C_FOOTNOTES_COMPLETE_20260527.md",
+    "docs/FOOTNOTE_ROLLOUT_WAVE_C_AG.md",
+    "docs/AG_CONTEXT_BOOTSTRAP_SHORT.md",
+    "AGENTS.md"
+  ],
+  "timestamp": "2026-05-27T12:00:00+09:00"
+}

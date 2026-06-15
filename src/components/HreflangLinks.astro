@@ -1,0 +1,17 @@
+---
+import { getHreflangAlternateUrls } from "@/utils/hreflang";
+
+type Props = {
+  pathname: string;
+  site: string;
+};
+
+const { pathname, site } = Astro.props;
+const alternates = getHreflangAlternateUrls(pathname, site);
+---
+
+{
+  alternates.map(({ hreflang, href }) => (
+    <link rel="alternate" hreflang={hreflang} href={href} />
+  ))
+}

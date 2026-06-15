@@ -1,0 +1,14 @@
+{
+  "title": "GSF-Blog Threads 자동 브로드캐스트 파이프라인",
+  "event_type": "pipeline_established",
+  "summary": "Meta Threads API v1.0 기반 GSF-Blog 포스트 자동 게시 파이프라인 구축 완료. post_to_threads.py (2-step 컨테이너 방식) + post_to_linkedin.py 구현. Threads 장기 토큰 발급 및 라이브 게시 검증 완료. 앱 ID: gsfark_broadcast (Meta App: 27846518188282973, Threads App: 2335354426960056). 게시 후 앱 반영까지 30초~1분 딜레이 정상 확인.",
+  "created_at": "2026-05-14",
+  "conversation_id": "14cddfda-a939-40ea-8d3e-7b0770964535",
+  "references": [
+    "apps/GSF-Blog/.env (THREADS_USER_ID, THREADS_ACCESS_TOKEN)",
+    ".agents/skills/social-broadcast/scripts/post_to_threads.py",
+    ".agents/skills/social-broadcast/scripts/post_to_linkedin.py",
+    ".agents/skills/social-broadcast/SKILL.md"
+  ],
+  "tags": ["threads", "linkedin", "sns-broadcast", "meta-api", "social-broadcast-skill"]
+}

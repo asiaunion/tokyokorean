@@ -1,0 +1,97 @@
+---
+import type { UiLang } from "@/i18n/ui";
+import { getUi } from "@/i18n/ui";
+import { PUBLIC_PROFILES } from "@/config";
+import {
+  showsFreelanceCta,
+  showsLeadMagnetCta,
+} from "@/data/highIntentCta";
+
+type Props = {
+  lang: UiLang;
+  localePrefix: string;
+  category: string | undefined;
+  slug: string;
+};
+
+const { lang, localePrefix, category, slug } = Astro.props;
+
+const showFreelance = showsFreelanceCta(category);
+const showMagnet = showsLeadMagnetCta(slug);
+
+if (!showFreelance && !showMagnet) {
+  return null;
+}
+
+const L = getUi(lang);
+const magnetHref =
+  lang === "en"
+    ? "/resources/tokyo-relocation-d90/"
+    : `${localePrefix}/resources/tokyo-relocation-d90/`;
+
+const contactLink = `${localePrefix}/contact/?utm_source=gsf_blog&utm_medium=high_intent_cta&utm_campaign=post-${encodeURIComponent(slug)}`;
+
+const linkedInUrl = new URL(PUBLIC_PROFILES.linkedIn);
+linkedInUrl.searchParams.set("utm_source", "gsf_blog");
+linkedInUrl.searchParams.set("utm_medium", "high_intent_cta");
+linkedInUrl.searchParams.set("utm_campaign", `post-${slug}`);
+---
+
+<section
+  class="mt-8 rounded-xl border border-accent/25 bg-gradient-to-br from-accent/8 to-transparent p-5"
+  aria-labelledby="high-intent-cta-title"
+  role="complementary"
+  data-high-intent-cta
+  data-cta-type="author-services"
+>
+  <h2 id="high-intent-cta-title" class="text-lg font-semibold">
+    {L.highIntentCtaTitle}
+  </h2>
+  <p class="mt-1 text-xs leading-relaxed text-foreground/60">
+    {L.highIntentCtaDisclosure}
+  </p>
+  <p class="mt-2 text-sm leading-relaxed text-foreground/75">
+    {showFreelance ? L.highIntentCtaBodyFreelance : L.highIntentCtaBodyMagnetOnly}
+  </p>
+
+  {
+    showMagnet && (
+      <p class="mt-3">
+        <a
+          href={magnetHref}
+          class="text-sm font-medium text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent"
+          data-cta="lead-magnet-d90"
+          data-cta-location="post-high-intent"
+        >
+          {L.highIntentCtaMagnetLink}
+        </a>
+      </p>
+    )
+  }
+
+  {
+    showFreelance && (
+      <div class="mt-4 flex flex-wrap gap-2">
+        <a
+          href={contactLink}
+          class="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition hover:opacity-90"
+          data-cta="contact-inquiry"
+          data-cta-location="post-high-intent"
+        >
+          {L.highIntentCtaContact}
+        </a>
+        <a
+          href={linkedInUrl.toString()}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rounded-lg border border-border px-4 py-2 text-sm font-medium transition hover:border-accent"
+          data-cta="linkedin-services"
+          data-cta-location="post-high-intent"
+          data-cta-name="LinkedIn"
+        >
+          {L.highIntentCtaLinkedIn}
+        </a>
+      </div>
+    )
+  }
+</section>

@@ -1,0 +1,145 @@
+---
+/**
+ * SourcesList — numbered sources with optional rich citations (label, archive, portal).
+ * Inline body uses <sup class="source-ref"><a href="#source-N">N</a></sup>.
+ */
+import type { UiLang } from "@/i18n/ui";
+import type { CiteSource } from "@/lib/sourceCitations";
+
+type Props = {
+  sources: string[];
+  citeSources?: CiteSource[];
+  lang?: UiLang | string;
+};
+
+const { sources, citeSources = [], lang = "en" } = Astro.props;
+
+const labels: Record<
+  string,
+  { title: string; note: string; official: string; archive: string; portal: string; pdf: string }
+> = {
+  en: {
+    title: "Sources & References",
+    note: "Green numbered markers in the body link to the entries below. URLs verified at writing time; “Archive” opens headline snapshots.",
+    official: "Official",
+    archive: "Archive",
+    portal: "Portal",
+    pdf: "PDF",
+  },
+  ko: {
+    title: "출처 및 참고 자료",
+    note: "본문의 초록색 숫자 각주를 누르면 아래 항목으로 이동합니다. URL은 작성 시점 기준으로 확인했으며, ‘보관’은 헤드라인 통계 스냅샷입니다.",
+    official: "공식",
+    archive: "보관",
+    portal: "포털",
+    pdf: "PDF",
+  },
+  ja: {
+    title: "出典・参考資料",
+    note: "本文の緑色の数字脚注から下の項目へジャンプできます。URLは執筆時点で確認済み。「アーカイブ」は見出し統計のスナップショットです。",
+    official: "公式",
+    archive: "アーカイブ",
+    portal: "ポータル",
+    pdf: "PDF",
+  },
+};
+
+const L = labels[lang as string] ?? labels.en;
+
+const linkClass =
+  "underline decoration-foreground/25 underline-offset-2 hover:text-accent";
+
+function toDomain(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url;
+  }
+}
+
+const useRich = citeSources.length > 0;
+const simpleOnly = !useRich && sources.length > 0;
+---
+
+{
+  (useRich || simpleOnly) && (
+    <section class="sources-panel mt-10 rounded-xl border border-border bg-card p-5">
+      <h2 class="text-base font-semibold">{L.title}</h2>
+      {useRich ? (
+        <ol class="mt-3 list-none space-y-2 pl-0 text-sm leading-relaxed text-foreground/80">
+          {citeSources.map((item, index) => {
+            const n = index + 1;
+            return (
+              <li
+                id={`source-${n}`}
+                class="source-line scroll-mt-24 flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5"
+              >
+                <span class="shrink-0 font-semibold text-accent">{n}.</span>
+                <span class="text-foreground">{item.label}</span>
+                <span class="text-foreground/40" aria-hidden="true">
+                  :
+                </span>
+                <span class="inline-flex flex-wrap items-baseline gap-x-2">
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    class={linkClass}
+                  >
+                    {L.official}
+                  </a>
+                  {item.secondaryUrl && (
+                    <a
+                      href={item.secondaryUrl}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      class={linkClass}
+                    >
+                      {L.pdf}
+                    </a>
+                  )}
+                  {item.archive && (
+                    <a
+                      href={item.archive}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class={`${linkClass} decoration-dotted`}
+                    >
+                      {L.archive}
+                    </a>
+                  )}
+                  {item.portal && (
+                    <a
+                      href={item.portal}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      class={linkClass}
+                    >
+                      {L.portal}
+                    </a>
+                  )}
+                </span>
+              </li>
+            );
+          })}
+        </ol>
+      ) : (
+        <ol class="mt-3 list-decimal space-y-1.5 pl-5 text-sm leading-relaxed text-foreground/75">
+          {sources.map(url => (
+            <li>
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                class="break-all underline decoration-foreground/25 underline-offset-2 transition-colors hover:text-accent hover:decoration-accent"
+              >
+                {toDomain(url)}
+              </a>
+            </li>
+          ))}
+        </ol>
+      )}
+      <p class="mt-3 text-xs italic text-foreground/50">{L.note}</p>
+    </section>
+  )
+}

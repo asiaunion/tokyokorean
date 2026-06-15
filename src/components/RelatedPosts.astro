@@ -1,0 +1,94 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getPath } from "@/utils/getPath";
+import { type UiLang } from "@/i18n/ui";
+
+type Props = {
+  currentPost: CollectionEntry<"blog">;
+  allPosts: CollectionEntry<"blog">[];
+  lang: UiLang;
+  maxPosts?: number;
+};
+
+const { currentPost, allPosts, lang, maxPosts = 3 } = Astro.props;
+
+const labels: Record<UiLang, string> = {
+  en: "Related Posts",
+  ko: "관련 글",
+  ja: "関連記事",
+};
+
+/**
+ * Score relevance by:
+ * 1. Same category = +3
+ * 2. Shared tags = +1 per tag
+ * 3. Exclude self
+ */
+function getRelevanceScore(
+  candidate: CollectionEntry<"blog">,
+  current: CollectionEntry<"blog">
+): number {
+  if (candidate.id === current.id) return -1;
+
+  let score = 0;
+
+  // Same category
+  if (candidate.data.category && candidate.data.category === current.data.category) {
+    score += 3;
+  }
+
+  // Shared tags
+  const currentTags = new Set(current.data.tags);
+  for (const tag of candidate.data.tags) {
+    if (currentTags.has(tag)) score += 1;
+  }
+
+  return score;
+}
+
+const scored = allPosts
+  .map(post => ({ post, score: getRelevanceScore(post, currentPost) }))
+  .filter(({ score }) => score > 0)
+  .sort((a, b) => b.score - a.score)
+  .slice(0, maxPosts);
+---
+
+{
+  scored.length > 0 && (
+    <section class="mt-8">
+      <h2 class="mb-4 text-lg font-semibold">{labels[lang]}</h2>
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
+        {scored.map(({ post }) => {
+          const ogSrc =
+            typeof post.data.ogImage === "string"
+              ? post.data.ogImage
+              : post.data.ogImage?.src;
+          return (
+            <a
+              href={getPath(post.id, post.filePath)}
+              class="group flex flex-col overflow-hidden rounded-lg border border-border bg-card transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-md"
+            >
+              {ogSrc && (
+                <img
+                  src={ogSrc}
+                  alt={post.data.title}
+                  loading="lazy"
+                  decoding="async"
+                  class="aspect-[16/9] w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                />
+              )}
+              <div class="flex flex-1 flex-col p-3">
+                <h3 class="line-clamp-2 text-sm font-medium leading-snug text-foreground group-hover:text-accent">
+                  {post.data.title}
+                </h3>
+                <p class="mt-1.5 line-clamp-2 text-xs leading-relaxed text-foreground/60">
+                  {post.data.description}
+                </p>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </section>
+  )
+}

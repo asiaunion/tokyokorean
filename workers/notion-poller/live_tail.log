@@ -1,0 +1,1470 @@
+{
+    "wallTime": 4299,
+    "cpuTime": 6,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276332896
+        },
+        {
+            "message": [
+                "✅ [gsf-blog] 발행승인 감지: nihonbashi-ninngyocho-test (3729ded2-8b0f-8023-a6fd-fec4c537b9c4)"
+            ],
+            "level": "log",
+            "timestamp": 1780276333590
+        },
+        {
+            "message": [
+                "PR merge 실패: {\"message\":\"Resource not accessible by personal access token\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"403\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276335553
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276336878
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"d5187807-e5ec-4553-b133-3b96a76d62cd\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276337020
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"9e7b3809-3c54-40be-8eb7-8431b1401742\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276337193
+        }
+    ],
+    "eventTimestamp": 1780276332896,
+    "event": {
+        "request": {
+            "url": "https://gsf-notion-poller.asiaunion.workers.dev/trigger",
+            "method": "POST",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "cf-connecting-ip": "240d:f:a3e:5e00:adc8:fd8:d9c1:9bb4",
+                "cf-ipcountry": "JP",
+                "cf-ray": "a04a594889d2fd47",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "content-length": "0",
+                "host": "gsf-notion-poller.asiaunion.workers.dev",
+                "user-agent": "curl/8.7.1",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "240d:f:a3e:5e00:adc8:fd8:d9c1:9bb4"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/2",
+                "requestPriority": "weight=16;exclusive=0;group=0;group-weight=0",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": {},
+                "clientTcpRtt": 4,
+                "clientQuicRtt": 0,
+                "colo": "NRT",
+                "asn": 2527,
+                "asOrganization": "So-net Corporation",
+                "country": "JP",
+                "isEUCountry": false,
+                "city": "Tokyo",
+                "continent": "AS",
+                "region": "Tokyo",
+                "regionCode": "13",
+                "timezone": "Asia/Tokyo",
+                "longitude": "139.69171",
+                "latitude": "35.6895",
+                "postalCode": "101-8656",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-CHACHA20-POLY1305-SHA256",
+                "tlsClientRandom": "z0LLfK6cTRuVmfHeZBkNWEPbO/wl5li1S08T/WOdMfg=",
+                "tlsClientCiphersSha1": "eDGmD1H99AwNYzOR+7eoGLo6eLU=",
+                "tlsClientExtensionsSha1": "Ub+nUmIm1U57hdNSUph0R+kx9Gc=",
+                "tlsClientExtensionsSha1Le": "NMNf2YIpLBhtroOEBooGFi+jtJ8=",
+                "tlsExportedAuthenticator": {
+                    "clientHandshake": "035a11fd0bf67ce2e27c65c8357396973bdf5835a78ba5a9ecebfb11d80b94cc",
+                    "serverHandshake": "674537be558a32d478906c6fd6b3c214083ae3ff9a6e961d4f5b1a716cfb9fc6",
+                    "clientFinished": "21b4bc0a2c316826f3571d284a895368fc1ee1a3f2e9c1f90471ab80442daa3f",
+                    "serverFinished": "343ce3b694d4a2565ba1d032ef6bf253406a550704614daf866586d740260371"
+                },
+                "tlsClientHelloLength": "340",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 807830
+                }
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 4111,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276360645
+        },
+        {
+            "message": [
+                "✅ [gsf-blog] 발행승인 감지: nihonbashi-ninngyocho-test (3729ded2-8b0f-8023-a6fd-fec4c537b9c4)"
+            ],
+            "level": "log",
+            "timestamp": 1780276361355
+        },
+        {
+            "message": [
+                "PR merge 실패: {\"message\":\"Resource not accessible by personal access token\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"403\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276362976
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276364329
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"36c18d22-c300-4c49-b76a-6ada37567feb\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276364543
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"6f5d145e-e95a-4ccd-ae9d-1b90354b83b2\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276364756
+        }
+    ],
+    "eventTimestamp": 1780276360644,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1780276360000
+    }
+}
+{
+    "wallTime": 4259,
+    "cpuTime": 5,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276420644
+        },
+        {
+            "message": [
+                "✅ [gsf-blog] 발행승인 감지: nihonbashi-ninngyocho-test (3729ded2-8b0f-8023-a6fd-fec4c537b9c4)"
+            ],
+            "level": "log",
+            "timestamp": 1780276422059
+        },
+        {
+            "message": [
+                "PR merge 실패: {\"message\":\"Resource not accessible by personal access token\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"403\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276423045
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276424488
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"5e673d8b-6cf7-4436-a292-6f537e71b3de\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276424690
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"3e2e2e18-8611-4820-b791-29329dab1e81\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276424902
+        }
+    ],
+    "eventTimestamp": 1780276420644,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1780276420000
+    }
+}
+{
+    "wallTime": 4734,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276480644
+        },
+        {
+            "message": [
+                "✅ [gsf-blog] 발행승인 감지: nihonbashi-ninngyocho-test (3729ded2-8b0f-8023-a6fd-fec4c537b9c4)"
+            ],
+            "level": "log",
+            "timestamp": 1780276482092
+        },
+        {
+            "message": [
+                "PR merge 실패: {\"message\":\"Resource not accessible by personal access token\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"403\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276483592
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276484967
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"4e017794-af9e-4fb1-9a47-c639fd618438\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276485165
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"24ba318b-5029-4e21-80af-c1f5df435e3f\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276485378
+        }
+    ],
+    "eventTimestamp": 1780276480644,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1780276480000
+    }
+}
+{
+    "wallTime": 3791,
+    "cpuTime": 3,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276540644
+        },
+        {
+            "message": [
+                "✅ [gsf-blog] 발행승인 감지: nihonbashi-ninngyocho-test (3729ded2-8b0f-8023-a6fd-fec4c537b9c4)"
+            ],
+            "level": "log",
+            "timestamp": 1780276541452
+        },
+        {
+            "message": [
+                "slug \"nihonbashi-ninngyocho-test\"에 해당하는 오픈 PR이 없습니다."
+            ],
+            "level": "error",
+            "timestamp": 1780276543109
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276544014
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"36c3ec43-9547-4d1d-aa29-4a1934ba29e8\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276544229
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"34e66688-8a7c-4dcc-abfc-22f9593c69fe\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276544435
+        }
+    ],
+    "eventTimestamp": 1780276540644,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1780276540000
+    }
+}
+{
+    "wallTime": 1227,
+    "cpuTime": 1,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276600643
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276601336
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"d36aa1c6-6ce7-413f-8c6d-206c0c9c7ca4\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276601560
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"4b1e9ef4-3514-4c53-9a95-f4b07495f89a\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276601870
+        }
+    ],
+    "eventTimestamp": 1780276600643,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1780276600000
+    }
+}
+{
+    "wallTime": 4502,
+    "cpuTime": 3,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276660644
+        },
+        {
+            "message": [
+                "📄 [gsf-blog] 발행요청 감지: nihonbashi-ninngyocho-test (3729ded2-8b0f-8023-a6fd-fec4c537b9c4)"
+            ],
+            "level": "log",
+            "timestamp": 1780276662496
+        },
+        {
+            "message": [
+                "✅ [gsf-blog] GitHub Actions 트리거 성공: nihonbashi-ninngyocho-test"
+            ],
+            "level": "log",
+            "timestamp": 1780276664374
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276664718
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"3f909735-2bc1-4296-a1de-fe09521a48ac\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276664936
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"843d172f-31dc-4468-94c9-07890e5815d8\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276665146
+        }
+    ],
+    "eventTimestamp": 1780276660644,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1780276660000
+    }
+}
+{
+    "wallTime": 1194,
+    "cpuTime": 1,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276720644
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276721323
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"e6622521-60fb-4d2c-b4d3-46b77eac6e90\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276721610
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"47120e56-4a9c-4009-a922-4d47d5f10603\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276721837
+        }
+    ],
+    "eventTimestamp": 1780276720644,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1780276720000
+    }
+}
+{
+    "wallTime": 1062,
+    "cpuTime": 2,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276780645
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276781300
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"4dd13bf9-99f4-4bf4-aa4b-eaefb6b3b0e6\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276781506
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"2f20717b-dd4c-4fc5-bfcf-77dfb89154bd\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276781706
+        }
+    ],
+    "eventTimestamp": 1780276780645,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1780276780000
+    }
+}
+{
+    "wallTime": 1324,
+    "cpuTime": 1,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276840643
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276841555
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"580de8d9-2ce0-45f1-ab43-5bc2f35d5e49\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276841763
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"66ad000b-ff64-4a34-aea8-e67d35e3566e\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276841967
+        }
+    ],
+    "eventTimestamp": 1780276840643,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1780276840000
+    }
+}
+{
+    "wallTime": 4956,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276900645
+        },
+        {
+            "message": [
+                "✅ [gsf-blog] 발행승인 감지: nihonbashi-ninngyocho-test (3729ded2-8b0f-8023-a6fd-fec4c537b9c4)"
+            ],
+            "level": "log",
+            "timestamp": 1780276901408
+        },
+        {
+            "message": [
+                "PR merge 실패: {\"message\":\"Resource not accessible by personal access token\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"403\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276903043
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276905159
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"33912a9b-c54f-4d63-af4d-164200d4a944\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276905386
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"1dac02c4-6c0b-4723-88e2-b029b952c799\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276905600
+        }
+    ],
+    "eventTimestamp": 1780276900645,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1780276900000
+    }
+}
+{
+    "wallTime": 4114,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276960644
+        },
+        {
+            "message": [
+                "✅ [gsf-blog] 발행승인 감지: nihonbashi-ninngyocho-test (3729ded2-8b0f-8023-a6fd-fec4c537b9c4)"
+            ],
+            "level": "log",
+            "timestamp": 1780276961332
+        },
+        {
+            "message": [
+                "PR merge 실패: {\"message\":\"Resource not accessible by personal access token\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"403\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276962888
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780276964343
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"dc79956a-1e2b-4c18-b4cd-b0a39d84281a\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276964552
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"739df1db-94fd-4923-baac-268c20887a3e\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780276964758
+        }
+    ],
+    "eventTimestamp": 1780276960644,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1780276960000
+    }
+}
+{
+    "wallTime": 3947,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277020643
+        },
+        {
+            "message": [
+                "✅ [gsf-blog] 발행승인 감지: nihonbashi-ninngyocho-test (3729ded2-8b0f-8023-a6fd-fec4c537b9c4)"
+            ],
+            "level": "log",
+            "timestamp": 1780277021318
+        },
+        {
+            "message": [
+                "PR merge 실패: {\"message\":\"Resource not accessible by personal access token\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"403\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277022635
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277024167
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"edacefac-2727-4acf-ac9b-b5d06a07ede6\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277024372
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"1957a3e4-3b52-4281-8c00-fe96b82c9639\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277024590
+        }
+    ],
+    "eventTimestamp": 1780277020643,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1780277020000
+    }
+}
+{
+    "wallTime": 4367,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277080645
+        },
+        {
+            "message": [
+                "✅ [gsf-blog] 발행승인 감지: nihonbashi-ninngyocho-test (3729ded2-8b0f-8023-a6fd-fec4c537b9c4)"
+            ],
+            "level": "log",
+            "timestamp": 1780277081389
+        },
+        {
+            "message": [
+                "PR merge 실패: {\"message\":\"Resource not accessible by personal access token\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"403\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277083336
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277084571
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"1d0fff97-5124-4a37-9431-b9c6cfea8978\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277084779
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"cbdf0e62-5c1c-4aea-9d82-7a3999d7a5f0\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277085012
+        }
+    ],
+    "eventTimestamp": 1780277080645,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1780277080000
+    }
+}
+{
+    "wallTime": 3990,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277140644
+        },
+        {
+            "message": [
+                "✅ [gsf-blog] 발행승인 감지: nihonbashi-ninngyocho-test (3729ded2-8b0f-8023-a6fd-fec4c537b9c4)"
+            ],
+            "level": "log",
+            "timestamp": 1780277141489
+        },
+        {
+            "message": [
+                "PR merge 실패: {\"message\":\"Resource not accessible by personal access token\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"403\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277143094
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277144212
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"bd37cb61-eac9-4a5b-b992-6813c54cd359\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277144426
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"e5d7a66f-a6e0-4800-b612-3547f2b11eab\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277144633
+        }
+    ],
+    "eventTimestamp": 1780277140644,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1780277140000
+    }
+}
+{
+    "wallTime": 5722,
+    "cpuTime": 5,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277200643
+        },
+        {
+            "message": [
+                "✅ [gsf-blog] 발행승인 감지: nihonbashi-ninngyocho-test (3729ded2-8b0f-8023-a6fd-fec4c537b9c4)"
+            ],
+            "level": "log",
+            "timestamp": 1780277203054
+        },
+        {
+            "message": [
+                "PR merge 실패: {\"message\":\"Resource not accessible by personal access token\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"403\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277204133
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277205909
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"8d3aab61-983a-48f4-b641-ef82161f3b71\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277206127
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"8d9ed663-7afa-4fd4-b1b1-4fcacf0a4b69\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277206363
+        }
+    ],
+    "eventTimestamp": 1780277200643,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1780277200000
+    }
+}
+{
+    "wallTime": 5373,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277260645
+        },
+        {
+            "message": [
+                "✅ [gsf-blog] 발행승인 감지: nihonbashi-ninngyocho-test (3729ded2-8b0f-8023-a6fd-fec4c537b9c4)"
+            ],
+            "level": "log",
+            "timestamp": 1780277261431
+        },
+        {
+            "message": [
+                "PR merge 실패: {\"message\":\"Resource not accessible by personal access token\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"403\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277264116
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277265604
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"4cc72d9b-eaa7-4bf1-888b-3cc3a9affcf1\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277265810
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"7e71b3f6-7448-4685-b09b-46c2832c8034\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277266016
+        }
+    ],
+    "eventTimestamp": 1780277260645,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1780277260000
+    }
+}
+{
+    "wallTime": 3465,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277320644
+        },
+        {
+            "message": [
+                "✅ [gsf-blog] 발행승인 감지: nihonbashi-ninngyocho-test (3729ded2-8b0f-8023-a6fd-fec4c537b9c4)"
+            ],
+            "level": "log",
+            "timestamp": 1780277321393
+        },
+        {
+            "message": [
+                "PR merge 실패: {\"message\":\"Resource not accessible by personal access token\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"403\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277322309
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277323685
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"ba686c1b-1463-41d7-83f1-2f4279e20cf3\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277323895
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"88934ea5-f07a-4449-b234-59557db690e1\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277324108
+        }
+    ],
+    "eventTimestamp": 1780277320644,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1780277320000
+    }
+}
+{
+    "wallTime": 4967,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277380644
+        },
+        {
+            "message": [
+                "✅ [gsf-blog] 발행승인 감지: nihonbashi-ninngyocho-test (3729ded2-8b0f-8023-a6fd-fec4c537b9c4)"
+            ],
+            "level": "log",
+            "timestamp": 1780277381453
+        },
+        {
+            "message": [
+                "PR merge 실패: {\"message\":\"Resource not accessible by personal access token\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"403\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277384536
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277385209
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"8387d3b2-a1cc-4967-9b30-5036320f41a8\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277385409
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"9c358649-0a4e-4de9-aa59-c2d1fd4dc15b\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277385610
+        }
+    ],
+    "eventTimestamp": 1780277380644,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1780277380000
+    }
+}
+{
+    "wallTime": 3806,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277440643
+        },
+        {
+            "message": [
+                "✅ [gsf-blog] 발행승인 감지: nihonbashi-ninngyocho-test (3729ded2-8b0f-8023-a6fd-fec4c537b9c4)"
+            ],
+            "level": "log",
+            "timestamp": 1780277441690
+        },
+        {
+            "message": [
+                "PR merge 실패: {\"message\":\"Resource not accessible by personal access token\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"403\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277442611
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277444035
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"fe2586f8-aefe-4851-b55c-ff95a30b9e90\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277444238
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"6d76f814-6525-4fcf-a529-eeb5664d89bd\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277444448
+        }
+    ],
+    "eventTimestamp": 1780277440643,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1780277440000
+    }
+}
+{
+    "wallTime": 2985,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277500644
+        },
+        {
+            "message": [
+                "✅ [gsf-blog] 발행승인 감지: nihonbashi-ninngyocho-test (3729ded2-8b0f-8023-a6fd-fec4c537b9c4)"
+            ],
+            "level": "log",
+            "timestamp": 1780277501424
+        },
+        {
+            "message": [
+                "PR merge 실패: {\"message\":\"Resource not accessible by personal access token\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"403\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277502561
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277503208
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"4e7225fe-5d78-4792-8c0d-be29bcd7b05e\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277503418
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"9df220fc-e3ae-49eb-b475-b9c57074d9cb\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277503628
+        }
+    ],
+    "eventTimestamp": 1780277500644,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1780277500000
+    }
+}
+{
+    "wallTime": 1080,
+    "cpuTime": 1,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277560643
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277561296
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"389c6ff2-c538-43dc-a160-48c99dbcfb58\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277561504
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"b20383a6-cb14-41f1-b28a-dc0913ff7ddb\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277561722
+        }
+    ],
+    "eventTimestamp": 1780277560643,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1780277560000
+    }
+}
+{
+    "wallTime": 1132,
+    "cpuTime": 2,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277620645
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277621337
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"bfc7fb4c-13b5-4961-a209-f72789cfdfef\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277621546
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"e78faece-6ebb-4773-81cf-a331b55d8ad8\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277621776
+        }
+    ],
+    "eventTimestamp": 1780277620645,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1780277620000
+    }
+}
+{
+    "wallTime": 1097,
+    "cpuTime": 1,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2c3a9463-b80d-4b81-99b5-67b1454b1980"
+    },
+    "scriptName": "gsf-notion-poller",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "🔍 [gsf-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277680644
+        },
+        {
+            "message": [
+                "🔍 [wife-blog] Notion DB 폴링 시작"
+            ],
+            "level": "log",
+            "timestamp": 1780277681328
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"1bace800-574e-437c-88a3-16b45fbacd92\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277681537
+        },
+        {
+            "message": [
+                "Notion DB 쿼리 실패 (404): {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: REPLACE_-WITH-_WIF-E_DB-_ID. Make sure the relevant pages and databases are shared with your integration \\\"gsf\\\".\",\"additional_data\":{\"integration_id\":\"6c0f9e0b-866c-4942-af99-39f76474a913\"},\"request_id\":\"6bc4cf24-75ee-46da-bc11-c6764def084c\"}"
+            ],
+            "level": "error",
+            "timestamp": 1780277681740
+        }
+    ],
+    "eventTimestamp": 1780277680644,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1780277680000
+    }
+}

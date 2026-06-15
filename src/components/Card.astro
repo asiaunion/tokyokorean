@@ -1,0 +1,86 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { slugifyStr } from "@/utils/slugify";
+import { getPath } from "@/utils/getPath";
+import Datetime from "./Datetime.astro";
+
+type Props = {
+  variant?: "h2" | "h3";
+} & CollectionEntry<"blog">;
+
+const { variant: Heading = "h2", id, data, filePath, body } = Astro.props;
+
+const { title, description, category, ogImage: initOgImage, ...props } = data;
+
+// Resolve ogImage to a displayable path string (works on both localhost and production)
+let thumbUrl: string | undefined;
+if (typeof initOgImage === "string") {
+  try { thumbUrl = new URL(initOgImage).pathname; } catch { thumbUrl = initOgImage; }
+} else if (initOgImage?.src) {
+  thumbUrl = initOgImage.src;
+}
+
+// Estimate reading time (~200 words/min for dense investment content)
+const wordCount = body?.split(/\s+/).length ?? 0;
+const readingTime = Math.max(1, Math.round(wordCount / 200));
+
+const categoryI18n: Record<string, string> = {
+  investment: "투자",
+  safety: "안전",
+  life: "생활",
+  local: "로컬",
+  essay: "에세이",
+};
+
+const categoryColors: Record<string, string> = {
+  investment: "bg-emerald-500/15 text-emerald-400 border-emerald-500/25",
+  safety: "bg-amber-500/15 text-amber-400 border-amber-500/25",
+  life: "bg-sky-500/15 text-sky-400 border-sky-500/25",
+  local: "bg-violet-500/15 text-violet-400 border-violet-500/25",
+  essay: "bg-rose-500/15 text-rose-400 border-rose-500/25",
+};
+
+const catLabel = category ? (categoryI18n[category] ?? category) : null;
+const catColor = category ? categoryColors[category] : null;
+---
+
+<li class="my-6">
+  <a
+    href={getPath(id, filePath)}
+    class="group block rounded-lg transition-all duration-300 hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+  >
+    <div class="flex gap-4">
+      <div class="flex-1 min-w-0">
+        <div class="flex items-center gap-2 mb-1">
+          {catLabel && catColor && (
+            <span class={`inline-flex items-center px-2 py-0.5 rounded-md text-[0.7rem] font-medium border ${catColor}`}>
+              {catLabel}
+            </span>
+          )}
+          <span class="text-[0.7rem] text-foreground/50">{readingTime} min read</span>
+        </div>
+        <Heading
+          class="inline-block text-lg font-medium text-accent underline decoration-solid decoration-1 underline-offset-[0.22em] decoration-accent/45 transition-colors group-hover:decoration-accent"
+          style={{ viewTransitionName: slugifyStr(title.replaceAll(".", "-")) }}
+        >
+          {title}
+        </Heading>
+        <div class="mt-1 transition-opacity duration-300 group-hover:opacity-80">
+          <Datetime {...props} />
+        </div>
+        <p class="mt-1 transition-opacity duration-300 group-hover:opacity-80">{description}</p>
+      </div>
+      {thumbUrl && (
+        <div class="hidden sm:block flex-shrink-0 self-center">
+          <img
+            src={thumbUrl}
+            alt=""
+            loading="lazy"
+            decoding="async"
+            class="w-28 h-20 rounded-md object-cover border border-border/50 transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+      )}
+    </div>
+  </a>
+</li>

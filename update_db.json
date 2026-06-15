@@ -1,0 +1,16 @@
+{
+  "properties": {
+    "status": {
+      "select": {
+        "options": [
+          { "name": "초안작성중", "color": "gray" },
+          { "name": "발행요청", "color": "blue" },
+          { "name": "처리중", "color": "yellow" },
+          { "name": "발행승인", "color": "purple" },
+          { "name": "발행완료", "color": "green" },
+          { "name": "업데이트요청", "color": "orange" }
+        ]
+      }
+    }
+  }
+}

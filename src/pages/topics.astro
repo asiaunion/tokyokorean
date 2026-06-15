@@ -1,0 +1,64 @@
+---
+import { getEntry } from "astro:content";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Layout from "@/layouts/Layout.astro";
+import Card from "@/components/Card.astro";
+import { SITE } from "@/config";
+import {
+  TOPIC_HUB_SLUGS,
+  type TopicHubKey,
+} from "@/data/topicHubs";
+import { getUi, type UiLang } from "@/i18n/ui";
+
+const L = getUi("ko");
+
+const hubOrder: TopicHubKey[] = [
+  "urbanInvestment",
+  "macroPolicy",
+  "tokyoLife",
+  "essay",
+];
+
+const sections = await Promise.all(
+  hubOrder.map(async key => {
+    const slugs = TOPIC_HUB_SLUGS[key];
+    const entries = await Promise.all(
+      slugs.map(slug => getEntry("blog", `ko/${slug}` as const))
+    );
+    const posts = entries.filter((e): e is NonNullable<typeof e> => e != null);
+    return { key, ...L.topicHubs[key], posts };
+  })
+);
+---
+
+<Layout title={`${L.topicsPageTitle} | ${SITE.title}`} description={L.topicsPageDesc}>
+  <Header />
+  <main id="main-content" class="app-layout pb-12">
+    <h1 class="text-2xl font-semibold sm:text-3xl">{L.topicsPageTitle}</h1>
+    <p class="mt-2 mb-10 max-w-3xl text-foreground/80 leading-relaxed">
+      {L.topicsPageDesc}
+    </p>
+
+    {
+      sections.map(({ key, title, description, posts }) => (
+        <section class="mb-14" aria-labelledby={`hub-${key}`}>
+          <h2 id={`hub-${key}`} class="text-xl font-semibold tracking-wide">
+            {title}
+          </h2>
+          <p class="mt-1 mb-6 max-w-3xl text-foreground/70">{description}</p>
+          {posts.length > 0 ? (
+            <ul>
+              {posts.map(post => (
+                <Card variant="h3" {...post} />
+              ))}
+            </ul>
+          ) : (
+            <p class="italic text-foreground/60">{L.topicsEmpty}</p>
+          )}
+        </section>
+      ))
+    }
+  </main>
+  <Footer />
+</Layout>

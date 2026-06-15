@@ -1,0 +1,30 @@
+{
+  "title": "GSF-Blog AdSense V8: Thin Content 근본 원인 분석 + noindex 태그 전략 + 중복 태그 통일",
+  "summary": "V1~V7 감사 7회 반복 실패의 근본 원인 발견: (1) 사이트맵 493개 URL 중 337개(68%)가 태그 페이지, 이 중 84.6%가 0-1개 포스트의 thin content → Google 'Low Value Content' 판정. (2) slugifyStr camelCase 미분리로 6쌍 중복 태그 URL 생성(CapitalGains vs capital-gains 등). (3) www vs non-www canonical 불일치(Vercel 307 임시 리다이렉트). 해결: 태그 페이지 전체 noindex+follow + 사이트맵 제외(493→140 URL), EN 포스트 14파일 태그 표기 통일(중복 0쌍). 핵심 교훈: 이전 감사들은 'HTTP 200=정상' 전제로 개별 항목만 체크했으나, Google 봇 관점의 사이트 전체 콘텐츠 구조(콘텐츠:인덱스 비율)를 한 번도 분석하지 않았음. 향후 감사 시 사이트맵 구성비 분석 + thin content 비율 계산 필수.",
+  "createdAt": "2026-05-13T12:12:00+09:00",
+  "updatedAt": "2026-05-13T12:12:00+09:00",
+  "references": [
+    {
+      "type": "conversation",
+      "id": "36114acc-19ba-40c5-ae6c-bc9e5fa1bc62",
+      "title": "Finalizing GSF-Blog AdSense Approval (V8 Deep Dive)"
+    },
+    {
+      "type": "file",
+      "path": "/Users/gsf/.gemini/antigravity/scratch/apps/blog-agent/astro.config.ts"
+    },
+    {
+      "type": "file",
+      "path": "/Users/gsf/.gemini/antigravity/scratch/apps/blog-agent/src/pages/[...locale]/tags/[tag]/[...page].astro"
+    },
+    {
+      "type": "file",
+      "path": "/Users/gsf/.gemini/antigravity/scratch/apps/blog-agent/src/pages/[...locale]/tags/index.astro"
+    },
+    {
+      "type": "commit",
+      "id": "7651550",
+      "title": "fix(adsense): noindex tag pages + exclude from sitemap + normalize duplicate tags"
+    }
+  ]
+}

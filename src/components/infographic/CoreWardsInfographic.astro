@@ -1,0 +1,245 @@
+---
+/**
+ * CoreWardsInfographic.astro
+ * 도쿄 핵심 3구 부동산 인포그래픽 Astro 컴포넌트
+ * ported from: prototypes/e1-core3-infographic.html
+ *
+ * 주의: SVG 내 CSS var()은 HTML 인라인 임베드 시에만 동작.
+ *       <style is:global>로 토큰을 적용.
+ */
+---
+
+<div class="ig-wrap ig-core-wards">
+
+  <!-- 헤더 카드 -->
+  <div class="ig-card">
+    <div class="ig-header">
+      <div>
+        <h2 class="ig-title">도쿄 핵심 3구 — 부동산 완전 분석</h2>
+        <p class="ig-subtitle">千代田区 · 港区 · 中央区 · 실거래가 기준 2024–2025</p>
+      </div>
+      <div class="ig-source">Source: 東京都統計, SUUMO<br>© 2026 GSF</div>
+    </div>
+
+    <!-- KPI 4열 -->
+    <div class="ig-kpi-grid">
+      <div class="ig-kpi ig-kpi--accent">
+        <div class="ig-kpi__label">최고 매매가 (㎡)</div>
+        <div class="ig-kpi__value">220<span class="ig-kpi__unit">万円</span></div>
+        <div class="ig-kpi__sub">千代田区 · ≈2,000만원/㎡</div>
+        <div class="ig-kpi__delta ig-kpi__delta--up">↑ 23구 평균의 3.7배</div>
+      </div>
+      <div class="ig-kpi">
+        <div class="ig-kpi__label">최고 월세 (1LDK)</div>
+        <div class="ig-kpi__value">22.3<span class="ig-kpi__unit">万円</span></div>
+        <div class="ig-kpi__sub">港区 · ≈203만원/월</div>
+        <div class="ig-kpi__delta ig-kpi__delta--up">↑ 강남 최고가 대비 +40%</div>
+      </div>
+      <div class="ig-kpi">
+        <div class="ig-kpi__label">최고 세대소득</div>
+        <div class="ig-kpi__value">1,163<span class="ig-kpi__unit">万円</span></div>
+        <div class="ig-kpi__sub">港区 · ≈1.06억원/년</div>
+        <div class="ig-kpi__delta ig-kpi__delta--up">↑ 23구 평균의 2.1배</div>
+      </div>
+      <div class="ig-kpi">
+        <div class="ig-kpi__label">표면 수익률 (최고)</div>
+        <div class="ig-kpi__value">3.8<span class="ig-kpi__unit">%</span></div>
+        <div class="ig-kpi__sub">中央区 · 서울 강남 1.5~2.0% 대비</div>
+        <div class="ig-kpi__delta ig-kpi__delta--up">↑ 약 2배 높은 수익률</div>
+      </div>
+    </div>
+
+    <div class="ig-insight">
+      <strong>→ 핵심 인사이트:</strong> 港区는 도쿄 23구에서 세대소득 1위(1,163万円),
+      월세 1위(22.3万円)이지만 표면수익률은 3.2%로 오히려 中央区(3.8%)가 투자 효율 1위.
+      서울 강남구(수익률 1.5~2.0%)와 비교해 도쿄 도심은 임대 수익 효율이 현저히 우수.
+    </div>
+  </div>
+
+  <!-- 매매가 + 월세 바 차트 -->
+  <div class="ig-card">
+    <div class="bar-group">
+      <div class="section-title">맨션 매매가 (万円/㎡)</div>
+
+      <div class="bar-row">
+        <span class="bar-row__name" style="color:#3b82f6">千代田区</span>
+        <div class="bar-row__track">
+          <div class="bar-row__fill" style="width:100%;background:#3b82f6">220</div>
+        </div>
+        <span class="bar-row__value">220万円/㎡<br><small style="color:var(--ig-text-muted);font-size:8px">≈ 2002만원/㎡</small></span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-row__name" style="color:#f59e0b">港区</span>
+        <div class="bar-row__track">
+          <div class="bar-row__fill" style="width:88.6%;background:#f59e0b">195</div>
+        </div>
+        <span class="bar-row__value">195万円/㎡<br><small style="color:var(--ig-text-muted);font-size:8px">≈ 1774만원/㎡</small></span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-row__name" style="color:#64748b">中央区</span>
+        <div class="bar-row__track">
+          <div class="bar-row__fill" style="width:75%;background:#64748b">165</div>
+        </div>
+        <span class="bar-row__value">165万円/㎡<br><small style="color:var(--ig-text-muted);font-size:8px">≈ 1502만원/㎡</small></span>
+      </div>
+    </div>
+
+    <hr class="ig-divider">
+
+    <div class="bar-group">
+      <div class="section-title">1LDK 월세 (万円/月)</div>
+
+      <div class="bar-row">
+        <span class="bar-row__name" style="color:#3b82f6">千代田区</span>
+        <div class="bar-row__track">
+          <div class="bar-row__fill" style="width:87.4%;background:#3b82f6">19.5</div>
+        </div>
+        <span class="bar-row__value">19.5万円/月</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-row__name" style="color:#f59e0b">港区</span>
+        <div class="bar-row__track">
+          <div class="bar-row__fill" style="width:100%;background:#f59e0b">22.3</div>
+        </div>
+        <span class="bar-row__value">22.3万円/月</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-row__name" style="color:#64748b">中央区</span>
+        <div class="bar-row__track">
+          <div class="bar-row__fill" style="width:75.3%;background:#64748b">16.8</div>
+        </div>
+        <span class="bar-row__value">16.8万円/月</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 도넛 + 소득 랭킹 -->
+  <div class="ig-two-col">
+    <!-- 외국인 비율 도넛 -->
+    <div class="ig-card">
+      <div class="section-title">외국인 주민 비율</div>
+      <div style="display:flex;align-items:center;gap:20px">
+        <svg width="140" height="140" viewBox="0 0 140 140" aria-label="외국인 비율 도넛 차트">
+          <circle cx="70" cy="70" r="52" fill="none" stroke="var(--ig-bg-card)" stroke-width="14"/>
+          <circle cx="70" cy="70" r="52" fill="none" stroke="#3b82f6" stroke-width="14" stroke-dasharray="80.7 246.0" stroke-dashoffset="-0.0" stroke-linecap="round"/>
+          <circle cx="70" cy="70" r="52" fill="none" stroke="#f59e0b" stroke-width="14" stroke-dasharray="140.6 186.1" stroke-dashoffset="-80.7" stroke-linecap="round"/>
+          <circle cx="70" cy="70" r="52" fill="none" stroke="#64748b" stroke-width="14" stroke-dasharray="105.4 221.3" stroke-dashoffset="-221.3" stroke-linecap="round"/>
+          <text x="70" y="66" text-anchor="middle" fill="var(--ig-text-primary)" font-family="Inter,sans-serif" font-size="16" font-weight="800">8.4%</text>
+          <text x="70" y="80" text-anchor="middle" fill="var(--ig-text-muted)" font-family="Inter,sans-serif" font-size="8">3구 평균</text>
+        </svg>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div class="ig-legend__item"><span class="ig-legend__dot" style="background:#3b82f6"></span>千代田区 6.2%</div>
+          <div class="ig-legend__item"><span class="ig-legend__dot" style="background:#f59e0b"></span>港区 10.8%</div>
+          <div class="ig-legend__item"><span class="ig-legend__dot" style="background:#64748b"></span>中央区 8.1%</div>
+        </div>
+      </div>
+      <div class="ig-insight" style="margin-top:12px">
+        외국인 비율이 높은 港区(10.8%)는 글로벌 비즈니스 수요로 공실률이 낮음
+      </div>
+    </div>
+
+    <!-- 세대 소득 랭킹 -->
+    <div class="ig-card">
+      <div class="section-title">세대 평균 연소득 순위</div>
+      <div class="ranking-item">
+        <span class="ranking-num" style="color:#f59e0b">1</span>
+        <span class="ranking-name">港区</span>
+        <span class="ranking-val" style="color:#f59e0b">1,163万円<br>
+          <small style="font-size:9px;color:var(--ig-text-muted)">약 1.1억원</small></span>
+      </div>
+      <div class="ranking-item">
+        <span class="ranking-num" style="color:#3b82f6">2</span>
+        <span class="ranking-name">千代田区</span>
+        <span class="ranking-val" style="color:#3b82f6">812万円<br>
+          <small style="font-size:9px;color:var(--ig-text-muted)">약 7389만원</small></span>
+      </div>
+      <div class="ranking-item">
+        <span class="ranking-num" style="color:#64748b">3</span>
+        <span class="ranking-name">中央区</span>
+        <span class="ranking-val" style="color:#64748b">625万円<br>
+          <small style="font-size:9px;color:var(--ig-text-muted)">약 5688만원</small></span>
+      </div>
+      <div class="ig-insight" style="margin-top:12px">
+        참고: 도쿄 23구 평균 545万円 · 서울 강남구 약 7,500만원(≈825万円)
+      </div>
+    </div>
+  </div>
+
+  <!-- 수익률 비교 -->
+  <div class="ig-card">
+    <div class="section-title">투자 수익률 (표면이율) — 서울 강남 비교</div>
+    <div class="ig-two-col">
+      <div>
+        <div class="ranking-item">
+          <span class="ranking-num" style="color:#64748b">1</span>
+          <span class="ranking-name">中央区</span>
+          <span class="ranking-val" style="color:#64748b">3.8%</span>
+        </div>
+        <div class="ranking-item">
+          <span class="ranking-num" style="color:#f59e0b">2</span>
+          <span class="ranking-name">港区</span>
+          <span class="ranking-val" style="color:#f59e0b">3.2%</span>
+        </div>
+        <div class="ranking-item">
+          <span class="ranking-num" style="color:#3b82f6">3</span>
+          <span class="ranking-name">千代田区</span>
+          <span class="ranking-val" style="color:#3b82f6">2.9%</span>
+        </div>
+        <div class="ig-insight" style="margin-top:12px">
+          <strong>참고 — 서울 강남구:</strong> 표면수익률 약 1.5~2.0% (2025 기준)<br>
+          도쿄 핵심3구는 수익률이 약 1.5~2배 높음
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;justify-content:center;gap:12px;padding:8px">
+        <div class="ig-kpi">
+          <div class="ig-kpi__label">서울 강남 비교</div>
+          <div class="ig-kpi__value" style="font-size:18px">1.5~2.0<span class="ig-kpi__unit">%</span></div>
+          <div class="ig-kpi__sub">서울 강남구 평균 표면이율</div>
+        </div>
+        <div class="ig-kpi ig-kpi--accent">
+          <div class="ig-kpi__label">도쿄 중앙구 우위</div>
+          <div class="ig-kpi__value" style="font-size:18px">+1.8<span class="ig-kpi__unit">%p</span></div>
+          <div class="ig-kpi__sub">中央区 3.8% vs 강남 2.0%</div>
+          <div class="ig-kpi__delta ig-kpi__delta--up">↑ 약 1.9배</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<style is:global>
+  /* 인포그래픽 래퍼 */
+  .ig-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 2rem 0;
+    font-family: 'Inter', 'Noto Sans KR', -apple-system, sans-serif;
+  }
+
+  .ig-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .ig-core-wards .section-title {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--ig-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 14px;
+  }
+
+  .ig-core-wards .ig-divider {
+    border: none;
+    border-top: 1px solid var(--ig-bg-card-border);
+    margin: 16px 0;
+  }
+
+  @media (max-width: 600px) {
+    .ig-two-col { grid-template-columns: 1fr; }
+  }
+</style>

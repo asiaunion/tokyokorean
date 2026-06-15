@@ -1,0 +1,24 @@
+---
+description: Prevent silent file conflicts between public/ and src/pages/ in Astro builds
+globs: public/**, src/pages/**
+alwaysApply: false
+---
+
+# Astro static/dynamic file conflict prevention
+
+> Incident (2026-05-30): `public/robots.txt` was silently overwritten by `src/pages/robots.txt.ts` at build time, causing 18 Disallow rules to be dropped for 7 days.
+
+## Before creating ANY file in `public/` or `src/pages/`:
+
+1. **Adding to `public/`** → Check `src/pages/` for a matching route (`.ts`, `.js`, `.astro`) with the same output filename
+2. **Adding to `src/pages/`** → Check `public/` for a matching static file
+3. **If both exist** → Merge into ONE source. Never keep both — Astro prerender silently wins with NO warning
+4. `npm run build` runs `scripts/check-static-route-conflict.mjs` automatically to catch conflicts
+
+## Protected files (conflict = critical failure):
+
+| File | Canonical location | NEVER create here |
+|------|--------------------|-------------------|
+| `ads.txt` | `public/ads.txt` | ❌ `src/pages/ads.txt.ts` |
+| `robots.txt` | `src/pages/robots.txt.ts` | ❌ `public/robots.txt` |
+| Google verification HTML | `public/google*.html` | ❌ `src/pages/google*.astro` |

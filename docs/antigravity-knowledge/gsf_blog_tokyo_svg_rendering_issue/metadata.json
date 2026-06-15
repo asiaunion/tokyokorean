@@ -1,0 +1,11 @@
+{
+  "summary": "GSF-Blog 도쿄 가이드 E0/E1 SVG 인포그래픽 렌더링 미작동 문제. Astro .md 파일에서 <script is:inline> 포함 HTML 블록이 rehype 파서에 의해 드롭됨. 해결: .md → .mdx 전환 + @astrojs/mdx 설치 필요 (현재 미설치). KO 파일에만 SVG 이식됨, EN/JA 미이식. Push/배포는 정상 완료(b1df511).",
+  "created_at": "2026-05-12T14:13:00Z",
+  "last_accessed": "2026-05-12T14:13:00Z",
+  "references": [
+    "https://www.gsfark.com/posts/tokyo-ward-guide-series-prologue/",
+    "https://www.gsfark.com/posts/tokyo-core-3-wards-chiyoda-chuo-minato/",
+    "https://github.com/asiaunion/GSF-Blog/commit/b1df511",
+    "conversation:8469df24-7ee9-4eb4-9904-807d797bcba1"
+  ]
+}

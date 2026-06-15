@@ -1,0 +1,9 @@
+{
+  "summary": "GSF-Blog(Astro+Vercel) 발행일 관리 정책. pubDatetime이 빌드 시각+15시간 초과 미래면 목록 미노출 버그. 즉시 발행=오늘 날짜, 예약 보관=draft:true+예정일. KO/EN/JA 3파일 동시 수정 필수. 동일 장애 3회 발생 이력.",
+  "created_at": "2026-05-12T00:37:00+09:00",
+  "references": [
+    "file:///Users/gsf/.gemini/antigravity/scratch/GSF-Blog/src/utils/postFilter.ts",
+    "file:///Users/gsf/.gemini/antigravity/scratch/GSF-Blog/src/config.ts"
+  ],
+  "tags": ["GSF-Blog", "Astro", "Vercel", "pubDatetime", "draft", "발행정책", "버그"]
+}

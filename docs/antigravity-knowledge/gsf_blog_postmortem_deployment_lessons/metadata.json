@@ -1,0 +1,22 @@
+{
+  "summary": "도쿄 인포그래픽 6세션 12시간 포스트모템 핵심 교훈. (1) PoC-First: 프레임워크 제약(.md에서 <script> 드롭)을 구현 전에 5분 PoC로 검증 필수. (2) DoD 의무화: '배포=push'가 아니라 '라이브 URL 렌더링 확인'까지. (3) 세션 핸드오프 시 '미검증 가정' 섹션 의무 포함. 시스템 내재화 3가지 메커니즘: GEMINI.md Rule 8/9/10 추가, /preflight 스킬, Reflect 스킬 보강. 에이전트 전략: 작업 유형별 분리(Gemini=디자인, Claude Sonnet=코드, Opus=분석).",
+  "created_at": "2026-05-12T23:56:00+09:00",
+  "updated_at": "2026-05-12T23:56:00+09:00",
+  "references": [
+    {
+      "type": "conversation",
+      "id": "8211edf4-958a-4696-bb99-dba22e152b9d",
+      "title": "E0/E1 SVG 렌더링 종합 포스트모템"
+    },
+    {
+      "type": "conversation",
+      "id": "8469df24-7ee9-4eb4-9904-807d797bcba1",
+      "title": "Push 미실행 디버깅 + 근본 원인 발견"
+    },
+    {
+      "type": "ki",
+      "id": "gsf_blog_tokyo_svg_rendering_issue",
+      "title": "SVG 렌더링 문제 종합 컨텍스트"
+    }
+  ]
+}

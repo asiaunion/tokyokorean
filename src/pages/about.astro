@@ -1,0 +1,24 @@
+---
+import AboutLayout from "@/layouts/AboutLayout.astro";
+import { getEntry, render } from "astro:content";
+import { PUBLIC_PROFILES } from "@/config";
+
+const lang = "ko";
+
+const entry = await getEntry("about", lang);
+if (!entry) {
+  throw new Error(`About entry not found for locale: ${lang}`);
+}
+
+const { Content } = await render(entry);
+---
+
+<AboutLayout
+  frontmatter={{
+    title: entry.data.title,
+    sameAs: [PUBLIC_PROFILES.linkedIn, PUBLIC_PROFILES.x],
+  }}
+  schemaType="AboutPage"
+>
+  <Content />
+</AboutLayout>

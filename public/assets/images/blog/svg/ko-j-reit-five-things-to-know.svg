@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 260" role="img" aria-label="J-REIT 시나리오별 기대수익률 막대 차트 예시" style="max-width:100%;height:auto;border:1px solid #e5e7eb;border-radius:8px;background:#fff">
+  <text x="24" y="30" font-size="16" font-weight="700" fill="#111827">가정 기반 총수익 시나리오 (직접 계산 메모)</text>
+  <text x="24" y="52" font-size="12" fill="#6b7280">가정: 배당수익률 + 환율 변화 + 가격 변화</text>
+  <line x1="80" y1="200" x2="700" y2="200" stroke="#9ca3af" stroke-width="1" />
+  <line x1="80" y1="80" x2="80" y2="200" stroke="#9ca3af" stroke-width="1" />
+  <text x="40" y="204" font-size="11" fill="#6b7280">0%</text>
+  <rect x="150" y="205" width="120" height="16" fill="#ef4444" rx="4" />
+  <rect x="330" y="133" width="120" height="67" fill="#3b82f6" rx="4" />
+  <rect x="510" y="33" width="120" height="167" fill="#10b981" rx="4" />
+  <text x="170" y="240" font-size="12" fill="#111827">보수</text>
+  <text x="360" y="240" font-size="12" fill="#111827">기준</text>
+  <text x="550" y="240" font-size="12" fill="#111827">상방</text>
+  <text x="185" y="196" font-size="12" fill="#b91c1c">-1.8%</text>
+  <text x="372" y="126" font-size="12" fill="#1d4ed8">+5.6%</text>
+  <text x="548" y="26" font-size="12" fill="#047857">+13.8%</text>
+</svg>

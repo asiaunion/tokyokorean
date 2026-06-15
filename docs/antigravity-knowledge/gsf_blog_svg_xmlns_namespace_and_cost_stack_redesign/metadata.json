@@ -1,0 +1,15 @@
+{
+  "title": "GSF-Blog SVG Xmlns Namespace Repair & Cost Stack Redesign",
+  "category": "troubleshooting",
+  "tags": [
+    "svg",
+    "xmlns",
+    "rendering-bug",
+    "resvg",
+    "visual-design",
+    "eeat"
+  ],
+  "summary": "Standalone SVG files in markdown or HTML reference must contain the xmlns='http://www.w3.org/2000/svg' attribute. Bulk SVG namespace repair script executed on all 43 assets, alongside a premium 100% vertical stacked bar chart redesign for the Tokyo cost-stack illustration.",
+  "source": "https://github.com/asiaunion/GSF-Blog",
+  "created_at": "2026-05-23T19:22:00"
+}

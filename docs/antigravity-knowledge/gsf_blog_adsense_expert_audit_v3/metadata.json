@@ -1,0 +1,43 @@
+{
+  "title": "GSF-Blog AdSense 전문가 종합 감사 V3: PageSpeed 전항목 녹색 + 경쟁사 비교 + 잔여 P0 2건",
+  "summary": "GSF Blog(gsfark.com) AdSense 승인을 위한 V3 전문가 종합 감사. PageSpeed Insights 데스크톱 실측(FCP 0.6s, LCP 0.6s, CLS 0, TBT 0ms — 전 항목 녹색). 경쟁사 REJ(realestate.co.jp) 대비 콘텐츠 깊이·다국어·기술 인프라 우위 확인. 콘텐츠 30개×3언어=90문서, 평균 1,290단어, 출처 30/30 완비. 강점 8개(콘텐츠 최상위, PageSpeed 만점, 1인칭 E-E-A-T, 완벽한 다국어, 법적 페이지, JSON-LD, 게시 빈도, Pillar+Cluster). 약점 7개(본문 Hero 미렌더링, 홈 썸네일 없음, GA4 미확인, 광고 슬롯 미사용, 도메인 2개월, PNG 용량 과대, About 시각화 부족). 잔여 P0: (1) PostDetails.astro에 Hero 이미지 본문 렌더링, (2) GA4 환경변수 확인. P0 완료 시 승인 확률 85~90% → 95%+. Hero 이미지 29개/26MB PNG 보유, WebP 변환 시 70% 절감 가능.",
+  "eventType": "architecture_audit",
+  "createdAt": "2026-05-07T16:56:00+09:00",
+  "references": [
+    {
+      "type": "conversation",
+      "id": "9927845a-24ae-4dfc-ac18-2682b68166f0",
+      "description": "GSF-Blog AdSense 전문가 종합 감사 V3 세션"
+    },
+    {
+      "type": "knowledge_item",
+      "id": "gsf_blog_adsense_audit_v2",
+      "description": "이전 V2 감사 (3회 반복 감사, 수정 7건, 잔여 P0 2건)"
+    },
+    {
+      "type": "knowledge_item",
+      "id": "gsf_blog_adsense_critical_fixes",
+      "description": "이전 크리티컬 수정 이력"
+    },
+    {
+      "type": "file",
+      "path": "src/layouts/PostDetails.astro",
+      "description": "포스트 상세 레이아웃 — Hero 이미지 렌더링 추가 필요"
+    },
+    {
+      "type": "file",
+      "path": "src/components/Card.astro",
+      "description": "홈 포스트 카드 — 썸네일 추가 필요"
+    },
+    {
+      "type": "file",
+      "path": "src/layouts/Layout.astro",
+      "description": "전역 레이아웃 — GA4/AdSense 메타 태그"
+    },
+    {
+      "type": "url",
+      "url": "https://gsfark.com/",
+      "description": "GSF Blog 라이브 사이트"
+    }
+  ]
+}

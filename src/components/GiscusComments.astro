@@ -1,0 +1,103 @@
+---
+/**
+ * GiscusComments.astro
+ * GitHub Discussions-based comment system via Giscus.
+ * Lightweight iframe approach with automatic dark mode sync.
+ *
+ * Prerequisites:
+ * 1. Enable GitHub Discussions on asiaunion/GSF-Blog
+ * 2. Install the Giscus app: https://github.com/apps/giscus
+ * 3. Configure at https://giscus.app/ and update repo/repoId/categoryId below
+ */
+import { getUi, type UiLang } from "@/i18n/ui";
+
+type Props = {
+  lang?: UiLang;
+};
+
+const { lang: langProp } = Astro.props;
+const { locale } = Astro.params;
+const navLang = (langProp ?? locale ?? "en") as UiLang;
+const L = getUi(navLang);
+
+// Giscus configuration — update these after setting up at https://giscus.app/
+const GISCUS_REPO = "asiaunion/GSF-Blog";
+const GISCUS_REPO_ID = "R_kgDOSBdT7Q";
+const GISCUS_CATEGORY = "Comments";
+const GISCUS_CATEGORY_ID = "DIC_kwDOSBdT7c4C7w7q";
+const GISCUS_MAPPING = "pathname"; // Maps discussion to page URL path
+
+// Language mapping for Giscus UI
+const giscusLangMap: Record<string, string> = {
+  en: "en",
+  ko: "ko",
+  ja: "ja",
+};
+const giscusLang = giscusLangMap[navLang] ?? "en";
+---
+
+<section id="giscus-comments" class="mt-8">
+  <h2 class="text-lg font-semibold mb-4">{L.commentsTitle}</h2>
+  <div id="giscus-container"></div>
+</section>
+
+<script
+  is:inline
+  data-repo={GISCUS_REPO}
+  data-repo-id={GISCUS_REPO_ID}
+  data-category={GISCUS_CATEGORY}
+  data-category-id={GISCUS_CATEGORY_ID}
+  data-mapping={GISCUS_MAPPING}
+  data-lang={giscusLang}
+  data-astro-rerun
+>
+  (function () {
+    const script = document.currentScript;
+    const container = document.getElementById("giscus-container");
+    if (!container) return;
+
+    // Determine current theme
+    const htmlEl = document.documentElement;
+    const currentTheme = htmlEl.getAttribute("data-theme");
+    const giscusTheme = currentTheme === "dark" ? "dark_dimmed" : "light";
+
+    // Create and inject Giscus script
+    const giscusScript = document.createElement("script");
+    giscusScript.src = "https://giscus.app/client.js";
+    giscusScript.setAttribute("data-repo", script.dataset.repo);
+    giscusScript.setAttribute("data-repo-id", script.dataset.repoId);
+    giscusScript.setAttribute("data-category", script.dataset.category);
+    giscusScript.setAttribute("data-category-id", script.dataset.categoryId);
+    giscusScript.setAttribute("data-mapping", script.dataset.mapping);
+    giscusScript.setAttribute("data-strict", "0");
+    giscusScript.setAttribute("data-reactions-enabled", "1");
+    giscusScript.setAttribute("data-emit-metadata", "0");
+    giscusScript.setAttribute("data-input-position", "top");
+    giscusScript.setAttribute("data-theme", giscusTheme);
+    giscusScript.setAttribute("data-lang", script.dataset.lang);
+    giscusScript.setAttribute("data-loading", "lazy");
+    giscusScript.crossOrigin = "anonymous";
+    giscusScript.async = true;
+
+    container.innerHTML = "";
+    container.appendChild(giscusScript);
+
+    // Sync dark mode changes with Giscus iframe
+    const observer = new MutationObserver(function (mutations) {
+      for (var m of mutations) {
+        if (m.attributeName === "data-theme") {
+          var newTheme = htmlEl.getAttribute("data-theme");
+          var gTheme = newTheme === "dark" ? "dark_dimmed" : "light";
+          var iframe = document.querySelector("iframe.giscus-frame");
+          if (iframe) {
+            iframe.contentWindow.postMessage(
+              { giscus: { setConfig: { theme: gTheme } } },
+              "https://giscus.app"
+            );
+          }
+        }
+      }
+    });
+    observer.observe(htmlEl, { attributes: true, attributeFilter: ["data-theme"] });
+  })();
+</script>

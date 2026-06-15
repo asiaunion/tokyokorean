@@ -1,0 +1,46 @@
+---
+import { getUi, type UiLang } from "@/i18n/ui";
+import { getLangUrl } from "@/utils/getLangUrl";
+
+type Props = { uiLang: UiLang; pathname: string; locale: string | undefined };
+const { uiLang, pathname, locale } = Astro.props as Props;
+const L = getUi(uiLang);
+const currentLang = uiLang;
+
+const langUrl = (target: string) => getLangUrl(target, pathname, locale);
+---
+
+<div
+  id="lang-banner"
+  class="w-full border-b border-border bg-background py-1.5 text-sm"
+>
+  <div class="app-layout flex items-center justify-end gap-1">
+    <a
+      href={langUrl("en")}
+      class:list={[
+        "px-2.5 py-1 rounded-sm transition-colors hover:text-accent text-xs font-medium",
+        currentLang === "en"
+          ? "font-bold text-accent border border-accent"
+          : "text-foreground/60",
+      ]}
+    >{L.langBannerEn}</a>
+    <a
+      href={langUrl("ko")}
+      class:list={[
+        "px-2.5 py-1 rounded-sm transition-colors hover:text-accent text-xs font-medium",
+        currentLang === "ko"
+          ? "font-bold text-accent border border-accent"
+          : "text-foreground/60",
+      ]}
+    >{L.langBannerKo}</a>
+    <a
+      href={langUrl("ja")}
+      class:list={[
+        "px-2.5 py-1 rounded-sm transition-colors hover:text-accent text-xs font-medium",
+        currentLang === "ja"
+          ? "font-bold text-accent border border-accent"
+          : "text-foreground/60",
+      ]}
+    >{L.langBannerJa}</a>
+  </div>
+</div>

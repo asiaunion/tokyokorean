@@ -1,0 +1,14 @@
+{
+  "id": "gsf_blog_content_source_integrity",
+  "title": "GSF-Blog 콘텐츠 출처 무결성 정책: AI 생성 수치 허위 데이터 방지",
+  "summary": "GSF-Blog 포스트 내 AI가 생성한 구체적 통계 수치(공실률, 가격 상승률, 법인 등록 증감 등)가 실제 출처 없이 작성된 사실 발견. Section 6(투자자의 시각)의 97% 공실률, 18~23% 상승, 14% 법인 증가 등은 검증된 공공 데이터 출처가 없는 AI 추정치로 판명. 향후 모든 블로그 포스트에서 구체적 수치 기재 시 반드시 원문 출처 URL을 함께 첨부하는 'Source-Gated Claim' 원칙 의무화. 대대적 수정 필요.",
+  "event_type": "content_quality_policy",
+  "severity": "high",
+  "created_at": "2026-05-13T17:29:00+09:00",
+  "references": [
+    "file:///Users/gsf/.gemini/antigravity/scratch/GSF-Blog/src/data/blog/en/tokyo-korean-community-beyond-shinokubo.md",
+    "https://www.moj.go.jp/housei/toukei/toukei_ichiran_touroku.html",
+    "https://www.sanki-re.co.jp/",
+    "https://www.homes.co.jp/chintai/research/"
+  ]
+}

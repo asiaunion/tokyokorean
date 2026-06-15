@@ -1,0 +1,185 @@
+{
+  "total_count": 1,
+  "jobs": [
+    {
+      "id": 78739398671,
+      "run_id": 26717811886,
+      "workflow_name": "Notion Publish Pipeline",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/asiaunion/GSF-Blog/actions/runs/26717811886",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOSBdT7c8AAAASVTvgDw",
+      "head_sha": "76d9e41ad375c6d5ded672ab9fdaf4b50d56df38",
+      "url": "https://api.github.com/repos/asiaunion/GSF-Blog/actions/jobs/78739398671",
+      "html_url": "https://github.com/asiaunion/GSF-Blog/actions/runs/26717811886/job/78739398671",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-05-31T16:17:07Z",
+      "started_at": "2026-05-31T16:17:09Z",
+      "completed_at": "2026-05-31T16:17:32Z",
+      "name": "publish",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-05-31T16:17:09Z",
+          "completed_at": "2026-05-31T16:17:11Z"
+        },
+        {
+          "name": "Checkout repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-05-31T16:17:11Z",
+          "completed_at": "2026-05-31T16:17:14Z"
+        },
+        {
+          "name": "Setup pnpm",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-05-31T16:17:14Z",
+          "completed_at": "2026-05-31T16:17:15Z"
+        },
+        {
+          "name": "Setup Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-05-31T16:17:15Z",
+          "completed_at": "2026-05-31T16:17:20Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-05-31T16:17:20Z",
+          "completed_at": "2026-05-31T16:17:25Z"
+        },
+        {
+          "name": "Convert Notion page to Markdown",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 6,
+          "started_at": "2026-05-31T16:17:25Z",
+          "completed_at": "2026-05-31T16:17:29Z"
+        },
+        {
+          "name": "Upload images to Vercel Blob",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 7,
+          "started_at": "2026-05-31T16:17:29Z",
+          "completed_at": "2026-05-31T16:17:29Z"
+        },
+        {
+          "name": "Voice Rewrite (Pass 1, automated)",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-05-31T16:17:29Z",
+          "completed_at": "2026-05-31T16:17:29Z"
+        },
+        {
+          "name": "Translate EN/JA (Pass 2)",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-05-31T16:17:29Z",
+          "completed_at": "2026-05-31T16:17:29Z"
+        },
+        {
+          "name": "Validate with Astro build",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-05-31T16:17:29Z",
+          "completed_at": "2026-05-31T16:17:29Z"
+        },
+        {
+          "name": "Push to feature branch",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-05-31T16:17:29Z",
+          "completed_at": "2026-05-31T16:17:29Z"
+        },
+        {
+          "name": "Create Pull Request",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-05-31T16:17:29Z",
+          "completed_at": "2026-05-31T16:17:29Z"
+        },
+        {
+          "name": "Wait for Vercel Preview URL",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-05-31T16:17:29Z",
+          "completed_at": "2026-05-31T16:17:29Z"
+        },
+        {
+          "name": "Write Preview URL to Notion",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 14,
+          "started_at": "2026-05-31T16:17:29Z",
+          "completed_at": "2026-05-31T16:17:29Z"
+        },
+        {
+          "name": "Notify failure to Notion",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-05-31T16:17:29Z",
+          "completed_at": "2026-05-31T16:17:29Z"
+        },
+        {
+          "name": "Post Setup Node.js",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 28,
+          "started_at": "2026-05-31T16:17:29Z",
+          "completed_at": "2026-05-31T16:17:29Z"
+        },
+        {
+          "name": "Post Setup pnpm",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 29,
+          "started_at": "2026-05-31T16:17:29Z",
+          "completed_at": "2026-05-31T16:17:30Z"
+        },
+        {
+          "name": "Post Checkout repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 30,
+          "started_at": "2026-05-31T16:17:30Z",
+          "completed_at": "2026-05-31T16:17:30Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 31,
+          "started_at": "2026-05-31T16:17:30Z",
+          "completed_at": "2026-05-31T16:17:30Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/asiaunion/GSF-Blog/check-runs/78739398671",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000140,
+      "runner_name": "GitHub Actions 1000000140",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}

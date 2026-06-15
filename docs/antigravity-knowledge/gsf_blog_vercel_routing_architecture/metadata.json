@@ -1,0 +1,14 @@
+{
+  "title": "Astro+Vercel 라우팅 아키텍처: 리다이렉트 계층·우선순위·trailing slash 버그 종합",
+  "summary": "Astro+Vercel 배포 시 리다이렉트 3계층 아키텍처 정리. (1) vercel.json redirects: Vercel CDN에서 최우선 처리, trailing slash URL 정상 매칭, 정적 규칙만 가능. (2) Astro config redirects: 빌드 시 .vercel/output/config.json에 ^/path$ 정규식으로 변환되어 trailing slash URL과 매칭 실패 (치명적 버그). (3) Astro middleware: _render 서버리스 함수 내부에서만 실행, Vercel의 catch-all 404 규칙이 먼저 매칭되면 미들웨어 도달 불가. 결론: cross-locale 리다이렉트는 반드시 vercel.json 정적 redirects를 사용해야 하며, Astro config/middleware는 보조 역할만 가능. Vercel output config.json의 라우팅 순서: trailing-slash-add → Astro redirects(^/path$) → {handle:filesystem} → _render routes → catch-all 404.",
+  "createdAt": "2026-05-13T11:28:00+09:00",
+  "updatedAt": "2026-05-13T11:28:00+09:00",
+  "eventType": "architecture-insight",
+  "references": [
+    "conversation:d73b6dd8-6138-42ca-a76d-294f1930cec1",
+    "ki:gsf_blog_vercel_redirect_trailing_slash",
+    "file:apps/blog-agent/.vercel/output/config.json",
+    "file:apps/blog-agent/vercel.json",
+    "file:apps/blog-agent/astro.config.ts"
+  ]
+}

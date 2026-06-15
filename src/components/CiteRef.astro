@@ -1,0 +1,10 @@
+---
+/** Inline footnote marker linking to SourcesList anchor #source-N */
+type Props = { n: number };
+const { n } = Astro.props;
+const href = `#source-${n}`;
+---
+
+<sup class="source-ref">
+  <a href={href} id={`cite-${n}`} aria-label={`Source ${n}`}>{n}</a>
+</sup>

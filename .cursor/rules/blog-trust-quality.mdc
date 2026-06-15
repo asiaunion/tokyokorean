@@ -1,0 +1,40 @@
+---
+description: Blog trust roadmap — fact sheets, T3 source verify, batch merge, CI
+globs: src/data/blog/**/*,docs/fact-audit/**/*,docs/BLOG_*.md,src/lib/validation/**/*
+alwaysApply: false
+---
+
+# Blog trust & quality (Cursor)
+
+**Hub:** [`docs/BLOG_TRUST_AND_QUALITY_ROADMAP.md`](docs/BLOG_TRUST_AND_QUALITY_ROADMAP.md)
+
+## Roles
+
+- **AG:** KO/EN/JA, fact sheets, tier-1 URL fixes, UNCERTAIN 해소
+- **Cursor:** `pnpm validate:post`, trust gates, INDEX validate column, gate code
+- **User:** git commit / deploy only when asked
+
+## Priority
+
+1. **P0** before merge: AG 2.5b → Cursor Phase 3 ([`CURSOR_PHASE3_REVERIFY_PROMPT.md`](docs/CURSOR_PHASE3_REVERIFY_PROMPT.md))
+2. Do not mass-edit slugs while AG 2.5b is in progress on the same slug
+3. **UNCERTAIN = hard block** — no warning-only bypass
+
+## Validate
+
+```bash
+pnpm validate:post <slug>              # includes trust (T1–T3)
+SKIP_TRUST_VERIFY=1 pnpm validate:post <slug>   # format gates only
+pnpm trust:verify-sources <slug>       # T3 only
+pnpm validate:batch                    # 35, skips build + trust
+```
+
+## Fact sheet
+
+- `docs/fact-audit/<slug>.md` required when KO has numerics
+- No generic `.go.jp/` homepage as sole source with ✓
+- Regenerate INDEX: `pnpm trust:update-index`
+
+## Commits
+
+Do not commit unless the user explicitly requests.

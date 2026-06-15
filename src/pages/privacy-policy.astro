@@ -1,0 +1,17 @@
+---
+import AboutLayout from "@/layouts/AboutLayout.astro";
+import { getEntry, render } from "astro:content";
+
+const lang = "ko";
+
+const entry = await getEntry("privacy", lang);
+if (!entry) {
+  throw new Error(`Privacy entry not found for locale: ${lang}`);
+}
+
+const { Content } = await render(entry);
+---
+
+<AboutLayout frontmatter={{ title: entry.data.title }} schemaType="WebPage">
+  <Content />
+</AboutLayout>

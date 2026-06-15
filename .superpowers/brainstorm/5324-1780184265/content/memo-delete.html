@@ -1,0 +1,78 @@
+<h2>남은 두 가지 — 빠르게 확인해주세요</h2>
+<p class="subtitle">메모장 편집/삭제 기능과 배경 투명도 문제입니다.</p>
+
+<div class="section">
+  <h3>📝 메모장 — 편집 & 삭제 기능</h3>
+  <p class="subtitle" style="margin-bottom:12px;">현재 메모는 등록만 되고 수정이나 삭제가 안 돼요. 어떤 UX가 좋으세요?</p>
+
+  <div class="split">
+
+    <div class="mockup" data-choice="inline" onclick="toggleSelect(this)" style="cursor:pointer;flex:1;">
+      <div class="mockup-header">🅐 카드 위에서 바로 편집</div>
+      <div class="mockup-body" style="padding:10px;background:#111;">
+        <!-- 메모 카드 - 일반 상태 -->
+        <div style="background:#1a1a1a;border:1px solid #333;border-radius:10px;padding:12px;margin-bottom:8px;">
+          <div style="font-size:11px;color:#ddd;margin-bottom:8px;line-height:1.5;">도쿄 23구 시리즈 다음 편은 메구로·세타가야. 공원과 조용한 주택가 위주로 다뤄볼 것.</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div style="font-size:9px;color:#555;">2026.05.30</div>
+            <div style="display:flex;gap:4px;">
+              <button style="padding:3px 8px;background:#1e2a1e;border:1px solid #2a4a2a;color:#34d399;border-radius:5px;font-size:9px;cursor:pointer;">✏️ 편집</button>
+              <button style="padding:3px 8px;background:#2a1a1a;border:1px solid #4a2a2a;color:#f87171;border-radius:5px;font-size:9px;cursor:pointer;">🗑️ 삭제</button>
+            </div>
+          </div>
+        </div>
+        <!-- 메모 카드 - 편집 상태 -->
+        <div style="background:#1a1a1a;border:2px solid #34d399;border-radius:10px;padding:12px;">
+          <textarea style="width:100%;background:transparent;border:none;color:#eee;font-size:11px;resize:none;height:50px;outline:none;font-family:inherit;" readonly>도쿄 23구 시리즈 다음 편은 메구로·세타가야...</textarea>
+          <div style="display:flex;justify-content:flex-end;gap:4px;margin-top:4px;">
+            <button style="padding:3px 8px;background:#333;border:none;color:#aaa;border-radius:5px;font-size:9px;cursor:pointer;">취소</button>
+            <button style="padding:3px 8px;background:#34d399;border:none;color:#000;border-radius:5px;font-size:9px;font-weight:bold;cursor:pointer;">저장</button>
+          </div>
+        </div>
+      </div>
+      <div style="padding:8px 12px;font-size:10px;color:#888;">
+        카드 안에서 바로 수정. 페이지 이동 없음. 빠르고 직관적.
+      </div>
+    </div>
+
+    <div class="mockup" data-choice="page" onclick="toggleSelect(this)" style="cursor:pointer;flex:1;">
+      <div class="mockup-header">🅑 별도 편집 페이지로 이동</div>
+      <div class="mockup-body" style="padding:10px;background:#111;">
+        <!-- 메모 카드 -->
+        <div style="background:#1a1a1a;border:1px solid #333;border-radius:10px;padding:12px;margin-bottom:8px;">
+          <div style="font-size:11px;color:#ddd;margin-bottom:8px;">도쿄 23구 시리즈 다음 편...</div>
+          <div style="display:flex;justify-content:flex-end;gap:4px;">
+            <button style="padding:3px 8px;background:#1e2a1e;border:1px solid #2a4a2a;color:#34d399;border-radius:5px;font-size:9px;">✏️ 편집 →</button>
+            <button style="padding:3px 8px;background:#2a1a1a;border:1px solid #4a2a2a;color:#f87171;border-radius:5px;font-size:9px;">🗑️ 삭제</button>
+          </div>
+        </div>
+        <!-- 화살표 -->
+        <div style="text-align:center;color:#555;font-size:16px;margin:4px 0;">↓</div>
+        <!-- 편집 페이지 미리보기 -->
+        <div style="background:#161616;border:1px solid #333;border-radius:10px;padding:10px;">
+          <div style="font-size:10px;font-weight:bold;color:#888;margin-bottom:6px;">메모 편집</div>
+          <textarea style="width:100%;background:#1a1a1a;border:1px solid #333;color:#eee;font-size:10px;border-radius:5px;padding:6px;height:40px;box-sizing:border-box;resize:none;" readonly>도쿄 23구 시리즈...</textarea>
+        </div>
+      </div>
+      <div style="padding:8px 12px;font-size:10px;color:#888;">
+        페이지 전환 필요. 긴 메모 편집에 유리하지만 흐름이 끊김.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section" style="margin-top:20px;padding:14px 16px;background:#1a1a1a;border:1px solid #333;border-radius:12px;">
+  <h3 style="font-size:13px;margin-bottom:8px;">🎨 배경 투명도 문제 — 자동 수정 예정</h3>
+  <p style="font-size:11px;color:#aaa;line-height:1.6;">
+    말씀하신 메뉴 항목이 배경 때문에 안 보이는 문제는 <code style="color:#34d399;font-size:10px;">AdminLayout.astro</code>의 헤더 배경색 처리 문제예요.<br/>
+    현재 <code style="color:#34d399;font-size:10px;">background: var(--color-card-bg)</code>가 일부 상황에서 투명하게 렌더링되고 있습니다.<br/><br/>
+    👉 <strong style="color:#eee;">별도 선택 없이 구현 시 함께 수정하겠습니다.</strong> 헤더에 solid 배경색 + 충분한 불투명도를 고정 적용하면 해결돼요.
+  </p>
+
+  <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;">
+    <div style="padding:6px 10px;background:#1e2a1e;border:1px solid #2a3a2a;border-radius:6px;font-size:10px;color:#34d399;">✅ 헤더 배경 불투명 고정</div>
+    <div style="padding:6px 10px;background:#1e2a1e;border:1px solid #2a3a2a;border-radius:6px;font-size:10px;color:#34d399;">✅ 드롭다운 메뉴 배경 강화</div>
+    <div style="padding:6px 10px;background:#1e2a1e;border:1px solid #2a3a2a;border-radius:6px;font-size:10px;color:#34d399;">✅ 탭 네비게이션 항목 가시성</div>
+  </div>
+</div>

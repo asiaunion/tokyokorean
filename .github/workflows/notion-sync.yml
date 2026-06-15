@@ -1,0 +1,60 @@
+name: Sync Git to Notion
+
+# main에 KO 포스트 변경이 push될 때 역동기화 실행
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "src/data/blog/ko/**"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # SHA ancestry 확인용 full history
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: "9"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run sync-git-to-notion
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+          GITHUB_SHA: ${{ github.sha }}
+          GITHUB_BEFORE: ${{ github.event.before }}
+        run: |
+          echo "🔄 Git → Notion 역동기화 시작"
+          echo "  Current SHA: ${{ github.sha }}"
+          echo "  Before SHA:  ${{ github.event.before }}"
+          npx tsx scripts/sync-git-to-notion.ts
+
+      # notion-page-map.json이 업데이트된 경우 자동 커밋
+      - name: Commit updated page map (if changed)
+        run: |
+          if git diff --quiet scripts/notion-page-map.json; then
+            echo "ℹ️ notion-page-map.json 변경 없음"
+          else
+            git config user.name "GSF Notion Bot"
+            git config user.email "bot@gsfark.com"
+            git add scripts/notion-page-map.json
+            git commit -m "chore(notion): notion-page-map.json 업데이트 (신규 포스트 추가)"
+            git push origin main
+            echo "✅ notion-page-map.json 업데이트 커밋됨"
+          fi

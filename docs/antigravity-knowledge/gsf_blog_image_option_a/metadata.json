@@ -1,0 +1,14 @@
+{
+  "id": "gsf_blog_image_option_a",
+  "title": "GSF-Blog: 이미지 Option A (1페이지) — hero/body 분리·약한 블러·ginza-weekend 정답",
+  "summary": "GSF-Blog 여행·산책 포스트 이미지 규칙 Option A. 히어로(ogImage·{slug}-hero.webp)와 본문({slug}-1.webp)은 반드시 다른 원본(md5 다름). 히어로=§1 장면(츠타야 간판 등, 인물 없음), 본문=해당 절(예 §3 보행자천국, 야마노 왼편). 프라이버시는 가우시안 블러만 약하게(인파 실루엣 유지), 모자이크·Downloads 자동 선택·부부 셀카 히어로 금지. 안티패턴 커밋 626a226(도쿄타워 셀카 히어로, hero=body 중복). 정답 d9e2d26·a7066f6. ko/en/ja 캡션·본문(표정·사진 왼쪽) 동시 수정. 트리거: hero, ogImage, webp, blur, mosaic, privacy, ginza-weekend, public/assets/images/blog.",
+  "event_type": "content_quality_policy",
+  "severity": "high",
+  "created_at": "2026-05-25T00:35:00+09:00",
+  "references": [
+    "file:///Users/gsf/.gemini/antigravity/scratch/projects/GSF-Blog/BLOG_IMAGE_RULES_1PAGE.md",
+    "file:///Users/gsf/.gemini/antigravity/scratch/projects/GSF-Blog/BLOG_IMAGE_INTENT_RULES.md",
+    "file:///Users/gsf/.gemini/antigravity/scratch/projects/GSF-Blog/.cursor/rules/blog-images-option-a.mdc",
+    "https://gsfark.com/ko/posts/ginza-weekend-walking-guide/"
+  ]
+}

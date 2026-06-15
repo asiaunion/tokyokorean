@@ -1,0 +1,22 @@
+{
+  "title": "GSF-Blog 도쿄부동산 필라 페이지 & 콘텐츠 클러스터 맵",
+  "summary": "P2 콘텐츠 클러스터 전략의 핵심 필라 페이지(tokyo-real-estate-investment-complete-guide) 구조, 7개 챕터별 내부 링크 매핑, 기존 15개 연결 포스트 슬러그, 미작성 6개 심층 아티클 로드맵을 영구 기록한 KI. 클러스터 포스트 추가 시 이 문서만 읽으면 전체 맥락 복원 가능.",
+  "createdAt": "2026-04-27T11:14:00+09:00",
+  "updatedAt": "2026-04-27T11:14:00+09:00",
+  "references": [
+    {
+      "type": "conversation",
+      "id": "ff7e3487-927e-4c71-b4b0-c10e83480c2a",
+      "title": "GSF-Blog P2 콘텐츠 클러스터 필라 페이지 작성"
+    },
+    {
+      "type": "file",
+      "path": "GSF-Blog/src/data/blog/ko/tokyo-real-estate-investment-complete-guide.md"
+    },
+    {
+      "type": "knowledge_item",
+      "id": "gsf_blog_newsletter_giscus_upgrade",
+      "title": "GSF-Blog 뉴스레터·댓글·클러스터·교차게시 4대 업그레이드"
+    }
+  ]
+}

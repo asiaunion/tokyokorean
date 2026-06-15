@@ -1,0 +1,96 @@
+name: Notion Merge Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      notion_page_id:
+        description: "Notion 페이지 ID"
+        required: true
+        type: string
+      slug:
+        description: "포스트 slug"
+        required: true
+        type: string
+      blog_id:
+        description: "블로그 ID"
+        required: false
+        default: "gsf-blog"
+        type: string
+concurrency:
+  group: notion-merge-${{ inputs.notion_page_id }}
+  cancel-in-progress: true
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Find and Merge PR
+        id: merge_pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          INPUT_SLUG: ${{ inputs.slug }}
+        run: |
+          SAFE_SLUG=$(node -e "console.log((process.env.INPUT_SLUG || '').trim().replace(/ /g, '-').replace(/[^a-zA-Z0-9가-힣-]/g, '').toLowerCase())")
+          
+          # 가장 최근에 업데이트된 해당 slug의 PR 조회
+          PR_JSON=$(gh pr list --state all --search "in:title \"[${SAFE_SLUG}]\"" --json number,state --limit 1)
+          PR_COUNT=$(echo "$PR_JSON" | jq length)
+          
+          if [ "$PR_COUNT" -eq 0 ]; then
+            echo "❌ Open PR for slug ${SAFE_SLUG} not found."
+            echo "머지할 PR이 없습니다."
+            exit 1
+          fi
+          
+          PR_NUMBER=$(echo "$PR_JSON" | jq -r '.[0].number')
+          PR_STATE=$(echo "$PR_JSON" | jq -r '.[0].state')
+          
+          if [ "$PR_STATE" = "MERGED" ]; then
+            echo "✅ PR #${PR_NUMBER} is already merged. Skipping."
+            exit 0
+          fi
+          
+          if [ "$PR_STATE" = "CLOSED" ]; then
+            echo "⚠️ PR #${PR_NUMBER} is closed but not merged."
+            exit 1
+          fi
+          
+          echo "Merging PR #${PR_NUMBER}..."
+          gh pr merge $PR_NUMBER --squash --delete-branch
+          echo "✅ PR #${PR_NUMBER} merged successfully."
+
+      - name: Update Notion Status to 발행완료
+        if: success()
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        run: |
+          PAGE_ID="${{ inputs.notion_page_id }}"
+          curl -s -X PATCH "https://api.notion.com/v1/pages/${PAGE_ID}" \
+            -H "Authorization: Bearer ${NOTION_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -H "Notion-Version: 2022-06-28" \
+            -d "{\"properties\":{\"status\":{\"select\":{\"name\":\"발행완료\"}}}}"
+
+      - name: Update Notion Status to 발행실패
+        if: failure()
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        run: |
+          PAGE_ID="${{ inputs.notion_page_id }}"
+          curl -s -X PATCH "https://api.notion.com/v1/pages/${PAGE_ID}" \
+            -H "Authorization: Bearer ${NOTION_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -H "Notion-Version: 2022-06-28" \
+            -d "{\"properties\":{\"status\":{\"select\":{\"name\":\"발행실패\"}}}}"
+            
+          curl -s -X POST "https://api.notion.com/v1/comments" \
+            -H "Authorization: Bearer ${NOTION_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -H "Notion-Version: 2022-06-28" \
+            -d "{\"parent\":{\"page_id\":\"${PAGE_ID}\"},\"rich_text\":[{\"type\":\"text\",\"text\":{\"content\":\"❌ PR 병합 실패. 수동으로 확인해주세요.\"}}]}"

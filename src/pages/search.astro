@@ -1,0 +1,183 @@
+---
+import "@pagefind/default-ui/css/ui.css";
+import Main from "@/layouts/Main.astro";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import { SITE } from "@/config";
+import { getUi, type UiLang } from "@/i18n/ui";
+
+const L = getUi("ko");
+const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
+---
+
+<Layout title={`${L.pageTitleSearch} | ${SITE.title}`} robotsMeta="noindex, follow">
+  <Header />
+  <Main pageTitle={L.pageTitleSearch} pageDesc={L.pageDescSearch}>
+    {
+      import.meta.env.DEV && (
+        <div class="bg-muted/75 not-prose mb-4 space-y-4 rounded p-4">
+          <p>
+            <strong>{L.devSearchWarnTitle}</strong> {L.devSearchWarnBody}
+          </p>
+          <code class="block rounded bg-black px-2 py-1 text-white">
+            pnpm run build
+          </code>
+        </div>
+      )
+    }
+    <div id="pagefind-search" data-backurl={backUrl} />
+  </Main>
+  <Footer />
+</Layout>
+
+<script>
+  function initSearch() {
+    const pageFindSearch: HTMLElement | null =
+      document.querySelector("#pagefind-search");
+
+    if (!pageFindSearch) return;
+
+    const params = new URLSearchParams(window.location.search);
+
+    const onIdle = window.requestIdleCallback || (cb => setTimeout(cb, 1));
+
+    onIdle(async () => {
+      // @ts-expect-error — Missing types for @pagefind/default-ui package.
+      const { PagefindUI } = await import("@pagefind/default-ui");
+
+      /*
+       * Dynamic import leaves `document.currentScript` null, so @pagefind/default-ui
+       * cannot infer bundlePath and passes `undefined` → broken `import(\`\${base_path}pagefind.js\`)`
+       * and an infinite wait in Pagefind's init loop ("Searching…" forever).
+       */
+      const pagefindBundlePath = `${import.meta.env.BASE_URL.replace(/\/?$/, "/")}pagefind/`.replace(
+        /\/{2,}/g,
+        "/"
+      );
+      const pagefindAuxBundlePath = `${import.meta.env.BASE_URL.replace(/\/?$/, "/")}pagefind-aux/`.replace(
+        /\/{2,}/g,
+        "/"
+      );
+
+      // Init pagefind ui
+      const search = new PagefindUI({
+        element: "#pagefind-search",
+        bundlePath: pagefindBundlePath,
+        showImages: false,
+        showSubResults: true,
+        translations: {},
+        processTerm: function (term: string) {
+          params.set("q", term);
+          const next =
+            window.location.pathname +
+            (params.toString() ? `?${params.toString()}` : "");
+          history.replaceState(history.state, "", next);
+
+          const backUrl = pageFindSearch?.dataset?.backurl;
+          if (backUrl) {
+            sessionStorage.setItem(
+              "backUrl",
+              backUrl + (params.toString() ? `?${params.toString()}` : ""),
+            );
+          }
+
+          return term;
+        },
+      });
+
+      /*
+       * Do not call triggerFilters({ language }) here. Pagefind 1.x already loads
+       * the per-language index from <html lang> (see multilingual docs). A manual
+       * language filter can yield zero hits because "language" is not exposed as a
+       * regular facet on the indexed pages.
+       */
+
+      // If search param exists (eg: search?q=astro), trigger search after UI mounts
+      const query = params.get("q");
+      if (query) {
+        requestAnimationFrame(() => search.triggerSearch(query));
+      }
+
+      // Reset search param if search input is cleared
+      const searchInput = document.querySelector(".pagefind-ui__search-input");
+      const clearButton = document.querySelector(".pagefind-ui__search-clear");
+      searchInput?.addEventListener("input", resetSearchParam);
+      clearButton?.addEventListener("click", resetSearchParam);
+
+      function resetSearchParam(e: Event) {
+        if ((e.target as HTMLInputElement)?.value.trim() === "") {
+          history.replaceState(history.state, "", window.location.pathname);
+        }
+      }
+    });
+  }
+
+  document.addEventListener("astro:after-swap", () => {
+    const pagefindSearch = document.querySelector("#pagefind-search");
+
+    // if pagefind search form already exists, don't initialize search component
+    if (pagefindSearch && pagefindSearch.querySelector("form")) return;
+
+    initSearch();
+  });
+  initSearch();
+</script>
+
+<style is:global>
+  #pagefind-search {
+    --pagefind-ui-font: var(--font-app);
+    --pagefind-ui-text: var(--foreground);
+    --pagefind-ui-background: var(--background);
+    --pagefind-ui-border: var(--border);
+    --pagefind-ui-primary: var(--accent);
+    --pagefind-ui-tag: var(--background);
+    --pagefind-ui-border-radius: 0.375rem;
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-image-border-radius: 8px;
+    --pagefind-ui-image-box-ratio: 3 / 2;
+
+    form::before {
+      background-color: var(--foreground);
+    }
+
+    input {
+      font-weight: 400;
+      border: 1px solid var(--border);
+    }
+
+    input:focus-visible {
+      outline: 1px solid var(--accent);
+    }
+
+    .pagefind-ui__result-title a {
+      color: var(--accent);
+      outline-offset: 1px;
+      outline-color: var(--accent);
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.22em;
+      text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
+    }
+
+    .pagefind-ui__result-title a:hover {
+      text-decoration-color: var(--accent);
+    }
+
+    .pagefind-ui__result-title a:focus-visible,
+    .pagefind-ui__search-clear:focus-visible {
+      text-decoration-line: none;
+      outline-width: 2px;
+      outline-style: solid;
+    }
+
+    .pagefind-ui__result:last-of-type {
+      border-bottom: 0;
+    }
+
+    .pagefind-ui__result-nested .pagefind-ui__result-link:before {
+      font-family: system-ui;
+    }
+  }
+</style>

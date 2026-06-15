@@ -1,0 +1,177 @@
+{
+  "total_count": 1,
+  "jobs": [
+    {
+      "id": 78740121908,
+      "run_id": 26718085021,
+      "workflow_name": "Notion Publish Pipeline",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/asiaunion/GSF-Blog/actions/runs/26718085021",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOSBdT7c8AAAASVUbpNA",
+      "head_sha": "f3b32dbb71e7aed0d49574915ba4809ad546d3f4",
+      "url": "https://api.github.com/repos/asiaunion/GSF-Blog/actions/jobs/78740121908",
+      "html_url": "https://github.com/asiaunion/GSF-Blog/actions/runs/26718085021/job/78740121908",
+      "status": "in_progress",
+      "conclusion": null,
+      "created_at": "2026-05-31T16:28:52Z",
+      "started_at": "2026-05-31T16:28:54Z",
+      "completed_at": null,
+      "name": "publish",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-05-31T16:28:55Z",
+          "completed_at": "2026-05-31T16:28:56Z"
+        },
+        {
+          "name": "Checkout repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-05-31T16:28:56Z",
+          "completed_at": "2026-05-31T16:28:58Z"
+        },
+        {
+          "name": "Setup pnpm",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-05-31T16:28:58Z",
+          "completed_at": "2026-05-31T16:29:00Z"
+        },
+        {
+          "name": "Setup Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-05-31T16:29:00Z",
+          "completed_at": "2026-05-31T16:29:04Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-05-31T16:29:04Z",
+          "completed_at": "2026-05-31T16:29:10Z"
+        },
+        {
+          "name": "Convert Notion page to Markdown",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-05-31T16:29:10Z",
+          "completed_at": "2026-05-31T16:29:17Z"
+        },
+        {
+          "name": "Upload images to Vercel Blob",
+          "status": "in_progress",
+          "conclusion": null,
+          "number": 7,
+          "started_at": "2026-05-31T16:29:17Z",
+          "completed_at": null
+        },
+        {
+          "name": "Voice Rewrite (Pass 1, automated)",
+          "status": "pending",
+          "conclusion": null,
+          "number": 8,
+          "started_at": null,
+          "completed_at": null
+        },
+        {
+          "name": "Translate EN/JA (Pass 2)",
+          "status": "pending",
+          "conclusion": null,
+          "number": 9,
+          "started_at": null,
+          "completed_at": null
+        },
+        {
+          "name": "Validate with Astro build",
+          "status": "pending",
+          "conclusion": null,
+          "number": 10,
+          "started_at": null,
+          "completed_at": null
+        },
+        {
+          "name": "Push to feature branch",
+          "status": "pending",
+          "conclusion": null,
+          "number": 11,
+          "started_at": null,
+          "completed_at": null
+        },
+        {
+          "name": "Create Pull Request",
+          "status": "pending",
+          "conclusion": null,
+          "number": 12,
+          "started_at": null,
+          "completed_at": null
+        },
+        {
+          "name": "Wait for Vercel Preview URL",
+          "status": "pending",
+          "conclusion": null,
+          "number": 13,
+          "started_at": null,
+          "completed_at": null
+        },
+        {
+          "name": "Write Preview URL to Notion",
+          "status": "pending",
+          "conclusion": null,
+          "number": 14,
+          "started_at": null,
+          "completed_at": null
+        },
+        {
+          "name": "Notify failure to Notion",
+          "status": "pending",
+          "conclusion": null,
+          "number": 15,
+          "started_at": null,
+          "completed_at": null
+        },
+        {
+          "name": "Post Setup Node.js",
+          "status": "pending",
+          "conclusion": null,
+          "number": 28,
+          "started_at": null,
+          "completed_at": null
+        },
+        {
+          "name": "Post Setup pnpm",
+          "status": "pending",
+          "conclusion": null,
+          "number": 29,
+          "started_at": null,
+          "completed_at": null
+        },
+        {
+          "name": "Post Checkout repository",
+          "status": "pending",
+          "conclusion": null,
+          "number": 30,
+          "started_at": null,
+          "completed_at": null
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/asiaunion/GSF-Blog/check-runs/78740121908",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000148,
+      "runner_name": "GitHub Actions 1000000148",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}

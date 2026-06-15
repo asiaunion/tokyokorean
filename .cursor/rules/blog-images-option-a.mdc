@@ -1,0 +1,50 @@
+---
+description: GSF-Blog hero/body images (Option A) — auto when editing blog images or post frontmatter
+globs: public/assets/images/blog/**,src/data/blog/**/*.md
+alwaysApply: false
+---
+
+# Blog images — Option A (mandatory when this rule applies)
+
+You are editing blog images or `src/data/blog/**` posts. **Follow this before changing assets or § captions.**
+
+## Structure
+
+| File | Role |
+|------|------|
+| `{slug}-hero.webp` | `ogImage` + page hero — **§1 scene** (e.g. Tsutaya sign). No identifiable faces. |
+| `{slug}-1.webp` | **One** body `![]()` — proof for **one section** (e.g. §3 hokoten, Yamano on the **left**). |
+
+- `md5(hero) ≠ md5(body)`. WebP ~1200px, q~80–82.
+
+## Never (anti-pattern `626a226`)
+
+- Auto-pick from `Downloads` / recent files (couple selfie, indoor Tokyo Tower, etc.)
+- Same file for hero and body
+- Wide **pixel mosaic** or heavy blur over buildings/signs
+- Caption says blur/mosaic but body still mentions 「표정」「사진 왼쪽」/ expressions / 写真の左側
+
+## Privacy (body photo)
+
+- **Gaussian blur only**, light — **crowd silhouettes stay visible**
+- Blur **lower / people zone only**; Yamano, Mitsukoshi, streetscape stay sharp
+- User said 「이 정도면 충분」→ do **not** strengthen blur
+
+## Photo selection
+
+- Use **user-attached photos** or **user-specified folder only**
+- Propose hero vs body vs reject table before replacing files
+
+## Text (ko / en / ja together)
+
+- Captions: face **blur** (not mosaic): KO 블러, EN softly blurred, JA ぼかし
+- Yamano land price: **6,710万 yen/m² (2026), 20 consecutive years** (not 21)
+
+## Before “done”
+
+- [ ] hero ≠ body, hero not a personal selfie
+- [ ] body matches §3 geography (Yamano left if stated)
+- [ ] 3 locales consistent with edit
+- [ ] No git push unless user asks
+
+Before edits: read repo `BLOG_IMAGE_RULES_1PAGE.md` and AG Knowledge **`gsf_blog_image_option_a`** (see `AGENTS.md`).

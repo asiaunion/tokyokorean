@@ -1,0 +1,70 @@
+---
+interface Props {
+  leftTitle: string;
+  leftItems: string[];
+  rightTitle: string;
+  rightItems: string[];
+}
+
+const { leftTitle, leftItems, rightTitle, rightItems } = Astro.props;
+---
+
+<div class="macro-micro-matrix">
+  <div class="matrix-card left-card">
+    <p class="matrix-heading">{leftTitle}</p>
+    <div class="card-content">
+      {leftItems.map((item) => (
+        <p set:html={item}></p>
+      ))}
+    </div>
+  </div>
+  <div class="matrix-card right-card">
+    <p class="matrix-heading">{rightTitle}</p>
+    <div class="card-content">
+      {rightItems.map((item) => (
+        <p set:html={item}></p>
+      ))}
+    </div>
+  </div>
+</div>
+
+<style>
+  .macro-micro-matrix {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+    font-family: var(--font-app), sans-serif;
+  }
+  .matrix-card {
+    background: var(--card-bg, rgba(128, 128, 128, 0.05));
+    border: 1px solid var(--card-border, rgba(128, 128, 128, 0.15));
+    border-left: 4px solid var(--card-accent, var(--color-accent));
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    transition: all 0.2s ease-in-out;
+  }
+  .matrix-card .matrix-heading {
+    margin: 0 0 10px 0;
+    color: var(--card-accent, var(--color-accent));
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .card-content {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.9;
+    line-height: 1.6;
+  }
+  .card-content :global(p) {
+    margin: 0 0 8px 0;
+  }
+  .card-content :global(p:last-child) {
+    margin-bottom: 0;
+  }
+  .card-content :global(strong) {
+    font-weight: 700;
+  }
+</style>

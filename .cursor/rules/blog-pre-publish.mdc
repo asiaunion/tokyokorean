@@ -1,0 +1,23 @@
+---
+description: Pre-publish blog verification (AG wrote draft; Cursor validates before publish)
+globs: src/data/blog/**/*
+alwaysApply: false
+---
+
+# Blog pre-publish (Cursor only)
+
+Writing happens in **Antigravity** (Docs, skills, etc.) — **not** via Telegram in current ops.
+
+When the user says 「AG 초안 완료, 검증 부탁」: ask for **slug**, confirm `src/data/blog/{ko,en,ja}/<slug>.md` exist (same filename in each folder).
+
+In Cursor:
+
+1. Do **not** commit or deploy unless the user explicitly asks after validation passes.
+2. Follow [`docs/BLOG_TRUST_AND_QUALITY_ROADMAP.md`](docs/BLOG_TRUST_AND_QUALITY_ROADMAP.md) and [`docs/BLOG_AG_CURSOR_WORKFLOW.md`](docs/BLOG_AG_CURSOR_WORKFLOW.md).
+3. Trust gates: `pnpm trust:verify-sources <slug>` when fact sheet has specific URLs; `SKIP_TRUST_VERIFY=1` only for format-only passes.
+4. Require [`docs/templates/blog-fact-sheet.md`](docs/templates/blog-fact-sheet.md) for KO bodies with numbers or legal thresholds.
+5. Run `pnpm validate:post <slug>` (or `--stage <slug>`) and fix markdown until exit code 0.
+6. Fact-check: [`docs/BLOG_FACT_CHECK_WORKFLOW.md`](docs/BLOG_FACT_CHECK_WORKFLOW.md).
+7. After exit 0, remind user to **git commit + deploy** — do not assume Telegram `/blog_publish`.
+
+Gate failures: fix order in `BLOG_AGENT_AUTOMATION_RUNBOOK.md` § Gate failure remediation (sources → length → tier → risky claims).

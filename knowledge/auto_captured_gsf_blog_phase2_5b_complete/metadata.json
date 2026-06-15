@@ -1,0 +1,10 @@
+{
+  "event_type": "architecture_standardization",
+  "summary": "GSF-Blog Phase 2.5b 팩트 보강, 다국어 수치 Parity 전원 해결 및 SSOT 아키텍처(면책 본문 제거, SVG 금지 및 WebP 전용, T3 P0-only) 영구 고정",
+  "source_files": [
+    "AGENTS.md",
+    "docs/GSF_BLOG_SESSION_ARCHIVE_20260525.md",
+    "docs/fact-audit/T3_POLICY.md"
+  ],
+  "timestamp": "2026-05-25T22:33:25+09:00"
+}

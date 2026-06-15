@@ -1,0 +1,13 @@
+{
+  "title": "GSF-Blog AdSense Critical 이슈 해결 패턴",
+  "summary": "Google AdSense 승인을 위한 4대 Critical 이슈(Financial Disclaimer, Thin Content, 미래 날짜, Sources 누락) 해결 패턴과 일괄 처리 스크립트. 48개 투자 포스트 면책 조항 삽입, 3개 Thin Content 보강(니혼바시/긴자/하마초), pubDatetime 미래 날짜 일괄 수정, sources 프론트매터 누락 검증 및 추가 방법을 문서화.",
+  "created": "2026-04-23T14:07:00Z",
+  "lastAccessed": "2026-04-23T14:07:00Z",
+  "references": [
+    {
+      "type": "conversation",
+      "id": "f9dd7425-5f1a-4e9d-91dc-d9712239b088",
+      "title": "GSF Blog Expert Optimization - Critical Fixes"
+    }
+  ]
+}

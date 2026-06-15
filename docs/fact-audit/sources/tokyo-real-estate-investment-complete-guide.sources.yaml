@@ -1,0 +1,161 @@
+# Source manifest — tokyo-real-estate-investment-complete-guide (pillar)
+# Used by scripts/check-source-urls.mjs and editorial dual-link pattern.
+slug: tokyo-real-estate-investment-complete-guide
+asOfDefault: "2026-04"
+
+claims:
+  - id: reins-tokyo23-median
+    koQuote: "도쿄 23구 기존 맨션 중위 가격은 약 9,200만 엔(㎡당 약 140만 엔)"
+    values: ["9200", "140"]
+    primaryUrl: https://www.reins.or.jp/pdf/trend/mw/mw_202604_summary.pdf
+    archivePath: /assets/sources/reins-202604-marketwatch.pdf
+    asOf: "2026-04"
+    verifiedAt: "2026-05-26"
+    verifier: Cursor
+
+  - id: mlit-foreign-buyer-share
+    koQuote: "해외 주소 보유자 비중 3.5% / 도심 6구 7.5% (2024년 3.2%)"
+    values: ["3.5%", "7.5%", "3.2%"]
+    primaryUrl: https://www.mlit.go.jp/report/press/tochi_fudousan_kensetsugyo05_hh_000001_00237.html
+    primaryPdf: https://www.mlit.go.jp/report/press/content/001970012.pdf
+    archivePath: /assets/sources/mlit-202511-mansion-foreign-buyer.pdf
+    asOf: "2025-H1"
+    verifiedAt: "2026-05-26"
+    verifier: Cursor
+
+  - id: miki-office-vacancy-five-wards
+    koQuote: "도심 5구 오피스 공실률 2.22%"
+    values: ["2.22%"]
+    primaryUrl: https://www.e-miki.com/rent/assets/market/tokyo.xlsx
+    archivePath: /assets/sources/miki-202603-tokyo-office-market.xlsx
+    portalUrl: https://www.e-miki.com/rent/
+    asOf: "2026-Q1"
+    verifiedAt: "2026-05-26"
+    verifier: Cursor
+
+  - id: tax-metro-fixed-asset
+    koQuote: "고정자산세 1.4% (표본)"
+    values: ["1.4%"]
+    primaryUrl: https://www.tax.metro.tokyo.lg.jp/kazei/real_estate/kotei_tosi
+    asOf: "2026"
+    verifiedAt: "2026-05-25"
+    verifier: Cursor
+
+  - id: ch1-tsubo-framework
+    koQuote: "에리어 선정입니다. 같은 23구 안에서도 치요다구의 坪단가와 에도가와구의 坪단가는 3배 이상 차이가 납니다."
+    values: ["3배"]
+    primaryUrl: https://www.kantei.ne.jp/wp-content/uploads/c2025.pdf
+    archivePath: /assets/sources/kantei-2025-chukomansion.pdf
+    asOf: "2025"
+    verifiedAt: "2026-05-26"
+    verifier: Cursor
+    notes: "Qualitative ward spread; table ranges are editorial framework anchored to Kantei/REINS cluster posts."
+
+  - id: ch2-ancillary-cost-pct
+    koQuote: "물건가의 7~10% 전후를 부대비용(세금·중개·등기 등)으로 별도 확보"
+    values: ["7~10%"]
+    primaryUrl: https://cs1.livable.co.jp/kounyu/loan/money_plan.html
+    portalUrl: https://www.livable.co.jp/
+    asOf: "2026"
+    verifiedAt: "2026-05-26"
+    verifier: Cursor
+
+  - id: ch2-deposit-pct
+    koQuote: "매매대금의 5~10% (보통 수백만 엔 단위)"
+    values: ["5~10%"]
+    primaryUrl: https://www.livable.co.jp/l-note/question/g12987/
+    asOf: "2026"
+    verifiedAt: "2026-05-26"
+    verifier: Cursor
+
+  - id: ch2-affidavit-nonresident
+    koQuote: "- 여권 + 서명 공증(Affidavit of Identity) 으로 인감증명 대체"
+    values: ["Affidavit of Identity"]
+    primaryUrl: https://www.moj.go.jp/MINJI/minji05_00494.html
+    asOf: "2026"
+    verifiedAt: "2026-05-26"
+    verifier: Cursor
+    notes: "HEAD 200 via trust script; page may block generic curl. Align with tokyo-buying-process-step-by-step MOJ cite."
+
+  - id: ch3-jreit-yield
+    koQuote: "JPX 시장 통계 기준 예상 연간 분배금 수익률은 약 4~5% 전후"
+    values: ["4~5%", "4.79%"]
+    primaryUrl: https://www.jpx.co.jp/equities/products/reits/reports/index.html
+    primaryPdf: https://www.jpx.co.jp/equities/products/reits/reports/tvdivq0000007ago-att/REIT.pdf
+    portalUrl: https://www.jpx.co.jp/equities/products/reits/index.html
+    asOf: "2026"
+    verifiedAt: "2026-05-26"
+    verifier: Cursor
+    notes: "JPX monthly REIT report shows forecast distribution yield ~4.79%; body uses 4~5% band. BOJ/FX not on same page."
+
+  - id: ch4-redevelopment-timeline
+    koQuote: "니혼바시·야에스·도라노몬·시부야역 주변의 메가 프로젝트가 2028~2030년 순차 완공"
+    values: ["2028~2030년"]
+    primaryUrl: https://www.toshiseibi.metro.tokyo.lg.jp/documents/d/toshiseibi/pdf_bosai_toshi_saisei_data_saisei10_siryou02
+    portalUrl: https://www.toshiseibi.metro.tokyo.lg.jp/
+    asOf: "2025-2026"
+    verifiedAt: "2026-05-26"
+    verifier: Cursor
+    notes: "AG URL /bosai/toshi_saikai/ was 404. PDF documents Shibuya step-up completions 2028–2029; other wards qualitative + cluster links."
+
+  - id: ch5-useful-life
+    koQuote: "2016년 4월 이후 건물은 정액법(定額法) 필수. 내용연수를 초과한 중고 건물은 법정내용연수 × 0.2로 단축 감가상각이 가능"
+    values: ["2016년 4월", "0.2"]
+    primaryUrl: https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2100.htm
+    portalUrl: https://www.nta.go.jp/
+    asOf: "2026"
+    verifiedAt: "2026-05-26"
+    verifier: Cursor
+    notes: "NTA 2100: Heisei 28 (2016) buildings straight-line only; used-asset 0.2× useful life via related 2105/省令 — spot wording in cluster posts."
+
+  - id: ch6-seismic-standard
+    koQuote: "1981년 신내진기준(新耐震基準) 이후 건물은 진도 7에도 도괴하지 않도록 설계"
+    values: ["1981년", "7"]
+    primaryUrl: https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk_000021.html
+    portalUrl: https://www.mlit.go.jp/
+    asOf: "2026"
+    verifiedAt: "2026-05-26"
+    verifier: Cursor
+    notes: "1981新耐震 on MLIT housing page; ‘震度7 no collapse’ is simplified reader framing — see earthquake cluster for hazard maps."
+
+  - id: ch7-visa-requirements
+    koQuote: "고도전문직(고도인재) — 포인트 70점 이상 시 3년, 80점 이상 시 1년 만에 영주권"
+    values: ["70점", "3년", "80점", "1년", "영주권"]
+    primaryUrl: https://www.moj.go.jp/isa/applications/resources/newimmiact_3_index.html
+    portalUrl: https://www.moj.go.jp/isa/
+    asOf: "2026"
+    verifiedAt: "2026-05-26"
+    verifier: Cursor
+    notes: "Replaced broken isa.go.jp/ko/.../nyuukokukanri07_00016 (301→ISA home) with MOJ HSP point-system index; 70pt/3yr and 80pt/1yr PR shortening per linked PDFs on page."
+
+  - id: ch7-business-manager-visa
+    koQuote: "경영관리비자 — 2025년 10월 대개편: 자본금 3,000만 엔 요건 + 언어 요건 추가"
+    values: ["2025년 10월", "3,000만 엔"]
+    primaryUrl: https://www.moj.go.jp/isa/applications/resources/10_00237.html
+    portalUrl: https://www.moj.go.jp/isa/
+    asOf: "2026"
+    verifiedAt: "2026-05-26"
+    verifier: Cursor
+
+  - id: ch6-earthquake-insurance
+    koQuote: "지진보험(地震保険)은 화재보험의 30~50% 범위에서 가입 가능"
+    values: ["30~50%"]
+    primaryUrl: https://www.mof.go.jp/policy/financial_system/earthquake_insurance/jisin.htm
+    portalUrl: https://www.mof.go.jp/
+    asOf: "2026"
+    verifiedAt: "2026-05-26"
+    verifier: Cursor
+    notes: "MOF states 火災保険の30％～50％; separate from MLIT seismic-design footnote."
+
+  - id: ch5-corporate-personal-tax-rates
+    koQuote: "세율 | 5~45% 누진 | 실효 30~35%"
+    values: ["5~45%", "30~35%"]
+    primaryUrl: https://www.nta.go.jp/taxes/shiraberu/taxanswer/joto/3211.htm
+    portalUrl: https://www.nta.go.jp/
+    asOf: "2026"
+    verifiedAt: "2026-05-26"
+    verifier: Cursor
+    notes: "Effective corporate band for small GK/KK; inheritance 55% etc. remain cluster deep-dives without inline cite."
+
+
+

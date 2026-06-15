@@ -1,0 +1,215 @@
+@plugin "@tailwindcss/typography";
+
+@layer base {
+  /* ===== Override default Tailwind Typography styles ===== */
+  .app-prose {
+    @apply prose;
+
+    h1,
+    h3,
+    h4,
+    th {
+      @apply mb-3 text-foreground;
+    }
+
+    /*
+      Section titles: Coredo inserts `---` between sections (~1.42857em margin each side of `hr`).
+      Posts without `---` need that combined gap above the heading so rhythm matches Coredo.
+    */
+    h2 {
+      @apply pb-[1lh] text-lg font-bold text-foreground sm:text-xl;
+      /* Beat `.prose :where(h2){ margin-top:2em; margin-bottom:1em }` */
+      margin-block-start: calc(2.8571428572rem + 1px);
+      margin-block-end: 0;
+    }
+
+    & hr + h2,
+    & > h2:first-child {
+      margin-block-start: 0.075rem;
+    }
+
+    h3 {
+      @apply italic;
+    }
+
+    p,
+    strong,
+    ol,
+    ul,
+    figcaption,
+    table,
+    code {
+      @apply text-foreground;
+    }
+
+    /* Body paragraphs: tight rhythm (excludes numbered section headings). */
+    p:not(.post-section-heading) {
+      @apply my-[0.05625rem];
+    }
+
+    /*
+      Numbered section headings (`<p class="post-section-heading">` in MD).
+      Must use `p.post-section-heading` + `margin-block-*` so we win over Tailwind Typography’s
+      `.prose :where(p){ margin-top:1.25em; margin-bottom:1.25em }`, which was erasing the large
+      `margin-top` we set on `.post-section-heading` alone.
+    */
+    & p.post-section-heading {
+      @apply pb-[1lh] text-lg font-bold text-foreground sm:text-xl;
+      margin-block-start: calc(2.8571428572rem + 1px);
+      margin-block-end: 0;
+    }
+
+    & hr + p.post-section-heading,
+    & > p.post-section-heading:first-child {
+      margin-block-start: 0.075rem;
+    }
+
+    a {
+      @apply wrap-break-word text-foreground underline decoration-solid decoration-1 underline-offset-[0.22em] transition-colors hover:text-accent hover:decoration-accent focus-visible:no-underline;
+    }
+
+    /*
+      Prose plugin uses ~1.14em vertical margins on lists and ~0.29em between `li`
+      — reads much looser than our tight `p` rhythm (e.g. manual “목차” `<ol>` blocks).
+    */
+    ol,
+    ul {
+      @apply my-[0.05625rem];
+    }
+
+    ul {
+      @apply overflow-x-clip;
+    }
+
+    ul ul,
+    ul ol,
+    ol ul,
+    ol ol {
+      @apply my-[0.05625rem];
+    }
+
+    li {
+      @apply marker:text-accent my-[0.05625rem];
+    }
+
+    /* Override prose `> ul/ol > li > p(:first|:last)` (~1.14em) — same as body `p` rhythm. */
+    & > ul > li > p,
+    & > ol > li > p {
+      @apply my-[0.05625rem];
+    }
+
+    & > ul > li > p:first-child,
+    & > ol > li > p:first-child {
+      @apply mt-[0.05625rem];
+    }
+
+    & > ul > li > p:last-child,
+    & > ol > li > p:last-child {
+      @apply mb-[0.05625rem];
+    }
+
+    /* Markdown `---`; prose default hr margins are ~2.86em each side — tighten for section dividers. */
+    hr {
+      @apply border-border my-[1.4285714286em];
+    }
+
+    img {
+      @apply mx-auto border border-border;
+    }
+
+    figcaption {
+      @apply opacity-75;
+    }
+
+    table {
+      th,
+      td {
+        @apply border border-border p-2;
+      }
+
+      th {
+        @apply py-1.5;
+      }
+
+      code {
+        @apply break-all sm:break-normal;
+      }
+    }
+
+    code {
+      @apply rounded bg-muted/75 p-1 wrap-break-word text-foreground before:content-none after:content-none;
+    }
+
+    .astro-code code {
+      @apply flex-[1_0_100%] bg-inherit p-0;
+    }
+
+    blockquote {
+      @apply wrap-break-word border-s-2 border-s-accent/35 bg-muted/30 py-2 ps-4 text-foreground not-italic;
+    }
+
+    details {
+      @apply inline-block cursor-pointer text-foreground select-none [&_p]:hidden [&_ul]:my-0!;
+    }
+
+    summary {
+      @apply focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent focus-visible:outline-solid;
+    }
+
+    pre {
+      @apply focus-visible:border-transparent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-solid;
+    }
+
+    .post-disclaimer {
+      @apply mt-6 max-w-none text-[0.625rem] leading-snug text-foreground/65 md:text-xs md:leading-relaxed;
+    }
+
+    .post-disclaimer__title {
+      @apply mb-1 font-medium;
+    }
+
+    .post-disclaimer p {
+      @apply my-0;
+    }
+
+    .post-disclaimer p + p {
+      @apply mt-0.5;
+    }
+
+    /* YMYL: inline notice above article body (all posts via PostDisclaimer) */
+    .post-inline-disclaimer {
+      @apply mb-6 rounded-md border border-border bg-muted/50 px-3 py-3 text-base leading-relaxed text-foreground/90;
+    }
+
+    /* First body block after disclaimer (often a tight `p`, not `h2:first-child`) */
+    .post-inline-disclaimer + :is(p, h2, h3, p.post-section-heading, div, blockquote) {
+      margin-block-start: 1.25rem;
+    }
+  }
+
+  /* ===== Code Blocks & Syntax Highlighting ===== */
+  .astro-code {
+    @apply flex border bg-(--shiki-light-bg) text-(--shiki-light) outline-border [&_span]:text-(--shiki-light);
+  }
+
+  html[data-theme="dark"] .astro-code {
+    @apply bg-(--shiki-dark-bg) text-(--shiki-dark) [&_span]:text-(--shiki-dark);
+  }
+
+  /* Styles for Shiki transformers */
+  /* https://shiki.style/packages/transformers */
+  .astro-code {
+    .line.diff.add {
+      @apply relative inline-block w-full bg-green-400/20 before:absolute before:-left-3 before:text-green-500 before:content-['+'];
+    }
+    .line.diff.remove {
+      @apply relative inline-block w-full bg-red-500/20 before:absolute before:-left-3 before:text-red-500 before:content-['-'];
+    }
+    .line.highlighted {
+      @apply inline-block w-full bg-slate-400/20;
+    }
+    .highlighted-word {
+      @apply rounded-sm border border-border px-0.5 py-px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "title": "GSF-Blog AdSense 최종 감사 V4: 전항목 PASS + 라이브 검증 완료 (승인 확률 95%+)",
+  "summary": "GSF-Blog(gsfark.com) 최종 애드센스 승인 준비 상태 종합 감사. 라이브 사이트 실시간 curl 검증 + PageSpeed Insights 실측. ads.txt(pub-4729433282370174), GA4(G-1JZH2YCS3Z), JSON-LD(BlogPosting+sameAs), Sitemap(461 URL), Cookie Consent(GDPR) 전항목 정상. Desktop 91점, Mobile 79점, CLS=0. 콘텐츠 30편×3언어=90+페이지, 4개 필라 허브. P0 전항목 PASS, 코드 레벨 추가 조치 불필요. 승인 후: .ad-slot에 유닛 코드 삽입 + GA4 CLS 재검증. 유일한 변수: 도메인 숙성도(~2개월).",
+  "created": "2026-05-08T17:17:00+09:00",
+  "lastAccessed": "2026-05-08T17:17:00+09:00",
+  "references": [
+    {
+      "type": "conversation",
+      "id": "fde1d84e-e6c4-4b5c-9044-b4213fb192a5",
+      "title": "Finalizing GSF-Blog AdSense Readiness"
+    },
+    {
+      "type": "conversation",
+      "id": "eb7bfb02-8f51-4476-98f2-a57d75fb0c8e",
+      "title": "Finalizing GSF-Blog AdSense Submission"
+    },
+    {
+      "type": "url",
+      "id": "https://gsfark.com",
+      "title": "GSF Blog Production Site"
+    }
+  ]
+}

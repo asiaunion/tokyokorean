@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 280" role="img" aria-label="한일 부동산 투자 시너지 매트릭스" style="max-width:100%;height:auto;border:1px solid #e5e7eb;border-radius:8px;background:#fff;margin: 20px 0;">
+  <text x="24" y="35" font-size="16" font-weight="700" fill="#111827">서울-도쿄 크로스보더 자산 배분 전략</text>
+  
+  <!-- Seoul Section -->
+  <rect x="60" y="70" width="300" height="160" fill="#f8fafc" stroke="#64748b" stroke-width="1" rx="8" />
+  <text x="160" y="95" font-size="14" font-weight="700" fill="#334155">서울 (Growth Engine)</text>
+  <text x="80" y="130" font-size="12" fill="#475569">● 핵심 키워드: 공급 부족, 똘똘한 한 채</text>
+  <text x="80" y="155" font-size="12" fill="#475569">● 주 수익원: 시세 차익 (Capital Gain)</text>
+  <text x="80" y="180" font-size="12" fill="#475569">● 리스크: 정책 변동성, 가계부채</text>
+  
+  <!-- Tokyo Section -->
+  <rect x="400" y="70" width="300" height="160" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="1" rx="8" />
+  <text x="495" y="95" font-size="14" font-weight="700" fill="#0369a1">도쿄 (Stability/Income)</text>
+  <text x="420" y="130" font-size="12" fill="#075985">● 핵심 키워드: 저금리 레버리지, 엔저</text>
+  <text x="420" y="155" font-size="12" fill="#075985">● 주 수익원: 임대 수익 (Income Gain)</text>
+  <text x="420" y="180" font-size="12" fill="#075985">● 리스크: 환율 변동성, 정책 금리 인상</text>
+  
+  <!-- Synergy Arrow -->
+  <path d="M360 150 L400 150" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead)" />
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+    </marker>
+  </defs>
+  <text x="380" y="250" font-size="12" font-weight="700" fill="#1e293b" text-anchor="middle">"서울의 가치 성장 + 도쿄의 현금 흐름 = 완전한 포트폴리오"</text>
+</svg>

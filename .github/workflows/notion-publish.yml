@@ -1,0 +1,298 @@
+name: Notion Publish Pipeline
+
+# CF Worker가 workflow_dispatch로 트리거
+on:
+  workflow_dispatch:
+    inputs:
+      notion_page_id:
+        description: "Notion 페이지 ID"
+        required: true
+        type: string
+      slug:
+        description: "포스트 slug (파일명)"
+        required: true
+        type: string
+      blog_id:
+        description: "블로그 ID (gsf-blog | wife-blog)"
+        required: false
+        default: "gsf-blog"
+        type: string
+
+env:
+  PNPM_VERSION: "9"
+  NODE_VERSION: "20"
+
+concurrency:
+  group: notion-publish-${{ inputs.notion_page_id }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      # ── 1. 체크아웃 ──────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 역동기화 diff용 full history 필요
+
+      # ── 2. Node.js + pnpm 설정 ───────────────────────────────────────
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Sanitize Slug and Check Existing
+        id: prep
+        env:
+          INPUT_SLUG: ${{ inputs.slug }}
+        run: |
+          # Slug 정규화: node.js 활용 (ubuntu-latest의 sed locale 문제 회피)
+          SAFE_SLUG=$(node -e "console.log(process.env.INPUT_SLUG.trim().replace(/ /g, '-').replace(/[^a-zA-Z0-9가-힣-]/g, '').toLowerCase())")
+          echo "safe_slug=${SAFE_SLUG}" >> $GITHUB_OUTPUT
+          
+          if [ -f "src/data/blog/ko/${SAFE_SLUG}.md" ]; then
+            echo "is_republish=true" >> $GITHUB_OUTPUT
+            echo "🔄 기존 KO 파일이 존재합니다. (재발행/번역 재요청 모드)"
+          else
+            echo "is_republish=false" >> $GITHUB_OUTPUT
+          fi
+
+      # ── 3. Notion → KO Markdown 변환 ─────────────────────────────────
+      - name: Convert Notion page to Markdown
+        id: convert
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
+        run: |
+          SAFE_SLUG="${{ steps.prep.outputs.safe_slug }}"
+          echo "📄 Notion 페이지 변환 시작: ${SAFE_SLUG}"
+          npx tsx scripts/notion-to-md.ts \
+            --page-id "${{ inputs.notion_page_id }}" \
+            --slug "${SAFE_SLUG}"
+
+          # voiceRewriteSkip 값 추출 (Notion property 기반)
+          SKIP=$(npx tsx -e "
+            import { loadPageMap } from './scripts/notion-to-md.ts';
+            // notion-to-md.ts가 .blog-agent-stage에 파일 저장 + 메타 출력
+            process.exit(0);
+          " 2>/dev/null; echo "false")
+
+          echo "voice_rewrite_skip=${SKIP}" >> $GITHUB_OUTPUT
+          echo "ko_file=.blog-agent-stage/${SAFE_SLUG}.ko.md" >> $GITHUB_OUTPUT
+
+      # ── 4. 이미지 Vercel Blob 업로드 ─────────────────────────────────
+      - name: Upload images to Vercel Blob
+        env:
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
+        run: |
+          echo "🖼️ 이미지 Blob 업로드 시작"
+          npx tsx scripts/notion-image-upload.ts \
+            --input ".blog-agent-stage/${{ steps.prep.outputs.safe_slug }}.ko.md"
+
+      # ── 5. Voice Rewrite — Pass 1 (조건부) ───────────────────────────
+      - name: Voice Rewrite (Pass 1, automated)
+        if: ${{ steps.convert.outputs.voice_rewrite_skip != 'true' && steps.prep.outputs.is_republish != 'true' }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          echo "✍️ GSF Voice Rewrite 실행 중..."
+          npx tsx scripts/voice-rewrite.ts \
+            --input ".blog-agent-stage/${{ steps.prep.outputs.safe_slug }}.ko.md" \
+            --automated
+
+      # ── 6. EN/JA 번역 — Pass 2 ───────────────────────────────────────
+      - name: Translate EN/JA (Pass 2)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          echo "🌐 EN/JA 번역 시작..."
+          npx tsx scripts/translate.ts \
+            --ko ".blog-agent-stage/${{ steps.prep.outputs.safe_slug }}.ko.md" \
+            --slug "${{ steps.prep.outputs.safe_slug }}"
+
+      # ── 7. Astro 빌드 검증 ───────────────────────────────────────────
+      - name: Validate with Astro build
+        run: |
+          echo "🔍 Astro 빌드 검증..."
+          pnpm build
+        env:
+          CONTENT_INTEGRITY_REQUIRE_SOURCES: "false"
+
+      # ── 8. feature branch push ───────────────────────────────────────
+      - name: Push to feature branch
+        id: push
+        run: |
+          BRANCH="notion/publish-${{ steps.prep.outputs.safe_slug }}-$(date +%Y%m%d%H%M%S)"
+          echo "branch_name=${BRANCH}" >> $GITHUB_OUTPUT
+
+          git config user.name "GSF Notion Bot"
+          git config user.email "bot@gsfark.com"
+          git checkout -b "${BRANCH}"
+          git add src/data/blog/
+          if git diff --staged --quiet; then
+            echo "⚠️ 변경 사항이 없습니다. (No changes to commit)"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            git commit -m "feat(notion): [${{ steps.prep.outputs.safe_slug }}] Notion 발행 파이프라인 자동 생성 (ko/en/ja)"
+            git push origin "${BRANCH}"
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+          echo "✅ feature branch push 완료: ${BRANCH}"
+
+      # ── 9. GitHub PR 생성 ────────────────────────────────────────────
+      - name: Create Pull Request
+        id: create_pr
+        if: ${{ steps.push.outputs.has_changes == 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR_URL=$(gh pr create \
+            --title "feat(notion): [${{ steps.prep.outputs.safe_slug }}] Notion 발행 파이프라인" \
+            --body "## Notion 발행 파이프라인 자동 생성
+
+          **slug**: \`${{ steps.prep.outputs.safe_slug }}\`
+          **Notion Page ID**: \`${{ inputs.notion_page_id }}\`
+          **Blog ID**: \`${{ inputs.blog_id }}\`
+
+          ### 파일 변경
+          - \`src/data/blog/ko/${{ steps.prep.outputs.safe_slug }}.md\`
+          - \`src/data/blog/en/${{ steps.prep.outputs.safe_slug }}.md\`
+          - \`src/data/blog/ja/${{ steps.prep.outputs.safe_slug }}.md\`
+
+          ### 발행 방법
+          Notion에서 status를 **발행승인**으로 변경하면 자동 merge됩니다." \
+            --head "${{ steps.push.outputs.branch_name }}" \
+            --base main)
+
+          PR_NUMBER=$(echo "$PR_URL" | grep -oE '[0-9]+$')
+          echo "pr_number=${PR_NUMBER}" >> $GITHUB_OUTPUT
+          echo "pr_url=${PR_URL}" >> $GITHUB_OUTPUT
+          echo "✅ PR 생성됨: ${PR_URL}"
+
+      # ── 9-B. Vercel Preview 직접 배포 ────────────────────────────────────
+      # 근본 원인: github-actions[bot]은 Vercel 팀 멤버가 아니어서
+      # Git Integration이 Preview를 자동 트리거하지 않음.
+      # 해결: vercel CLI로 Actions runner에서 직접 배포 → stdout에서 즉시 URL 취득 (폴링 불필요)
+      - name: Deploy to Vercel Preview (direct)
+        id: vercel_deploy
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: |
+          npm install -g vercel@latest
+
+          # 프로젝트 설정 pull (vercel.json 동기화)
+          vercel pull --yes --environment=preview --token=$VERCEL_TOKEN
+
+          # 빌드 아티팩트 생성 (.vercel/output/)
+          vercel build --token=$VERCEL_TOKEN
+
+          # Preview 배포 — stdout에 URL 1줄 동기 출력 (폴링 0초)
+          PREVIEW_URL=$(vercel deploy --prebuilt --token=$VERCEL_TOKEN 2>/dev/null)
+
+          if [[ ! "$PREVIEW_URL" =~ ^https:// ]]; then
+            echo "⚠️ Vercel URL 파싱 실패, PR URL로 fallback"
+            PREVIEW_URL="${{ steps.create_pr.outputs.pr_url }}"
+          fi
+
+          echo "✅ Preview URL: $PREVIEW_URL"
+          echo "preview_url=$PREVIEW_URL" >> $GITHUB_OUTPUT
+
+      # ── 10. Preview URL → Notion 기록 + Comment ──────────────────────────
+      - name: Write Preview URL to Notion + Comment
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        run: |
+          PAGE_ID="${{ inputs.notion_page_id }}"
+          PREVIEW_URL="${{ steps.vercel_deploy.outputs.preview_url }}"
+
+          # 1) previewUrl property + status 업데이트
+          PATCH_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            -X PATCH "https://api.notion.com/v1/pages/${PAGE_ID}" \
+            -H "Authorization: Bearer ${NOTION_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -H "Notion-Version: 2022-06-28" \
+            -d "{\"properties\":{\"previewUrl\":{\"url\":\"${PREVIEW_URL}\"},\"status\":{\"select\":{\"name\":\"발행승인대기\"}}}}")
+
+          echo "Notion PATCH status: $PATCH_STATUS"
+          if [[ "$PATCH_STATUS" != "200" ]]; then
+            echo "❌ Notion PATCH 실패 (HTTP $PATCH_STATUS)"
+            exit 1
+          fi
+
+          # 2) 페이지 레벨 Comment 추가
+          # 사전 조건: developers.notion.com → Integration → Capabilities → 'Insert comments' 활성화 필요
+          COMMENT_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            -X POST "https://api.notion.com/v1/comments" \
+            -H "Authorization: Bearer ${NOTION_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -H "Notion-Version: 2022-06-28" \
+            -d "{\"parent\":{\"page_id\":\"${PAGE_ID}\"},\"rich_text\":[{\"type\":\"text\",\"text\":{\"content\":\"✅ Preview 준비됨: ${PREVIEW_URL}\n\n발행 승인 시 Notion에서 status를 '발행승인'으로 변경해주세요.\"}}]}")
+
+          echo "Notion Comment status: $COMMENT_STATUS"
+          if [[ "$COMMENT_STATUS" == "403" ]]; then
+            echo "⚠️  Notion Comment 403 — Integration 'Insert comments' capability 미활성화"
+            echo "    해결: developers.notion.com → 해당 Integration → Capabilities → Insert comments 활성화"
+          elif [[ "$COMMENT_STATUS" != "200" ]]; then
+            echo "⚠️  Notion Comment 전송 실패 (HTTP $COMMENT_STATUS) — previewUrl은 이미 기록됨"
+          else
+            echo "✅ Notion Comment 전송 완료"
+          fi
+
+          echo "✅ Notion 업데이트 완료 (previewUrl 기록 완료)"
+
+      # ── 11. 실패 시 Notion 알림 ──────────────────────────────────────
+      - name: Notify failure to Notion
+        if: failure()
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        run: |
+          PAGE_ID="${{ inputs.notion_page_id }}"
+          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
+          ERROR_MSG="발행 파이프라인 실패. Github Actions 로그를 확인해주세요."
+          if [ -f "upload_error.log" ]; then
+            # 파일 내용을 한 줄로 만들고, 쌍따옴표를 이스케이프
+            ERROR_MSG=$(cat upload_error.log | tr '\n' ' ' | sed 's/"/\\"/g')
+          fi
+
+          # status를 오류(발행실패) 및 previewUrl에 에러 로그 기록
+          curl -s -X PATCH "https://api.notion.com/v1/pages/${PAGE_ID}" \
+            -H "Authorization: Bearer ${NOTION_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -H "Notion-Version: 2022-06-28" \
+            -d "{\"properties\":{\"status\":{\"select\":{\"name\":\"발행실패\"}},\"previewUrl\":{\"url\":\"${RUN_URL}\"}}}"
+          
+          # 에러 코멘트 남기기 (권한 부족시 실패할 수 있음)
+          curl -s -X POST "https://api.notion.com/v1/comments" \
+            -H "Authorization: Bearer ${NOTION_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -H "Notion-Version: 2022-06-28" \
+            -d "{\"parent\":{\"page_id\":\"${PAGE_ID}\"},\"rich_text\":[{\"type\":\"text\",\"text\":{\"content\":\"❌ ${ERROR_MSG}\"}}]}"
+
+      - name: Upload Error Log Artifact
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: error-logs
+          path: upload_error.log
+          if-no-files-found: ignore

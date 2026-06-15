@@ -1,0 +1,31 @@
+{
+  "title": "GSF-Blog 뉴스레터·댓글·클러스터·교차게시 4대 업그레이드",
+  "summary": "전략 보고서(경쟁사 분석) 기반 4대 확정 항목 구현 기록. Q1 Buttondown 뉴스레터(NewsletterForm.astro), Q4 Giscus 댓글(GiscusComments.astro) 코드 완료. Q2 도쿄부동산 콘텐츠 클러스터 전략, Q3 교차 게시 SOP 문서화 완료. 브랜치: feat/newsletter-giscus-upgrade.",
+  "eventType": "architecture_change",
+  "createdAt": "2026-04-27T10:38:00+09:00",
+  "references": [
+    {
+      "type": "conversation",
+      "id": "37c3d636-dbc0-4fa2-bb2e-86a46e091450",
+      "title": "GSF-Blog 4대 전략 업그레이드 구현"
+    },
+    {
+      "type": "conversation",
+      "id": "169a2558-3049-4936-8f7e-31921492a7bf",
+      "title": "GSF-Blog 경쟁사 분석 보고서 (원본)"
+    },
+    {
+      "type": "file",
+      "path": "GSF-Blog/src/components/NewsletterForm.astro"
+    },
+    {
+      "type": "file",
+      "path": "GSF-Blog/src/components/GiscusComments.astro"
+    },
+    {
+      "type": "branch",
+      "repo": "asiaunion/GSF-Blog",
+      "name": "feat/newsletter-giscus-upgrade"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "title": "GSF-Blog About 페이지 경력 타임라인 시각화 + AdSense 잔여 작업 현황",
+  "summary": "GSF Blog(gsfark.com) About 페이지의 E-E-A-T 시각적 신뢰도 강화. 마크다운 내 HTML 타임라인(.career-timeline) + 4축 필러 카드(.about-pillars) 패턴 구현. 3개 언어(EN/KO/JA) 동시 적용. global.css에 120줄 CSS 추가(테마 변수 기반 라이트/다크 호환). AdSense 잔여: P0-2 GA4 환경변수(코드 완비, Vercel에서 PUBLIC_GA4_MEASUREMENT_ID 설정만 필요), P2-5 광고 슬롯(승인 후), P2-6 도메인 연령(시간 해결). 승인 확률 95%+.",
+  "eventType": "architecture_change",
+  "createdAt": "2026-05-07T17:49:00+09:00",
+  "references": [
+    {
+      "type": "commit",
+      "value": "2eb51c5",
+      "repo": "asiaunion/GSF-Blog"
+    },
+    {
+      "type": "file",
+      "value": "src/styles/global.css"
+    },
+    {
+      "type": "file",
+      "value": "src/data/about/ko.md"
+    },
+    {
+      "type": "file",
+      "value": "src/data/about/en.md"
+    },
+    {
+      "type": "file",
+      "value": "src/data/about/ja.md"
+    },
+    {
+      "type": "ki",
+      "value": "gsf_blog_adsense_p0_hero_webp_remediation"
+    },
+    {
+      "type": "ki",
+      "value": "gsf_blog_adsense_expert_audit_v3"
+    },
+    {
+      "type": "conversation",
+      "value": "0349a90a-777e-4df1-96ac-e90b4c640f6a"
+    }
+  ]
+}

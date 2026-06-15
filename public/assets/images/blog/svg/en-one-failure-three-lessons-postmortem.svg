@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-label="The Iceberg of Hidden Costs in Japan Real Estate" style="max-width:100%;height:auto;border:1px solid #e5e7eb;border-radius:8px;background:#fff;margin: 20px 0;">
+  <!-- Water Line -->
+  <rect x="0" y="100" width="760" height="200" fill="#eff6ff" />
+  <line x1="0" y1="100" x2="760" y2="100" stroke="#3b82f6" stroke-width="2" stroke-dasharray="5,5" />
+  
+  <!-- Iceberg Top -->
+  <path d="M380 30 L450 100 L310 100 Z" fill="#fff" stroke="#94a3b8" />
+  <text x="380" y="85" font-size="14" font-weight="700" fill="#1e293b" text-anchor="middle">Gross Yield (Visible)</text>
+  
+  <!-- Iceberg Bottom -->
+  <path d="M310 100 L250 250 L510 250 L450 100 Z" fill="#d1d5db" stroke="#94a3b8" />
+  <text x="380" y="140" font-size="12" fill="#475569" text-anchor="middle">● Maintenance Fee Spikes (15-year cycle)</text>
+  <text x="380" y="170" font-size="12" fill="#475569" text-anchor="middle">● Restoration Costs (Tenant Exit)</text>
+  <text x="380" y="200" font-size="12" fill="#475569" text-anchor="middle">● Tax Agent &amp; Management Fees</text>
+  <text x="380" y="230" font-size="12" fill="#475569" text-anchor="middle">● Non-resident Withholding Tax (20.42%)</text>
+  
+  <text x="380" y="280" font-size="14" font-weight="700" fill="#ef4444" text-anchor="middle">Real Net Yield = 60-70% of Advertised Gross Yield</text>
+</svg>

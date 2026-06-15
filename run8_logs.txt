@@ -1,0 +1,1358 @@
+﻿2026-05-31T16:24:04.8311111Z Current runner version: '2.334.0'
+2026-05-31T16:24:04.8335252Z ##[group]Runner Image Provisioner
+2026-05-31T16:24:04.8336654Z Hosted Compute Agent
+2026-05-31T16:24:04.8337298Z Version: 20260520.533
+2026-05-31T16:24:04.8338265Z Commit: 189110e25284a9812c124fd27b339e2fb4f2f9db
+2026-05-31T16:24:04.8339328Z Build Date: 2026-05-20T17:44:04Z
+2026-05-31T16:24:04.8340051Z Worker ID: {4b3c748c-9b5b-40e8-9b51-1838451a7c0a}
+2026-05-31T16:24:04.8340940Z Azure Region: westcentralus
+2026-05-31T16:24:04.8341595Z ##[endgroup]
+2026-05-31T16:24:04.8343185Z ##[group]Operating System
+2026-05-31T16:24:04.8343947Z Ubuntu
+2026-05-31T16:24:04.8344558Z 24.04.4
+2026-05-31T16:24:04.8345158Z LTS
+2026-05-31T16:24:04.8345735Z ##[endgroup]
+2026-05-31T16:24:04.8346395Z ##[group]Runner Image
+2026-05-31T16:24:04.8347137Z Image: ubuntu-24.04
+2026-05-31T16:24:04.8347796Z Version: 20260525.161.1
+2026-05-31T16:24:04.8349347Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260525.161/images/ubuntu/Ubuntu2404-Readme.md
+2026-05-31T16:24:04.8351078Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260525.161
+2026-05-31T16:24:04.8352116Z ##[endgroup]
+2026-05-31T16:24:04.8353434Z ##[group]GITHUB_TOKEN Permissions
+2026-05-31T16:24:04.8355582Z Contents: read
+2026-05-31T16:24:04.8356295Z Metadata: read
+2026-05-31T16:24:04.8356888Z Packages: read
+2026-05-31T16:24:04.8357553Z ##[endgroup]
+2026-05-31T16:24:04.8359925Z Secret source: Actions
+2026-05-31T16:24:04.8360843Z Prepare workflow directory
+2026-05-31T16:24:04.8762271Z Prepare all required actions
+2026-05-31T16:24:04.8799168Z Getting action download info
+2026-05-31T16:24:05.2937781Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-05-31T16:24:05.4179857Z Download action repository 'pnpm/action-setup@v4' (SHA:b906affcce14559ad1aafd4ab0e942779e9f58b1)
+2026-05-31T16:24:06.2062218Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-05-31T16:24:06.4153413Z Complete job name: publish
+2026-05-31T16:24:06.4959078Z ##[group]Run actions/checkout@v4
+2026-05-31T16:24:06.4960121Z with:
+2026-05-31T16:24:06.4960634Z   fetch-depth: 0
+2026-05-31T16:24:06.4961213Z   repository: asiaunion/GSF-Blog
+2026-05-31T16:24:06.4965631Z   token: ***
+2026-05-31T16:24:06.4966127Z   ssh-strict: true
+2026-05-31T16:24:06.4966637Z   ssh-user: git
+2026-05-31T16:24:06.4967155Z   persist-credentials: true
+2026-05-31T16:24:06.4967717Z   clean: true
+2026-05-31T16:24:06.4968672Z   sparse-checkout-cone-mode: true
+2026-05-31T16:24:06.4969297Z   fetch-tags: false
+2026-05-31T16:24:06.4969824Z   show-progress: true
+2026-05-31T16:24:06.4970363Z   lfs: false
+2026-05-31T16:24:06.4970848Z   submodules: false
+2026-05-31T16:24:06.4971379Z   set-safe-directory: true
+2026-05-31T16:24:06.4972253Z env:
+2026-05-31T16:24:06.4972736Z   PNPM_VERSION: 9
+2026-05-31T16:24:06.4973268Z   NODE_VERSION: 20
+2026-05-31T16:24:06.4973777Z ##[endgroup]
+2026-05-31T16:24:06.6094983Z Syncing repository: asiaunion/GSF-Blog
+2026-05-31T16:24:06.6097292Z ##[group]Getting Git version info
+2026-05-31T16:24:06.6098381Z Working directory is '/home/runner/work/GSF-Blog/GSF-Blog'
+2026-05-31T16:24:06.6099564Z [command]/usr/bin/git version
+2026-05-31T16:24:06.6173909Z git version 2.54.0
+2026-05-31T16:24:06.6199855Z ##[endgroup]
+2026-05-31T16:24:06.6214023Z Temporarily overriding HOME='/home/runner/work/_temp/2ecd48e1-72e7-4195-8fbf-9c3dc5073e7b' before making global git config changes
+2026-05-31T16:24:06.6215668Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-31T16:24:06.6226171Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/GSF-Blog/GSF-Blog
+2026-05-31T16:24:06.6272406Z Deleting the contents of '/home/runner/work/GSF-Blog/GSF-Blog'
+2026-05-31T16:24:06.6282804Z ##[group]Initializing the repository
+2026-05-31T16:24:06.6287500Z [command]/usr/bin/git init /home/runner/work/GSF-Blog/GSF-Blog
+2026-05-31T16:24:06.6484966Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-05-31T16:24:06.6487218Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-05-31T16:24:06.6489359Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-05-31T16:24:06.6490971Z hint: call:
+2026-05-31T16:24:06.6491859Z hint:
+2026-05-31T16:24:06.6493216Z hint: 	git config --global init.defaultBranch <name>
+2026-05-31T16:24:06.6494003Z hint:
+2026-05-31T16:24:06.6494693Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-05-31T16:24:06.6495750Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-05-31T16:24:06.6496615Z hint:
+2026-05-31T16:24:06.6497164Z hint: 	git branch -m <name>
+2026-05-31T16:24:06.6498452Z hint:
+2026-05-31T16:24:06.6499422Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-05-31T16:24:06.6500610Z Initialized empty Git repository in /home/runner/work/GSF-Blog/GSF-Blog/.git/
+2026-05-31T16:24:06.6505106Z [command]/usr/bin/git remote add origin https://github.com/asiaunion/GSF-Blog
+2026-05-31T16:24:06.6545684Z ##[endgroup]
+2026-05-31T16:24:06.6546607Z ##[group]Disabling automatic garbage collection
+2026-05-31T16:24:06.6550042Z [command]/usr/bin/git config --local gc.auto 0
+2026-05-31T16:24:06.6580065Z ##[endgroup]
+2026-05-31T16:24:06.6581760Z ##[group]Setting up auth
+2026-05-31T16:24:06.6587767Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-31T16:24:06.6620960Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-31T16:24:06.6952018Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-31T16:24:06.6983227Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-31T16:24:06.7195795Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-31T16:24:06.7226390Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-31T16:24:06.7450572Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-05-31T16:24:06.7493293Z ##[endgroup]
+2026-05-31T16:24:06.7501788Z ##[group]Fetching the repository
+2026-05-31T16:24:06.7503163Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-05-31T16:24:09.0030505Z From https://github.com/asiaunion/GSF-Blog
+2026-05-31T16:24:09.0033166Z  * [new branch]      feat/admin-cms-p4          -> origin/feat/admin-cms-p4
+2026-05-31T16:24:09.0034791Z  * [new branch]      feat/cms-ux-upgrade        -> origin/feat/cms-ux-upgrade
+2026-05-31T16:24:09.0036188Z  * [new branch]      feat/fact-audit-wave-a     -> origin/feat/fact-audit-wave-a
+2026-05-31T16:24:09.0037153Z  * [new branch]      feat/ginza-walk            -> origin/feat/ginza-walk
+2026-05-31T16:24:09.0038629Z  * [new branch]      feat/improve-macro-barrier-blog -> origin/feat/improve-macro-barrier-blog
+2026-05-31T16:24:09.0040197Z  * [new branch]      feat/newsletter-giscus-upgrade -> origin/feat/newsletter-giscus-upgrade
+2026-05-31T16:24:09.0041971Z  * [new branch]      feat/tokyo-infographic-astro-components -> origin/feat/tokyo-infographic-astro-components
+2026-05-31T16:24:09.0043530Z  * [new branch]      feat/tokyo-real-estate-ch3-ch4 -> origin/feat/tokyo-real-estate-ch3-ch4
+2026-05-31T16:24:09.0044790Z  * [new branch]      feat/toolbar-commands-fix  -> origin/feat/toolbar-commands-fix
+2026-05-31T16:24:09.0045830Z  * [new branch]      main                       -> origin/main
+2026-05-31T16:24:09.0118711Z  * [new tag]         v-approved-20260518-strikethrough-fix -> v-approved-20260518-strikethrough-fix
+2026-05-31T16:24:09.0120907Z  * [new tag]         v-approved-20260522-improved-ui -> v-approved-20260522-improved-ui
+2026-05-31T16:24:09.0122237Z  * [new tag]         v-approved-20260522-p0-p5-complete -> v-approved-20260522-p0-p5-complete
+2026-05-31T16:24:09.0123630Z  * [new tag]         v-approved-20260522-p1-p2-complete -> v-approved-20260522-p1-p2-complete
+2026-05-31T16:24:09.0125078Z  * [new tag]         v-approved-20260522-pre-p0 -> v-approved-20260522-pre-p0
+2026-05-31T16:24:09.0126282Z  * [new tag]         v-approved-20260522-pre-p1 -> v-approved-20260522-pre-p1
+2026-05-31T16:24:09.0127496Z  * [new tag]         v-approved-20260522-pre-p2 -> v-approved-20260522-pre-p2
+2026-05-31T16:24:09.0129042Z  * [new tag]         v-approved-20260522-pre-p5 -> v-approved-20260522-pre-p5
+2026-05-31T16:24:09.0130573Z  * [new tag]         v-approved-20260523-fix-tokyo-cost-stack-chart -> v-approved-20260523-fix-tokyo-cost-stack-chart
+2026-05-31T16:24:09.0132290Z  * [new tag]         v-approved-20260530-admin-cms-final -> v-approved-20260530-admin-cms-final
+2026-05-31T16:24:09.0133954Z  * [new tag]         v-approved-20260530-admin-cms-instant-post -> v-approved-20260530-admin-cms-instant-post
+2026-05-31T16:24:09.0135738Z  * [new tag]         v-approved-20260530-admin-cms-p1-complete -> v-approved-20260530-admin-cms-p1-complete
+2026-05-31T16:24:09.0137481Z  * [new tag]         v-approved-20260530-admin-cms-p2-complete -> v-approved-20260530-admin-cms-p2-complete
+2026-05-31T16:24:09.0139853Z  * [new tag]         v-approved-20260530-admin-cms-p3-complete -> v-approved-20260530-admin-cms-p3-complete
+2026-05-31T16:24:09.0141354Z  * [new tag]         v-approved-20260530-admin-cms-p4-complete -> v-approved-20260530-admin-cms-p4-complete
+2026-05-31T16:24:09.0142360Z  * [new tag]         v-approved-20260530-admin-design-unification -> v-approved-20260530-admin-design-unification
+2026-05-31T16:24:09.0143979Z  * [new tag]         v-approved-20260530-admin-memo-expansion -> v-approved-20260530-admin-memo-expansion
+2026-05-31T16:24:09.0145879Z  * [new tag]         v-approved-20260530-admin-ux-overhaul -> v-approved-20260530-admin-ux-overhaul
+2026-05-31T16:24:09.0147711Z  * [new tag]         v-approved-20260530-modal-transparency-fixed -> v-approved-20260530-modal-transparency-fixed
+2026-05-31T16:24:09.0149823Z  * [new tag]         v-approved-20260530-phase-cd-fixes -> v-approved-20260530-phase-cd-fixes
+2026-05-31T16:24:09.0152239Z [command]/usr/bin/git branch --list --remote origin/main
+2026-05-31T16:24:09.0164295Z   origin/main
+2026-05-31T16:24:09.0174501Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-05-31T16:24:09.0195859Z 146c93554fc12d56dd2d6196b6ae627376063684
+2026-05-31T16:24:09.0202021Z ##[endgroup]
+2026-05-31T16:24:09.0203184Z ##[group]Determining the checkout info
+2026-05-31T16:24:09.0203959Z ##[endgroup]
+2026-05-31T16:24:09.0207538Z [command]/usr/bin/git sparse-checkout disable
+2026-05-31T16:24:09.0252205Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-05-31T16:24:09.0277319Z ##[group]Checking out the ref
+2026-05-31T16:24:09.0281722Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-05-31T16:24:09.1767824Z Switched to a new branch 'main'
+2026-05-31T16:24:09.1770529Z branch 'main' set up to track 'origin/main'.
+2026-05-31T16:24:09.1789270Z ##[endgroup]
+2026-05-31T16:24:09.1850046Z [command]/usr/bin/git log -1 --format=%H
+2026-05-31T16:24:09.1877074Z 146c93554fc12d56dd2d6196b6ae627376063684
+2026-05-31T16:24:09.2096811Z ##[group]Run pnpm/action-setup@v4
+2026-05-31T16:24:09.2097266Z with:
+2026-05-31T16:24:09.2097561Z   version: 9
+2026-05-31T16:24:09.2098165Z   dest: ~/setup-pnpm
+2026-05-31T16:24:09.2098544Z   run_install: null
+2026-05-31T16:24:09.2098859Z   cache: false
+2026-05-31T16:24:09.2099220Z   cache_dependency_path: pnpm-lock.yaml
+2026-05-31T16:24:09.2099651Z   package_json_file: package.json
+2026-05-31T16:24:09.2100032Z   standalone: false
+2026-05-31T16:24:09.2100349Z env:
+2026-05-31T16:24:09.2100641Z   PNPM_VERSION: 9
+2026-05-31T16:24:09.2101157Z   NODE_VERSION: 20
+2026-05-31T16:24:09.2101478Z ##[endgroup]
+2026-05-31T16:24:09.3519431Z ##[group]Running self-installer...
+2026-05-31T16:24:10.0222772Z Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-05-31T16:24:10.0380525Z Packages: +1
+2026-05-31T16:24:10.0436555Z +
+2026-05-31T16:24:10.4868518Z Progress: resolved 1, reused 0, downloaded 1, added 1, done
+2026-05-31T16:24:10.5162687Z 
+2026-05-31T16:24:10.5163212Z dependencies:
+2026-05-31T16:24:10.5164102Z + pnpm 9.15.9 (11.5.0 is available)
+2026-05-31T16:24:10.5164787Z 
+2026-05-31T16:24:10.5191210Z Done in 994ms
+2026-05-31T16:24:10.5347493Z ##[endgroup]
+2026-05-31T16:24:10.5352661Z Installation Completed!
+2026-05-31T16:24:10.5510522Z ##[group]Run actions/setup-node@v4
+2026-05-31T16:24:10.5510820Z with:
+2026-05-31T16:24:10.5511024Z   node-version: 20
+2026-05-31T16:24:10.5511236Z   cache: pnpm
+2026-05-31T16:24:10.5511442Z   always-auth: false
+2026-05-31T16:24:10.5511670Z   check-latest: false
+2026-05-31T16:24:10.5514424Z   token: ***
+2026-05-31T16:24:10.5514642Z env:
+2026-05-31T16:24:10.5514832Z   PNPM_VERSION: 9
+2026-05-31T16:24:10.5515038Z   NODE_VERSION: 20
+2026-05-31T16:24:10.5515311Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-05-31T16:24:10.5515620Z ##[endgroup]
+2026-05-31T16:24:10.7312204Z Attempting to download 20...
+2026-05-31T16:24:11.6325875Z Acquiring 20.20.2 - x64 from https://github.com/actions/node-versions/releases/download/20.20.2-23521894959/node-20.20.2-linux-x64.tar.gz
+2026-05-31T16:24:12.3354986Z Extracting ...
+2026-05-31T16:24:12.3465757Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/e7998a94-b897-416f-ab60-472083ce2936 -f /home/runner/work/_temp/49ab2f3c-3a99-4754-bf01-93b841f09440
+2026-05-31T16:24:13.3177739Z Adding to the cache ...
+2026-05-31T16:24:15.1909216Z ##[group]Environment details
+2026-05-31T16:24:15.4078812Z node: v20.20.2
+2026-05-31T16:24:15.4079227Z npm: 10.8.2
+2026-05-31T16:24:15.4079552Z yarn: 1.22.22
+2026-05-31T16:24:15.4080144Z ##[endgroup]
+2026-05-31T16:24:15.4101125Z [command]/home/runner/setup-pnpm/node_modules/.bin/pnpm store path --silent
+2026-05-31T16:24:15.7833085Z /home/runner/setup-pnpm/node_modules/.bin/store/v3
+2026-05-31T16:24:15.9679321Z pnpm cache is not found
+2026-05-31T16:24:15.9824735Z ##[group]Run pnpm install --frozen-lockfile
+2026-05-31T16:24:15.9825154Z [36;1mpnpm install --frozen-lockfile[0m
+2026-05-31T16:24:15.9855765Z shell: /usr/bin/bash -e {0}
+2026-05-31T16:24:15.9856043Z env:
+2026-05-31T16:24:15.9856246Z   PNPM_VERSION: 9
+2026-05-31T16:24:15.9856470Z   NODE_VERSION: 20
+2026-05-31T16:24:15.9856756Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-05-31T16:24:15.9857085Z ##[endgroup]
+2026-05-31T16:24:16.4372939Z Lockfile is up to date, resolution step is skipped
+2026-05-31T16:24:16.5411632Z Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-05-31T16:24:16.6746918Z Packages: +878
+2026-05-31T16:24:16.6748733Z ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-05-31T16:24:17.5445922Z Progress: resolved 878, reused 0, downloaded 162, added 162
+2026-05-31T16:24:18.5435882Z Progress: resolved 878, reused 0, downloaded 354, added 349
+2026-05-31T16:24:19.5438856Z Progress: resolved 878, reused 0, downloaded 606, added 606
+2026-05-31T16:24:20.5449814Z Progress: resolved 878, reused 0, downloaded 829, added 828
+2026-05-31T16:24:21.2279520Z Progress: resolved 878, reused 0, downloaded 878, added 878, done
+2026-05-31T16:24:21.6203699Z .../sharp@0.34.5/node_modules/sharp install$ node install/check.js || npm run build
+2026-05-31T16:24:21.6211799Z .../esbuild@0.25.12/node_modules/esbuild postinstall$ node install.js
+2026-05-31T16:24:21.6332377Z .../esbuild@0.27.7/node_modules/esbuild postinstall$ node install.js
+2026-05-31T16:24:21.6906028Z .../esbuild@0.27.7/node_modules/esbuild postinstall: Done
+2026-05-31T16:24:21.6927802Z .../esbuild@0.25.12/node_modules/esbuild postinstall: Done
+2026-05-31T16:24:21.7108554Z .../sharp@0.34.5/node_modules/sharp install: Done
+2026-05-31T16:24:21.9926793Z 
+2026-05-31T16:24:21.9927368Z dependencies:
+2026-05-31T16:24:21.9927836Z + @astrojs/mdx 5.0.6
+2026-05-31T16:24:21.9928494Z + @astrojs/react 5.0.6
+2026-05-31T16:24:21.9928779Z + @astrojs/rss 4.0.18
+2026-05-31T16:24:21.9929079Z + @astrojs/sitemap 3.7.2
+2026-05-31T16:24:21.9929360Z + @astrojs/vercel 9.0.5
+2026-05-31T16:24:21.9929620Z + @libsql/client 0.17.3
+2026-05-31T16:24:21.9929872Z + @milkdown/crepe 7.21.1
+2026-05-31T16:24:21.9930137Z + @milkdown/kit 7.21.1
+2026-05-31T16:24:21.9930386Z + @notionhq/client 2.3.0
+2026-05-31T16:24:21.9930655Z + @pagefind/default-ui 1.5.2
+2026-05-31T16:24:21.9931963Z + @resvg/resvg-js 2.6.2
+2026-05-31T16:24:21.9932430Z + @tailwindcss/vite 4.2.2
+2026-05-31T16:24:21.9932840Z + @vercel/analytics 2.0.1
+2026-05-31T16:24:21.9933271Z + @vercel/blob 2.4.0
+2026-05-31T16:24:21.9933609Z + arctic 3.7.0
+2026-05-31T16:24:21.9933996Z + astro 5.18.1
+2026-05-31T16:24:21.9934340Z + dayjs 1.11.20
+2026-05-31T16:24:21.9934698Z + dompurify 3.4.7
+2026-05-31T16:24:21.9935094Z + gray-matter 4.0.3
+2026-05-31T16:24:21.9935452Z + jose 6.2.3
+2026-05-31T16:24:21.9935814Z + lodash.kebabcase 4.1.1
+2026-05-31T16:24:21.9936221Z + pagefind 1.5.2
+2026-05-31T16:24:21.9936639Z + pdfjs-dist 5.7.284
+2026-05-31T16:24:21.9937045Z + react 19.2.6
+2026-05-31T16:24:21.9937455Z + react-dom 19.2.6
+2026-05-31T16:24:21.9937874Z + react-markdown 10.1.0
+2026-05-31T16:24:21.9938642Z + remark-collapse 0.1.2
+2026-05-31T16:24:21.9939094Z + remark-gfm 4.0.1
+2026-05-31T16:24:21.9939551Z + remark-toc 9.0.0
+2026-05-31T16:24:21.9939944Z + satori 0.18.4
+2026-05-31T16:24:21.9940333Z + sharp 0.34.5
+2026-05-31T16:24:21.9940718Z + slugify 1.6.9
+2026-05-31T16:24:21.9941133Z + tailwindcss 4.2.2
+2026-05-31T16:24:21.9941538Z + zod 4.4.3
+2026-05-31T16:24:21.9941742Z 
+2026-05-31T16:24:21.9941906Z devDependencies:
+2026-05-31T16:24:21.9942331Z + @astrojs/check 0.9.8
+2026-05-31T16:24:21.9942821Z + @shikijs/transformers 3.23.0
+2026-05-31T16:24:21.9943379Z + @tailwindcss/typography 0.5.19
+2026-05-31T16:24:21.9943951Z + @types/lodash.kebabcase 4.1.9
+2026-05-31T16:24:21.9944533Z + @typescript-eslint/parser 8.58.2
+2026-05-31T16:24:21.9945003Z + eslint 9.39.4
+2026-05-31T16:24:21.9945431Z + eslint-plugin-astro 1.7.0
+2026-05-31T16:24:21.9945868Z + globals 16.5.0
+2026-05-31T16:24:21.9946543Z + prettier 3.8.3
+2026-05-31T16:24:21.9947051Z + prettier-plugin-astro 0.14.1
+2026-05-31T16:24:21.9947654Z + prettier-plugin-tailwindcss 0.7.2
+2026-05-31T16:24:21.9951454Z + typescript 5.9.3
+2026-05-31T16:24:21.9952023Z + typescript-eslint 8.58.2
+2026-05-31T16:24:21.9952349Z 
+2026-05-31T16:24:22.0286779Z Done in 6s using pnpm v9.15.9
+2026-05-31T16:24:22.0623784Z ##[group]Run echo "📄 Notion 페이지 변환 시작: why-warm-investing-holds"
+2026-05-31T16:24:22.0624344Z [36;1mecho "📄 Notion 페이지 변환 시작: why-warm-investing-holds"[0m
+2026-05-31T16:24:22.0624742Z [36;1mnpx tsx scripts/notion-to-md.ts \[0m
+2026-05-31T16:24:22.0625111Z [36;1m  --page-id "3719ded2-8b0f-81e1-9a53-d1273f2db78a" \[0m
+2026-05-31T16:24:22.0625491Z [36;1m  --slug "why-warm-investing-holds"[0m
+2026-05-31T16:24:22.0625809Z [36;1m[0m
+2026-05-31T16:24:22.0646939Z [36;1m# voiceRewriteSkip 값 추출 (Notion property 기반)[0m
+2026-05-31T16:24:22.0647543Z [36;1mSKIP=$(npx tsx -e "[0m
+2026-05-31T16:24:22.0648350Z [36;1m  import { loadPageMap } from './scripts/notion-to-md.ts';[0m
+2026-05-31T16:24:22.0648895Z [36;1m  // notion-to-md.ts가 .blog-agent-stage에 파일 저장 + 메타 출력[0m
+2026-05-31T16:24:22.0649291Z [36;1m  process.exit(0);[0m
+2026-05-31T16:24:22.0649554Z [36;1m" 2>/dev/null; echo "false")[0m
+2026-05-31T16:24:22.0649828Z [36;1m[0m
+2026-05-31T16:24:22.0650154Z [36;1mecho "voice_rewrite_skip=${SKIP}" >> $GITHUB_OUTPUT[0m
+2026-05-31T16:24:22.0650674Z [36;1mecho "ko_file=.blog-agent-stage/why-warm-investing-holds.ko.md" >> $GITHUB_OUTPUT[0m
+2026-05-31T16:24:22.0676804Z shell: /usr/bin/bash -e {0}
+2026-05-31T16:24:22.0677109Z env:
+2026-05-31T16:24:22.0677305Z   PNPM_VERSION: 9
+2026-05-31T16:24:22.0677517Z   NODE_VERSION: 20
+2026-05-31T16:24:22.0677793Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-05-31T16:24:22.0678816Z   NOTION_TOKEN: ***
+2026-05-31T16:24:22.0679112Z   NOTION_DATABASE_ID: ***
+2026-05-31T16:24:22.0679526Z   BLOB_READ_WRITE_TOKEN: ***
+2026-05-31T16:24:22.0679772Z ##[endgroup]
+2026-05-31T16:24:22.0729293Z 📄 Notion 페이지 변환 시작: why-warm-investing-holds
+2026-05-31T16:24:24.6796366Z npm warn exec The following package was not found and will be installed: tsx@4.22.4
+2026-05-31T16:24:26.8109977Z ✅ 저장됨: /home/runner/work/GSF-Blog/GSF-Blog/.blog-agent-stage/why-warm-investing-holds.ko.md
+2026-05-31T16:24:26.8111224Z 📄 slug: why-warm-investing-holds
+2026-05-31T16:24:26.8111947Z 📝 voiceRewriteSkip: true
+2026-05-31T16:24:29.8641139Z ##[group]Run echo "🖼️ 이미지 Blob 업로드 시작"
+2026-05-31T16:24:29.8641509Z [36;1mecho "🖼️ 이미지 Blob 업로드 시작"[0m
+2026-05-31T16:24:29.8641838Z [36;1mnpx tsx scripts/notion-image-upload.ts \[0m
+2026-05-31T16:24:29.8642271Z [36;1m  --input ".blog-agent-stage/why-warm-investing-holds.ko.md"[0m
+2026-05-31T16:24:29.8667825Z shell: /usr/bin/bash -e {0}
+2026-05-31T16:24:29.8668271Z env:
+2026-05-31T16:24:29.8668471Z   PNPM_VERSION: 9
+2026-05-31T16:24:29.8668690Z   NODE_VERSION: 20
+2026-05-31T16:24:29.8668965Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-05-31T16:24:29.8669568Z   BLOB_READ_WRITE_TOKEN: ***
+2026-05-31T16:24:29.8669815Z ##[endgroup]
+2026-05-31T16:24:29.8717015Z 🖼️ 이미지 Blob 업로드 시작
+2026-05-31T16:24:32.7387829Z 🖼️ (Stub) Image upload logic skipped for now.
+2026-05-31T16:24:32.7659025Z ##[group]Run echo "✍️ GSF Voice Rewrite 실행 중..."
+2026-05-31T16:24:32.7659445Z [36;1mecho "✍️ GSF Voice Rewrite 실행 중..."[0m
+2026-05-31T16:24:32.7659783Z [36;1mnpx tsx scripts/voice-rewrite.ts \[0m
+2026-05-31T16:24:32.7660180Z [36;1m  --input ".blog-agent-stage/why-warm-investing-holds.ko.md" \[0m
+2026-05-31T16:24:32.7660567Z [36;1m  --automated[0m
+2026-05-31T16:24:32.7686163Z shell: /usr/bin/bash -e {0}
+2026-05-31T16:24:32.7686419Z env:
+2026-05-31T16:24:32.7686623Z   PNPM_VERSION: 9
+2026-05-31T16:24:32.7686842Z   NODE_VERSION: 20
+2026-05-31T16:24:32.7687146Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-05-31T16:24:32.7687778Z   GEMINI_API_KEY: ***
+2026-05-31T16:24:32.7688301Z ##[endgroup]
+2026-05-31T16:24:32.7735813Z ✍️ GSF Voice Rewrite 실행 중...
+2026-05-31T16:24:35.6735897Z ✍️ (Stub) Voice Rewrite logic skipped for now.
+2026-05-31T16:24:35.6998543Z ##[group]Run echo "🌐 EN/JA 번역 시작..."
+2026-05-31T16:24:35.6998926Z [36;1mecho "🌐 EN/JA 번역 시작..."[0m
+2026-05-31T16:24:35.6999248Z [36;1mnpx tsx scripts/translate.ts \[0m
+2026-05-31T16:24:35.6999637Z [36;1m  --ko ".blog-agent-stage/why-warm-investing-holds.ko.md" \[0m
+2026-05-31T16:24:35.7000040Z [36;1m  --slug "why-warm-investing-holds"[0m
+2026-05-31T16:24:35.7025656Z shell: /usr/bin/bash -e {0}
+2026-05-31T16:24:35.7025932Z env:
+2026-05-31T16:24:35.7026133Z   PNPM_VERSION: 9
+2026-05-31T16:24:35.7026365Z   NODE_VERSION: 20
+2026-05-31T16:24:35.7026649Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-05-31T16:24:35.7027150Z   GEMINI_API_KEY: ***
+2026-05-31T16:24:35.7027396Z ##[endgroup]
+2026-05-31T16:24:35.7076406Z 🌐 EN/JA 번역 시작...
+2026-05-31T16:24:38.5809962Z 🌐 (Stub) Translated files created at: .blog-agent-stage/why-warm-investing-holds.en.md, .blog-agent-stage/why-warm-investing-holds.ja.md
+2026-05-31T16:24:38.6050812Z ##[group]Run echo "🔍 Astro 빌드 검증..."
+2026-05-31T16:24:38.6051165Z [36;1mecho "🔍 Astro 빌드 검증..."[0m
+2026-05-31T16:24:38.6051433Z [36;1mpnpm build[0m
+2026-05-31T16:24:38.6076865Z shell: /usr/bin/bash -e {0}
+2026-05-31T16:24:38.6077185Z env:
+2026-05-31T16:24:38.6077416Z   PNPM_VERSION: 9
+2026-05-31T16:24:38.6077631Z   NODE_VERSION: 20
+2026-05-31T16:24:38.6078133Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-05-31T16:24:38.6078727Z   CONTENT_INTEGRITY_REQUIRE_SOURCES: false
+2026-05-31T16:24:38.6079185Z ##[endgroup]
+2026-05-31T16:24:38.6139032Z 🔍 Astro 빌드 검증...
+2026-05-31T16:24:38.9911520Z 
+2026-05-31T16:24:38.9912312Z > astro-paper@5.5.1 build /home/runner/work/GSF-Blog/GSF-Blog
+2026-05-31T16:24:38.9912927Z > node scripts/check-static-route-conflict.mjs && astro build
+2026-05-31T16:24:38.9913553Z 
+2026-05-31T16:24:39.0275391Z ✅ No static/route file conflicts detected.
+2026-05-31T16:24:40.6713270Z [33m[1m16:24:40[22m [WARN] [router][39m The route "/ja/privacy" is defined in both "/ja/privacy" and "/ja/privacy/". A static route cannot be defined more than once.
+2026-05-31T16:24:40.6715552Z [33m[1m16:24:40[22m [WARN] [router][39m A collision will result in an hard error in following versions of Astro.
+2026-05-31T16:24:40.6717866Z [33m[1m16:24:40[22m [WARN] [router][39m The route "/ko/privacy" is defined in both "/ko/privacy" and "/ko/privacy/". A static route cannot be defined more than once.
+2026-05-31T16:24:40.6720346Z [33m[1m16:24:40[22m [WARN] [router][39m A collision will result in an hard error in following versions of Astro.
+2026-05-31T16:24:40.6722594Z [33m[1m16:24:40[22m [WARN] [router][39m The route "/privacy" is defined in both "/privacy" and "/privacy/". A static route cannot be defined more than once.
+2026-05-31T16:24:40.6724675Z [33m[1m16:24:40[22m [WARN] [router][39m A collision will result in an hard error in following versions of Astro.
+2026-05-31T16:24:41.9415018Z [2m16:24:41[22m [34m[content][39m Syncing content
+2026-05-31T16:24:44.8121545Z [2m16:24:44[22m [34m[content][39m Synced content
+2026-05-31T16:24:44.8130289Z [2m16:24:44[22m [34m[types][39m Generated [2m4.11s[22m
+2026-05-31T16:24:44.8140071Z [2m16:24:44[22m [34m[build][39m output: [34m"static"[39m
+2026-05-31T16:24:44.8141101Z [2m16:24:44[22m [34m[build][39m mode: [34m"server"[39m
+2026-05-31T16:24:44.8142394Z [2m16:24:44[22m [34m[build][39m directory: [34m/home/runner/work/GSF-Blog/GSF-Blog/dist/[39m
+2026-05-31T16:24:44.8143869Z [2m16:24:44[22m [34m[build][39m adapter: [32m@astrojs/vercel[39m
+2026-05-31T16:24:44.8145033Z [2m16:24:44[22m [34m[build][39m Collecting build info...
+2026-05-31T16:24:44.8149443Z [2m16:24:44[22m [34m[build][39m [32m✓ Completed in 4.16s.[39m
+2026-05-31T16:24:44.8189126Z [2m16:24:44[22m [34m[build][39m Building server entrypoints...
+2026-05-31T16:24:49.6847519Z [2m16:24:49[22m [34m[assets][39m Copying fonts (2 files)...
+2026-05-31T16:24:50.1032264Z [2m16:24:50[22m [34m[vite][39m [32m✓ built in 5.25s[39m
+2026-05-31T16:24:50.1033395Z [2m16:24:50[22m [34m[build][39m [32m✓ Completed in 5.29s.[39m
+2026-05-31T16:24:50.1037083Z 
+2026-05-31T16:24:50.1037707Z [42m[30m building client (vite) [39m[49m
+2026-05-31T16:24:50.1427844Z [2m16:24:50[22m [34m[vite][39m transforming...
+2026-05-31T16:24:56.2799921Z [2m16:24:56[22m [34m[assets][39m Copying fonts (2 files)...
+2026-05-31T16:24:56.2805424Z [2m16:24:56[22m [34m[vite][39m [32m✓[39m 1234 modules transformed.
+2026-05-31T16:24:56.7843438Z [2m16:24:56[22m [34m[vite][39m rendering chunks...
+2026-05-31T16:24:57.2547378Z [2m16:24:57[22m [34m[vite][39m computing gzip size...
+2026-05-31T16:24:57.3440608Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Size3-Regular.CTq5MqoE.woff                              [39m[1m[2m    4.42 kB[22m[1m[22m
+2026-05-31T16:24:57.3443951Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Size4-Regular.Dl5lxZxV.woff2                             [39m[1m[2m    4.93 kB[22m[1m[22m
+2026-05-31T16:24:57.3469900Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Size2-Regular.Dy4dx90m.woff2                             [39m[1m[2m    5.21 kB[22m[1m[22m
+2026-05-31T16:24:57.3499920Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Size1-Regular.mCD8mA8B.woff2                             [39m[1m[2m    5.47 kB[22m[1m[22m
+2026-05-31T16:24:57.3513216Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Size4-Regular.BF-4gkZK.woff                              [39m[1m[2m    5.98 kB[22m[1m[22m
+2026-05-31T16:24:57.3515672Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Size2-Regular.oD1tc_U0.woff                              [39m[1m[2m    6.19 kB[22m[1m[22m
+2026-05-31T16:24:57.3518580Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Size1-Regular.C195tn64.woff                              [39m[1m[2m    6.50 kB[22m[1m[22m
+2026-05-31T16:24:57.3521006Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Caligraphic-Regular.Di6jR-x-.woff2                       [39m[1m[2m    6.91 kB[22m[1m[22m
+2026-05-31T16:24:57.3523437Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Caligraphic-Bold.Dq_IR9rO.woff2                          [39m[1m[2m    6.91 kB[22m[1m[22m
+2026-05-31T16:24:57.3525736Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Size3-Regular.DgpXs0kz.ttf                               [39m[1m[2m    7.59 kB[22m[1m[22m
+2026-05-31T16:24:57.3528257Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Caligraphic-Regular.CTRA-rTL.woff                        [39m[1m[2m    7.66 kB[22m[1m[22m
+2026-05-31T16:24:57.3530662Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Caligraphic-Bold.BEiXGLvX.woff                           [39m[1m[2m    7.72 kB[22m[1m[22m
+2026-05-31T16:24:57.3532984Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Script-Regular.D3wIWfF6.woff2                            [39m[1m[2m    9.64 kB[22m[1m[22m
+2026-05-31T16:24:57.3535306Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_SansSerif-Regular.DDBCnlJ7.woff2                         [39m[1m[2m   10.34 kB[22m[1m[22m
+2026-05-31T16:24:57.3537618Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Size4-Regular.DWFBv043.ttf                               [39m[1m[2m   10.36 kB[22m[1m[22m
+2026-05-31T16:24:57.3556459Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Script-Regular.D5yQViql.woff                             [39m[1m[2m   10.59 kB[22m[1m[22m
+2026-05-31T16:24:57.3559175Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Fraktur-Regular.CTYiF6lA.woff2                           [39m[1m[2m   11.32 kB[22m[1m[22m
+2026-05-31T16:24:57.3561518Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Fraktur-Bold.CL6g_b3V.woff2                              [39m[1m[2m   11.35 kB[22m[1m[22m
+2026-05-31T16:24:57.3563809Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Size2-Regular.B7gKUWhC.ttf                               [39m[1m[2m   11.51 kB[22m[1m[22m
+2026-05-31T16:24:57.3566138Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_SansSerif-Italic.C3H0VqGB.woff2                          [39m[1m[2m   12.03 kB[22m[1m[22m
+2026-05-31T16:24:57.3568642Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_SansSerif-Bold.D1sUS0GD.woff2                            [39m[1m[2m   12.22 kB[22m[1m[22m
+2026-05-31T16:24:57.3600155Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Size1-Regular.Dbsnue_I.ttf                               [39m[1m[2m   12.23 kB[22m[1m[22m
+2026-05-31T16:24:57.3629794Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_SansSerif-Regular.CS6fqUqJ.woff                          [39m[1m[2m   12.32 kB[22m[1m[22m
+2026-05-31T16:24:57.3632353Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Caligraphic-Regular.wX97UBjC.ttf                         [39m[1m[2m   12.34 kB[22m[1m[22m
+2026-05-31T16:24:57.3659770Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Caligraphic-Bold.ATXxdsX0.ttf                            [39m[1m[2m   12.37 kB[22m[1m[22m
+2026-05-31T16:24:57.3689908Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Fraktur-Regular.Dxdc4cR9.woff                            [39m[1m[2m   13.21 kB[22m[1m[22m
+2026-05-31T16:24:57.3719655Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Fraktur-Bold.BsDP51OF.woff                               [39m[1m[2m   13.30 kB[22m[1m[22m
+2026-05-31T16:24:57.3734499Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Typewriter-Regular.CO6r4hn1.woff2                        [39m[1m[2m   13.57 kB[22m[1m[22m
+2026-05-31T16:24:57.3749765Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_SansSerif-Italic.DN2j7dab.woff                           [39m[1m[2m   14.11 kB[22m[1m[22m
+2026-05-31T16:24:57.3780341Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_SansSerif-Bold.DbIhKOiC.woff                             [39m[1m[2m   14.41 kB[22m[1m[22m
+2026-05-31T16:24:57.3809812Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Typewriter-Regular.C0xS9mPB.woff                         [39m[1m[2m   16.03 kB[22m[1m[22m
+2026-05-31T16:24:57.3839581Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Math-BoldItalic.CZnvNsCZ.woff2                           [39m[1m[2m   16.40 kB[22m[1m[22m
+2026-05-31T16:24:57.3841999Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Math-Italic.t53AETM-.woff2                               [39m[1m[2m   16.44 kB[22m[1m[22m
+2026-05-31T16:24:57.3869593Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Script-Regular.C5JkGWo-.ttf                              [39m[1m[2m   16.65 kB[22m[1m[22m
+2026-05-31T16:24:57.3899574Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Main-BoldItalic.DxDJ3AOS.woff2                           [39m[1m[2m   16.78 kB[22m[1m[22m
+2026-05-31T16:24:57.3929567Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Main-Italic.NWA7e6Wa.woff2                               [39m[1m[2m   16.99 kB[22m[1m[22m
+2026-05-31T16:24:57.3959555Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Math-BoldItalic.iY-2wyZ7.woff                            [39m[1m[2m   18.67 kB[22m[1m[22m
+2026-05-31T16:24:57.3961890Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Math-Italic.DA0__PXp.woff                                [39m[1m[2m   18.75 kB[22m[1m[22m
+2026-05-31T16:24:57.3989552Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Main-BoldItalic.SpSLRI95.woff                            [39m[1m[2m   19.41 kB[22m[1m[22m
+2026-05-31T16:24:57.4019569Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_SansSerif-Regular.BNo7hRIc.ttf                           [39m[1m[2m   19.44 kB[22m[1m[22m
+2026-05-31T16:24:57.4049576Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Fraktur-Regular.CB_wures.ttf                             [39m[1m[2m   19.57 kB[22m[1m[22m
+2026-05-31T16:24:57.4052372Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Fraktur-Bold.BdnERNNW.ttf                                [39m[1m[2m   19.58 kB[22m[1m[22m
+2026-05-31T16:24:57.4079560Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Main-Italic.BMLOBm91.woff                                [39m[1m[2m   19.68 kB[22m[1m[22m
+2026-05-31T16:24:57.4109568Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_SansSerif-Italic.YYjJ1zSn.ttf                            [39m[1m[2m   22.36 kB[22m[1m[22m
+2026-05-31T16:24:57.4139584Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_SansSerif-Bold.CFMepnvq.ttf                              [39m[1m[2m   24.50 kB[22m[1m[22m
+2026-05-31T16:24:57.4169519Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Main-Bold.Cx986IdX.woff2                                 [39m[1m[2m   25.32 kB[22m[1m[22m
+2026-05-31T16:24:57.4171975Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Main-Regular.B22Nviop.woff2                              [39m[1m[2m   26.27 kB[22m[1m[22m
+2026-05-31T16:24:57.4199584Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Typewriter-Regular.D3Ib7_Hf.ttf                          [39m[1m[2m   27.56 kB[22m[1m[22m
+2026-05-31T16:24:57.4229588Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_AMS-Regular.BQhdFMY1.woff2                               [39m[1m[2m   28.08 kB[22m[1m[22m
+2026-05-31T16:24:57.4259544Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Main-Bold.Jm3AIy58.woff                                  [39m[1m[2m   29.91 kB[22m[1m[22m
+2026-05-31T16:24:57.4261862Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Main-Regular.Dr94JaBh.woff                               [39m[1m[2m   30.77 kB[22m[1m[22m
+2026-05-31T16:24:57.4289557Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Math-BoldItalic.B3XSjfu4.ttf                             [39m[1m[2m   31.20 kB[22m[1m[22m
+2026-05-31T16:24:57.4319543Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Math-Italic.flOr_0UB.ttf                                 [39m[1m[2m   31.31 kB[22m[1m[22m
+2026-05-31T16:24:57.4349608Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Main-BoldItalic.DzxPMmG6.ttf                             [39m[1m[2m   32.97 kB[22m[1m[22m
+2026-05-31T16:24:57.4379513Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_AMS-Regular.DMm9YOAa.woff                                [39m[1m[2m   33.52 kB[22m[1m[22m
+2026-05-31T16:24:57.4381878Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Main-Italic.3WenGoN9.ttf                                 [39m[1m[2m   33.58 kB[22m[1m[22m
+2026-05-31T16:24:57.4409517Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Main-Bold.waoOVXN0.ttf                                   [39m[1m[2m   51.34 kB[22m[1m[22m
+2026-05-31T16:24:57.4439580Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_Main-Regular.ypZvNtVU.ttf                                [39m[1m[2m   53.58 kB[22m[1m[22m
+2026-05-31T16:24:57.4469645Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[32mKaTeX_AMS-Regular.DRggAlZN.ttf                                 [39m[1m[2m   63.63 kB[22m[1m[22m
+2026-05-31T16:24:57.4499638Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[35mEditor.BSHlJSuz.css                                            [39m[1m[2m   82.60 kB[22m[1m[22m[2m │ gzip:  16.13 kB[22m
+2026-05-31T16:24:57.4530252Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mAdminLayout.astro_astro_type_script_index_0_lang.CLaqBFe2.js   [39m[1m[2m    0.07 kB[22m[1m[22m[2m │ gzip:   0.08 kB[22m
+2026-05-31T16:24:57.4559531Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mdiff.DbItnlRl.js                                               [39m[1m[2m    0.31 kB[22m[1m[22m[2m │ gzip:   0.24 kB[22m
+2026-05-31T16:24:57.4589552Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mbrainfuck.C4LP7Hcl.js                                          [39m[1m[2m    0.61 kB[22m[1m[22m[2m │ gzip:   0.33 kB[22m
+2026-05-31T16:24:57.4619639Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mproperties.C78fOPTZ.js                                         [39m[1m[2m    0.67 kB[22m[1m[22m[2m │ gzip:   0.35 kB[22m
+2026-05-31T16:24:57.4649695Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mjsx-runtime.D_zvdyIk.js                                        [39m[1m[2m    0.73 kB[22m[1m[22m[2m │ gzip:   0.46 kB[22m
+2026-05-31T16:24:57.4679532Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mcmake.BQqOBYOt.js                                              [39m[1m[2m    0.78 kB[22m[1m[22m[2m │ gzip:   0.46 kB[22m
+2026-05-31T16:24:57.4709568Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36masciiarmor.Df11BRmG.js                                         [39m[1m[2m    0.79 kB[22m[1m[22m[2m │ gzip:   0.41 kB[22m
+2026-05-31T16:24:57.4739591Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mhttp.DBlCnlav.js                                               [39m[1m[2m    0.85 kB[22m[1m[22m[2m │ gzip:   0.41 kB[22m
+2026-05-31T16:24:57.4741973Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mprotobuf.ChK-085T.js                                           [39m[1m[2m    0.86 kB[22m[1m[22m[2m │ gzip:   0.52 kB[22m
+2026-05-31T16:24:57.4769574Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36msolr.DehyRSwq.js                                               [39m[1m[2m    0.87 kB[22m[1m[22m[2m │ gzip:   0.46 kB[22m
+2026-05-31T16:24:57.4804514Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mtroff.wAsdV37c.js                                              [39m[1m[2m    0.96 kB[22m[1m[22m[2m │ gzip:   0.44 kB[22m
+2026-05-31T16:24:57.4806933Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mpreload-helper.BlTxHScW.js                                     [39m[1m[2m    1.11 kB[22m[1m[22m[2m │ gzip:   0.65 kB[22m
+2026-05-31T16:24:57.4813574Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mspreadsheet.BCZA_wO0.js                                        [39m[1m[2m    1.14 kB[22m[1m[22m[2m │ gzip:   0.54 kB[22m
+2026-05-31T16:24:57.4870032Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mtoml.Bm5Em-hy.js                                               [39m[1m[2m    1.14 kB[22m[1m[22m[2m │ gzip:   0.54 kB[22m
+2026-05-31T16:24:57.4899875Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mLayout.astro_astro_type_script_index_0_lang.DGYwhuyp.js        [39m[1m[2m    1.25 kB[22m[1m[22m[2m │ gzip:   0.51 kB[22m
+2026-05-31T16:24:57.4949600Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mmbox.CNhZ1qSd.js                                               [39m[1m[2m    1.40 kB[22m[1m[22m[2m │ gzip:   0.66 kB[22m
+2026-05-31T16:24:57.4989802Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36msieve.C3Gn_uJK.js                                              [39m[1m[2m    1.62 kB[22m[1m[22m[2m │ gzip:   0.77 kB[22m
+2026-05-31T16:24:57.5049762Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mrpm.CTu-6PCP.js                                                [39m[1m[2m    1.62 kB[22m[1m[22m[2m │ gzip:   0.83 kB[22m
+2026-05-31T16:24:57.5080208Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mfactor.XCvu78D9.js                                             [39m[1m[2m    1.67 kB[22m[1m[22m[2m │ gzip:   0.61 kB[22m
+2026-05-31T16:24:57.5130008Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36msearch.astro_astro_type_script_index_0_lang.CA8htPhm.js        [39m[1m[2m    1.73 kB[22m[1m[22m[2m │ gzip:   0.84 kB[22m
+2026-05-31T16:24:57.5132582Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mz80.Hz9HOZM7.js                                                [39m[1m[2m    1.75 kB[22m[1m[22m[2m │ gzip:   0.81 kB[22m
+2026-05-31T16:24:57.5189811Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36meiffel.CnydiIhH.js                                             [39m[1m[2m    1.81 kB[22m[1m[22m[2m │ gzip:   0.92 kB[22m
+2026-05-31T16:24:57.5249869Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36melm.vLlmbW-K.js                                                [39m[1m[2m    1.89 kB[22m[1m[22m[2m │ gzip:   0.82 kB[22m
+2026-05-31T16:24:57.5279711Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mmathematica.DTrFuWx2.js                                        [39m[1m[2m    1.92 kB[22m[1m[22m[2m │ gzip:   0.82 kB[22m
+2026-05-31T16:24:57.5309857Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mdockerfile.BNmZX-Cu.js                                         [39m[1m[2m    1.95 kB[22m[1m[22m[2m │ gzip:   0.67 kB[22m
+2026-05-31T16:24:57.5312592Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mturtle.B1tBg_DP.js                                             [39m[1m[2m    1.98 kB[22m[1m[22m[2m │ gzip:   0.90 kB[22m
+2026-05-31T16:24:57.5314946Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mebnf.CDyGwa7X.js                                               [39m[1m[2m    1.99 kB[22m[1m[22m[2m │ gzip:   0.81 kB[22m
+2026-05-31T16:24:57.5317244Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36msmalltalk.CnHTOXQT.js                                          [39m[1m[2m    2.01 kB[22m[1m[22m[2m │ gzip:   0.85 kB[22m
+2026-05-31T16:24:57.5349946Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mdtd.DF_7sFjM.js                                                [39m[1m[2m    2.06 kB[22m[1m[22m[2m │ gzip:   0.87 kB[22m
+2026-05-31T16:24:57.5352200Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mmumps.BT43cFF4.js                                              [39m[1m[2m    2.07 kB[22m[1m[22m[2m │ gzip:   0.98 kB[22m
+2026-05-31T16:24:57.5354460Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mfcl.Kvtd6kyn.js                                                [39m[1m[2m    2.08 kB[22m[1m[22m[2m │ gzip:   0.95 kB[22m
+2026-05-31T16:24:57.5356753Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mntriples.BfvgReVJ.js                                           [39m[1m[2m    2.10 kB[22m[1m[22m[2m │ gzip:   0.75 kB[22m
+2026-05-31T16:24:57.5359235Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36myacas.BJ4BC0dw.js                                              [39m[1m[2m    2.15 kB[22m[1m[22m[2m │ gzip:   1.09 kB[22m
+2026-05-31T16:24:57.5361532Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36msimple-mode.GW_nhZxv.js                                        [39m[1m[2m    2.28 kB[22m[1m[22m[2m │ gzip:   1.09 kB[22m
+2026-05-31T16:24:57.5363821Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mapl.B4CMkyY2.js                                                [39m[1m[2m    2.30 kB[22m[1m[22m[2m │ gzip:   1.23 kB[22m
+2026-05-31T16:24:57.5366627Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mpascal.-L3eBynH.js                                             [39m[1m[2m    2.30 kB[22m[1m[22m[2m │ gzip:   1.19 kB[22m
+2026-05-31T16:24:57.5399415Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36moctave.Ck1zUtKM.js                                             [39m[1m[2m    2.31 kB[22m[1m[22m[2m │ gzip:   1.09 kB[22m
+2026-05-31T16:24:57.5401898Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mcommonlisp.DBKNyK5s.js                                         [39m[1m[2m    2.32 kB[22m[1m[22m[2m │ gzip:   1.10 kB[22m
+2026-05-31T16:24:57.5404276Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mtcl.DVfN8rqt.js                                                [39m[1m[2m    2.36 kB[22m[1m[22m[2m │ gzip:   1.23 kB[22m
+2026-05-31T16:24:57.5407105Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mwebidl.ZXfAyPTL.js                                             [39m[1m[2m    2.52 kB[22m[1m[22m[2m │ gzip:   1.26 kB[22m
+2026-05-31T16:24:57.5409734Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mpig.CevX1Tat.js                                                [39m[1m[2m    2.53 kB[22m[1m[22m[2m │ gzip:   1.38 kB[22m
+2026-05-31T16:24:57.5412195Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex.CkclZlap.js                                              [39m[1m[2m    2.54 kB[22m[1m[22m[2m │ gzip:   1.56 kB[22m
+2026-05-31T16:24:57.5414566Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mpuppet.DMA9R1ak.js                                             [39m[1m[2m    2.54 kB[22m[1m[22m[2m │ gzip:   1.20 kB[22m
+2026-05-31T16:24:57.5416917Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mforth.Ffai-XNe.js                                              [39m[1m[2m    2.54 kB[22m[1m[22m[2m │ gzip:   1.33 kB[22m
+2026-05-31T16:24:57.5419592Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mshell.CjFT_Tl9.js                                              [39m[1m[2m    2.57 kB[22m[1m[22m[2m │ gzip:   1.21 kB[22m
+2026-05-31T16:24:57.5421956Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mvelocity.D8B20fx6.js                                           [39m[1m[2m    2.67 kB[22m[1m[22m[2m │ gzip:   1.11 kB[22m
+2026-05-31T16:24:57.5424290Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex.Cf5LqmM7.js                                              [39m[1m[2m    2.76 kB[22m[1m[22m[2m │ gzip:   1.57 kB[22m
+2026-05-31T16:24:57.5426549Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mtiddlywiki.DO-Gjzrf.js                                         [39m[1m[2m    2.78 kB[22m[1m[22m[2m │ gzip:   1.07 kB[22m
+2026-05-31T16:24:57.5489139Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mmodelica.Dc1JOy9r.js                                           [39m[1m[2m    2.79 kB[22m[1m[22m[2m │ gzip:   1.29 kB[22m
+2026-05-31T16:24:57.5491428Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mCustomSelect.CULB8scV.js                                       [39m[1m[2m    2.84 kB[22m[1m[22m[2m │ gzip:   1.29 kB[22m
+2026-05-31T16:24:57.5493538Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36moz.BzwKVEFT.js                                                 [39m[1m[2m    2.90 kB[22m[1m[22m[2m │ gzip:   1.28 kB[22m
+2026-05-31T16:24:57.5495628Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mr.B6wPVr8A.js                                                  [39m[1m[2m    2.94 kB[22m[1m[22m[2m │ gzip:   1.36 kB[22m
+2026-05-31T16:24:57.5498408Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mstex.C3f8Ysf7.js                                               [39m[1m[2m    3.12 kB[22m[1m[22m[2m │ gzip:   1.20 kB[22m
+2026-05-31T16:24:57.5500747Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mtiki.DGYXhP31.js                                               [39m[1m[2m    3.25 kB[22m[1m[22m[2m │ gzip:   1.26 kB[22m
+2026-05-31T16:24:57.5503206Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mvhdl.lSbBsy5d.js                                               [39m[1m[2m    3.35 kB[22m[1m[22m[2m │ gzip:   1.51 kB[22m
+2026-05-31T16:24:57.5505604Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mlua.VAEuO923.js                                                [39m[1m[2m    3.41 kB[22m[1m[22m[2m │ gzip:   1.43 kB[22m
+2026-05-31T16:24:57.5508432Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mmscgen.BA5vi2Kp.js                                             [39m[1m[2m    3.51 kB[22m[1m[22m[2m │ gzip:   0.98 kB[22m
+2026-05-31T16:24:57.5511131Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex.CB6ef5hJ.js                                              [39m[1m[2m    3.53 kB[22m[1m[22m[2m │ gzip:   1.79 kB[22m
+2026-05-31T16:24:57.5513577Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36msparql.DkYu6x3z.js                                             [39m[1m[2m    3.55 kB[22m[1m[22m[2m │ gzip:   1.63 kB[22m
+2026-05-31T16:24:57.5515985Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mcypher.C_CwsFkJ.js                                             [39m[1m[2m    3.56 kB[22m[1m[22m[2m │ gzip:   1.52 kB[22m
+2026-05-31T16:24:57.5578834Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36md.pRatUO7H.js                                                  [39m[1m[2m    3.72 kB[22m[1m[22m[2m │ gzip:   1.68 kB[22m
+2026-05-31T16:24:57.5581458Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mcoffeescript.S37ZYGWr.js                                       [39m[1m[2m    3.87 kB[22m[1m[22m[2m │ gzip:   1.69 kB[22m
+2026-05-31T16:24:57.5584023Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mvb.CmGdzxic.js                                                 [39m[1m[2m    3.90 kB[22m[1m[22m[2m │ gzip:   1.79 kB[22m
+2026-05-31T16:24:57.5600687Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mswift.BzpIVaGY.js                                              [39m[1m[2m    3.96 kB[22m[1m[22m[2m │ gzip:   1.79 kB[22m
+2026-05-31T16:24:57.5603052Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36masn1.EdZsLKOL.js                                               [39m[1m[2m    3.98 kB[22m[1m[22m[2m │ gzip:   1.96 kB[22m
+2026-05-31T16:24:57.5605433Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mq.pXgVlZs6.js                                                  [39m[1m[2m    4.03 kB[22m[1m[22m[2m │ gzip:   1.67 kB[22m
+2026-05-31T16:24:57.5607674Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mttcn-cfg.B9xdYoR4.js                                           [39m[1m[2m    4.05 kB[22m[1m[22m[2m │ gzip:   1.71 kB[22m
+2026-05-31T16:24:57.5670366Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mdylan.DwRh75JA.js                                              [39m[1m[2m    4.05 kB[22m[1m[22m[2m │ gzip:   1.65 kB[22m
+2026-05-31T16:24:57.5672685Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mlivescript.BwQOo05w.js                                         [39m[1m[2m    4.09 kB[22m[1m[22m[2m │ gzip:   1.64 kB[22m
+2026-05-31T16:24:57.5674960Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mgroovy.D9Dt4D0W.js                                             [39m[1m[2m    4.14 kB[22m[1m[22m[2m │ gzip:   1.77 kB[22m
+2026-05-31T16:24:57.5677627Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mDashboard.CMMxHCpr.js                                          [39m[1m[2m    4.15 kB[22m[1m[22m[2m │ gzip:   1.28 kB[22m
+2026-05-31T16:24:57.5680166Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mhaskell.Cw1EW3IL.js                                            [39m[1m[2m    4.17 kB[22m[1m[22m[2m │ gzip:   1.89 kB[22m
+2026-05-31T16:24:57.5682511Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36masterisk.B-8jnY81.js                                           [39m[1m[2m    4.48 kB[22m[1m[22m[2m │ gzip:   1.78 kB[22m
+2026-05-31T16:24:57.5684837Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mgas.Bneqetm1.js                                                [39m[1m[2m    4.57 kB[22m[1m[22m[2m │ gzip:   1.28 kB[22m
+2026-05-31T16:24:57.5687320Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mfortran.DYz_wnZ1.js                                            [39m[1m[2m    4.65 kB[22m[1m[22m[2m │ gzip:   2.01 kB[22m
+2026-05-31T16:24:57.5689860Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mmllike.CXdrOF99.js                                             [39m[1m[2m    4.79 kB[22m[1m[22m[2m │ gzip:   1.53 kB[22m
+2026-05-31T16:24:57.5692152Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mttcn.CfJYG6tj.js                                               [39m[1m[2m    4.80 kB[22m[1m[22m[2m │ gzip:   2.13 kB[22m
+2026-05-31T16:24:57.5694424Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mecl.Cabwm37j.js                                                [39m[1m[2m    5.13 kB[22m[1m[22m[2m │ gzip:   2.31 kB[22m
+2026-05-31T16:24:57.5696787Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mcrystal.SjHAIU92.js                                            [39m[1m[2m    5.13 kB[22m[1m[22m[2m │ gzip:   2.07 kB[22m
+2026-05-31T16:24:57.5754631Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mruby.B2Rjki9n.js                                               [39m[1m[2m    5.16 kB[22m[1m[22m[2m │ gzip:   2.15 kB[22m
+2026-05-31T16:24:57.5757029Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex.2AQ3bnph.js                                              [39m[1m[2m    5.19 kB[22m[1m[22m[2m │ gzip:   2.47 kB[22m
+2026-05-31T16:24:57.5759504Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mjulia.DuME0IfC.js                                              [39m[1m[2m    5.39 kB[22m[1m[22m[2m │ gzip:   2.14 kB[22m
+2026-05-31T16:24:57.5761850Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mvbscript.BuJXcnF6.js                                           [39m[1m[2m    5.82 kB[22m[1m[22m[2m │ gzip:   2.57 kB[22m
+2026-05-31T16:24:57.5764165Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mmirc.CjQqDB4T.js                                               [39m[1m[2m    5.92 kB[22m[1m[22m[2m │ gzip:   2.68 kB[22m
+2026-05-31T16:24:57.5766428Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mcobol.CWcv1MsR.js                                              [39m[1m[2m    6.20 kB[22m[1m[22m[2m │ gzip:   2.96 kB[22m
+2026-05-31T16:24:57.5768874Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mscheme.C41bIUwD.js                                             [39m[1m[2m    6.37 kB[22m[1m[22m[2m │ gzip:   2.39 kB[22m
+2026-05-31T16:24:57.5771171Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mpython.BuPzkPfP.js                                             [39m[1m[2m    6.48 kB[22m[1m[22m[2m │ gzip:   2.73 kB[22m
+2026-05-31T16:24:57.5773779Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mxquery.DzFWVndE.js                                             [39m[1m[2m    6.62 kB[22m[1m[22m[2m │ gzip:   2.56 kB[22m
+2026-05-31T16:24:57.5776013Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mpug.C8cW77Mm.js                                                [39m[1m[2m    6.67 kB[22m[1m[22m[2m │ gzip:   1.94 kB[22m
+2026-05-31T16:24:57.5851432Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mtextile.CnDTJFAw.js                                            [39m[1m[2m    6.80 kB[22m[1m[22m[2m │ gzip:   2.44 kB[22m
+2026-05-31T16:24:57.5853846Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mnsis.D5ISOQms.js                                               [39m[1m[2m    6.81 kB[22m[1m[22m[2m │ gzip:   2.99 kB[22m
+2026-05-31T16:24:57.5856210Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mMemoList.CK2tyYwe.js                                           [39m[1m[2m    7.34 kB[22m[1m[22m[2m │ gzip:   2.77 kB[22m
+2026-05-31T16:24:57.5858976Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mnginx.DdIZxoE0.js                                              [39m[1m[2m    7.34 kB[22m[1m[22m[2m │ gzip:   2.72 kB[22m
+2026-05-31T16:24:57.5861282Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mpowershell.CFHJl5sT.js                                         [39m[1m[2m    7.77 kB[22m[1m[22m[2m │ gzip:   3.33 kB[22m
+2026-05-31T16:24:57.5863569Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex.C5BVv2q5.js                                              [39m[1m[2m    7.85 kB[22m[1m[22m[2m │ gzip:   3.05 kB[22m
+2026-05-31T16:24:57.5865816Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mhaxe.H-WmDvRZ.js                                               [39m[1m[2m    7.89 kB[22m[1m[22m[2m │ gzip:   2.95 kB[22m
+2026-05-31T16:24:57.5868286Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36merlang.BNw1qcRV.js                                             [39m[1m[2m    8.10 kB[22m[1m[22m[2m │ gzip:   2.89 kB[22m
+2026-05-31T16:24:57.5870610Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mverilog.C6RDOZhf.js                                            [39m[1m[2m    8.24 kB[22m[1m[22m[2m │ gzip:   3.52 kB[22m
+2026-05-31T16:24:57.5872915Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36msas.B4kiWyti.js                                                [39m[1m[2m    9.33 kB[22m[1m[22m[2m │ gzip:   4.11 kB[22m
+2026-05-31T16:24:57.5875148Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mperl.CdXCOZ3F.js                                               [39m[1m[2m    9.75 kB[22m[1m[22m[2m │ gzip:   3.46 kB[22m
+2026-05-31T16:24:57.5877497Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mgherkin.heZmZLOM.js                                            [39m[1m[2m   10.16 kB[22m[1m[22m[2m │ gzip:   5.09 kB[22m
+2026-05-31T16:24:57.5940100Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mPostList.9cjh_Os1.js                                           [39m[1m[2m   10.62 kB[22m[1m[22m[2m │ gzip:   3.48 kB[22m
+2026-05-31T16:24:57.5942418Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mclojure.BMjYHr_A.js                                            [39m[1m[2m   10.82 kB[22m[1m[22m[2m │ gzip:   3.99 kB[22m
+2026-05-31T16:24:57.5944721Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36midl.BEugSyMb.js                                                [39m[1m[2m   11.63 kB[22m[1m[22m[2m │ gzip:   4.52 kB[22m
+2026-05-31T16:24:57.5947013Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex.CWnJtlCB.js                                              [39m[1m[2m   12.83 kB[22m[1m[22m[2m │ gzip:   5.67 kB[22m
+2026-05-31T16:24:57.5949698Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex.BR_qX3su.js                                              [39m[1m[2m   14.79 kB[22m[1m[22m[2m │ gzip:   6.01 kB[22m
+2026-05-31T16:24:57.5952163Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mClientRouter.astro_astro_type_script_index_0_lang.CDGfc0hd.js  [39m[1m[2m   15.36 kB[22m[1m[22m[2m │ gzip:   5.28 kB[22m
+2026-05-31T16:24:57.5954592Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex.DK_VQjfd.js                                              [39m[1m[2m   16.43 kB[22m[1m[22m[2m │ gzip:   7.51 kB[22m
+2026-05-31T16:24:57.5956766Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mjavascript.iXu5QeM3.js                                         [39m[1m[2m   17.08 kB[22m[1m[22m[2m │ gzip:   5.75 kB[22m
+2026-05-31T16:24:57.5959424Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex.DDoRiXWU.js                                              [39m[1m[2m   21.04 kB[22m[1m[22m[2m │ gzip:   9.41 kB[22m
+2026-05-31T16:24:57.5961617Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex.Cpdmha4P.js                                              [39m[1m[2m   21.31 kB[22m[1m[22m[2m │ gzip:   9.80 kB[22m
+2026-05-31T16:24:57.5963841Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mclike.B9uivgTg.js                                              [39m[1m[2m   22.30 kB[22m[1m[22m[2m │ gzip:   7.86 kB[22m
+2026-05-31T16:24:57.5966097Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex.CmkBdBFb.js                                              [39m[1m[2m   23.18 kB[22m[1m[22m[2m │ gzip:  10.45 kB[22m
+2026-05-31T16:24:57.6028681Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mstylus.B533Al4x.js                                             [39m[1m[2m   25.80 kB[22m[1m[22m[2m │ gzip:   8.60 kB[22m
+2026-05-31T16:24:57.6031104Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex.BdZeuLcd.js                                              [39m[1m[2m   26.52 kB[22m[1m[22m[2m │ gzip:   8.81 kB[22m
+2026-05-31T16:24:57.6033446Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mcss.BnMrqG3P.js                                                [39m[1m[2m   27.13 kB[22m[1m[22m[2m │ gzip:   8.47 kB[22m
+2026-05-31T16:24:57.6035697Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex.DRBFR9ol.js                                              [39m[1m[2m   27.31 kB[22m[1m[22m[2m │ gzip:  12.32 kB[22m
+2026-05-31T16:24:57.6038121Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex.8MJ2upHd.js                                              [39m[1m[2m   28.78 kB[22m[1m[22m[2m │ gzip:  11.71 kB[22m
+2026-05-31T16:24:57.6040462Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex.C5860wi0.js                                              [39m[1m[2m   30.92 kB[22m[1m[22m[2m │ gzip:  12.71 kB[22m
+2026-05-31T16:24:57.6042742Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex.CEhn8QQl.js                                              [39m[1m[2m   32.42 kB[22m[1m[22m[2m │ gzip:  13.12 kB[22m
+2026-05-31T16:24:57.6045045Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36msql.D0XecflT.js                                                [39m[1m[2m   37.05 kB[22m[1m[22m[2m │ gzip:  10.94 kB[22m
+2026-05-31T16:24:57.6047348Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mcommonmark.Dol48P2r.js                                         [39m[1m[2m   40.83 kB[22m[1m[22m[2m │ gzip:  12.05 kB[22m
+2026-05-31T16:24:57.6050093Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex.D4-uDWJh.js                                              [39m[1m[2m   40.86 kB[22m[1m[22m[2m │ gzip:  16.81 kB[22m
+2026-05-31T16:24:57.6052407Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex.CjhJ-jHa.js                                              [39m[1m[2m   44.28 kB[22m[1m[22m[2m │ gzip:  15.39 kB[22m
+2026-05-31T16:24:57.6054729Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex.BPYpLyvS.js                                              [39m[1m[2m   45.22 kB[22m[1m[22m[2m │ gzip:  19.21 kB[22m
+2026-05-31T16:24:57.6057005Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex._k19Dyrs.js                                              [39m[1m[2m   70.93 kB[22m[1m[22m[2m │ gzip:  25.91 kB[22m
+2026-05-31T16:24:57.6089719Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mgfm.DY-0QWMS.js                                                [39m[1m[2m   83.04 kB[22m[1m[22m[2m │ gzip:  26.07 kB[22m
+2026-05-31T16:24:57.6091137Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex.Bxh4NrkF.js                                              [39m[1m[2m   87.05 kB[22m[1m[22m[2m │ gzip:  34.56 kB[22m
+2026-05-31T16:24:57.6092499Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mEditor.CMXiyeMo.js                                             [39m[1m[2m   89.96 kB[22m[1m[22m[2m │ gzip:  26.22 kB[22m
+2026-05-31T16:24:57.6093946Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mui-core.D7EsID-j.js                                            [39m[1m[2m   94.16 kB[22m[1m[22m[2m │ gzip:  27.33 kB[22m
+2026-05-31T16:24:57.6095331Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex.D_EburHq.js                                              [39m[1m[2m   97.98 kB[22m[1m[22m[2m │ gzip:  28.52 kB[22m
+2026-05-31T16:24:57.6096707Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex.C0ZWl_tR.js                                              [39m[1m[2m  104.04 kB[22m[1m[22m[2m │ gzip:  34.45 kB[22m
+2026-05-31T16:24:57.6098341Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mclient.CBoWd3Gx.js                                             [39m[1m[2m  186.79 kB[22m[1m[22m[2m │ gzip:  58.63 kB[22m
+2026-05-31T16:24:57.6130061Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mcore.I0KjlGXz.js                                               [39m[1m[2m  321.58 kB[22m[1m[22m[2m │ gzip:  98.62 kB[22m
+2026-05-31T16:24:57.6132379Z [2m16:24:57[22m [34m[vite][39m [2mdist/client/[22m[2m_astro/[22m[36mindex.BBj77Iu8.js                                              [39m[1m[33m1,033.54 kB[39m[22m[2m │ gzip: 332.77 kB[22m
+2026-05-31T16:24:57.6133721Z [33m[1m16:24:57[22m [WARN] [vite][39m [33m
+2026-05-31T16:24:57.6134531Z (!) Some chunks are larger than 500 kB after minification. Consider:
+2026-05-31T16:24:57.6135322Z - Using dynamic import() to code-split the application
+2026-05-31T16:24:57.6136694Z - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+2026-05-31T16:24:57.6138439Z - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+2026-05-31T16:24:57.6139532Z [2m16:24:57[22m [34m[vite][39m [32m✓ built in 7.24s[39m
+2026-05-31T16:24:57.7139490Z 
+2026-05-31T16:24:57.7140522Z [42m[30m prerendering static routes [39m[49m
+2026-05-31T16:24:57.7240225Z [2m16:24:57[22m [32m▶[39m src/pages/404.astro
+2026-05-31T16:24:57.9390740Z [2m16:24:57[22m   [34m└─[39m [2m/404.html[22m [2m(+215ms)[22m 
+2026-05-31T16:24:57.9744161Z [2m16:24:57[22m [32m▶[39m src/pages/archives/index.astro
+2026-05-31T16:24:58.1111161Z [2m16:24:57[22m   [34m└─[39m [2m/archives/index.html[22m [2m(+137ms)[22m 
+2026-05-31T16:24:58.1972223Z [2m16:24:58[22m [35mλ[39m src/pages/og.png.ts
+2026-05-31T16:24:58.7413587Z [2m16:24:58[22m   [34m└─[39m [2m/og.png[22m [31m(+544ms)[39m 
+2026-05-31T16:24:58.7428439Z [2m16:24:58[22m [35mλ[39m src/pages/robots.txt.ts
+2026-05-31T16:24:58.7439575Z [2m16:24:58[22m   [34m└─[39m [2m/robots.txt[22m [2m(+1ms)[22m 
+2026-05-31T16:24:58.7469611Z [2m16:24:58[22m [32m▶[39m src/pages/[...locale]/about.astro
+2026-05-31T16:24:58.7527804Z [2m16:24:58[22m   [34m├─[39m [2m/about/index.html[22m [2m(+5ms)[22m 
+2026-05-31T16:24:58.7564164Z [2m16:24:58[22m   [34m├─[39m [2m/ko/about/index.html[22m [2m(+4ms)[22m 
+2026-05-31T16:24:58.7619475Z [2m16:24:58[22m   [34m└─[39m [2m/ja/about/index.html[22m [2m(+6ms)[22m 
+2026-05-31T16:24:58.7635046Z [2m16:24:58[22m [32m▶[39m src/pages/[...locale]/contact.astro
+2026-05-31T16:24:58.7666056Z [2m16:24:58[22m   [34m├─[39m [2m/contact/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:24:58.7699814Z [2m16:24:58[22m   [34m├─[39m [2m/ko/contact/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:24:58.7735986Z [2m16:24:58[22m   [34m└─[39m [2m/ja/contact/index.html[22m [2m(+4ms)[22m 
+2026-05-31T16:24:58.7770702Z [2m16:24:58[22m [35mλ[39m src/pages/[...locale]/posts/[...slug]/index.png.ts
+2026-05-31T16:24:58.8060575Z [2m16:24:58[22m [32m▶[39m src/pages/[...locale]/posts/[...page].astro
+2026-05-31T16:24:58.8174048Z [2m16:24:58[22m   [34m├─[39m [2m/posts/index.html[22m [2m(+6ms)[22m 
+2026-05-31T16:24:58.8220921Z [2m16:24:58[22m   [34m├─[39m [2m/posts/2/index.html[22m [2m(+5ms)[22m 
+2026-05-31T16:24:58.8301753Z [2m16:24:58[22m   [34m├─[39m [2m/posts/3/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:58.8379261Z [2m16:24:58[22m   [34m├─[39m [2m/posts/4/index.html[22m [2m(+6ms)[22m 
+2026-05-31T16:24:58.8408421Z [2m16:24:58[22m   [34m├─[39m [2m/posts/5/index.html[22m [2m(+4ms)[22m 
+2026-05-31T16:24:58.8447045Z [2m16:24:58[22m   [34m├─[39m [2m/posts/6/index.html[22m [2m(+4ms)[22m 
+2026-05-31T16:24:58.8493298Z [2m16:24:58[22m   [34m├─[39m [2m/posts/7/index.html[22m [2m(+5ms)[22m 
+2026-05-31T16:24:58.8544614Z [2m16:24:58[22m   [34m├─[39m [2m/posts/8/index.html[22m [2m(+5ms)[22m 
+2026-05-31T16:24:58.8590895Z [2m16:24:58[22m   [34m├─[39m [2m/posts/9/index.html[22m [2m(+5ms)[22m 
+2026-05-31T16:24:58.8627265Z [2m16:24:58[22m   [34m├─[39m [2m/posts/10/index.html[22m [2m(+4ms)[22m 
+2026-05-31T16:24:58.8683228Z [2m16:24:58[22m   [34m├─[39m [2m/ko/posts/index.html[22m [2m(+6ms)[22m 
+2026-05-31T16:24:58.8737216Z [2m16:24:58[22m   [34m├─[39m [2m/ko/posts/2/index.html[22m [2m(+5ms)[22m 
+2026-05-31T16:24:58.8826873Z [2m16:24:58[22m   [34m├─[39m [2m/ko/posts/3/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:58.8858996Z [2m16:24:58[22m   [34m├─[39m [2m/ko/posts/4/index.html[22m [2m(+5ms)[22m 
+2026-05-31T16:24:58.8894531Z [2m16:24:58[22m   [34m├─[39m [2m/ko/posts/5/index.html[22m [2m(+4ms)[22m 
+2026-05-31T16:24:58.8931905Z [2m16:24:58[22m   [34m├─[39m [2m/ko/posts/6/index.html[22m [2m(+4ms)[22m 
+2026-05-31T16:24:58.8999042Z [2m16:24:58[22m   [34m├─[39m [2m/ko/posts/7/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:58.9041686Z [2m16:24:58[22m   [34m├─[39m [2m/ko/posts/8/index.html[22m [2m(+4ms)[22m 
+2026-05-31T16:24:58.9079049Z [2m16:24:58[22m   [34m├─[39m [2m/ko/posts/9/index.html[22m [2m(+4ms)[22m 
+2026-05-31T16:24:58.9110821Z [2m16:24:58[22m   [34m├─[39m [2m/ko/posts/10/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:24:58.9152479Z [2m16:24:58[22m   [34m├─[39m [2m/ja/posts/index.html[22m [2m(+4ms)[22m 
+2026-05-31T16:24:58.9191007Z [2m16:24:58[22m   [34m├─[39m [2m/ja/posts/2/index.html[22m [2m(+4ms)[22m 
+2026-05-31T16:24:58.9226885Z [2m16:24:58[22m   [34m├─[39m [2m/ja/posts/3/index.html[22m [2m(+4ms)[22m 
+2026-05-31T16:24:58.9261727Z [2m16:24:58[22m   [34m├─[39m [2m/ja/posts/4/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:24:58.9295451Z [2m16:24:58[22m   [34m├─[39m [2m/ja/posts/5/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:24:58.9330978Z [2m16:24:58[22m   [34m├─[39m [2m/ja/posts/6/index.html[22m [2m(+4ms)[22m 
+2026-05-31T16:24:58.9379308Z [2m16:24:58[22m   [34m├─[39m [2m/ja/posts/7/index.html[22m [2m(+4ms)[22m 
+2026-05-31T16:24:58.9416582Z [2m16:24:58[22m   [34m├─[39m [2m/ja/posts/8/index.html[22m [2m(+5ms)[22m 
+2026-05-31T16:24:58.9496785Z [2m16:24:58[22m   [34m├─[39m [2m/ja/posts/9/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:58.9530961Z [2m16:24:58[22m   [34m└─[39m [2m/ja/posts/10/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:24:58.9945675Z [2m16:24:58[22m [32m▶[39m src/pages/[...locale]/posts/[...slug]/index.astro
+2026-05-31T16:24:59.0204181Z [2m16:24:59[22m   [34m├─[39m [2m/posts/coredo-nihonbashi-mitsui-redevelopment/index.html[22m [2m(+17ms)[22m 
+2026-05-31T16:24:59.0295313Z [2m16:24:59[22m   [34m├─[39m [2m/posts/ginza-marunouchi-walk-dna/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.0399069Z [2m16:24:59[22m   [34m├─[39m [2m/posts/ginza-weekend-walking-guide/index.html[22m [2m(+10ms)[22m 
+2026-05-31T16:24:59.0480532Z [2m16:24:59[22m   [34m├─[39m [2m/posts/hotel-reit-vs-office-reit-post-covid/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.0580288Z [2m16:24:59[22m   [34m├─[39m [2m/posts/j-reit-five-things-to-know/index.html[22m [2m(+10ms)[22m 
+2026-05-31T16:24:59.0661341Z [2m16:24:59[22m   [34m├─[39m [2m/posts/japan-corporate-vs-personal-rental-after-tax-sketch/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.0754171Z [2m16:24:59[22m   [34m├─[39m [2m/posts/japan-rate-hike-cycle-j-reit-three-lessons/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.0835885Z [2m16:24:59[22m   [34m├─[39m [2m/posts/japan-real-estate-three-things/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.0935799Z [2m16:24:59[22m   [34m├─[39m [2m/posts/japan-shinchiku-vs-chuko-mansion-investor-guide/index.html[22m [2m(+10ms)[22m 
+2026-05-31T16:24:59.1014077Z [2m16:24:59[22m   [34m├─[39m [2m/posts/japan-visa-paths-permanent-business-manager-asset-holders/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.1130288Z [2m16:24:59[22m   [34m├─[39m [2m/posts/korea-japan-inheritance-gift-tax-cross-border-basics/index.html[22m [2m(+12ms)[22m 
+2026-05-31T16:24:59.1269485Z [2m16:24:59[22m   [34m├─[39m [2m/posts/macro-barrier-and-super-scarce-real-estate-selection/index.html[22m [2m(+14ms)[22m 
+2026-05-31T16:24:59.1363424Z [2m16:24:59[22m   [34m├─[39m [2m/posts/nihonbashi-hamacho-supermarket-peacock-city-life/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.1440867Z [2m16:24:59[22m   [34m├─[39m [2m/posts/nihonbashi-mitsui-redevelopment-pipeline-three/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.1529610Z [2m16:24:59[22m   [34m├─[39m [2m/posts/nihonbashi-the-origin-of-japan/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.1601873Z [2m16:24:59[22m   [34m├─[39m [2m/posts/one-failure-three-lessons-postmortem/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.1697103Z [2m16:24:59[22m   [34m├─[39m [2m/posts/reading-korea-japan-markets-together/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.1768575Z [2m16:24:59[22m   [34m├─[39m [2m/posts/nihonbashi-hamacho-walking-guide/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.1857671Z [2m16:24:59[22m   [34m├─[39m [2m/posts/tokyo-6-wards-real-estate-insight/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.1939596Z [2m16:24:59[22m   [34m├─[39m [2m/posts/three-things-when-fx-shakes/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.2044827Z [2m16:24:59[22m   [34m├─[39m [2m/posts/tokyo-buying-process-step-by-step/index.html[22m [2m(+11ms)[22m 
+2026-05-31T16:24:59.2128790Z [2m16:24:59[22m   [34m├─[39m [2m/posts/tokyo-core-3-wards-chiyoda-chuo-minato/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.2218592Z [2m16:24:59[22m   [34m├─[39m [2m/posts/tokyo-earthquake-vulnerable-five-areas/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.2298650Z [2m16:24:59[22m   [34m├─[39m [2m/posts/tokyo-five-sophisticated-spots/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.2387521Z [2m16:24:59[22m   [34m├─[39m [2m/posts/tokyo-korean-community-beyond-shinokubo/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.2459607Z [2m16:24:59[22m   [34m├─[39m [2m/posts/tokyo-meguro-setagaya/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.2543980Z [2m16:24:59[22m   [34m├─[39m [2m/posts/tokyo-mansion-tsubo-chiyoda-chuo-minato/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.2629307Z [2m16:24:59[22m   [34m├─[39m [2m/posts/tokyo-moving-contracts-two-notes/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.2731104Z [2m16:24:59[22m   [34m├─[39m [2m/posts/tokyo-museums-with-kids-five-picks/index.html[22m [2m(+10ms)[22m 
+2026-05-31T16:24:59.2805878Z [2m16:24:59[22m   [34m├─[39m [2m/posts/tokyo-office-vacancy-five-wards-2026/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.2895838Z [2m16:24:59[22m   [34m├─[39m [2m/posts/tokyo-real-estate-investment-complete-guide/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.3011626Z [2m16:24:59[22m   [34m├─[39m [2m/posts/tokyo-shinjuku-shibuya-bunkyo/index.html[22m [2m(+12ms)[22m 
+2026-05-31T16:24:59.3104078Z [2m16:24:59[22m   [34m├─[39m [2m/posts/tokyo-small-rental-yield-vs-capital-gain-breakeven/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.3172563Z [2m16:24:59[22m   [34m├─[39m [2m/posts/tokyo-ward-guide-series-prologue/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.3259539Z [2m16:24:59[22m   [34m├─[39m [2m/posts/tokyo-yokohama-fuji-transport-pass/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.3357569Z [2m16:24:59[22m   [34m├─[39m [2m/posts/tsukiji-to-toyosu-morning-tokyo/index.html[22m [2m(+10ms)[22m 
+2026-05-31T16:24:59.3440433Z [2m16:24:59[22m   [34m├─[39m [2m/posts/weak-yen-korean-japan-asset-allocation-fx-scenarios/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.3507255Z [2m16:24:59[22m   [34m├─[39m [2m/posts/why-warm-investing-holds/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.3590694Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/coredo-nihonbashi-mitsui-redevelopment/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.3658261Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/ginza-marunouchi-walk-dna/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.3739372Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/ginza-weekend-walking-guide/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.3806682Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/hotel-reit-vs-office-reit-post-covid/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.3887345Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/j-reit-five-things-to-know/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.3955712Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/japan-corporate-vs-personal-rental-after-tax-sketch/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.4038672Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/japan-rate-hike-cycle-j-reit-three-lessons/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.4112132Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/japan-visa-paths-permanent-business-manager-asset-holders/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.4227699Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/japan-real-estate-three-things/index.html[22m [2m(+12ms)[22m 
+2026-05-31T16:24:59.4306284Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/korea-japan-inheritance-gift-tax-cross-border-basics/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.4392395Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/japan-shinchiku-vs-chuko-mansion-investor-guide/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.4531217Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/macro-barrier-and-super-scarce-real-estate-selection/index.html[22m [2m(+14ms)[22m 
+2026-05-31T16:24:59.4629755Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/nihonbashi-hamacho-supermarket-peacock-city-life/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.4944492Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/nihonbashi-hamacho-walking-guide/index.html[22m [2m(+32ms)[22m 
+2026-05-31T16:24:59.5054055Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/nihonbashi-mitsui-redevelopment-pipeline-three/index.html[22m [2m(+11ms)[22m 
+2026-05-31T16:24:59.5124003Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/nihonbashi-the-origin-of-japan/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.5219681Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/one-failure-three-lessons-postmortem/index.html[22m [2m(+10ms)[22m 
+2026-05-31T16:24:59.5304240Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/reading-korea-japan-markets-together/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.5389470Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/three-things-when-fx-shakes/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.5479592Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/tokyo-6-wards-real-estate-insight/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.5567639Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/tokyo-buying-process-step-by-step/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.5637113Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/tokyo-core-3-wards-chiyoda-chuo-minato/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.5720313Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/tokyo-earthquake-vulnerable-five-areas/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.5790497Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/tokyo-five-sophisticated-spots/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.5874981Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/tokyo-korean-community-beyond-shinokubo/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.5949133Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/tokyo-mansion-tsubo-chiyoda-chuo-minato/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.6031936Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/tokyo-meguro-setagaya/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.6100131Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/tokyo-moving-contracts-two-notes/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.6181406Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/tokyo-museums-with-kids-five-picks/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.6250164Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/tokyo-office-vacancy-five-wards-2026/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.6337533Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/tokyo-real-estate-investment-complete-guide/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.6403798Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/tokyo-shinjuku-shibuya-bunkyo/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.6498769Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/tokyo-small-rental-yield-vs-capital-gain-breakeven/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.6563640Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/tokyo-ward-guide-series-prologue/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.6644758Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/tokyo-yokohama-fuji-transport-pass/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.6709396Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/tsukiji-to-toyosu-morning-tokyo/index.html[22m [2m(+6ms)[22m 
+2026-05-31T16:24:59.6786125Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/why-warm-investing-holds/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.6852440Z [2m16:24:59[22m   [34m├─[39m [2m/ko/posts/weak-yen-korean-japan-asset-allocation-fx-scenarios/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.6933306Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/coredo-nihonbashi-mitsui-redevelopment/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.6998646Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/ginza-marunouchi-walk-dna/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.7077251Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/hotel-reit-vs-office-reit-post-covid/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.7140926Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/ginza-weekend-walking-guide/index.html[22m [2m(+6ms)[22m 
+2026-05-31T16:24:59.7221477Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/j-reit-five-things-to-know/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.7289151Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/japan-corporate-vs-personal-rental-after-tax-sketch/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.7370844Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/japan-rate-hike-cycle-j-reit-three-lessons/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.7440319Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/japan-real-estate-three-things/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.7521778Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/japan-shinchiku-vs-chuko-mansion-investor-guide/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.7594231Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/japan-visa-paths-permanent-business-manager-asset-holders/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.7700331Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/korea-japan-inheritance-gift-tax-cross-border-basics/index.html[22m [2m(+10ms)[22m 
+2026-05-31T16:24:59.7799202Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/macro-barrier-and-super-scarce-real-estate-selection/index.html[22m [2m(+10ms)[22m 
+2026-05-31T16:24:59.7884804Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/nihonbashi-hamacho-supermarket-peacock-city-life/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.7964575Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/nihonbashi-hamacho-walking-guide/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.8046760Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/nihonbashi-the-origin-of-japan/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.8114894Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/nihonbashi-mitsui-redevelopment-pipeline-three/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.8206491Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/one-failure-three-lessons-postmortem/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.8278699Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/reading-korea-japan-markets-together/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.8375007Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/three-things-when-fx-shakes/index.html[22m [2m(+10ms)[22m 
+2026-05-31T16:24:59.8451250Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/tokyo-6-wards-real-estate-insight/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.8532083Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/tokyo-buying-process-step-by-step/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.8598795Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/tokyo-core-3-wards-chiyoda-chuo-minato/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.8683416Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/tokyo-five-sophisticated-spots/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.8753631Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/tokyo-earthquake-vulnerable-five-areas/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.8865885Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/tokyo-korean-community-beyond-shinokubo/index.html[22m [2m(+11ms)[22m 
+2026-05-31T16:24:59.8935047Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/tokyo-mansion-tsubo-chiyoda-chuo-minato/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.9020574Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/tokyo-meguro-setagaya/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.9088121Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/tokyo-moving-contracts-two-notes/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.9172072Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/tokyo-museums-with-kids-five-picks/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.9240611Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/tokyo-office-vacancy-five-wards-2026/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.9328589Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/tokyo-real-estate-investment-complete-guide/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.9409431Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/tokyo-shinjuku-shibuya-bunkyo/index.html[22m [2m(+8ms)[22m 
+2026-05-31T16:24:59.9496274Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/tokyo-small-rental-yield-vs-capital-gain-breakeven/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.9565364Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/tokyo-yokohama-fuji-transport-pass/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.9659268Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/tokyo-ward-guide-series-prologue/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.9726640Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/tsukiji-to-toyosu-morning-tokyo/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.9813841Z [2m16:24:59[22m   [34m├─[39m [2m/ja/posts/weak-yen-korean-japan-asset-allocation-fx-scenarios/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:24:59.9883923Z [2m16:24:59[22m   [34m└─[39m [2m/ja/posts/why-warm-investing-holds/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:24:59.9899279Z [2m16:24:59[22m [32m▶[39m src/pages/[...locale]/privacy-policy.astro
+2026-05-31T16:24:59.9922210Z [2m16:24:59[22m   [34m├─[39m [2m/privacy-policy/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:24:59.9940698Z [2m16:24:59[22m   [34m├─[39m [2m/ko/privacy-policy/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:24:59.9959253Z [2m16:24:59[22m   [34m└─[39m [2m/ja/privacy-policy/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:24:59.9978995Z [2m16:24:59[22m [32m▶[39m src/pages/[...locale]/resources/tokyo-relocation-d90.astro
+2026-05-31T16:25:00.0004733Z [2m16:24:59[22m   [34m├─[39m [2m/resources/tokyo-relocation-d90/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.0026460Z [2m16:25:00[22m   [34m├─[39m [2m/ko/resources/tokyo-relocation-d90/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.0046489Z [2m16:25:00[22m   [34m└─[39m [2m/ja/resources/tokyo-relocation-d90/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.0421944Z [2m16:25:00[22m [35mλ[39m src/pages/[...locale]/rss.xml.ts
+2026-05-31T16:25:00.0562515Z [2m16:25:00[22m   [34m├─[39m [2m/rss.xml/[22m [2m(+14ms)[22m 
+2026-05-31T16:25:00.0619588Z [2m16:25:00[22m   [34m├─[39m [2m/ko/rss.xml/[22m [2m(+6ms)[22m 
+2026-05-31T16:25:00.0701266Z [2m16:25:00[22m   [34m└─[39m [2m/ja/rss.xml/[22m [2m(+8ms)[22m 
+2026-05-31T16:25:00.0736527Z [2m16:25:00[22m [32m▶[39m src/pages/[...locale]/search.astro
+2026-05-31T16:25:00.0759132Z [2m16:25:00[22m   [34m├─[39m [2m/search/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.0774992Z [2m16:25:00[22m   [34m├─[39m [2m/ko/search/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.0790192Z [2m16:25:00[22m   [34m└─[39m [2m/ja/search/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.0825779Z [2m16:25:00[22m [32m▶[39m src/pages/[...locale]/tags/[tag]/[...page].astro
+2026-05-31T16:25:00.1900050Z [2m16:25:00[22m   [34m├─[39m [2m/tags/23-wards/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:25:00.1909365Z [2m16:25:00[22m   [34m├─[39m [2m/tags/allocation/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.1929714Z [2m16:25:00[22m   [34m├─[39m [2m/tags/assetallocation/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.1949813Z [2m16:25:00[22m   [34m├─[39m [2m/tags/azabujuban/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.1975875Z [2m16:25:00[22m   [34m├─[39m [2m/tags/boj-interest-rate/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.2003865Z [2m16:25:00[22m   [34m├─[39m [2m/tags/bunkyo/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.2031250Z [2m16:25:00[22m   [34m├─[39m [2m/tags/businessmanagervisa/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.2053302Z [2m16:25:00[22m   [34m├─[39m [2m/tags/buying-process/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2078928Z [2m16:25:00[22m   [34m├─[39m [2m/tags/capital-gains/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.2100724Z [2m16:25:00[22m   [34m├─[39m [2m/tags/chiyoda/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2129173Z [2m16:25:00[22m   [34m├─[39m [2m/tags/chuo/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.2178232Z [2m16:25:00[22m   [34m├─[39m [2m/tags/city-life/index.html[22m [2m(+5ms)[22m 
+2026-05-31T16:25:00.2200084Z [2m16:25:00[22m   [34m├─[39m [2m/tags/complete-guide/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2220624Z [2m16:25:00[22m   [34m├─[39m [2m/tags/condo/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2240414Z [2m16:25:00[22m   [34m├─[39m [2m/tags/coredo/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2264761Z [2m16:25:00[22m   [34m├─[39m [2m/tags/corporateownership/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2293715Z [2m16:25:00[22m   [34m├─[39m [2m/tags/credit-restrictions/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.2313617Z [2m16:25:00[22m   [34m├─[39m [2m/tags/crossborder/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2334247Z [2m16:25:00[22m   [34m├─[39m [2m/tags/crossborderbusiness/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2354303Z [2m16:25:00[22m   [34m├─[39m [2m/tags/daikanyama/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2374670Z [2m16:25:00[22m   [34m├─[39m [2m/tags/depreciation/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2394659Z [2m16:25:00[22m   [34m├─[39m [2m/tags/earthquake/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2414797Z [2m16:25:00[22m   [34m├─[39m [2m/tags/entrepreneurship/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2434592Z [2m16:25:00[22m   [34m├─[39m [2m/tags/essay/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2456004Z [2m16:25:00[22m   [34m├─[39m [2m/tags/foreign-investor/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2476894Z [2m16:25:00[22m   [34m├─[39m [2m/tags/futsuchakuya/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2498252Z [2m16:25:00[22m   [34m├─[39m [2m/tags/fx/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2519135Z [2m16:25:00[22m   [34m├─[39m [2m/tags/fxrisk/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2539160Z [2m16:25:00[22m   [34m├─[39m [2m/tags/gifttax/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2558898Z [2m16:25:00[22m   [34m├─[39m [2m/tags/ginza/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2578691Z [2m16:25:00[22m   [34m├─[39m [2m/tags/ginzasix/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2636776Z [2m16:25:00[22m   [34m├─[39m [2m/tags/hamacho/index.html[22m [2m(+6ms)[22m 
+2026-05-31T16:25:00.2658121Z [2m16:25:00[22m   [34m├─[39m [2m/tags/hotel/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2678831Z [2m16:25:00[22m   [34m├─[39m [2m/tags/immigrationreform/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2705333Z [2m16:25:00[22m   [34m├─[39m [2m/tags/inheritancetax/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.2732409Z [2m16:25:00[22m   [34m├─[39m [2m/tags/insights/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.2752286Z [2m16:25:00[22m   [34m├─[39m [2m/tags/interest-rate-hikes/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2776014Z [2m16:25:00[22m   [34m├─[39m [2m/tags/investing/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2808150Z [2m16:25:00[22m   [34m├─[39m [2m/tags/investment/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.2831523Z [2m16:25:00[22m   [34m├─[39m [2m/tags/investment/2/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2850620Z [2m16:25:00[22m   [34m├─[39m [2m/tags/investment-strategy/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2870095Z [2m16:25:00[22m   [34m├─[39m [2m/tags/investmentfailure/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2889452Z [2m16:25:00[22m   [34m├─[39m [2m/tags/investmentphilosophy/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2923264Z [2m16:25:00[22m   [34m├─[39m [2m/tags/j-reit/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.2944480Z [2m16:25:00[22m   [34m├─[39m [2m/tags/j-reit/2/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2966296Z [2m16:25:00[22m   [34m├─[39m [2m/tags/japan/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.2987724Z [2m16:25:00[22m   [34m├─[39m [2m/tags/japan-investing/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3043778Z [2m16:25:00[22m   [34m├─[39m [2m/tags/japan-investment/index.html[22m [2m(+6ms)[22m 
+2026-05-31T16:25:00.3064204Z [2m16:25:00[22m   [34m├─[39m [2m/tags/japan-lifestyle/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3096103Z [2m16:25:00[22m   [34m├─[39m [2m/tags/japan-real-estate/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.3124296Z [2m16:25:00[22m   [34m├─[39m [2m/tags/japan-real-estate/2/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.3144089Z [2m16:25:00[22m   [34m├─[39m [2m/tags/japanification/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3164259Z [2m16:25:00[22m   [34m├─[39m [2m/tags/japanredevelopment/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3184747Z [2m16:25:00[22m   [34m├─[39m [2m/tags/japanrentalcontracts/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3204521Z [2m16:25:00[22m   [34m├─[39m [2m/tags/japanvisa/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3224960Z [2m16:25:00[22m   [34m├─[39m [2m/tags/jfind/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3244876Z [2m16:25:00[22m   [34m├─[39m [2m/tags/jr-pass/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3267639Z [2m16:25:00[22m   [34m├─[39m [2m/tags/judicial-scrivener/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3293803Z [2m16:25:00[22m   [34m├─[39m [2m/tags/kabutocho/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.3320466Z [2m16:25:00[22m   [34m├─[39m [2m/tags/kidzania/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.3341562Z [2m16:25:00[22m   [34m├─[39m [2m/tags/korea-japan/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3363575Z [2m16:25:00[22m   [34m├─[39m [2m/tags/koreancommunity/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3383260Z [2m16:25:00[22m   [34m├─[39m [2m/tags/kstartup/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3403283Z [2m16:25:00[22m   [34m├─[39m [2m/tags/lifestyle/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3426929Z [2m16:25:00[22m   [34m├─[39m [2m/tags/livingintokyo/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3477139Z [2m16:25:00[22m   [34m├─[39m [2m/tags/local-report/index.html[22m [2m(+5ms)[22m 
+2026-05-31T16:25:00.3501363Z [2m16:25:00[22m   [34m├─[39m [2m/tags/macro/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3520770Z [2m16:25:00[22m   [34m├─[39m [2m/tags/maintenancefees/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3555825Z [2m16:25:00[22m   [34m├─[39m [2m/tags/mansion/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.3575417Z [2m16:25:00[22m   [34m├─[39m [2m/tags/marketcorrelation/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3596381Z [2m16:25:00[22m   [34m├─[39m [2m/tags/marunouchi/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3616370Z [2m16:25:00[22m   [34m├─[39m [2m/tags/meguro/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3635183Z [2m16:25:00[22m   [34m├─[39m [2m/tags/mikishoji/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3654465Z [2m16:25:00[22m   [34m├─[39m [2m/tags/minato/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3673463Z [2m16:25:00[22m   [34m├─[39m [2m/tags/miraikan/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3692711Z [2m16:25:00[22m   [34m├─[39m [2m/tags/mitsui/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3711553Z [2m16:25:00[22m   [34m├─[39m [2m/tags/monetarypolicy/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3730673Z [2m16:25:00[22m   [34m├─[39m [2m/tags/neighborhood-guide/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3751955Z [2m16:25:00[22m   [34m├─[39m [2m/tags/new-mansion/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3783355Z [2m16:25:00[22m   [34m├─[39m [2m/tags/nihonbashi/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.3806716Z [2m16:25:00[22m   [34m├─[39m [2m/tags/nihonbashi/2/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3827273Z [2m16:25:00[22m   [34m├─[39m [2m/tags/ningyocho/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3882776Z [2m16:25:00[22m   [34m├─[39m [2m/tags/non-resident/index.html[22m [2m(+6ms)[22m 
+2026-05-31T16:25:00.3906908Z [2m16:25:00[22m   [34m├─[39m [2m/tags/office/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3926150Z [2m16:25:00[22m   [34m├─[39m [2m/tags/otemachi/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3945679Z [2m16:25:00[22m   [34m├─[39m [2m/tags/pedestrianparadise/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3964869Z [2m16:25:00[22m   [34m├─[39m [2m/tags/permanentresidency/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.3984565Z [2m16:25:00[22m   [34m├─[39m [2m/tags/pillar-page/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4004431Z [2m16:25:00[22m   [34m├─[39m [2m/tags/pre-owned-mansion/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4024157Z [2m16:25:00[22m   [34m├─[39m [2m/tags/price/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4043724Z [2m16:25:00[22m   [34m├─[39m [2m/tags/rates/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4077038Z [2m16:25:00[22m   [34m├─[39m [2m/tags/real-estate/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.4104840Z [2m16:25:00[22m   [34m├─[39m [2m/tags/real-estate/2/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.4125367Z [2m16:25:00[22m   [34m├─[39m [2m/tags/realestate/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4161126Z [2m16:25:00[22m   [34m├─[39m [2m/tags/redevelopment/index.html[22m [2m(+4ms)[22m 
+2026-05-31T16:25:00.4206300Z [2m16:25:00[22m   [34m├─[39m [2m/tags/relocation/index.html[22m [2m(+4ms)[22m 
+2026-05-31T16:25:00.4225956Z [2m16:25:00[22m   [34m├─[39m [2m/tags/repair-reserve-fund/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4244816Z [2m16:25:00[22m   [34m├─[39m [2m/tags/restorationcosts/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4294548Z [2m16:25:00[22m   [34m├─[39m [2m/tags/riskmanagement/index.html[22m [2m(+5ms)[22m 
+2026-05-31T16:25:00.4314121Z [2m16:25:00[22m   [34m├─[39m [2m/tags/safety/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4333356Z [2m16:25:00[22m   [34m├─[39m [2m/tags/scarcity/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4352642Z [2m16:25:00[22m   [34m├─[39m [2m/tags/selectivity/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4371334Z [2m16:25:00[22m   [34m├─[39m [2m/tags/senkyakubanrai/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4393669Z [2m16:25:00[22m   [34m├─[39m [2m/tags/seoul-real-estate/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4413079Z [2m16:25:00[22m   [34m├─[39m [2m/tags/setagaya/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4432540Z [2m16:25:00[22m   [34m├─[39m [2m/tags/shibuya/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4452075Z [2m16:25:00[22m   [34m├─[39m [2m/tags/shinjuku/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4470576Z [2m16:25:00[22m   [34m├─[39m [2m/tags/shinokubo/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4489141Z [2m16:25:00[22m   [34m├─[39m [2m/tags/sublease/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4509528Z [2m16:25:00[22m   [34m├─[39m [2m/tags/tama/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4533234Z [2m16:25:00[22m   [34m├─[39m [2m/tags/tax/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4552683Z [2m16:25:00[22m   [34m├─[39m [2m/tags/taxaudit/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4571468Z [2m16:25:00[22m   [34m├─[39m [2m/tags/taxplanning/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4590697Z [2m16:25:00[22m   [34m├─[39m [2m/tags/taxstrategy/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4613416Z [2m16:25:00[22m   [34m├─[39m [2m/tags/teamlab/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4633078Z [2m16:25:00[22m   [34m├─[39m [2m/tags/teikichakuya/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4652785Z [2m16:25:00[22m   [34m├─[39m [2m/tags/title-registration/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4718973Z [2m16:25:00[22m   [34m├─[39m [2m/tags/tokyo/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:25:00.4750899Z [2m16:25:00[22m   [34m├─[39m [2m/tags/tokyo/2/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.4781953Z [2m16:25:00[22m   [34m├─[39m [2m/tags/tokyo/3/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.4810868Z [2m16:25:00[22m   [34m├─[39m [2m/tags/tokyo/4/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.4830204Z [2m16:25:00[22m   [34m├─[39m [2m/tags/tokyo-investment/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4853712Z [2m16:25:00[22m   [34m├─[39m [2m/tags/tokyo-life/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4877542Z [2m16:25:00[22m   [34m├─[39m [2m/tags/tokyo-living/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4909384Z [2m16:25:00[22m   [34m├─[39m [2m/tags/tokyo-real-estate/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.4929485Z [2m16:25:00[22m   [34m├─[39m [2m/tags/tokyomuseums/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4949319Z [2m16:25:00[22m   [34m├─[39m [2m/tags/tokyoobservatory/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4971679Z [2m16:25:00[22m   [34m├─[39m [2m/tags/tokyostroll/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.4992284Z [2m16:25:00[22m   [34m├─[39m [2m/tags/tokyotorch/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5034689Z [2m16:25:00[22m   [34m├─[39m [2m/tags/tokyotravel/index.html[22m [2m(+4ms)[22m 
+2026-05-31T16:25:00.5060906Z [2m16:25:00[22m   [34m├─[39m [2m/tags/tokyowithkids/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.5081961Z [2m16:25:00[22m   [34m├─[39m [2m/tags/toranomon/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5102508Z [2m16:25:00[22m   [34m├─[39m [2m/tags/toyosumarket/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5160596Z [2m16:25:00[22m   [34m├─[39m [2m/tags/travel/index.html[22m [2m(+6ms)[22m 
+2026-05-31T16:25:00.5180081Z [2m16:25:00[22m   [34m├─[39m [2m/tags/tsukijimarket/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5199537Z [2m16:25:00[22m   [34m├─[39m [2m/tags/tsukijiredevelopment/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5224409Z [2m16:25:00[22m   [34m├─[39m [2m/tags/tsutayabooks/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.5250595Z [2m16:25:00[22m   [34m├─[39m [2m/tags/vacancyrate/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.5277578Z [2m16:25:00[22m   [34m├─[39m [2m/tags/yen/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.5304233Z [2m16:25:00[22m   [34m├─[39m [2m/tags/yenstrategy/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.5329275Z [2m16:25:00[22m   [34m├─[39m [2m/tags/yield/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5349257Z [2m16:25:00[22m   [34m├─[39m [2m/tags/yokohama/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5374058Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/23-구/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5393098Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/5-구/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5412929Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/boj금리/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5432050Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/fx/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5461909Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/j-reit/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.5481424Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/j-reits/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5500168Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/jpy/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5519191Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/jr패스/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5538388Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/k-스타트업/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5557946Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/가격/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5613467Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/감가상각/index.html[22m [2m(+6ms)[22m 
+2026-05-31T16:25:00.5633678Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/경영관리비자/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5652804Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/고도인재/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5671906Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/공실률/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5691539Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/구매절차/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5710927Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/금리/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5730177Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/금리인상/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5749486Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/기업가정신/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5768773Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/긴자/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5789284Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/긴자식스/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5820163Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/니혼바시/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.5840450Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/니혼바시/2/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5860309Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/다이칸야마/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5879928Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/대출규제/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5899457Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/도심라이프/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.5931608Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/도쿄/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.5963586Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/도쿄/2/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.6031154Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/도쿄/3/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:25:00.6056158Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/도쿄/4/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6076150Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/도쿄-6-구/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6099368Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/도쿄라이프/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6118962Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/도쿄뮤지엄/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6150138Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/도쿄부동산/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.6169914Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/도쿄산책/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6197496Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/도쿄생활/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.6227531Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/도쿄여행/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.6247467Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/도쿄전망대/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6267287Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/도쿄투자/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6287083Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/등기/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6306637Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/라이프/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6326353Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/로컬리포트/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6346077Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/리스크관리/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6366084Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/마루노우치/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6390903Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/매크로/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6458977Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/맨션/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:25:00.6480410Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/맨션/2/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6500479Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/메구로구/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6521652Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/미나토구/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6541062Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/미라이칸/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6560647Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/미츠이/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6580716Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/법인설립/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6600164Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/보통차가/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6619559Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/보행자천국/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6664315Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/부동산/index.html[22m [2m(+4ms)[22m 
+2026-05-31T16:25:00.6708458Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/부동산/2/index.html[22m [2m(+4ms)[22m 
+2026-05-31T16:25:00.6729053Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/분쿄구/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6755189Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/비거주자/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.6774982Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/사법서사/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6794225Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/상속세/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6820527Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/서브리스/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.6853546Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/서울부동산/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.6873856Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/선별안목/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6935414Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/세금/index.html[22m [2m(+6ms)[22m 
+2026-05-31T16:25:00.6955203Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/세무계획/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6973765Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/세무조사/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.6992940Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/세타가야구/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7015470Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/수선적립금/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7034811Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/시부야구/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7053646Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/시세차익/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7072205Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/시장비교/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7091495Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/신오쿠보/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7110619Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/신주쿠구/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7129872Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/신축맨션/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7149113Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/아이와도쿄/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7167917Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/아자부주반/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7187006Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/안전/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7206068Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/에세이/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7225646Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/엔저/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7245416Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/엔저전략/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7269277Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/여행/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7290299Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/영주권/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7347121Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/오테마치/index.html[22m [2m(+6ms)[22m 
+2026-05-31T16:25:00.7376737Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/오피스/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.7397833Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/완전가이드/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7418601Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/외국인투자/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7440628Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/요코하마/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7460380Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/원상회복/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7491119Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/이주/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.7510384Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/인사이트/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7529582Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/인형초/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7548895Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/일본/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7579781Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/일본부동산/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.7606213Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/일본부동산/2/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.7626542Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/일본비자/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7646357Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/일본생활/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7666343Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/일본이민/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7685672Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/일본임대차계약/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7705837Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/일본재개발/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7762672Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/일본투자/index.html[22m [2m(+6ms)[22m 
+2026-05-31T16:25:00.7783297Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/일본화/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7802448Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/임대수익률/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7825188Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/자산배분/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7851911Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/재개발/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.7870864Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/절세/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7890270Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/정기차가/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7909792Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/주오구/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7931327Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/중고맨션/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7952362Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/증여세/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7972456Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/지역가이드/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.7991513Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/지진/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8010518Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/천객만래/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8029602Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/츠키지시장/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8048585Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/츠키지재개발/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8068123Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/츠타야서점/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8088205Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/치요다구/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8108383Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/카부토초/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8129024Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/코레도/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8149294Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/키자니아/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8204847Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/토라노몬/index.html[22m [2m(+5ms)[22m 
+2026-05-31T16:25:00.8224982Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/토요스시장/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8244524Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/토쿄토치/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8263594Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/통화정책/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8309756Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/투자/index.html[22m [2m(+5ms)[22m 
+2026-05-31T16:25:00.8351326Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/투자/2/index.html[22m [2m(+4ms)[22m 
+2026-05-31T16:25:00.8399290Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/투자실패/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.8405033Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/투자전략/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.8426897Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/투자철학/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8446672Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/팀랩/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8466894Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/필라페이지/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8490323Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/하마초/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8510043Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/한국인커뮤니티/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8529819Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/한일비즈니스/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8549489Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/호텔/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8569291Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/환리스크/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8589582Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/환율/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8609528Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/희소성/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8665071Z [2m16:25:00[22m   [34m├─[39m [2m/ko/tags/多摩/index.html[22m [2m(+5ms)[22m 
+2026-05-31T16:25:00.8688256Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/23-区/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8719332Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/j-reit/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.8739562Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/j-reit/2/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8759026Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/jrパス/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8783603Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/kスタートアップ/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8802947Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/torchtower/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8822293Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/インサイト/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8841730Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/エッセイ/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8861191Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/オフィス/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8881004Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/オフィス市場/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8900594Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/キッザニア/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8919881Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/キャピタルゲイン/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8939296Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/クロスボーダービジネス/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8958815Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/コレド/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.8978987Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/サブリース/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9001539Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/ソウル不動産/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9022617Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/チームラボ/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9042642Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/ピラーページ/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9062681Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/ホテル/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9119851Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/マクロ/index.html[22m [2m(+6ms)[22m 
+2026-05-31T16:25:00.9139593Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/マクロ経済/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9170272Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/マンション/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.9189780Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/マンション/2/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9208612Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/ライフスタイル/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9228723Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/リスク管理/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9247711Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/ローカルレポート/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9279148Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/三井/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9295399Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/三鬼商事/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.9329600Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/不動産/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.9355741Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/不動産/2/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.9375103Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/世田谷区/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9394114Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/中古マンション/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9414360Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/中央区/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9433880Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/丸の内/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9453356Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/人形町/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9472614Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/代官山/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9493914Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/価格/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9518712Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/修繕積立金/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9538953Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/兜町/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9596599Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/入管法改正/index.html[22m [2m(+6ms)[22m 
+2026-05-31T16:25:00.9616814Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/円/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9635785Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/円安戦略/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9661542Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/再開発/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.9680315Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/利上げ/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9698867Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/利回り/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9718544Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/千代田区/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9737336Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/千客万来/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9764152Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/原状回復/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.9783679Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/司法書士/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9803679Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/地域ガイド/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9822094Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/地震/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9849220Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/外国人投資/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:00.9873221Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/多摩/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9897535Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/大手町/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9922206Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/子連れ東京/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9946535Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/完全ガイド/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9964629Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/定期借家/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:00.9982427Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/市場相関/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0000654Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/希少性/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0034462Z [2m16:25:00[22m   [34m├─[39m [2m/ja/tags/投資/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:01.0106968Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/投資/2/index.html[22m [2m(+7ms)[22m 
+2026-05-31T16:25:01.0127477Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/投資哲学/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0146782Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/投資失敗/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0169141Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/投資戦略/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0188151Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/文京区/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0206454Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/新大久保/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0225061Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/新宿区/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0245630Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/新築マンション/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0267740Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/旅行/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0286054Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/日本/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0304722Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/日本ビザ/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0333528Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/日本不動産/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:01.0359193Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/日本不動産/2/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:01.0377355Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/日本再開発/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0396958Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/日本化/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0419123Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/日本投資/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0446999Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/日本橋/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:01.0466720Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/日本橋/2/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0486548Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/日本生活/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0544490Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/日銀金利/index.html[22m [2m(+6ms)[22m 
+2026-05-31T16:25:01.0563658Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/普通借家/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0582179Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/未来館/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0611598Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/東京/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:01.0640696Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/東京/2/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:01.0669376Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/東京/3/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:01.0688240Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/東京/4/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0707223Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/東京ミュージアム/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0729331Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/東京ライフ/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0759235Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/東京不動産/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:01.0780279Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/東京不動産/2/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0809361Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/東京展望台/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0819310Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/東京投資/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0839574Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/東京散策/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0869200Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/東京旅行/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:01.0888303Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/東京暮らし/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0912062Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/東京生活/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0931601Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/横浜/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.0989681Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/歩行者天国/index.html[22m [2m(+6ms)[22m 
+2026-05-31T16:25:01.1010634Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/永住権/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1030206Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/法人化/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1052542Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/浜町/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1071954Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/渋谷区/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1091217Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/減価償却/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1110397Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/港区/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1129351Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/為替/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1148658Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/為替リスク/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1167800Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/登記/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1187281Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/目黒区/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1206540Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/相続税/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1235904Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/移住/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:01.1255408Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/税務戦略/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1274362Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/税務計画/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1293436Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/税務調査/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1315765Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/税金/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1334768Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/空室率/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1353665Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/築地再開発/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1373916Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/築地市場/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1430848Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/経営管理ビザ/index.html[22m [2m(+6ms)[22m 
+2026-05-31T16:25:01.1450595Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/蔦屋書店/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1469533Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/虎ノ門/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1488859Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/融資規制/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1507668Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/譲渡所得/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1528406Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/豊洲市場/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1548360Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/賃貸借契約/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1567007Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/資産配分/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1586684Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/購入手続き/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1606073Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/贈与税/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1624849Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/起業家精神/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1643892Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/選別眼/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1665037Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/都心-6-区/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1683833Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/都心ライフ/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1702508Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/配分/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1721509Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/金利/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1740496Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/金融政策/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1758878Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/銀座/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1777430Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/銀座シックス/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1796176Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/防災/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1823631Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/非居住者/index.html[22m [2m(+3ms)[22m 
+2026-05-31T16:25:01.1881055Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/韓国人コミュニティ/index.html[22m [2m(+6ms)[22m 
+2026-05-31T16:25:01.1900608Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/韓日/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1919395Z [2m16:25:01[22m   [34m├─[39m [2m/ja/tags/高度専門職/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1938268Z [2m16:25:01[22m   [34m└─[39m [2m/ja/tags/麻布十番/index.html[22m [2m(+2ms)[22m 
+2026-05-31T16:25:01.1963078Z [2m16:25:01[22m [32m▶[39m src/pages/[...locale]/tags/index.astro
+2026-05-31T16:25:01.2132164Z [2m16:25:01[22m   [34m├─[39m [2m/tags/index.html[22m [2m(+17ms)[22m 
+2026-05-31T16:25:01.2269091Z [2m16:25:01[22m   [34m├─[39m [2m/ko/tags/index.html[22m [2m(+14ms)[22m 
+2026-05-31T16:25:01.2396885Z [2m16:25:01[22m   [34m└─[39m [2m/ja/tags/index.html[22m [2m(+13ms)[22m 
+2026-05-31T16:25:01.2462936Z [2m16:25:01[22m [32m▶[39m src/pages/[...locale]/topics.astro
+2026-05-31T16:25:01.2582724Z [2m16:25:01[22m   [34m├─[39m [2m/topics/index.html[22m [2m(+12ms)[22m 
+2026-05-31T16:25:01.2721337Z [2m16:25:01[22m   [34m├─[39m [2m/ko/topics/index.html[22m [2m(+14ms)[22m 
+2026-05-31T16:25:01.2823020Z [2m16:25:01[22m   [34m└─[39m [2m/ja/topics/index.html[22m [2m(+10ms)[22m 
+2026-05-31T16:25:01.2852117Z [2m16:25:01[22m [32m▶[39m src/pages/[...locale]/index.astro
+2026-05-31T16:25:01.2941871Z [2m16:25:01[22m   [34m├─[39m [2m/index.html[22m [2m(+9ms)[22m 
+2026-05-31T16:25:01.3062942Z [2m16:25:01[22m   [34m├─[39m [2m/ko/index.html[22m [2m(+12ms)[22m 
+2026-05-31T16:25:01.3161230Z [2m16:25:01[22m   [34m└─[39m [2m/ja/index.html[22m [2m(+10ms)[22m 
+2026-05-31T16:25:01.3162584Z [2m16:25:01[22m [32m▶[39m /ja/posts/도쿄와-요코하마-후지산까지-이용-가능한-교통-패스/
+2026-05-31T16:25:01.3167567Z [2m16:25:01[22m   [34m└─[39m [2m/ja/posts/도쿄와-요코하마-후지산까지-이용-가능한-교통-패스/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3168926Z [2m16:25:01[22m [32m▶[39m /ja/posts/일본-도쿄-지진에서-취약한-5곳/
+2026-05-31T16:25:01.3170166Z [2m16:25:01[22m   [34m└─[39m [2m/ja/posts/일본-도쿄-지진에서-취약한-5곳/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3170940Z [2m16:25:01[22m [32m▶[39m /ja/posts/일본-도쿄의-세련된-명소-5곳/
+2026-05-31T16:25:01.3172402Z [2m16:25:01[22m   [34m└─[39m [2m/ja/posts/일본-도쿄의-세련된-명소-5곳/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3173423Z [2m16:25:01[22m [32m▶[39m /ja/posts/일본-리츠j-reits-투자-알아야-할-5가지/
+2026-05-31T16:25:01.3174749Z [2m16:25:01[22m   [34m└─[39m [2m/ja/posts/일본-리츠j-reits-투자-알아야-할-5가지/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3176275Z [2m16:25:01[22m [32m▶[39m /ja/posts/일본-부동산-투자-알아야-할-3가지/
+2026-05-31T16:25:01.3177279Z [2m16:25:01[22m   [34m└─[39m [2m/ja/posts/일본-부동산-투자-알아야-할-3가지/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3178713Z [2m16:25:01[22m [32m▶[39m /ja/posts/코레도-니혼바시-무로마치-미쓰이-재개발/
+2026-05-31T16:25:01.3180919Z [2m16:25:01[22m   [34m└─[39m [2m/ja/posts/코레도-니혼바시-무로마치-미쓰이-재개발/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3181487Z [2m16:25:01[22m [32m▶[39m /ja/privacy
+2026-05-31T16:25:01.3182069Z [2m16:25:01[22m   [34m└─[39m [2m/ja/privacy/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3182980Z [2m16:25:01[22m [32m▶[39m /ja/privacy/
+2026-05-31T16:25:01.3184504Z [2m16:25:01[22m   [34m└─[39m [2m/ja/privacy/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3185673Z [2m16:25:01[22m [32m▶[39m /ko/posts/도쿄와-요코하마-후지산까지-이용-가능한-교통-패스/
+2026-05-31T16:25:01.3186822Z [2m16:25:01[22m   [34m└─[39m [2m/ko/posts/도쿄와-요코하마-후지산까지-이용-가능한-교통-패스/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3188098Z [2m16:25:01[22m [32m▶[39m /ko/posts/일본-도쿄-지진에서-취약한-5곳/
+2026-05-31T16:25:01.3189567Z [2m16:25:01[22m   [34m└─[39m [2m/ko/posts/일본-도쿄-지진에서-취약한-5곳/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3190532Z [2m16:25:01[22m [32m▶[39m /ko/posts/일본-도쿄의-세련된-명소-5곳/
+2026-05-31T16:25:01.3192123Z [2m16:25:01[22m   [34m└─[39m [2m/ko/posts/일본-도쿄의-세련된-명소-5곳/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3193319Z [2m16:25:01[22m [32m▶[39m /ko/posts/일본-리츠j-reits-투자-알아야-할-5가지/
+2026-05-31T16:25:01.3194833Z [2m16:25:01[22m   [34m└─[39m [2m/ko/posts/일본-리츠j-reits-투자-알아야-할-5가지/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3195994Z [2m16:25:01[22m [32m▶[39m /ko/posts/일본-부동산-투자-알아야-할-3가지/
+2026-05-31T16:25:01.3196894Z [2m16:25:01[22m   [34m└─[39m [2m/ko/posts/일본-부동산-투자-알아야-할-3가지/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3197857Z [2m16:25:01[22m [32m▶[39m /ko/posts/코레도-니혼바시-무로마치-미쓰이-재개발/
+2026-05-31T16:25:01.3199421Z [2m16:25:01[22m   [34m└─[39m [2m/ko/posts/코레도-니혼바시-무로마치-미쓰이-재개발/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3200445Z [2m16:25:01[22m [32m▶[39m /ko/privacy
+2026-05-31T16:25:01.3201257Z [2m16:25:01[22m   [34m└─[39m [2m/ko/privacy/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3201970Z [2m16:25:01[22m [32m▶[39m /ko/privacy/
+2026-05-31T16:25:01.3203333Z [2m16:25:01[22m   [34m└─[39m [2m/ko/privacy/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3204255Z [2m16:25:01[22m [32m▶[39m /posts/도쿄와-요코하마-후지산까지-이용-가능한-교통-패스/
+2026-05-31T16:25:01.3205719Z [2m16:25:01[22m   [34m└─[39m [2m/posts/도쿄와-요코하마-후지산까지-이용-가능한-교통-패스/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3206781Z [2m16:25:01[22m [32m▶[39m /posts/일본-도쿄-지진에서-취약한-5곳/
+2026-05-31T16:25:01.3208189Z [2m16:25:01[22m   [34m└─[39m [2m/posts/일본-도쿄-지진에서-취약한-5곳/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3209330Z [2m16:25:01[22m [32m▶[39m /posts/일본-도쿄의-세련된-명소-5곳/
+2026-05-31T16:25:01.3210442Z [2m16:25:01[22m   [34m└─[39m [2m/posts/일본-도쿄의-세련된-명소-5곳/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3211728Z [2m16:25:01[22m [32m▶[39m /posts/일본-리츠j-reits-투자-알아야-할-5가지/
+2026-05-31T16:25:01.3212991Z [2m16:25:01[22m   [34m└─[39m [2m/posts/일본-리츠j-reits-투자-알아야-할-5가지/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3214043Z [2m16:25:01[22m [32m▶[39m /posts/일본-부동산-투자-알아야-할-3가지/
+2026-05-31T16:25:01.3215083Z [2m16:25:01[22m   [34m└─[39m [2m/posts/일본-부동산-투자-알아야-할-3가지/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3215706Z [2m16:25:01[22m [32m▶[39m /posts/코레도-니혼바시-무로마치-미쓰이-재개발/
+2026-05-31T16:25:01.3216917Z [2m16:25:01[22m   [34m└─[39m [2m/posts/코레도-니혼바시-무로마치-미쓰이-재개발/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3217451Z [2m16:25:01[22m [32m▶[39m /privacy
+2026-05-31T16:25:01.3218492Z [2m16:25:01[22m   [34m└─[39m [2m/privacy/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3219283Z [2m16:25:01[22m [32m▶[39m /privacy/
+2026-05-31T16:25:01.3220155Z [2m16:25:01[22m   [34m└─[39m [2m/privacy/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3220912Z [2m16:25:01[22m [32m▶[39m /sitemap.xml
+2026-05-31T16:25:01.3222031Z [2m16:25:01[22m   [34m└─[39m [2m/sitemap.xml/index.html[22m [2m(+0ms)[22m 
+2026-05-31T16:25:01.3222834Z [2m16:25:01[22m [32m✓ Completed in 3.94s.
+2026-05-31T16:25:01.3223144Z [39m
+2026-05-31T16:25:01.3251640Z [2m16:25:01[22m [34m[build][39m Rearranging server assets...
+2026-05-31T16:25:01.3459693Z [2m16:25:01[22m [34m[@astrojs/vercel][39m Bundling function ../../../../dist/server/entry.mjs
+2026-05-31T16:25:04.1949139Z [2m16:25:04[22m [34m[pagefind-build][39m Indexing search (Pagefind) in /home/runner/work/GSF-Blog/GSF-Blog/dist/client/
+2026-05-31T16:25:04.2393688Z 
+2026-05-31T16:25:04.2394534Z Running Pagefind v1.5.2 (Extended)
+2026-05-31T16:25:04.2395296Z Running from: "/home/runner/work/GSF-Blog/GSF-Blog"
+2026-05-31T16:25:04.2395946Z Source:       "dist/client"
+2026-05-31T16:25:04.2396470Z Output:       "dist/client/pagefind"
+2026-05-31T16:25:04.2396803Z 
+2026-05-31T16:25:04.2396942Z [Walking source directory]
+2026-05-31T16:25:04.2502270Z Found 592 files matching **/*.{html}
+2026-05-31T16:25:04.2502673Z 
+2026-05-31T16:25:04.2502867Z [Parsing files]
+2026-05-31T16:25:05.2763208Z 1 page found without an <html> element. 
+2026-05-31T16:25:05.2763812Z Pages without an outer <html> element will not be processed by default. 
+2026-05-31T16:25:05.2764575Z If adding this element is not possible, use the root selector config to target a different root element.
+2026-05-31T16:25:05.2765167Z   * "/google21b29b3e517c0ba5.html" has no <html> element
+2026-05-31T16:25:05.2765606Z Found a data-pagefind-body element on the site.
+2026-05-31T16:25:05.2766230Z ↳ Ignoring pages without this tag.
+2026-05-31T16:25:05.2766432Z 
+2026-05-31T16:25:05.2766544Z [Reading languages]
+2026-05-31T16:25:05.2917520Z Discovered 3 languages: en, ko, ja
+2026-05-31T16:25:05.2938316Z 
+2026-05-31T16:25:05.2973247Z [Building search indexes]
+2026-05-31T16:25:05.3865641Z Note: Pagefind doesn't support stemming for the language ko. 
+2026-05-31T16:25:05.3866922Z Search will still work, but will not match across root words.
+2026-05-31T16:25:05.3868860Z Note: Pagefind doesn't support stemming for the language ja. 
+2026-05-31T16:25:05.3869798Z Search will still work, but will not match across root words.
+2026-05-31T16:25:05.3870476Z Total: 
+2026-05-31T16:25:05.3870905Z   Indexed 3 languages
+2026-05-31T16:25:05.3871365Z   Indexed 114 pages
+2026-05-31T16:25:05.3871803Z   Indexed 29169 words
+2026-05-31T16:25:05.3872259Z   Indexed 0 filters
+2026-05-31T16:25:05.3872676Z   Indexed 0 sorts
+2026-05-31T16:25:05.3889647Z Note: Pagefind doesn't support stemming for the language ko. 
+2026-05-31T16:25:05.3890753Z Search will still work, but will not match across root words.
+2026-05-31T16:25:05.3895701Z Note: Pagefind doesn't support stemming for the language ja. 
+2026-05-31T16:25:05.3896642Z Search will still work, but will not match across root words.
+2026-05-31T16:25:05.7769953Z 
+2026-05-31T16:25:05.7770504Z Finished in 1.537 seconds
+2026-05-31T16:25:05.8174652Z [2m16:25:05[22m [34m[pagefind-build][39m Copied Pagefind bundle to /home/runner/work/GSF-Blog/GSF-Blog/dist/client/pagefind-aux for cross-language mergeIndex.
+2026-05-31T16:25:05.8409947Z [2m16:25:05[22m [34m[@astrojs/sitemap][39m `sitemap-index.xml` created at `dist/client`
+2026-05-31T16:25:05.8411543Z [2m16:25:05[22m [34m[@astrojs/vercel][39m Copying static files to .vercel/output/static
+2026-05-31T16:25:06.1305662Z [2m16:25:06[22m [34m[pagefind-sync-aux-to-vercel-static][39m vercel-config-patch: stripped 0 per-tag, +393 catch-alls, +5 WP legacy, total 456 routes
+2026-05-31T16:25:06.1557226Z [2m16:25:06[22m [34m[pagefind-sync-aux-to-vercel-static][39m pagefind-sync-aux: synced to /home/runner/work/GSF-Blog/GSF-Blog/.vercel/output/static/pagefind-aux
+2026-05-31T16:25:06.1559043Z [2m16:25:06[22m [34m[build][39m Server built in [1m25.50s[22m
+2026-05-31T16:25:06.1559676Z [2m16:25:06[22m [34m[build][39m [1mComplete![22m
+2026-05-31T16:25:06.2666637Z ##[group]Run BRANCH="notion/publish-why-warm-investing-holds-$(date +%Y%m%d%H%M%S)"
+2026-05-31T16:25:06.2667282Z [36;1mBRANCH="notion/publish-why-warm-investing-holds-$(date +%Y%m%d%H%M%S)"[0m
+2026-05-31T16:25:06.2667760Z [36;1mecho "branch_name=${BRANCH}" >> $GITHUB_OUTPUT[0m
+2026-05-31T16:25:06.2668411Z [36;1m[0m
+2026-05-31T16:25:06.2668653Z [36;1mgit config user.name "GSF Notion Bot"[0m
+2026-05-31T16:25:06.2668987Z [36;1mgit config user.email "bot@gsfark.com"[0m
+2026-05-31T16:25:06.2669298Z [36;1mgit checkout -b "${BRANCH}"[0m
+2026-05-31T16:25:06.2669566Z [36;1mgit add src/data/blog/[0m
+2026-05-31T16:25:06.2670004Z [36;1mgit commit -m "feat(notion): [why-warm-investing-holds] Notion 발행 파이프라인 자동 생성 (ko/en/ja)"[0m
+2026-05-31T16:25:06.2670479Z [36;1mgit push origin "${BRANCH}"[0m
+2026-05-31T16:25:06.2670740Z [36;1m[0m
+2026-05-31T16:25:06.2670975Z [36;1mecho "✅ feature branch push 완료: ${BRANCH}"[0m
+2026-05-31T16:25:06.2696814Z shell: /usr/bin/bash -e {0}
+2026-05-31T16:25:06.2697110Z env:
+2026-05-31T16:25:06.2697310Z   PNPM_VERSION: 9
+2026-05-31T16:25:06.2697523Z   NODE_VERSION: 20
+2026-05-31T16:25:06.2697798Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-05-31T16:25:06.2698395Z ##[endgroup]
+2026-05-31T16:25:06.2809857Z Switched to a new branch 'notion/publish-why-warm-investing-holds-20260531162506'
+2026-05-31T16:25:06.4121867Z On branch notion/publish-why-warm-investing-holds-20260531162506
+2026-05-31T16:25:06.4122709Z nothing to commit, working tree clean
+2026-05-31T16:25:06.4136450Z ##[error]Process completed with exit code 1.
+2026-05-31T16:25:06.4196550Z ##[group]Run PAGE_ID="3719ded2-8b0f-81e1-9a53-d1273f2db78a"
+2026-05-31T16:25:06.4197021Z [36;1mPAGE_ID="3719ded2-8b0f-81e1-9a53-d1273f2db78a"[0m
+2026-05-31T16:25:06.4197490Z [36;1mRUN_URL="https://github.com/asiaunion/GSF-Blog/actions/runs/26717973090"[0m
+2026-05-31T16:25:06.4198166Z [36;1m[0m
+2026-05-31T16:25:06.4198425Z [36;1m# status를 발행요청으로 복원 (재시도 가능하게)[0m
+2026-05-31T16:25:06.4198827Z [36;1mcurl -s -X PATCH "https://api.notion.com/v1/pages/${PAGE_ID}" \[0m
+2026-05-31T16:25:06.4199365Z [36;1m  -H "Authorization: ***" \[0m
+2026-05-31T16:25:06.4199697Z [36;1m  -H "Content-Type: application/json" \[0m
+2026-05-31T16:25:06.4200031Z [36;1m  -H "Notion-Version: 2022-06-28" \[0m
+2026-05-31T16:25:06.4200395Z [36;1m  -d '{"properties":{"status":{"select":{"name":"발행요청"}}}}'[0m
+2026-05-31T16:25:06.4200730Z [36;1m[0m
+2026-05-31T16:25:06.4201014Z [36;1mcurl -s -X POST "https://api.notion.com/v1/comments" \[0m
+2026-05-31T16:25:06.4201472Z [36;1m  -H "Authorization: ***" \[0m
+2026-05-31T16:25:06.4201772Z [36;1m  -H "Content-Type: application/json" \[0m
+2026-05-31T16:25:06.4202092Z [36;1m  -H "Notion-Version: 2022-06-28" \[0m
+2026-05-31T16:25:06.4202761Z [36;1m  -d "{\"parent\":{\"page_id\":\"${PAGE_ID}\"},\"rich_text\":[{\"type\":\"text\",\"text\":{\"content\":\"❌ 파이프라인 실패\\nActions 로그: ${RUN_URL}\\n\\n수정 후 status를 다시 '발행요청'으로 변경하세요.\"}}]}"[0m
+2026-05-31T16:25:06.4229404Z shell: /usr/bin/bash -e {0}
+2026-05-31T16:25:06.4229679Z env:
+2026-05-31T16:25:06.4229878Z   PNPM_VERSION: 9
+2026-05-31T16:25:06.4230097Z   NODE_VERSION: 20
+2026-05-31T16:25:06.4230369Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-05-31T16:25:06.4230853Z   NOTION_TOKEN: ***
+2026-05-31T16:25:06.4231072Z ##[endgroup]
+2026-05-31T16:25:08.2903573Z {"object":"page","id":"3719ded2-8b0f-81e1-9a53-d1273f2db78a","created_time":"2026-05-31T15:34:00.000Z","last_edited_time":"2026-05-31T16:25:00.000Z","created_by":{"object":"user","id":"6c0f9e0b-866c-4942-af99-39f76474a913"},"last_edited_by":{"object":"user","id":"6c0f9e0b-866c-4942-af99-39f76474a913"},"cover":null,"icon":null,"parent":{"type":"database_id","database_id":"3719ded2-8b0f-8110-9dc8-e5d80c2f2c47"},"in_trash":false,"is_archived":false,"is_locked":false,"properties":{"featured":{"id":"%3A%3Es%40","type":"checkbox","checkbox":false},"modDatetime":{"id":"%3ByH%60","type":"date","date":null},"description":{"id":"%3Cv%5CJ","type":"rich_text","rich_text":[{"type":"text","text":{"content":"투자는 결국 숫자로 증명되지만, 그 숫자를 만드는 것은 사람의 의사결정과 관계의 품질입니다. GSF가 지향하는 '따뜻한 투자'가 단순한 슬로건을 넘어, 어떻게 실질적인 리스크 관리 프레임워크로 작동하는지 설명합니다.","link":null},"annotations":{"bold":false,"italic":false,"strikethrough":false,"underline":false,"code":false,"color":"default"},"plain_text":"투자는 결국 숫자로 증명되지만, 그 숫자를 만드는 것은 사람의 의사결정과 관계의 품질입니다. GSF가 지향하는 '따뜻한 투자'가 단순한 슬로건을 넘어, 어떻게 실질적인 리스크 관리 프레임워크로 작동하는지 설명합니다.","href":null}]},"tags":{"id":"Ar%5C_","type":"multi_select","multi_select":[{"id":"e0f601a4-f578-4f0a-97f5-6d606115f10d","name":"투자철학","color":"pink"},{"id":"2469b0a9-905c-4cb1-97b4-64c4c73a4b00","name":"리스크관리","color":"green"},{"id":"ea1d9096-3388-4b6b-aac2-2a701deb6201","name":"기업가정신","color":"blue"},{"id":"9058d640-5480-482b-8818-6a3add02c6fa","name":"한일비즈니스","color":"red"}]},"voiceRewriteSkip":{"id":"IWKb","type":"checkbox","checkbox":true},"ogImage":{"id":"Ki%3Bq","type":"url","url":"https://gsfark.com/assets/images/blog/why-warm-investing-holds-hero.webp"},"category":{"id":"Uxl~","type":"select","select":{"id":"737aacd3-e6bb-4b92-b3dd-2ff05a5c1b4e","name":"essay","color":"green"}},"translationStatus":{"id":"%60%7DFP","type":"select","select":{"id":"1a78a9e3-a104-407c-95d4-4dcfff90895e","name":"completed","color":"default"}},"pubDatetime":{"id":"coLK","type":"date","date":{"start":"2026-04-22T08:00:00.000+00:00","end":null,"time_zone":null}},"slug":{"id":"ivGQ","type":"rich_text","rich_text":[{"type":"text","text":{"content":"why-warm-investing-holds","link":null},"annotations":{"bold":false,"italic":false,"strikethrough":false,"underline":false,"code":false,"color":"default"},"plain_text":"why-warm-investing-holds","href":null}]},"draft":{"id":"kxmb","type":"checkbox","checkbox":false},"status":{"id":"vM%60F","type":"select","select":{"id":"f5730235-f2e7-4b4d-96a4-ed5f50b12619","name":"발행요청","color":"blue"}},"lang":{"id":"vxjH","type":"select","select":{"id":"3c3a5099-80e6-4136-a39d-22fd04f9b149","name":"ko","color":"default"}},"gitSha":{"id":"x%5E%3De","type":"rich_text","rich_text":[]},"previewUrl":{"id":"yS%5Cg","type":"url","url":null},"sources":{"id":"%7B%3ApZ","type":"rich_text","rich_text":[{"type":"text","text":{"content":"https://www.gsfark.com/\nhttps://www.nikkei.com/news/category/economy/","link":null},"annotations":{"bold":false,"italic":false,"strikethrough":false,"underline":false,"code":false,"color":"default"},"plain_text":"https://www.gsfark.com/\nhttps://www.nikkei.com/news/category/economy/","href":null}]},"title":{"id":"title","type":"title","title":[{"type":"text","text":{"content":"따뜻한 투자의 미학: 숫자의 냉기와 사람의 온도가 만나는 지점","link":null},"annotations":{"bold":false,"italic":false,"strikethrough":false,"underline":false,"code":false,"color":"default"},"plain_text":"따뜻한 투자의 미학: 숫자의 냉기와 사람의 온도가 만나는 지점","href":null}]}},"url":"https://www.notion.so/3719ded28b0f81e19a53d1273f2db78a","public_url":null,"archived":false,"request_id":"cb1eda2c-6f7c-4513-8dda-6cfa8d15a469"}{"object":"error","status":403,"code":"restricted_resource","message":"Insufficient permissions for this endpoint.","request_id":"d83333b5-1a73-451d-b855-1a00d8bf80db"}
+2026-05-31T16:25:08.2962815Z Post job cleanup.
+2026-05-31T16:25:08.4373842Z Pruning is unnecessary.
+2026-05-31T16:25:08.4512668Z Post job cleanup.
+2026-05-31T16:25:08.5495431Z [command]/usr/bin/git version
+2026-05-31T16:25:08.5531088Z git version 2.54.0
+2026-05-31T16:25:08.5576163Z Temporarily overriding HOME='/home/runner/work/_temp/400103db-87d7-4aba-bb34-6ecad291671b' before making global git config changes
+2026-05-31T16:25:08.5577815Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-31T16:25:08.5582966Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/GSF-Blog/GSF-Blog
+2026-05-31T16:25:08.5623417Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-31T16:25:08.5655896Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-31T16:25:08.5880441Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-31T16:25:08.5903805Z http.https://github.com/.extraheader
+2026-05-31T16:25:08.5917200Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-05-31T16:25:08.5947604Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-31T16:25:08.6161792Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-31T16:25:08.6192107Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-31T16:25:08.6524374Z Cleaning up orphan processes
+2026-05-31T16:25:08.6813392Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-node@v4, pnpm/action-setup@v4. Actions will be forced to run with Node.js 24 by default starting June 16th, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

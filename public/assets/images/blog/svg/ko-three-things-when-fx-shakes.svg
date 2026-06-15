@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 260" role="img" aria-label="환율 변동과 투자 수익 상관관계" style="max-width:100%;height:auto;border:1px solid #e5e7eb;border-radius:8px;background:#fff;margin: 20px 0;">
+  <text x="24" y="35" font-size="16" font-weight="700" fill="#111827">환율 변동 시나리오별 대응 전략</text>
+  
+  <!-- Yen Weakness -->
+  <rect x="60" y="80" width="300" height="120" fill="#fffbeb" stroke="#f59e0b" stroke-width="1" rx="8" />
+  <text x="145" y="110" font-size="14" font-weight="700" fill="#92400e">엔화 약세 지속 시</text>
+  <text x="80" y="145" font-size="12" fill="#b45309">● 추가 매수/자산 확장 기회</text>
+  <text x="80" y="170" font-size="12" fill="#b45309">● 수익금 일본 내 재투자 (송금 지양)</text>
+  
+  <!-- Yen Strength -->
+  <rect x="420" y="80" width="300" height="120" fill="#f0fdf4" stroke="#22c55e" stroke-width="1" rx="8" />
+  <text x="505" y="110" font-size="14" font-weight="700" fill="#166534">엔화 강세 전환 시</text>
+  <text x="440" y="145" font-size="12" fill="#15803d">● 누적 수익금 해외 송금 (환차익 확정)</text>
+  <text x="440" y="170" font-size="12" fill="#15803d">● 일부 자산 매각 및 포트폴리오 리밸런싱</text>
+  
+  <!-- Center Logic -->
+  <path d="M360 140 L420 140" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrowhead)" />
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#9ca3af" />
+    </marker>
+  </defs>
+  <text x="390" y="225" font-size="11" fill="#6b7280" text-anchor="middle">현지 대출(Yen Debt)을 통한 환리스크 자동 상쇄 구조가 핵심</text>
+</svg>

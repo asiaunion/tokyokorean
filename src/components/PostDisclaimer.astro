@@ -1,0 +1,25 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import {
+  postDisclaimerText,
+  type PostDisclaimerCategory,
+  type PostDisclaimerLang,
+} from "@/lib/postDisclaimer";
+
+type Props = {
+  category: PostDisclaimerCategory;
+  lang: PostDisclaimerLang;
+} & HTMLAttributes<"p">;
+
+const { category, lang, class: className, ...attrs } = Astro.props;
+
+const text = postDisclaimerText(category, lang);
+---
+
+<p
+  class:list={["post-inline-disclaimer not-prose", className]}
+  role="note"
+  {...attrs}
+>
+  {text}
+</p>

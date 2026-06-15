@@ -1,0 +1,11 @@
+{
+  "title": "GSF-Blog AdSense V5 감사 오탐(False Positive) 항목 검증 결과",
+  "summary": "AdSense V5 감사 보고서에서 제기된 P0/P1 항목 5개가 모두 오탐으로 확인됨. (1) ads.txt pub ID 불일치 — 브라우저 세션 캐시로 인한 오독, 실제 라이브/코드 모두 pub-4729433282370174 일치. (2) og:image 이중 URL — curl 실측 결과 정상 단일 URL. (3) GA4 환경변수 미설정 — G-1JZH2YCS3Z 정상 로드 확인. (4) 중복 포스트 — KO 버전의 2026-05-19 예약 발행 포스트와 기존 다른 주제 포스트의 혼동. (5) 800단어 미만 포스트 — SVG 인포그래픽 포함 본문으로 실제 텍스트 충분. 핵심 교훈: 브라우저 서브에이전트는 세션 캐시/리디렉션/렌더링 환경 차이로 오탐 생성 가능 → 반드시 curl 실측 병행 필수.",
+  "eventType": "audit_false_positive_postmortem",
+  "createdAt": "2026-05-13T01:59:00+09:00",
+  "relatedProject": "GSF-Blog (gsfark.com)",
+  "references": [
+    "d8f406cb-5f8a-4933-85af-c4ccaa813f09 (V5 감사 세션)",
+    "d0189d36-71fb-4b22-b4ae-a501fa4f4864 (V5 후속 작업 세션)"
+  ]
+}

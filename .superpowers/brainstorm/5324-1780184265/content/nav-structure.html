@@ -1,0 +1,137 @@
+<h2>네비게이션 구조 — 어떤 방식이 좋으세요?</h2>
+<p class="subtitle">지금은 대시보드 화면에 "메모장", "포스트 라이브러리" 버튼이 있어요. 이걸 상단 헤더 메뉴로 옮기는 방식을 비교해드릴게요.</p>
+
+<div class="section">
+  <div class="split">
+    <div class="mockup" data-choice="a" onclick="toggleSelect(this)" style="cursor:pointer; flex:1;">
+      <div class="mockup-header">🅐 현재 방식 (변경 없음)</div>
+      <div class="mockup-body" style="padding:0;">
+        <!-- 헤더 -->
+        <div class="mock-nav" style="display:flex;align-items:center;justify-content:space-between;padding:10px 16px;background:#1a1a1a;border-bottom:1px solid #333;">
+          <span style="font-weight:bold;color:#34d399;">🛠️ GSF-Blog Admin</span>
+          <span style="font-size:11px;color:#888;">관리자 | 로그아웃</span>
+        </div>
+        <!-- 대시보드 본문 -->
+        <div style="padding:16px;background:#111;">
+          <div style="font-size:13px;font-weight:bold;color:#34d399;margin-bottom:12px;">대시보드 요약</div>
+          <!-- 버튼들 -->
+          <div style="display:flex;gap:8px;margin-bottom:16px;">
+            <div style="padding:8px 14px;background:#1e1e1e;border:1px solid #333;border-radius:8px;font-size:11px;color:#eee;">📝 메모장</div>
+            <div style="padding:8px 14px;background:#1e1e1e;border:1px solid #333;border-radius:8px;font-size:11px;color:#eee;">📚 포스트 라이브러리</div>
+          </div>
+          <!-- 통계 카드 -->
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px;">
+            <div style="background:#1e1e1e;border:1px solid #333;border-radius:8px;padding:10px;text-align:center;">
+              <div style="font-size:18px;">🟢</div>
+              <div style="font-size:14px;font-weight:bold;color:#fff;">12</div>
+              <div style="font-size:9px;color:#888;">발행됨</div>
+            </div>
+            <div style="background:#1e1e1e;border:1px solid #333;border-radius:8px;padding:10px;text-align:center;">
+              <div style="font-size:18px;">🟡</div>
+              <div style="font-size:14px;font-weight:bold;color:#fff;">3</div>
+              <div style="font-size:9px;color:#888;">작성 중</div>
+            </div>
+            <div style="background:#1e1e1e;border:1px solid #333;border-radius:8px;padding:10px;text-align:center;">
+              <div style="font-size:18px;">📝</div>
+              <div style="font-size:14px;font-weight:bold;color:#fff;">7</div>
+              <div style="font-size:9px;color:#888;">메모</div>
+            </div>
+            <div style="background:#1e1e1e;border:1px solid #333;border-radius:8px;padding:10px;text-align:center;">
+              <div style="font-size:18px;">🔒</div>
+              <div style="font-size:14px;font-weight:bold;color:#fff;">24</div>
+              <div style="font-size:9px;color:#888;">활동 기록</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="padding:10px 14px;font-size:11px;color:#888;">
+        ✖️ 대시보드에서만 메뉴를 볼 수 있음. 포스트 라이브러리에서 다른 페이지로 가려면 뒤로가기 필요.
+      </div>
+    </div>
+
+    <div class="mockup" data-choice="b" onclick="toggleSelect(this)" style="cursor:pointer; flex:1; border: 2px solid transparent;">
+      <div class="mockup-header">🅑 헤더 상단 탭 메뉴 (추천)</div>
+      <div class="mockup-body" style="padding:0;">
+        <!-- 헤더 with 탭 -->
+        <div style="background:#1a1a1a;border-bottom:1px solid #333;">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 16px;">
+            <span style="font-weight:bold;color:#34d399;">🛠️ GSF-Blog Admin</span>
+            <span style="font-size:11px;color:#888;">관리자 | 로그아웃</span>
+          </div>
+          <!-- 탭 네비게이션 -->
+          <div style="display:flex;gap:0;padding:0 16px;border-top:1px solid #222;">
+            <div style="padding:8px 14px;font-size:11px;color:#34d399;border-bottom:2px solid #34d399;font-weight:bold;">📊 대시보드</div>
+            <div style="padding:8px 14px;font-size:11px;color:#888;border-bottom:2px solid transparent;">📝 메모장</div>
+            <div style="padding:8px 14px;font-size:11px;color:#888;border-bottom:2px solid transparent;">📚 포스트 라이브러리</div>
+          </div>
+        </div>
+        <!-- 대시보드 본문 -->
+        <div style="padding:16px;background:#111;">
+          <div style="font-size:13px;font-weight:bold;color:#34d399;margin-bottom:12px;">대시보드 요약</div>
+          <!-- 통계 카드 -->
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+            <div style="background:#1e1e1e;border:1px solid #333;border-radius:8px;padding:10px;text-align:center;">
+              <div style="font-size:18px;">🟢</div>
+              <div style="font-size:14px;font-weight:bold;color:#fff;">12</div>
+              <div style="font-size:9px;color:#888;">발행됨</div>
+            </div>
+            <div style="background:#1e1e1e;border:1px solid #333;border-radius:8px;padding:10px;text-align:center;">
+              <div style="font-size:18px;">🟡</div>
+              <div style="font-size:14px;font-weight:bold;color:#fff;">3</div>
+              <div style="font-size:9px;color:#888;">작성 중</div>
+            </div>
+            <div style="background:#1e1e1e;border:1px solid #333;border-radius:8px;padding:10px;text-align:center;">
+              <div style="font-size:18px;">📝</div>
+              <div style="font-size:14px;font-weight:bold;color:#fff;">7</div>
+              <div style="font-size:9px;color:#888;">메모</div>
+            </div>
+            <div style="background:#1e1e1e;border:1px solid #333;border-radius:8px;padding:10px;text-align:center;">
+              <div style="font-size:18px;">🔒</div>
+              <div style="font-size:14px;font-weight:bold;color:#fff;">24</div>
+              <div style="font-size:9px;color:#888;">활동 기록</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="padding:10px 14px;font-size:11px;color:#888;">
+        ✅ 어느 페이지에 있든 탭 클릭 한 번으로 이동 가능. 지금 어디 있는지도 한눈에 보임.
+      </div>
+    </div>
+
+    <div class="mockup" data-choice="c" onclick="toggleSelect(this)" style="cursor:pointer; flex:1;">
+      <div class="mockup-header">🅒 왼쪽 사이드바 메뉴</div>
+      <div class="mockup-body" style="padding:0;">
+        <!-- 헤더 -->
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 16px;background:#1a1a1a;border-bottom:1px solid #333;">
+          <span style="font-weight:bold;color:#34d399;">🛠️ GSF-Blog Admin</span>
+          <span style="font-size:11px;color:#888;">로그아웃</span>
+        </div>
+        <!-- 사이드바 + 콘텐츠 -->
+        <div style="display:flex;background:#111;">
+          <!-- 사이드바 -->
+          <div style="width:90px;background:#161616;border-right:1px solid #333;padding:12px 8px;min-height:120px;display:flex;flex-direction:column;gap:4px;">
+            <div style="padding:8px;text-align:center;background:#34d399;color:#000;border-radius:6px;font-size:10px;font-weight:bold;">📊<br/>대시보드</div>
+            <div style="padding:8px;text-align:center;border-radius:6px;font-size:10px;color:#888;">📝<br/>메모장</div>
+            <div style="padding:8px;text-align:center;border-radius:6px;font-size:10px;color:#888;">📚<br/>포스트</div>
+          </div>
+          <!-- 메인 -->
+          <div style="flex:1;padding:12px;">
+            <div style="font-size:12px;font-weight:bold;color:#34d399;margin-bottom:10px;">대시보드</div>
+            <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:6px;">
+              <div style="background:#1e1e1e;border:1px solid #333;border-radius:6px;padding:8px;text-align:center;font-size:10px;color:#eee;">🟢 12 발행됨</div>
+              <div style="background:#1e1e1e;border:1px solid #333;border-radius:6px;padding:8px;text-align:center;font-size:10px;color:#eee;">🟡 3 작성 중</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="padding:10px 14px;font-size:11px;color:#888;">
+        ↔️ 공간을 조금 더 차지함. 모바일에서 불편할 수 있음. 메뉴 항목이 5개 이상으로 늘어날 때 유리.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top:16px;padding:12px 16px;background:#1a2a1a;border:1px solid #2a3a2a;border-radius:10px;">
+  <strong style="color:#34d399;">💡 제 추천은 B (헤더 상단 탭)</strong>입니다.<br/>
+  <span style="font-size:12px;color:#aaa;">가장 적은 수정으로 가장 큰 UX 개선이 가능해요. 현재 헤더를 그대로 쓰면서 탭 한 줄만 추가하면 됩니다. 워드, 노션 같은 앱에서 다들 익숙한 방식이기도 해요.</span>
+</div>

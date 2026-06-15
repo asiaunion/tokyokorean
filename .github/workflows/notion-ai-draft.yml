@@ -1,0 +1,88 @@
+name: Notion AI Draft
+
+on:
+  workflow_dispatch:
+    inputs:
+      notion_page_id:
+        description: "Notion 페이지 ID"
+        required: true
+        type: string
+      slug:
+        description: "포스트 slug"
+        required: true
+        type: string
+      blog_id:
+        description: "블로그 ID"
+        required: false
+        default: "gsf-blog"
+        type: string
+
+env:
+  PNPM_VERSION: "9"
+  NODE_VERSION: "20"
+
+concurrency:
+  group: notion-draft-${{ inputs.notion_page_id }}
+  cancel-in-progress: true
+
+jobs:
+  ai-draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate AI Draft
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
+        run: |
+          npx tsx scripts/notion-ai-draft.ts "${{ inputs.notion_page_id }}"
+
+      - name: Notify success to Notion
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        run: |
+          PAGE_ID="${{ inputs.notion_page_id }}"
+          # status를 '초안검토대기'로 변경
+          curl -s -X PATCH "https://api.notion.com/v1/pages/${PAGE_ID}" \
+            -H "Authorization: Bearer ${NOTION_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -H "Notion-Version: 2022-06-28" \
+            -d "{\"properties\":{\"status\":{\"select\":{\"name\":\"초안검토대기\"}}}}"
+
+      - name: Notify failure to Notion
+        if: failure()
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        run: |
+          PAGE_ID="${{ inputs.notion_page_id }}"
+          # status를 '발행실패'로 변경
+          curl -s -X PATCH "https://api.notion.com/v1/pages/${PAGE_ID}" \
+            -H "Authorization: Bearer ${NOTION_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -H "Notion-Version: 2022-06-28" \
+            -d "{\"properties\":{\"status\":{\"select\":{\"name\":\"발행실패\"}}}}"
+          
+          # 에러 코멘트 남기기
+          curl -s -X POST "https://api.notion.com/v1/comments" \
+            -H "Authorization: Bearer ${NOTION_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -H "Notion-Version: 2022-06-28" \
+            -d "{\"parent\":{\"page_id\":\"${PAGE_ID}\"},\"rich_text\":[{\"type\":\"text\",\"text\":{\"content\":\"❌ AI 초안 생성 실패. Github Actions 로그를 확인해주세요.\"}}]}" || echo "Failed to add comment"

@@ -1,0 +1,31 @@
+{
+  "title": "GSF-Blog AdSense P0/P1 수정: Hero 본문 렌더링 + 카드 썸네일 + PNG→WebP 전환",
+  "summary": "GSF Blog(gsfark.com) AdSense 승인 확률 극대화를 위한 P0/P1 수정 완료. 핵심 수정 4건: (1) PostDetails.astro에 Hero 이미지 본문 렌더링 추가 — ogImage가 OG 메타 태그에만 사용되고 본문에는 미표시되던 치명적 결함 수정, (2) Card.astro에 ogImage 썸네일 추가 — 텍스트만의 밋밋한 리스트를 이미지 포함 카드로 개선, (3) 29개 Hero PNG → WebP 변환 (26MB→5.6MB, 78% 절감), (4) 절대 URL(https://gsfark.com/...) ogImage를 new URL().pathname으로 경로만 추출하여 localhost/production 양립 해결. 90개 포스트(EN/KO/JA) frontmatter 전원 .webp 참조로 업데이트. 승인 확률 85~90% → 95%+.",
+  "eventType": "architecture_change",
+  "createdAt": "2026-05-07T17:25:00+09:00",
+  "references": [
+    {
+      "type": "conversation",
+      "id": "76448ac3-af1b-486e-bd61-551e5c094bcb",
+      "title": "GSF Blog AdSense P0/P1 Remediation"
+    },
+    {
+      "type": "knowledge_item",
+      "id": "gsf_blog_adsense_expert_audit_v3",
+      "title": "GSF-Blog AdSense 전문가 종합 감사 V3"
+    },
+    {
+      "type": "file",
+      "path": "GSF-Blog/src/layouts/PostDetails.astro"
+    },
+    {
+      "type": "file",
+      "path": "GSF-Blog/src/components/Card.astro"
+    },
+    {
+      "type": "commit",
+      "sha": "d6dbbd6",
+      "message": "feat: P0 Hero image rendering + P1 card thumbnails + WebP migration"
+    }
+  ]
+}

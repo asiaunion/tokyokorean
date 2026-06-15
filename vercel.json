@@ -1,0 +1,3815 @@
+{
+  "redirects": [
+    {
+      "source": "/en",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/en/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/en/:path*",
+      "destination": "/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/author",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/author/",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/author/:path*",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy/",
+      "destination": "/privacy-policy/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/privacy/",
+      "destination": "/ko/privacy-policy/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/privacy/",
+      "destination": "/ja/privacy-policy/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*/feed/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/feed/",
+      "destination": "/rss.xml",
+      "permanent": true
+    },
+    {
+      "source": "/tags/archive/",
+      "destination": "/tags/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/archive/",
+      "destination": "/ko/tags/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/archive/",
+      "destination": "/ja/tags/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%8B%88%ED%98%BC%EB%B0%94%EC%8B%9C/",
+      "destination": "/tags/nihonbashi/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%8B%88%ED%98%BC%EB%B0%94%EC%8B%9C",
+      "destination": "/tags/nihonbashi/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%8B%88%ED%98%BC%EB%B0%94%EC%8B%9C/",
+      "destination": "/tags/nihonbashi/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%8B%88%ED%98%BC%EB%B0%94%EC%8B%9C",
+      "destination": "/tags/nihonbashi/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%e6%97%a5%e6%9c%ac%e6%a9%8b/",
+      "destination": "/tags/nihonbashi/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%e6%97%a5%e6%9c%ac%e6%a9%8b",
+      "destination": "/tags/nihonbashi/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%B6%80%EB%8F%99%EC%82%B0/",
+      "destination": "/ko/tags/%EB%B6%80%EB%8F%99%EC%82%B0/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%B6%80%EB%8F%99%EC%82%B0",
+      "destination": "/ko/tags/%EB%B6%80%EB%8F%99%EC%82%B0/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%B6%80%EB%8F%99%EC%82%B0/",
+      "destination": "/ko/tags/%EB%B6%80%EB%8F%99%EC%82%B0/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%B6%80%EB%8F%99%EC%82%B0",
+      "destination": "/ko/tags/%EB%B6%80%EB%8F%99%EC%82%B0/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%ED%88%AC%EC%9E%90/",
+      "destination": "/ko/tags/%ED%88%AC%EC%9E%90/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%ED%88%AC%EC%9E%90",
+      "destination": "/ko/tags/%ED%88%AC%EC%9E%90/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%97%85%E8%A1%8C/",
+      "destination": "/tags/travel/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%97%85%E8%A1%8C",
+      "destination": "/tags/travel/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%97%85%E8%A1%8C/",
+      "destination": "/tags/travel/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%97%85%E8%A1%8C",
+      "destination": "/tags/travel/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%ED%98%B8%ED%85%94/",
+      "destination": "/tags/hotel/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%ED%98%B8%ED%85%94",
+      "destination": "/tags/hotel/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%ED%98%B8%ED%85%94/",
+      "destination": "/tags/hotel/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%ED%98%B8%ED%85%94",
+      "destination": "/tags/hotel/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E8%B4%88%E4%B8%8E%E7%A8%8E/",
+      "destination": "/ja/tags/%E8%B4%88%E4%B8%8E%E7%A8%8E/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E8%B4%88%E4%B8%8E%E7%A8%8E",
+      "destination": "/ja/tags/%E8%B4%88%E4%B8%8E%E7%A8%8E/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E9%83%BD%E5%BF%83%E3%83%A9%E3%82%A4%E3%83%95/",
+      "destination": "/ja/tags/%E9%83%BD%E5%BF%83%E3%83%A9%E3%82%A4%E3%83%95/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E9%83%BD%E5%BF%83%E3%83%A9%E3%82%A4%E3%83%95",
+      "destination": "/ja/tags/%E9%83%BD%E5%BF%83%E3%83%A9%E3%82%A4%E3%83%95/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E9%83%BD%E5%BF%83%E3%83%A9%E3%82%A4%E3%83%95/",
+      "destination": "/ja/tags/%E9%83%BD%E5%BF%83%E3%83%A9%E3%82%A4%E3%83%95/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E9%83%BD%E5%BF%83%E3%83%A9%E3%82%A4%E3%83%95",
+      "destination": "/ja/tags/%E9%83%BD%E5%BF%83%E3%83%A9%E3%82%A4%E3%83%95/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%9D%B1%E4%BA%AC%E3%83%A9%E3%82%A4%E3%83%95/",
+      "destination": "/ja/tags/%E6%9D%B1%E4%BA%AC%E3%83%A9%E3%82%A4%E3%83%95/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%9D%B1%E4%BA%AC%E3%83%A9%E3%82%A4%E3%83%95",
+      "destination": "/ja/tags/%E6%9D%B1%E4%BA%AC%E3%83%A9%E3%82%A4%E3%83%95/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%9D%B1%E4%BA%AC%E3%83%A9%E3%82%A4%E3%83%95/",
+      "destination": "/ja/tags/%E6%9D%B1%E4%BA%AC%E3%83%A9%E3%82%A4%E3%83%95/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%9D%B1%E4%BA%AC%E3%83%A9%E3%82%A4%E3%83%95",
+      "destination": "/ja/tags/%E6%9D%B1%E4%BA%AC%E3%83%A9%E3%82%A4%E3%83%95/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/k%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97/",
+      "destination": "/ko/tags/k-%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/k%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97",
+      "destination": "/ko/tags/k-%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/k%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97/",
+      "destination": "/ko/tags/k-%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/k%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97",
+      "destination": "/ko/tags/k-%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%8F%84%EC%BF%84-6-%EA%B5%AC/",
+      "destination": "/ko/tags/%EB%8F%84%EC%BF%84-6-%EA%B5%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%8F%84%EC%BF%84-6-%EA%B5%AC",
+      "destination": "/ko/tags/%EB%8F%84%EC%BF%84-6-%EA%B5%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%8F%84%EC%BF%84-6-%EA%B5%AC/",
+      "destination": "/ko/tags/%EB%8F%84%EC%BF%84-6-%EA%B5%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%8F%84%EC%BF%84-6-%EA%B5%AC",
+      "destination": "/ko/tags/%EB%8F%84%EC%BF%84-6-%EA%B5%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%ED%86%A0%EC%BF%84%ED%86%A0%EC%B9%98/",
+      "destination": "/ko/tags/%ED%86%A0%EC%BF%84%ED%86%A0%EC%B9%98/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%ED%86%A0%EC%BF%84%ED%86%A0%EC%B9%98",
+      "destination": "/ko/tags/%ED%86%A0%EC%BF%84%ED%86%A0%EC%B9%98/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%ED%86%A0%EC%BF%84%ED%86%A0%EC%B9%98/",
+      "destination": "/ko/tags/%ED%86%A0%EC%BF%84%ED%86%A0%EC%B9%98/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%ED%86%A0%EC%BF%84%ED%86%A0%EC%B9%98",
+      "destination": "/ko/tags/%ED%86%A0%EC%BF%84%ED%86%A0%EC%B9%98/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%99%84%EC%A0%84%EA%B0%80%EC%9D%B4%EB%93%9C/",
+      "destination": "/ko/tags/%EC%99%84%EC%A0%84%EA%B0%80%EC%9D%B4%EB%93%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%99%84%EC%A0%84%EA%B0%80%EC%9D%B4%EB%93%9C",
+      "destination": "/ko/tags/%EC%99%84%EC%A0%84%EA%B0%80%EC%9D%B4%EB%93%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%99%84%EC%A0%84%EA%B0%80%EC%9D%B4%EB%93%9C/",
+      "destination": "/ko/tags/%EC%99%84%EC%A0%84%EA%B0%80%EC%9D%B4%EB%93%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%99%84%EC%A0%84%EA%B0%80%EC%9D%B4%EB%93%9C",
+      "destination": "/ko/tags/%EC%99%84%EC%A0%84%EA%B0%80%EC%9D%B4%EB%93%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%8B%88%ED%98%BC%EB%B0%94%EC%8B%9C/:page(\\d+)/",
+      "destination": "/tags/nihonbashi/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%8B%88%ED%98%BC%EB%B0%94%EC%8B%9C/:page(\\d+)",
+      "destination": "/tags/nihonbashi/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%8B%88%ED%98%BC%EB%B0%94%EC%8B%9C/:page(\\d+)/",
+      "destination": "/tags/nihonbashi/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%8B%88%ED%98%BC%EB%B0%94%EC%8B%9C/:page(\\d+)",
+      "destination": "/tags/nihonbashi/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%e6%97%a5%e6%9c%ac%e6%a9%8b/:page(\\d+)/",
+      "destination": "/tags/nihonbashi/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%e6%97%a5%e6%9c%ac%e6%a9%8b/:page(\\d+)",
+      "destination": "/tags/nihonbashi/",
+      "permanent": true
+    },
+
+    {
+      "source": "/tags/부동산/:page(\\d+)/",
+      "destination": "/ko/tags/부동산/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/부동산/:page(\\d+)",
+      "destination": "/ko/tags/부동산/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/부동산/:page(\\d+)/",
+      "destination": "/ko/tags/부동산/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/부동산/:page(\\d+)",
+      "destination": "/ko/tags/부동산/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/투자/:page(\\d+)/",
+      "destination": "/ko/tags/투자/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/투자/:page(\\d+)",
+      "destination": "/ko/tags/투자/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%eb%8b%88%ed%98%bc%eb%b0%94%ec%8b%9c/",
+      "destination": "/tags/nihonbashi/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%eb%8b%88%ed%98%bc%eb%b0%94%ec%8b%9c",
+      "destination": "/tags/nihonbashi/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%eb%8b%88%ed%98%bc%eb%b0%94%ec%8b%9c/:page(\\d+)/",
+      "destination": "/tags/nihonbashi/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%eb%8b%88%ed%98%bc%eb%b0%94%ec%8b%9c/:page(\\d+)",
+      "destination": "/tags/nihonbashi/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/:tag/:page(\\d+)",
+      "destination": "/tags/:tag/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/:tag/:page(\\d+)/",
+      "destination": "/tags/:tag/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/:tag/:page(\\d+)",
+      "destination": "/ko/tags/:tag/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/:tag/:page(\\d+)/",
+      "destination": "/ko/tags/:tag/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/:tag/:page(\\d+)",
+      "destination": "/ja/tags/:tag/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/:tag/:page(\\d+)/",
+      "destination": "/ja/tags/:tag/",
+      "permanent": true
+    },
+    {
+      "source": "/en/:path(.*)",
+      "destination": "/:path",
+      "permanent": true
+    },
+    {
+      "source": "/%EC%9D%BC%EB%B3%B8-%EB%8F%84%EC%BF%84-%EC%A7%80%EC%A7%84%EC%97%90%EC%84%9C-%EC%B7%A8%EC%95%BD%ED%95%9C-5%EA%B3%B3/",
+      "destination": "/ko/posts/tokyo-earthquake-vulnerable-five-areas/",
+      "permanent": true
+    },
+    {
+      "source": "/%EC%9D%BC%EB%B3%B8-%EB%A6%AC%EC%B8%A0j-reits-%ED%88%AC%EC%9E%90-%EC%95%8C%EC%95%84%EC%95%BC-%ED%95%A0-5%EA%B0%80%EC%A7%80/",
+      "destination": "/ko/posts/j-reit-five-things-to-know/",
+      "permanent": true
+    },
+    {
+      "source": "/%EC%9D%BC%EB%B3%B8-%EB%8F%84%EC%BF%84%EC%9D%98-%EC%84%B8%EB%A0%A8%EB%90%9C-%EB%AA%85%EC%86%8C-5%EA%B3%B3/",
+      "destination": "/ko/posts/tokyo-five-sophisticated-spots/",
+      "permanent": true
+    },
+    {
+      "source": "/%EC%9D%BC%EB%B3%B8-%EB%B6%80%EB%8F%99%EC%82%B0-%ED%88%AC%EC%9E%90-%EC%95%8C%EC%95%84%EC%95%BC-%ED%95%A0-3%EA%B0%80%EC%A7%80/",
+      "destination": "/ko/posts/japan-real-estate-three-things/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/%EC%9D%BC%EB%B3%B8-%EB%B6%80%EB%8F%99%EC%82%B0-%ED%88%AC%EC%9E%90-%EC%95%8C%EC%95%84%EC%95%BC-%ED%95%A0-3%EA%B0%80%EC%A7%80/",
+      "destination": "/posts/japan-real-estate-three-things/",
+      "permanent": true
+    },
+    {
+      "source": "/%EB%8F%84%EC%BF%84%EC%99%80-%EC%9A%94%EC%BD%94%ED%95%98%EB%A7%88-%ED%9B%84%EC%A7%80%EC%82%B0%EA%B9%8C%EC%A7%80-%EC%9D%B4%EC%9A%A9-%EA%B0%80%EB%8A%A5%ED%95%9C-%EA%B5%90%ED%86%B5-%ED%8C%A8%EC%8A%A4/",
+      "destination": "/ko/posts/tokyo-yokohama-fuji-transport-pass/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/%EB%8F%84%EC%BF%84%EC%99%80-%EC%9A%94%EC%BD%94%ED%95%98%EB%A7%88-%ED%9B%84%EC%A7%80%EC%82%B0%EA%B9%8C%EC%A7%80-%EC%9D%B4%EC%9A%A9-%EA%B0%80%EB%8A%A5%ED%95%9C-%EA%B5%90%ED%86%B5-%ED%8C%A8%EC%8A%A4/",
+      "destination": "/posts/tokyo-yokohama-fuji-transport-pass/",
+      "permanent": true
+    },
+    {
+      "source": "/%EC%BD%94%EB%A0%88%EB%8F%84-%EB%8B%88%ED%98%BC%EB%B0%94%EC%8B%9C-%EB%AC%B4%EB%A1%9C%EB%A7%88%EC%B9%98-%EB%AF%B8%EC%93%B0%EC%9D%B4-%EC%9E%AC%EA%B0%9C%EB%B0%9C/",
+      "destination": "/ko/posts/coredo-nihonbashi-mitsui-redevelopment/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/%EC%BD%94%EB%A0%88%EB%8F%84-%EB%8B%88%ED%98%BC%EB%B0%94%EC%8B%9C-%EB%AC%B4%EB%A1%9C%EB%A7%88%EC%B9%98-%EB%AF%B8%EC%93%B0%EC%9D%B4-%EC%9E%AC%EA%B0%9C%EB%B0%9C/",
+      "destination": "/posts/coredo-nihonbashi-mitsui-redevelopment/",
+      "permanent": true
+    },
+    {
+      "source": "/debug/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/posts/%EC%9D%BC%EB%B3%B8-%EB%A6%AC%EC%B8%A0j-reits-%ED%88%AC%EC%9E%90-%EC%95%8C%EC%95%84%EC%95%BC-%ED%95%A0-5%EA%B0%80%EC%A7%80/",
+      "destination": "/ko/posts/j-reit-five-things-to-know/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/tokyo/",
+      "destination": "/tags/tokyo/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/tokyo/",
+      "destination": "/tags/tokyo/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/nihonbashi/",
+      "destination": "/tags/nihonbashi/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/nihonbashi/",
+      "destination": "/tags/nihonbashi/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/coredo/",
+      "destination": "/tags/coredo/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/coredo/",
+      "destination": "/tags/coredo/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/redevelopment/",
+      "destination": "/tags/redevelopment/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/redevelopment/",
+      "destination": "/tags/redevelopment/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/tokyo-life/",
+      "destination": "/tags/tokyo-life/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/tokyo-life/",
+      "destination": "/tags/tokyo-life/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/tokyotravel/",
+      "destination": "/tags/tokyotravel/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/tokyotravel/",
+      "destination": "/tags/tokyotravel/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/ginza/",
+      "destination": "/tags/ginza/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/ginza/",
+      "destination": "/tags/ginza/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/marunouchi/",
+      "destination": "/tags/marunouchi/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/marunouchi/",
+      "destination": "/tags/marunouchi/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/otemachi/",
+      "destination": "/tags/otemachi/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/otemachi/",
+      "destination": "/tags/otemachi/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/japanrealestate/",
+      "destination": "/tags/japanrealestate/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/japanrealestate/",
+      "destination": "/tags/japanrealestate/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/tokyotorch/",
+      "destination": "/tags/tokyotorch/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/tokyotorch/",
+      "destination": "/tags/tokyotorch/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/j-reit/",
+      "destination": "/tags/j-reit/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/j-reit/",
+      "destination": "/tags/j-reit/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/hotel/",
+      "destination": "/tags/hotel/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/hotel/",
+      "destination": "/tags/hotel/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/office/",
+      "destination": "/tags/office/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/office/",
+      "destination": "/tags/office/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/investing/",
+      "destination": "/tags/investing/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/investing/",
+      "destination": "/tags/investing/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/j-reits/",
+      "destination": "/tags/j-reits/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/j-reits/",
+      "destination": "/tags/j-reits/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/japan-investing/",
+      "destination": "/tags/japan-investing/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/japan-investing/",
+      "destination": "/tags/japan-investing/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/real-estate/",
+      "destination": "/tags/real-estate/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/real-estate/",
+      "destination": "/tags/real-estate/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/taxstrategy/",
+      "destination": "/tags/taxstrategy/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/taxstrategy/",
+      "destination": "/tags/taxstrategy/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/corporateownership/",
+      "destination": "/tags/corporateownership/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/corporateownership/",
+      "destination": "/tags/corporateownership/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/capitalgains/",
+      "destination": "/tags/capitalgains/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/capitalgains/",
+      "destination": "/tags/capitalgains/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/nonresident/",
+      "destination": "/tags/nonresident/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/nonresident/",
+      "destination": "/tags/nonresident/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/rates/",
+      "destination": "/tags/rates/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/rates/",
+      "destination": "/tags/rates/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/japan/",
+      "destination": "/tags/japan/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/japan/",
+      "destination": "/tags/japan/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/macro/",
+      "destination": "/tags/macro/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/macro/",
+      "destination": "/tags/macro/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/japan-real-estate/",
+      "destination": "/tags/japan-real-estate/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/japan-real-estate/",
+      "destination": "/tags/japan-real-estate/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/investment/",
+      "destination": "/tags/investment/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/investment/",
+      "destination": "/tags/investment/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/tax/",
+      "destination": "/tags/tax/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/tax/",
+      "destination": "/tags/tax/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/japanvisa/",
+      "destination": "/tags/japanvisa/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/japanvisa/",
+      "destination": "/tags/japanvisa/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/permanentresidency/",
+      "destination": "/tags/permanentresidency/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/permanentresidency/",
+      "destination": "/tags/permanentresidency/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/businessmanagervisa/",
+      "destination": "/tags/businessmanagervisa/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/businessmanagervisa/",
+      "destination": "/tags/businessmanagervisa/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/jfind/",
+      "destination": "/tags/jfind/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/jfind/",
+      "destination": "/tags/jfind/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/immigrationreform/",
+      "destination": "/tags/immigrationreform/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/immigrationreform/",
+      "destination": "/tags/immigrationreform/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/inheritancetax/",
+      "destination": "/tags/inheritancetax/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/inheritancetax/",
+      "destination": "/tags/inheritancetax/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/gifttax/",
+      "destination": "/tags/gifttax/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/gifttax/",
+      "destination": "/tags/gifttax/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/crossborder/",
+      "destination": "/tags/crossborder/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/crossborder/",
+      "destination": "/tags/crossborder/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/taxplanning/",
+      "destination": "/tags/taxplanning/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/taxplanning/",
+      "destination": "/tags/taxplanning/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/tokyo-living/",
+      "destination": "/tags/tokyo-living/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/tokyo-living/",
+      "destination": "/tags/tokyo-living/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/hamacho/",
+      "destination": "/tags/hamacho/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/hamacho/",
+      "destination": "/tags/hamacho/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/city-life/",
+      "destination": "/tags/city-life/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/city-life/",
+      "destination": "/tags/city-life/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/japan-lifestyle/",
+      "destination": "/tags/japan-lifestyle/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/japan-lifestyle/",
+      "destination": "/tags/japan-lifestyle/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/ningyocho/",
+      "destination": "/tags/ningyocho/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/ningyocho/",
+      "destination": "/tags/ningyocho/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/kabutocho/",
+      "destination": "/tags/kabutocho/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/kabutocho/",
+      "destination": "/tags/kabutocho/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/japanredevelopment/",
+      "destination": "/tags/japanredevelopment/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/japanredevelopment/",
+      "destination": "/tags/japanredevelopment/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/mitsui/",
+      "destination": "/tags/mitsui/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/mitsui/",
+      "destination": "/tags/mitsui/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/essay/",
+      "destination": "/tags/essay/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/essay/",
+      "destination": "/tags/essay/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/local-report/",
+      "destination": "/tags/local-report/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/local-report/",
+      "destination": "/tags/local-report/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/investmentfailure/",
+      "destination": "/tags/investmentfailure/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/investmentfailure/",
+      "destination": "/tags/investmentfailure/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/sublease/",
+      "destination": "/tags/sublease/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/sublease/",
+      "destination": "/tags/sublease/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/maintenancefees/",
+      "destination": "/tags/maintenancefees/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/maintenancefees/",
+      "destination": "/tags/maintenancefees/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/taxaudit/",
+      "destination": "/tags/taxaudit/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/taxaudit/",
+      "destination": "/tags/taxaudit/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/seoulrealestate/",
+      "destination": "/tags/seoulrealestate/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/seoulrealestate/",
+      "destination": "/tags/seoulrealestate/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/tokyorealestate/",
+      "destination": "/tags/tokyorealestate/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/tokyorealestate/",
+      "destination": "/tags/tokyorealestate/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/marketcorrelation/",
+      "destination": "/tags/marketcorrelation/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/marketcorrelation/",
+      "destination": "/tags/marketcorrelation/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/assetallocation/",
+      "destination": "/tags/assetallocation/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/assetallocation/",
+      "destination": "/tags/assetallocation/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/japanification/",
+      "destination": "/tags/japanification/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/japanification/",
+      "destination": "/tags/japanification/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/yenstrategy/",
+      "destination": "/tags/yenstrategy/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/yenstrategy/",
+      "destination": "/tags/yenstrategy/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/fxrisk/",
+      "destination": "/tags/fxrisk/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/fxrisk/",
+      "destination": "/tags/fxrisk/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/jreit/",
+      "destination": "/tags/jreit/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/jreit/",
+      "destination": "/tags/jreit/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/monetarypolicy/",
+      "destination": "/tags/monetarypolicy/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/monetarypolicy/",
+      "destination": "/tags/monetarypolicy/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/investment-strategy/",
+      "destination": "/tags/investment-strategy/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/investment-strategy/",
+      "destination": "/tags/investment-strategy/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/insights/",
+      "destination": "/tags/insights/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/insights/",
+      "destination": "/tags/insights/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/tokyo-real-estate/",
+      "destination": "/tags/tokyo-real-estate/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/tokyo-real-estate/",
+      "destination": "/tags/tokyo-real-estate/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/buying-process/",
+      "destination": "/tags/buying-process/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/buying-process/",
+      "destination": "/tags/buying-process/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/title-registration/",
+      "destination": "/tags/title-registration/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/title-registration/",
+      "destination": "/tags/title-registration/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/foreign-investor/",
+      "destination": "/tags/foreign-investor/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/foreign-investor/",
+      "destination": "/tags/foreign-investor/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/judicial-scrivener/",
+      "destination": "/tags/judicial-scrivener/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/judicial-scrivener/",
+      "destination": "/tags/judicial-scrivener/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/non-resident/",
+      "destination": "/tags/non-resident/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/non-resident/",
+      "destination": "/tags/non-resident/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/earthquake/",
+      "destination": "/tags/earthquake/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/earthquake/",
+      "destination": "/tags/earthquake/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/safety/",
+      "destination": "/tags/safety/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/safety/",
+      "destination": "/tags/safety/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/travel/",
+      "destination": "/tags/travel/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/travel/",
+      "destination": "/tags/travel/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/lifestyle/",
+      "destination": "/tags/lifestyle/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/lifestyle/",
+      "destination": "/tags/lifestyle/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/daikanyama/",
+      "destination": "/tags/daikanyama/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/daikanyama/",
+      "destination": "/tags/daikanyama/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/livingintokyo/",
+      "destination": "/tags/livingintokyo/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/livingintokyo/",
+      "destination": "/tags/livingintokyo/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/koreancommunity/",
+      "destination": "/tags/koreancommunity/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/koreancommunity/",
+      "destination": "/tags/koreancommunity/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/shinokubo/",
+      "destination": "/tags/shinokubo/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/shinokubo/",
+      "destination": "/tags/shinokubo/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/azabujuban/",
+      "destination": "/tags/azabujuban/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/azabujuban/",
+      "destination": "/tags/azabujuban/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/toranomon/",
+      "destination": "/tags/toranomon/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/toranomon/",
+      "destination": "/tags/toranomon/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/kstartup/",
+      "destination": "/tags/kstartup/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/kstartup/",
+      "destination": "/tags/kstartup/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/condo/",
+      "destination": "/tags/condo/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/condo/",
+      "destination": "/tags/condo/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/price/",
+      "destination": "/tags/price/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/price/",
+      "destination": "/tags/price/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/japanrentalcontracts/",
+      "destination": "/tags/japanrentalcontracts/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/japanrentalcontracts/",
+      "destination": "/tags/japanrentalcontracts/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/futsuchakuya/",
+      "destination": "/tags/futsuchakuya/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/futsuchakuya/",
+      "destination": "/tags/futsuchakuya/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/teikichakuya/",
+      "destination": "/tags/teikichakuya/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/teikichakuya/",
+      "destination": "/tags/teikichakuya/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/restorationcosts/",
+      "destination": "/tags/restorationcosts/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/restorationcosts/",
+      "destination": "/tags/restorationcosts/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/tokyowithkids/",
+      "destination": "/tags/tokyowithkids/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/tokyowithkids/",
+      "destination": "/tags/tokyowithkids/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/tokyomuseums/",
+      "destination": "/tags/tokyomuseums/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/tokyomuseums/",
+      "destination": "/tags/tokyomuseums/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/teamlab/",
+      "destination": "/tags/teamlab/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/teamlab/",
+      "destination": "/tags/teamlab/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/miraikan/",
+      "destination": "/tags/miraikan/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/miraikan/",
+      "destination": "/tags/miraikan/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/kidzania/",
+      "destination": "/tags/kidzania/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/kidzania/",
+      "destination": "/tags/kidzania/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/realestate/",
+      "destination": "/tags/realestate/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/realestate/",
+      "destination": "/tags/realestate/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/vacancyrate/",
+      "destination": "/tags/vacancyrate/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/vacancyrate/",
+      "destination": "/tags/vacancyrate/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/mikishoji/",
+      "destination": "/tags/mikishoji/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/mikishoji/",
+      "destination": "/tags/mikishoji/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/japan-investment/",
+      "destination": "/tags/japan-investment/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/japan-investment/",
+      "destination": "/tags/japan-investment/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/pillar-page/",
+      "destination": "/tags/pillar-page/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/pillar-page/",
+      "destination": "/tags/pillar-page/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/complete-guide/",
+      "destination": "/tags/complete-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/complete-guide/",
+      "destination": "/tags/complete-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/mansion/",
+      "destination": "/tags/mansion/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/mansion/",
+      "destination": "/tags/mansion/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/yield/",
+      "destination": "/tags/yield/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/yield/",
+      "destination": "/tags/yield/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/capital-gains/",
+      "destination": "/tags/capital-gains/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/capital-gains/",
+      "destination": "/tags/capital-gains/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/23-wards/",
+      "destination": "/tags/23-wards/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/23-wards/",
+      "destination": "/tags/23-wards/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/tama/",
+      "destination": "/tags/tama/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/tama/",
+      "destination": "/tags/tama/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/relocation/",
+      "destination": "/tags/relocation/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/relocation/",
+      "destination": "/tags/relocation/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/neighborhood-guide/",
+      "destination": "/tags/neighborhood-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/neighborhood-guide/",
+      "destination": "/tags/neighborhood-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/jr-pass/",
+      "destination": "/tags/jr-pass/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/jr-pass/",
+      "destination": "/tags/jr-pass/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/yokohama/",
+      "destination": "/tags/yokohama/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/yokohama/",
+      "destination": "/tags/yokohama/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/tsukijimarket/",
+      "destination": "/tags/tsukijimarket/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/tsukijimarket/",
+      "destination": "/tags/tsukijimarket/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/toyosumarket/",
+      "destination": "/tags/toyosumarket/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/toyosumarket/",
+      "destination": "/tags/toyosumarket/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/senkyakubanrai/",
+      "destination": "/tags/senkyakubanrai/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/senkyakubanrai/",
+      "destination": "/tags/senkyakubanrai/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/tsukijiredevelopment/",
+      "destination": "/tags/tsukijiredevelopment/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/tsukijiredevelopment/",
+      "destination": "/tags/tsukijiredevelopment/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/yen/",
+      "destination": "/tags/yen/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/yen/",
+      "destination": "/tags/yen/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/fx/",
+      "destination": "/tags/fx/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/fx/",
+      "destination": "/tags/fx/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/korea-japan/",
+      "destination": "/tags/korea-japan/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/korea-japan/",
+      "destination": "/tags/korea-japan/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/allocation/",
+      "destination": "/tags/allocation/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/allocation/",
+      "destination": "/tags/allocation/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/investmentphilosophy/",
+      "destination": "/tags/investmentphilosophy/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/investmentphilosophy/",
+      "destination": "/tags/investmentphilosophy/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/riskmanagement/",
+      "destination": "/tags/riskmanagement/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/riskmanagement/",
+      "destination": "/tags/riskmanagement/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/entrepreneurship/",
+      "destination": "/tags/entrepreneurship/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/entrepreneurship/",
+      "destination": "/tags/entrepreneurship/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/crossborderbusiness/",
+      "destination": "/tags/crossborderbusiness/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/crossborderbusiness/",
+      "destination": "/tags/crossborderbusiness/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%8F%84%EC%BF%84/",
+      "destination": "/ko/tags/%EB%8F%84%EC%BF%84/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%8F%84%EC%BF%84/",
+      "destination": "/ko/tags/%EB%8F%84%EC%BF%84/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%8B%88%ED%98%BC%EB%B0%94%EC%8B%9C/",
+      "destination": "/ko/tags/%EB%8B%88%ED%98%BC%EB%B0%94%EC%8B%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%8B%88%ED%98%BC%EB%B0%94%EC%8B%9C/",
+      "destination": "/ko/tags/%EB%8B%88%ED%98%BC%EB%B0%94%EC%8B%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%BD%94%EB%A0%88%EB%8F%84/",
+      "destination": "/ko/tags/%EC%BD%94%EB%A0%88%EB%8F%84/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%BD%94%EB%A0%88%EB%8F%84/",
+      "destination": "/ko/tags/%EC%BD%94%EB%A0%88%EB%8F%84/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%9E%AC%EA%B0%9C%EB%B0%9C/",
+      "destination": "/ko/tags/%EC%9E%AC%EA%B0%9C%EB%B0%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%9E%AC%EA%B0%9C%EB%B0%9C/",
+      "destination": "/ko/tags/%EC%9E%AC%EA%B0%9C%EB%B0%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%8F%84%EC%BF%84%EB%9D%BC%EC%9D%B4%ED%94%84/",
+      "destination": "/ko/tags/%EB%8F%84%EC%BF%84%EB%9D%BC%EC%9D%B4%ED%94%84/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%8F%84%EC%BF%84%EB%9D%BC%EC%9D%B4%ED%94%84/",
+      "destination": "/ko/tags/%EB%8F%84%EC%BF%84%EB%9D%BC%EC%9D%B4%ED%94%84/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%8F%84%EC%BF%84%EC%97%AC%ED%96%89/",
+      "destination": "/ko/tags/%EB%8F%84%EC%BF%84%EC%97%AC%ED%96%89/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%8F%84%EC%BF%84%EC%97%AC%ED%96%89/",
+      "destination": "/ko/tags/%EB%8F%84%EC%BF%84%EC%97%AC%ED%96%89/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EA%B8%B4%EC%9E%90/",
+      "destination": "/ko/tags/%EA%B8%B4%EC%9E%90/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EA%B8%B4%EC%9E%90/",
+      "destination": "/ko/tags/%EA%B8%B4%EC%9E%90/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%A7%88%EB%A3%A8%EB%85%B8%EC%9A%B0%EC%B9%98/",
+      "destination": "/ko/tags/%EB%A7%88%EB%A3%A8%EB%85%B8%EC%9A%B0%EC%B9%98/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%A7%88%EB%A3%A8%EB%85%B8%EC%9A%B0%EC%B9%98/",
+      "destination": "/ko/tags/%EB%A7%88%EB%A3%A8%EB%85%B8%EC%9A%B0%EC%B9%98/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%98%A4%ED%85%8C%EB%A7%88%EC%B9%98/",
+      "destination": "/ko/tags/%EC%98%A4%ED%85%8C%EB%A7%88%EC%B9%98/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%98%A4%ED%85%8C%EB%A7%88%EC%B9%98/",
+      "destination": "/ko/tags/%EC%98%A4%ED%85%8C%EB%A7%88%EC%B9%98/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%9D%BC%EB%B3%B8%EB%B6%80%EB%8F%99%EC%82%B0/",
+      "destination": "/ko/tags/%EC%9D%BC%EB%B3%B8%EB%B6%80%EB%8F%99%EC%82%B0/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%9D%BC%EB%B3%B8%EB%B6%80%EB%8F%99%EC%82%B0/",
+      "destination": "/ko/tags/%EC%9D%BC%EB%B3%B8%EB%B6%80%EB%8F%99%EC%82%B0/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%ED%86%A0%EC%BF%84%ED%86%A0%EC%B9%98/",
+      "destination": "/ko/tags/%ED%86%A0%EC%BF%84%ED%86%A0%EC%B9%98/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%ED%86%A0%EC%BF%84%ED%86%A0%EC%B9%98/",
+      "destination": "/ko/tags/%ED%86%A0%EC%BF%84%ED%86%A0%EC%B9%98/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/j-reit/",
+      "destination": "/ko/tags/j-reit/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%ED%98%B8%ED%85%94/",
+      "destination": "/ko/tags/%ED%98%B8%ED%85%94/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%ED%98%B8%ED%85%94/",
+      "destination": "/ko/tags/%ED%98%B8%ED%85%94/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%98%A4%ED%94%BC%EC%8A%A4/",
+      "destination": "/ko/tags/%EC%98%A4%ED%94%BC%EC%8A%A4/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%98%A4%ED%94%BC%EC%8A%A4/",
+      "destination": "/ko/tags/%EC%98%A4%ED%94%BC%EC%8A%A4/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%ED%88%AC%EC%9E%90/",
+      "destination": "/ko/tags/%ED%88%AC%EC%9E%90/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%ED%88%AC%EC%9E%90/",
+      "destination": "/ko/tags/%ED%88%AC%EC%9E%90/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/j-reits/",
+      "destination": "/ko/tags/j-reits/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%9D%BC%EB%B3%B8%ED%88%AC%EC%9E%90/",
+      "destination": "/ko/tags/%EC%9D%BC%EB%B3%B8%ED%88%AC%EC%9E%90/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%9D%BC%EB%B3%B8%ED%88%AC%EC%9E%90/",
+      "destination": "/ko/tags/%EC%9D%BC%EB%B3%B8%ED%88%AC%EC%9E%90/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%B6%80%EB%8F%99%EC%82%B0/",
+      "destination": "/ko/tags/%EB%B6%80%EB%8F%99%EC%82%B0/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%B6%80%EB%8F%99%EC%82%B0/",
+      "destination": "/ko/tags/%EB%B6%80%EB%8F%99%EC%82%B0/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%84%B8%EA%B8%88/",
+      "destination": "/ko/tags/%EC%84%B8%EA%B8%88/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%84%B8%EA%B8%88/",
+      "destination": "/ko/tags/%EC%84%B8%EA%B8%88/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%B2%95%EC%9D%B8%EC%84%A4%EB%A6%BD/",
+      "destination": "/ko/tags/%EB%B2%95%EC%9D%B8%EC%84%A4%EB%A6%BD/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%B2%95%EC%9D%B8%EC%84%A4%EB%A6%BD/",
+      "destination": "/ko/tags/%EB%B2%95%EC%9D%B8%EC%84%A4%EB%A6%BD/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%B9%84%EA%B1%B0%EC%A3%BC%EC%9E%90/",
+      "destination": "/ko/tags/%EB%B9%84%EA%B1%B0%EC%A3%BC%EC%9E%90/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%B9%84%EA%B1%B0%EC%A3%BC%EC%9E%90/",
+      "destination": "/ko/tags/%EB%B9%84%EA%B1%B0%EC%A3%BC%EC%9E%90/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%A0%88%EC%84%B8/",
+      "destination": "/ko/tags/%EC%A0%88%EC%84%B8/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%A0%88%EC%84%B8/",
+      "destination": "/ko/tags/%EC%A0%88%EC%84%B8/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EA%B8%88%EB%A6%AC/",
+      "destination": "/ko/tags/%EA%B8%88%EB%A6%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EA%B8%88%EB%A6%AC/",
+      "destination": "/ko/tags/%EA%B8%88%EB%A6%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%9D%BC%EB%B3%B8/",
+      "destination": "/ko/tags/%EC%9D%BC%EB%B3%B8/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%9D%BC%EB%B3%B8/",
+      "destination": "/ko/tags/%EC%9D%BC%EB%B3%B8/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%A7%A4%ED%81%AC%EB%A1%9C/",
+      "destination": "/ko/tags/%EB%A7%A4%ED%81%AC%EB%A1%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%A7%A4%ED%81%AC%EB%A1%9C/",
+      "destination": "/ko/tags/%EB%A7%A4%ED%81%AC%EB%A1%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%9D%BC%EB%B3%B8%EB%B9%84%EC%9E%90/",
+      "destination": "/ko/tags/%EC%9D%BC%EB%B3%B8%EB%B9%84%EC%9E%90/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%9D%BC%EB%B3%B8%EB%B9%84%EC%9E%90/",
+      "destination": "/ko/tags/%EC%9D%BC%EB%B3%B8%EB%B9%84%EC%9E%90/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EA%B2%BD%EC%98%81%EA%B4%80%EB%A6%AC%EB%B9%84%EC%9E%90/",
+      "destination": "/ko/tags/%EA%B2%BD%EC%98%81%EA%B4%80%EB%A6%AC%EB%B9%84%EC%9E%90/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EA%B2%BD%EC%98%81%EA%B4%80%EB%A6%AC%EB%B9%84%EC%9E%90/",
+      "destination": "/ko/tags/%EA%B2%BD%EC%98%81%EA%B4%80%EB%A6%AC%EB%B9%84%EC%9E%90/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EA%B3%A0%EB%8F%84%EC%9D%B8%EC%9E%AC/",
+      "destination": "/ko/tags/%EA%B3%A0%EB%8F%84%EC%9D%B8%EC%9E%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EA%B3%A0%EB%8F%84%EC%9D%B8%EC%9E%AC/",
+      "destination": "/ko/tags/%EA%B3%A0%EB%8F%84%EC%9D%B8%EC%9E%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%98%81%EC%A3%BC%EA%B6%8C/",
+      "destination": "/ko/tags/%EC%98%81%EC%A3%BC%EA%B6%8C/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%98%81%EC%A3%BC%EA%B6%8C/",
+      "destination": "/ko/tags/%EC%98%81%EC%A3%BC%EA%B6%8C/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%9D%BC%EB%B3%B8%EC%9D%B4%EB%AF%BC/",
+      "destination": "/ko/tags/%EC%9D%BC%EB%B3%B8%EC%9D%B4%EB%AF%BC/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%9D%BC%EB%B3%B8%EC%9D%B4%EB%AF%BC/",
+      "destination": "/ko/tags/%EC%9D%BC%EB%B3%B8%EC%9D%B4%EB%AF%BC/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%83%81%EC%86%8D%EC%84%B8/",
+      "destination": "/ko/tags/%EC%83%81%EC%86%8D%EC%84%B8/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%83%81%EC%86%8D%EC%84%B8/",
+      "destination": "/ko/tags/%EC%83%81%EC%86%8D%EC%84%B8/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%A6%9D%EC%97%AC%EC%84%B8/",
+      "destination": "/ko/tags/%EC%A6%9D%EC%97%AC%EC%84%B8/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%A6%9D%EC%97%AC%EC%84%B8/",
+      "destination": "/ko/tags/%EC%A6%9D%EC%97%AC%EC%84%B8/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%84%B8%EB%AC%B4%EA%B3%84%ED%9A%8D/",
+      "destination": "/ko/tags/%EC%84%B8%EB%AC%B4%EA%B3%84%ED%9A%8D/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%84%B8%EB%AC%B4%EA%B3%84%ED%9A%8D/",
+      "destination": "/ko/tags/%EC%84%B8%EB%AC%B4%EA%B3%84%ED%9A%8D/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%8F%84%EC%BF%84%EC%83%9D%ED%99%9C/",
+      "destination": "/ko/tags/%EB%8F%84%EC%BF%84%EC%83%9D%ED%99%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%8F%84%EC%BF%84%EC%83%9D%ED%99%9C/",
+      "destination": "/ko/tags/%EB%8F%84%EC%BF%84%EC%83%9D%ED%99%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%ED%95%98%EB%A7%88%EC%B4%88/",
+      "destination": "/ko/tags/%ED%95%98%EB%A7%88%EC%B4%88/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%ED%95%98%EB%A7%88%EC%B4%88/",
+      "destination": "/ko/tags/%ED%95%98%EB%A7%88%EC%B4%88/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%8F%84%EC%8B%AC%EB%9D%BC%EC%9D%B4%ED%94%84/",
+      "destination": "/ko/tags/%EB%8F%84%EC%8B%AC%EB%9D%BC%EC%9D%B4%ED%94%84/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%8F%84%EC%8B%AC%EB%9D%BC%EC%9D%B4%ED%94%84/",
+      "destination": "/ko/tags/%EB%8F%84%EC%8B%AC%EB%9D%BC%EC%9D%B4%ED%94%84/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%9D%BC%EB%B3%B8%EC%83%9D%ED%99%9C/",
+      "destination": "/ko/tags/%EC%9D%BC%EB%B3%B8%EC%83%9D%ED%99%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%9D%BC%EB%B3%B8%EC%83%9D%ED%99%9C/",
+      "destination": "/ko/tags/%EC%9D%BC%EB%B3%B8%EC%83%9D%ED%99%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%9D%B8%ED%98%95%EC%B4%88/",
+      "destination": "/ko/tags/%EC%9D%B8%ED%98%95%EC%B4%88/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%9D%B8%ED%98%95%EC%B4%88/",
+      "destination": "/ko/tags/%EC%9D%B8%ED%98%95%EC%B4%88/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%B9%B4%EB%B6%80%ED%86%A0%EC%B4%88/",
+      "destination": "/ko/tags/%EC%B9%B4%EB%B6%80%ED%86%A0%EC%B4%88/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%B9%B4%EB%B6%80%ED%86%A0%EC%B4%88/",
+      "destination": "/ko/tags/%EC%B9%B4%EB%B6%80%ED%86%A0%EC%B4%88/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%9D%BC%EB%B3%B8%EC%9E%AC%EA%B0%9C%EB%B0%9C/",
+      "destination": "/ko/tags/%EC%9D%BC%EB%B3%B8%EC%9E%AC%EA%B0%9C%EB%B0%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%9D%BC%EB%B3%B8%EC%9E%AC%EA%B0%9C%EB%B0%9C/",
+      "destination": "/ko/tags/%EC%9D%BC%EB%B3%B8%EC%9E%AC%EA%B0%9C%EB%B0%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%AF%B8%EC%B8%A0%EC%9D%B4/",
+      "destination": "/ko/tags/%EB%AF%B8%EC%B8%A0%EC%9D%B4/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%AF%B8%EC%B8%A0%EC%9D%B4/",
+      "destination": "/ko/tags/%EB%AF%B8%EC%B8%A0%EC%9D%B4/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%97%90%EC%84%B8%EC%9D%B4/",
+      "destination": "/ko/tags/%EC%97%90%EC%84%B8%EC%9D%B4/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%97%90%EC%84%B8%EC%9D%B4/",
+      "destination": "/ko/tags/%EC%97%90%EC%84%B8%EC%9D%B4/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%A1%9C%EC%BB%AC%EB%A6%AC%ED%8F%AC%ED%8A%B8/",
+      "destination": "/ko/tags/%EB%A1%9C%EC%BB%AC%EB%A6%AC%ED%8F%AC%ED%8A%B8/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%A1%9C%EC%BB%AC%EB%A6%AC%ED%8F%AC%ED%8A%B8/",
+      "destination": "/ko/tags/%EB%A1%9C%EC%BB%AC%EB%A6%AC%ED%8F%AC%ED%8A%B8/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%ED%88%AC%EC%9E%90%EC%8B%A4%ED%8C%A8/",
+      "destination": "/ko/tags/%ED%88%AC%EC%9E%90%EC%8B%A4%ED%8C%A8/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%ED%88%AC%EC%9E%90%EC%8B%A4%ED%8C%A8/",
+      "destination": "/ko/tags/%ED%88%AC%EC%9E%90%EC%8B%A4%ED%8C%A8/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%84%9C%EB%B8%8C%EB%A6%AC%EC%8A%A4/",
+      "destination": "/ko/tags/%EC%84%9C%EB%B8%8C%EB%A6%AC%EC%8A%A4/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%84%9C%EB%B8%8C%EB%A6%AC%EC%8A%A4/",
+      "destination": "/ko/tags/%EC%84%9C%EB%B8%8C%EB%A6%AC%EC%8A%A4/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%88%98%EC%84%A0%EC%A0%81%EB%A6%BD%EA%B8%88/",
+      "destination": "/ko/tags/%EC%88%98%EC%84%A0%EC%A0%81%EB%A6%BD%EA%B8%88/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%88%98%EC%84%A0%EC%A0%81%EB%A6%BD%EA%B8%88/",
+      "destination": "/ko/tags/%EC%88%98%EC%84%A0%EC%A0%81%EB%A6%BD%EA%B8%88/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%84%B8%EB%AC%B4%EC%A1%B0%EC%82%AC/",
+      "destination": "/ko/tags/%EC%84%B8%EB%AC%B4%EC%A1%B0%EC%82%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%84%B8%EB%AC%B4%EC%A1%B0%EC%82%AC/",
+      "destination": "/ko/tags/%EC%84%B8%EB%AC%B4%EC%A1%B0%EC%82%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%84%9C%EC%9A%B8%EB%B6%80%EB%8F%99%EC%82%B0/",
+      "destination": "/ko/tags/%EC%84%9C%EC%9A%B8%EB%B6%80%EB%8F%99%EC%82%B0/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%84%9C%EC%9A%B8%EB%B6%80%EB%8F%99%EC%82%B0/",
+      "destination": "/ko/tags/%EC%84%9C%EC%9A%B8%EB%B6%80%EB%8F%99%EC%82%B0/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%8F%84%EC%BF%84%EB%B6%80%EB%8F%99%EC%82%B0/",
+      "destination": "/ko/tags/%EB%8F%84%EC%BF%84%EB%B6%80%EB%8F%99%EC%82%B0/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%8F%84%EC%BF%84%EB%B6%80%EB%8F%99%EC%82%B0/",
+      "destination": "/ko/tags/%EB%8F%84%EC%BF%84%EB%B6%80%EB%8F%99%EC%82%B0/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%8B%9C%EC%9E%A5%EB%B9%84%EA%B5%90/",
+      "destination": "/ko/tags/%EC%8B%9C%EC%9E%A5%EB%B9%84%EA%B5%90/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%8B%9C%EC%9E%A5%EB%B9%84%EA%B5%90/",
+      "destination": "/ko/tags/%EC%8B%9C%EC%9E%A5%EB%B9%84%EA%B5%90/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84/",
+      "destination": "/ko/tags/%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84/",
+      "destination": "/ko/tags/%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%9D%BC%EB%B3%B8%ED%99%94/",
+      "destination": "/ko/tags/%EC%9D%BC%EB%B3%B8%ED%99%94/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%9D%BC%EB%B3%B8%ED%99%94/",
+      "destination": "/ko/tags/%EC%9D%BC%EB%B3%B8%ED%99%94/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%97%94%EC%A0%80%EC%A0%84%EB%9E%B5/",
+      "destination": "/ko/tags/%EC%97%94%EC%A0%80%EC%A0%84%EB%9E%B5/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%97%94%EC%A0%80%EC%A0%84%EB%9E%B5/",
+      "destination": "/ko/tags/%EC%97%94%EC%A0%80%EC%A0%84%EB%9E%B5/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%ED%99%98%EB%A6%AC%EC%8A%A4%ED%81%AC/",
+      "destination": "/ko/tags/%ED%99%98%EB%A6%AC%EC%8A%A4%ED%81%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%ED%99%98%EB%A6%AC%EC%8A%A4%ED%81%AC/",
+      "destination": "/ko/tags/%ED%99%98%EB%A6%AC%EC%8A%A4%ED%81%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%ED%86%B5%ED%99%94%EC%A0%95%EC%B1%85/",
+      "destination": "/ko/tags/%ED%86%B5%ED%99%94%EC%A0%95%EC%B1%85/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%ED%86%B5%ED%99%94%EC%A0%95%EC%B1%85/",
+      "destination": "/ko/tags/%ED%86%B5%ED%99%94%EC%A0%95%EC%B1%85/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%8F%84%EC%BF%84-6-%EA%B5%AC/",
+      "destination": "/ko/tags/%EB%8F%84%EC%BF%84-6-%EA%B5%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%8F%84%EC%BF%84-6-%EA%B5%AC/",
+      "destination": "/ko/tags/%EB%8F%84%EC%BF%84-6-%EA%B5%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%ED%88%AC%EC%9E%90%EC%A0%84%EB%9E%B5/",
+      "destination": "/ko/tags/%ED%88%AC%EC%9E%90%EC%A0%84%EB%9E%B5/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%ED%88%AC%EC%9E%90%EC%A0%84%EB%9E%B5/",
+      "destination": "/ko/tags/%ED%88%AC%EC%9E%90%EC%A0%84%EB%9E%B5/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%9D%B8%EC%82%AC%EC%9D%B4%ED%8A%B8/",
+      "destination": "/ko/tags/%EC%9D%B8%EC%82%AC%EC%9D%B4%ED%8A%B8/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%9D%B8%EC%82%AC%EC%9D%B4%ED%8A%B8/",
+      "destination": "/ko/tags/%EC%9D%B8%EC%82%AC%EC%9D%B4%ED%8A%B8/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EA%B5%AC%EB%A7%A4%EC%A0%88%EC%B0%A8/",
+      "destination": "/ko/tags/%EA%B5%AC%EB%A7%A4%EC%A0%88%EC%B0%A8/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EA%B5%AC%EB%A7%A4%EC%A0%88%EC%B0%A8/",
+      "destination": "/ko/tags/%EA%B5%AC%EB%A7%A4%EC%A0%88%EC%B0%A8/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%93%B1%EA%B8%B0/",
+      "destination": "/ko/tags/%EB%93%B1%EA%B8%B0/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%93%B1%EA%B8%B0/",
+      "destination": "/ko/tags/%EB%93%B1%EA%B8%B0/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%99%B8%EA%B5%AD%EC%9D%B8%ED%88%AC%EC%9E%90/",
+      "destination": "/ko/tags/%EC%99%B8%EA%B5%AD%EC%9D%B8%ED%88%AC%EC%9E%90/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%99%B8%EA%B5%AD%EC%9D%B8%ED%88%AC%EC%9E%90/",
+      "destination": "/ko/tags/%EC%99%B8%EA%B5%AD%EC%9D%B8%ED%88%AC%EC%9E%90/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%82%AC%EB%B2%95%EC%84%9C%EC%82%AC/",
+      "destination": "/ko/tags/%EC%82%AC%EB%B2%95%EC%84%9C%EC%82%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%82%AC%EB%B2%95%EC%84%9C%EC%82%AC/",
+      "destination": "/ko/tags/%EC%82%AC%EB%B2%95%EC%84%9C%EC%82%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%B9%98%EC%9A%94%EB%8B%A4%EA%B5%AC/",
+      "destination": "/ko/tags/%EC%B9%98%EC%9A%94%EB%8B%A4%EA%B5%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%B9%98%EC%9A%94%EB%8B%A4%EA%B5%AC/",
+      "destination": "/ko/tags/%EC%B9%98%EC%9A%94%EB%8B%A4%EA%B5%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%A3%BC%EC%98%A4%EA%B5%AC/",
+      "destination": "/ko/tags/%EC%A3%BC%EC%98%A4%EA%B5%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%A3%BC%EC%98%A4%EA%B5%AC/",
+      "destination": "/ko/tags/%EC%A3%BC%EC%98%A4%EA%B5%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%AF%B8%EB%82%98%ED%86%A0%EA%B5%AC/",
+      "destination": "/ko/tags/%EB%AF%B8%EB%82%98%ED%86%A0%EA%B5%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%AF%B8%EB%82%98%ED%86%A0%EA%B5%AC/",
+      "destination": "/ko/tags/%EB%AF%B8%EB%82%98%ED%86%A0%EA%B5%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%A7%A8%EC%85%98/",
+      "destination": "/ko/tags/%EB%A7%A8%EC%85%98/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%A7%A8%EC%85%98/",
+      "destination": "/ko/tags/%EB%A7%A8%EC%85%98/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%9D%B4%EC%A3%BC/",
+      "destination": "/ko/tags/%EC%9D%B4%EC%A3%BC/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%9D%B4%EC%A3%BC/",
+      "destination": "/ko/tags/%EC%9D%B4%EC%A3%BC/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%A7%80%EC%A7%84/",
+      "destination": "/ko/tags/%EC%A7%80%EC%A7%84/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%A7%80%EC%A7%84/",
+      "destination": "/ko/tags/%EC%A7%80%EC%A7%84/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%95%88%EC%A0%84/",
+      "destination": "/ko/tags/%EC%95%88%EC%A0%84/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%95%88%EC%A0%84/",
+      "destination": "/ko/tags/%EC%95%88%EC%A0%84/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%97%AC%ED%96%89/",
+      "destination": "/ko/tags/%EC%97%AC%ED%96%89/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%97%AC%ED%96%89/",
+      "destination": "/ko/tags/%EC%97%AC%ED%96%89/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%9D%BC%EC%9D%B4%ED%94%84/",
+      "destination": "/ko/tags/%EB%9D%BC%EC%9D%B4%ED%94%84/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%9D%BC%EC%9D%B4%ED%94%84/",
+      "destination": "/ko/tags/%EB%9D%BC%EC%9D%B4%ED%94%84/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%8B%A4%EC%9D%B4%EC%B9%B8%EC%95%BC%EB%A7%88/",
+      "destination": "/ko/tags/%EB%8B%A4%EC%9D%B4%EC%B9%B8%EC%95%BC%EB%A7%88/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%8B%A4%EC%9D%B4%EC%B9%B8%EC%95%BC%EB%A7%88/",
+      "destination": "/ko/tags/%EB%8B%A4%EC%9D%B4%EC%B9%B8%EC%95%BC%EB%A7%88/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%ED%95%9C%EA%B5%AD%EC%9D%B8%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0/",
+      "destination": "/ko/tags/%ED%95%9C%EA%B5%AD%EC%9D%B8%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%ED%95%9C%EA%B5%AD%EC%9D%B8%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0/",
+      "destination": "/ko/tags/%ED%95%9C%EA%B5%AD%EC%9D%B8%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%8B%A0%EC%98%A4%EC%BF%A0%EB%B3%B4/",
+      "destination": "/ko/tags/%EC%8B%A0%EC%98%A4%EC%BF%A0%EB%B3%B4/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%8B%A0%EC%98%A4%EC%BF%A0%EB%B3%B4/",
+      "destination": "/ko/tags/%EC%8B%A0%EC%98%A4%EC%BF%A0%EB%B3%B4/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%95%84%EC%9E%90%EB%B6%80%EC%A3%BC%EB%B0%98/",
+      "destination": "/ko/tags/%EC%95%84%EC%9E%90%EB%B6%80%EC%A3%BC%EB%B0%98/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%95%84%EC%9E%90%EB%B6%80%EC%A3%BC%EB%B0%98/",
+      "destination": "/ko/tags/%EC%95%84%EC%9E%90%EB%B6%80%EC%A3%BC%EB%B0%98/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%ED%86%A0%EB%9D%BC%EB%85%B8%EB%AA%AC/",
+      "destination": "/ko/tags/%ED%86%A0%EB%9D%BC%EB%85%B8%EB%AA%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%ED%86%A0%EB%9D%BC%EB%85%B8%EB%AA%AC/",
+      "destination": "/ko/tags/%ED%86%A0%EB%9D%BC%EB%85%B8%EB%AA%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/k-%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85/",
+      "destination": "/ko/tags/k-%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/k-%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85/",
+      "destination": "/ko/tags/k-%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EA%B0%80%EA%B2%A9/",
+      "destination": "/ko/tags/%EA%B0%80%EA%B2%A9/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EA%B0%80%EA%B2%A9/",
+      "destination": "/ko/tags/%EA%B0%80%EA%B2%A9/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%9D%BC%EB%B3%B8%EC%9E%84%EB%8C%80%EC%B0%A8%EA%B3%84%EC%95%BD/",
+      "destination": "/ko/tags/%EC%9D%BC%EB%B3%B8%EC%9E%84%EB%8C%80%EC%B0%A8%EA%B3%84%EC%95%BD/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%9D%BC%EB%B3%B8%EC%9E%84%EB%8C%80%EC%B0%A8%EA%B3%84%EC%95%BD/",
+      "destination": "/ko/tags/%EC%9D%BC%EB%B3%B8%EC%9E%84%EB%8C%80%EC%B0%A8%EA%B3%84%EC%95%BD/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%B3%B4%ED%86%B5%EC%B0%A8%EA%B0%80/",
+      "destination": "/ko/tags/%EB%B3%B4%ED%86%B5%EC%B0%A8%EA%B0%80/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%B3%B4%ED%86%B5%EC%B0%A8%EA%B0%80/",
+      "destination": "/ko/tags/%EB%B3%B4%ED%86%B5%EC%B0%A8%EA%B0%80/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%A0%95%EA%B8%B0%EC%B0%A8%EA%B0%80/",
+      "destination": "/ko/tags/%EC%A0%95%EA%B8%B0%EC%B0%A8%EA%B0%80/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%A0%95%EA%B8%B0%EC%B0%A8%EA%B0%80/",
+      "destination": "/ko/tags/%EC%A0%95%EA%B8%B0%EC%B0%A8%EA%B0%80/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%9B%90%EC%83%81%ED%9A%8C%EB%B3%B5/",
+      "destination": "/ko/tags/%EC%9B%90%EC%83%81%ED%9A%8C%EB%B3%B5/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%9B%90%EC%83%81%ED%9A%8C%EB%B3%B5/",
+      "destination": "/ko/tags/%EC%9B%90%EC%83%81%ED%9A%8C%EB%B3%B5/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%95%84%EC%9D%B4%EC%99%80%EB%8F%84%EC%BF%84/",
+      "destination": "/ko/tags/%EC%95%84%EC%9D%B4%EC%99%80%EB%8F%84%EC%BF%84/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%95%84%EC%9D%B4%EC%99%80%EB%8F%84%EC%BF%84/",
+      "destination": "/ko/tags/%EC%95%84%EC%9D%B4%EC%99%80%EB%8F%84%EC%BF%84/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%8F%84%EC%BF%84%EB%AE%A4%EC%A7%80%EC%97%84/",
+      "destination": "/ko/tags/%EB%8F%84%EC%BF%84%EB%AE%A4%EC%A7%80%EC%97%84/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%8F%84%EC%BF%84%EB%AE%A4%EC%A7%80%EC%97%84/",
+      "destination": "/ko/tags/%EB%8F%84%EC%BF%84%EB%AE%A4%EC%A7%80%EC%97%84/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%ED%8C%80%EB%9E%A9/",
+      "destination": "/ko/tags/%ED%8C%80%EB%9E%A9/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%ED%8C%80%EB%9E%A9/",
+      "destination": "/ko/tags/%ED%8C%80%EB%9E%A9/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%AF%B8%EB%9D%BC%EC%9D%B4%EC%B9%B8/",
+      "destination": "/ko/tags/%EB%AF%B8%EB%9D%BC%EC%9D%B4%EC%B9%B8/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%AF%B8%EB%9D%BC%EC%9D%B4%EC%B9%B8/",
+      "destination": "/ko/tags/%EB%AF%B8%EB%9D%BC%EC%9D%B4%EC%B9%B8/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%ED%82%A4%EC%9E%90%EB%8B%88%EC%95%84/",
+      "destination": "/ko/tags/%ED%82%A4%EC%9E%90%EB%8B%88%EC%95%84/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%ED%82%A4%EC%9E%90%EB%8B%88%EC%95%84/",
+      "destination": "/ko/tags/%ED%82%A4%EC%9E%90%EB%8B%88%EC%95%84/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/5-%EA%B5%AC/",
+      "destination": "/ko/tags/5-%EA%B5%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/5-%EA%B5%AC/",
+      "destination": "/ko/tags/5-%EA%B5%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EA%B3%B5%EC%8B%A4%EB%A5%A0/",
+      "destination": "/ko/tags/%EA%B3%B5%EC%8B%A4%EB%A5%A0/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EA%B3%B5%EC%8B%A4%EB%A5%A0/",
+      "destination": "/ko/tags/%EA%B3%B5%EC%8B%A4%EB%A5%A0/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%ED%95%84%EB%9D%BC%ED%8E%98%EC%9D%B4%EC%A7%80/",
+      "destination": "/ko/tags/%ED%95%84%EB%9D%BC%ED%8E%98%EC%9D%B4%EC%A7%80/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%ED%95%84%EB%9D%BC%ED%8E%98%EC%9D%B4%EC%A7%80/",
+      "destination": "/ko/tags/%ED%95%84%EB%9D%BC%ED%8E%98%EC%9D%B4%EC%A7%80/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%99%84%EC%A0%84%EA%B0%80%EC%9D%B4%EB%93%9C/",
+      "destination": "/ko/tags/%EC%99%84%EC%A0%84%EA%B0%80%EC%9D%B4%EB%93%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%99%84%EC%A0%84%EA%B0%80%EC%9D%B4%EB%93%9C/",
+      "destination": "/ko/tags/%EC%99%84%EC%A0%84%EA%B0%80%EC%9D%B4%EB%93%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%9E%84%EB%8C%80%EC%88%98%EC%9D%B5%EB%A5%A0/",
+      "destination": "/ko/tags/%EC%9E%84%EB%8C%80%EC%88%98%EC%9D%B5%EB%A5%A0/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%9E%84%EB%8C%80%EC%88%98%EC%9D%B5%EB%A5%A0/",
+      "destination": "/ko/tags/%EC%9E%84%EB%8C%80%EC%88%98%EC%9D%B5%EB%A5%A0/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%8B%9C%EC%84%B8%EC%B0%A8%EC%9D%B5/",
+      "destination": "/ko/tags/%EC%8B%9C%EC%84%B8%EC%B0%A8%EC%9D%B5/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%8B%9C%EC%84%B8%EC%B0%A8%EC%9D%B5/",
+      "destination": "/ko/tags/%EC%8B%9C%EC%84%B8%EC%B0%A8%EC%9D%B5/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/23-%EA%B5%AC/",
+      "destination": "/ko/tags/23-%EA%B5%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/23-%EA%B5%AC/",
+      "destination": "/ko/tags/23-%EA%B5%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E5%A4%9A%E6%91%A9/",
+      "destination": "/ko/tags/%E5%A4%9A%E6%91%A9/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%E5%A4%9A%E6%91%A9/",
+      "destination": "/ko/tags/%E5%A4%9A%E6%91%A9/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%A7%80%EC%97%AD%EA%B0%80%EC%9D%B4%EB%93%9C/",
+      "destination": "/ko/tags/%EC%A7%80%EC%97%AD%EA%B0%80%EC%9D%B4%EB%93%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%A7%80%EC%97%AD%EA%B0%80%EC%9D%B4%EB%93%9C/",
+      "destination": "/ko/tags/%EC%A7%80%EC%97%AD%EA%B0%80%EC%9D%B4%EB%93%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/jr%ED%8C%A8%EC%8A%A4/",
+      "destination": "/ko/tags/jr%ED%8C%A8%EC%8A%A4/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/jr%ED%8C%A8%EC%8A%A4/",
+      "destination": "/ko/tags/jr%ED%8C%A8%EC%8A%A4/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%9A%94%EC%BD%94%ED%95%98%EB%A7%88/",
+      "destination": "/ko/tags/%EC%9A%94%EC%BD%94%ED%95%98%EB%A7%88/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%9A%94%EC%BD%94%ED%95%98%EB%A7%88/",
+      "destination": "/ko/tags/%EC%9A%94%EC%BD%94%ED%95%98%EB%A7%88/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%B8%A0%ED%82%A4%EC%A7%80%EC%8B%9C%EC%9E%A5/",
+      "destination": "/ko/tags/%EC%B8%A0%ED%82%A4%EC%A7%80%EC%8B%9C%EC%9E%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%B8%A0%ED%82%A4%EC%A7%80%EC%8B%9C%EC%9E%A5/",
+      "destination": "/ko/tags/%EC%B8%A0%ED%82%A4%EC%A7%80%EC%8B%9C%EC%9E%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%ED%86%A0%EC%9A%94%EC%8A%A4%EC%8B%9C%EC%9E%A5/",
+      "destination": "/ko/tags/%ED%86%A0%EC%9A%94%EC%8A%A4%EC%8B%9C%EC%9E%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%ED%86%A0%EC%9A%94%EC%8A%A4%EC%8B%9C%EC%9E%A5/",
+      "destination": "/ko/tags/%ED%86%A0%EC%9A%94%EC%8A%A4%EC%8B%9C%EC%9E%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%B2%9C%EA%B0%9D%EB%A7%8C%EB%9E%98/",
+      "destination": "/ko/tags/%EC%B2%9C%EA%B0%9D%EB%A7%8C%EB%9E%98/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%B2%9C%EA%B0%9D%EB%A7%8C%EB%9E%98/",
+      "destination": "/ko/tags/%EC%B2%9C%EA%B0%9D%EB%A7%8C%EB%9E%98/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%B8%A0%ED%82%A4%EC%A7%80%EC%9E%AC%EA%B0%9C%EB%B0%9C/",
+      "destination": "/ko/tags/%EC%B8%A0%ED%82%A4%EC%A7%80%EC%9E%AC%EA%B0%9C%EB%B0%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%B8%A0%ED%82%A4%EC%A7%80%EC%9E%AC%EA%B0%9C%EB%B0%9C/",
+      "destination": "/ko/tags/%EC%B8%A0%ED%82%A4%EC%A7%80%EC%9E%AC%EA%B0%9C%EB%B0%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%ED%99%98%EC%9C%A8/",
+      "destination": "/ko/tags/%ED%99%98%EC%9C%A8/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%ED%99%98%EC%9C%A8/",
+      "destination": "/ko/tags/%ED%99%98%EC%9C%A8/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EC%97%94%EC%A0%80/",
+      "destination": "/ko/tags/%EC%97%94%EC%A0%80/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EC%97%94%EC%A0%80/",
+      "destination": "/ko/tags/%EC%97%94%EC%A0%80/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/jpy/",
+      "destination": "/ko/tags/jpy/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/jpy/",
+      "destination": "/ko/tags/jpy/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/fx/",
+      "destination": "/ko/tags/fx/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%ED%88%AC%EC%9E%90%EC%B2%A0%ED%95%99/",
+      "destination": "/ko/tags/%ED%88%AC%EC%9E%90%EC%B2%A0%ED%95%99/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%ED%88%AC%EC%9E%90%EC%B2%A0%ED%95%99/",
+      "destination": "/ko/tags/%ED%88%AC%EC%9E%90%EC%B2%A0%ED%95%99/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EB%A6%AC%EC%8A%A4%ED%81%AC%EA%B4%80%EB%A6%AC/",
+      "destination": "/ko/tags/%EB%A6%AC%EC%8A%A4%ED%81%AC%EA%B4%80%EB%A6%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EB%A6%AC%EC%8A%A4%ED%81%AC%EA%B4%80%EB%A6%AC/",
+      "destination": "/ko/tags/%EB%A6%AC%EC%8A%A4%ED%81%AC%EA%B4%80%EB%A6%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%EA%B8%B0%EC%97%85%EA%B0%80%EC%A0%95%EC%8B%A0/",
+      "destination": "/ko/tags/%EA%B8%B0%EC%97%85%EA%B0%80%EC%A0%95%EC%8B%A0/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%EA%B8%B0%EC%97%85%EA%B0%80%EC%A0%95%EC%8B%A0/",
+      "destination": "/ko/tags/%EA%B8%B0%EC%97%85%EA%B0%80%EC%A0%95%EC%8B%A0/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%ED%95%9C%EC%9D%BC%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4/",
+      "destination": "/ko/tags/%ED%95%9C%EC%9D%BC%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/tags/%ED%95%9C%EC%9D%BC%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4/",
+      "destination": "/ko/tags/%ED%95%9C%EC%9D%BC%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%9D%B1%E4%BA%AC/",
+      "destination": "/ja/tags/%E6%9D%B1%E4%BA%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%9D%B1%E4%BA%AC/",
+      "destination": "/ja/tags/%E6%9D%B1%E4%BA%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%e6%97%a5%e6%9c%ac%e6%a9%8b/",
+      "destination": "/ja/tags/%e6%97%a5%e6%9c%ac%e6%a9%8b/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%e6%97%a5%e6%9c%ac%e6%a9%8b/",
+      "destination": "/ja/tags/%e6%97%a5%e6%9c%ac%e6%a9%8b/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E3%82%B3%E3%83%AC%E3%83%89/",
+      "destination": "/ja/tags/%E3%82%B3%E3%83%AC%E3%83%89/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E3%82%B3%E3%83%AC%E3%83%89/",
+      "destination": "/ja/tags/%E3%82%B3%E3%83%AC%E3%83%89/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E5%86%8D%E9%96%8B%E7%99%BA/",
+      "destination": "/ja/tags/%E5%86%8D%E9%96%8B%E7%99%BA/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E5%86%8D%E9%96%8B%E7%99%BA/",
+      "destination": "/ja/tags/%E5%86%8D%E9%96%8B%E7%99%BA/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%9D%B1%E4%BA%AC%E3%83%A9%E3%82%A4%E3%83%95/",
+      "destination": "/ja/tags/%E6%9D%B1%E4%BA%AC%E3%83%A9%E3%82%A4%E3%83%95/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%9D%B1%E4%BA%AC%E3%83%A9%E3%82%A4%E3%83%95/",
+      "destination": "/ja/tags/%E6%9D%B1%E4%BA%AC%E3%83%A9%E3%82%A4%E3%83%95/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%9D%B1%E4%BA%AC%E6%97%85%E8%A1%8C/",
+      "destination": "/ja/tags/%E6%9D%B1%E4%BA%AC%E6%97%85%E8%A1%8C/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%9D%B1%E4%BA%AC%E6%97%85%E8%A1%8C/",
+      "destination": "/ja/tags/%E6%9D%B1%E4%BA%AC%E6%97%85%E8%A1%8C/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E9%8A%80%E5%BA%A7/",
+      "destination": "/ja/tags/%E9%8A%80%E5%BA%A7/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E9%8A%80%E5%BA%A7/",
+      "destination": "/ja/tags/%E9%8A%80%E5%BA%A7/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E4%B8%B8%E3%81%AE%E5%86%85/",
+      "destination": "/ja/tags/%E4%B8%B8%E3%81%AE%E5%86%85/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E4%B8%B8%E3%81%AE%E5%86%85/",
+      "destination": "/ja/tags/%E4%B8%B8%E3%81%AE%E5%86%85/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E5%A4%A7%E6%89%8B%E7%94%BA/",
+      "destination": "/ja/tags/%E5%A4%A7%E6%89%8B%E7%94%BA/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E5%A4%A7%E6%89%8B%E7%94%BA/",
+      "destination": "/ja/tags/%E5%A4%A7%E6%89%8B%E7%94%BA/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%97%A5%E6%9C%AC%E4%B8%8D%E5%8B%95%E7%94%A3/",
+      "destination": "/ja/tags/%E6%97%A5%E6%9C%AC%E4%B8%8D%E5%8B%95%E7%94%A3/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%97%A5%E6%9C%AC%E4%B8%8D%E5%8B%95%E7%94%A3/",
+      "destination": "/ja/tags/%E6%97%A5%E6%9C%AC%E4%B8%8D%E5%8B%95%E7%94%A3/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/torchtower/",
+      "destination": "/ja/tags/torchtower/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/torchtower/",
+      "destination": "/ja/tags/torchtower/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E3%83%9B%E3%83%86%E3%83%AB/",
+      "destination": "/ja/tags/%E3%83%9B%E3%83%86%E3%83%AB/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E3%83%9B%E3%83%86%E3%83%AB/",
+      "destination": "/ja/tags/%E3%83%9B%E3%83%86%E3%83%AB/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E3%82%AA%E3%83%95%E3%82%A3%E3%82%B9/",
+      "destination": "/ja/tags/%E3%82%AA%E3%83%95%E3%82%A3%E3%82%B9/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E3%82%AA%E3%83%95%E3%82%A3%E3%82%B9/",
+      "destination": "/ja/tags/%E3%82%AA%E3%83%95%E3%82%A3%E3%82%B9/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%8A%95%E8%B3%87/",
+      "destination": "/ja/tags/%E6%8A%95%E8%B3%87/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%8A%95%E8%B3%87/",
+      "destination": "/ja/tags/%E6%8A%95%E8%B3%87/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%97%A5%E6%9C%AC%E6%8A%95%E8%B3%87/",
+      "destination": "/ja/tags/%E6%97%A5%E6%9C%AC%E6%8A%95%E8%B3%87/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%97%A5%E6%9C%AC%E6%8A%95%E8%B3%87/",
+      "destination": "/ja/tags/%E6%97%A5%E6%9C%AC%E6%8A%95%E8%B3%87/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E4%B8%8D%E5%8B%95%E7%94%A3/",
+      "destination": "/ja/tags/%E4%B8%8D%E5%8B%95%E7%94%A3/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E4%B8%8D%E5%8B%95%E7%94%A3/",
+      "destination": "/ja/tags/%E4%B8%8D%E5%8B%95%E7%94%A3/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E7%A8%8E%E5%8B%99%E6%88%A6%E7%95%A5/",
+      "destination": "/ja/tags/%E7%A8%8E%E5%8B%99%E6%88%A6%E7%95%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E7%A8%8E%E5%8B%99%E6%88%A6%E7%95%A5/",
+      "destination": "/ja/tags/%E7%A8%8E%E5%8B%99%E6%88%A6%E7%95%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%B3%95%E4%BA%BA%E5%8C%96/",
+      "destination": "/ja/tags/%E6%B3%95%E4%BA%BA%E5%8C%96/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%B3%95%E4%BA%BA%E5%8C%96/",
+      "destination": "/ja/tags/%E6%B3%95%E4%BA%BA%E5%8C%96/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E8%AD%B2%E6%B8%A1%E6%89%80%E5%BE%97/",
+      "destination": "/ja/tags/%E8%AD%B2%E6%B8%A1%E6%89%80%E5%BE%97/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E8%AD%B2%E6%B8%A1%E6%89%80%E5%BE%97/",
+      "destination": "/ja/tags/%E8%AD%B2%E6%B8%A1%E6%89%80%E5%BE%97/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E9%9D%9E%E5%B1%85%E4%BD%8F%E8%80%85/",
+      "destination": "/ja/tags/%E9%9D%9E%E5%B1%85%E4%BD%8F%E8%80%85/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E9%9D%9E%E5%B1%85%E4%BD%8F%E8%80%85/",
+      "destination": "/ja/tags/%E9%9D%9E%E5%B1%85%E4%BD%8F%E8%80%85/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E9%87%91%E5%88%A9/",
+      "destination": "/ja/tags/%E9%87%91%E5%88%A9/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E9%87%91%E5%88%A9/",
+      "destination": "/ja/tags/%E9%87%91%E5%88%A9/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%97%A5%E6%9C%AC/",
+      "destination": "/ja/tags/%E6%97%A5%E6%9C%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%97%A5%E6%9C%AC/",
+      "destination": "/ja/tags/%E6%97%A5%E6%9C%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E3%83%9E%E3%82%AF%E3%83%AD/",
+      "destination": "/ja/tags/%E3%83%9E%E3%82%AF%E3%83%AD/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E3%83%9E%E3%82%AF%E3%83%AD/",
+      "destination": "/ja/tags/%E3%83%9E%E3%82%AF%E3%83%AD/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E7%A8%8E%E9%87%91/",
+      "destination": "/ja/tags/%E7%A8%8E%E9%87%91/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E7%A8%8E%E9%87%91/",
+      "destination": "/ja/tags/%E7%A8%8E%E9%87%91/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%97%A5%E6%9C%AC%E3%83%93%E3%82%B6/",
+      "destination": "/ja/tags/%E6%97%A5%E6%9C%AC%E3%83%93%E3%82%B6/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%97%A5%E6%9C%AC%E3%83%93%E3%82%B6/",
+      "destination": "/ja/tags/%E6%97%A5%E6%9C%AC%E3%83%93%E3%82%B6/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%B0%B8%E4%BD%8F%E6%A8%A9/",
+      "destination": "/ja/tags/%E6%B0%B8%E4%BD%8F%E6%A8%A9/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%B0%B8%E4%BD%8F%E6%A8%A9/",
+      "destination": "/ja/tags/%E6%B0%B8%E4%BD%8F%E6%A8%A9/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E7%B5%8C%E5%96%B6%E7%AE%A1%E7%90%86%E3%83%93%E3%82%B6/",
+      "destination": "/ja/tags/%E7%B5%8C%E5%96%B6%E7%AE%A1%E7%90%86%E3%83%93%E3%82%B6/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E7%B5%8C%E5%96%B6%E7%AE%A1%E7%90%86%E3%83%93%E3%82%B6/",
+      "destination": "/ja/tags/%E7%B5%8C%E5%96%B6%E7%AE%A1%E7%90%86%E3%83%93%E3%82%B6/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E9%AB%98%E5%BA%A6%E5%B0%82%E9%96%80%E8%81%B7/",
+      "destination": "/ja/tags/%E9%AB%98%E5%BA%A6%E5%B0%82%E9%96%80%E8%81%B7/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E9%AB%98%E5%BA%A6%E5%B0%82%E9%96%80%E8%81%B7/",
+      "destination": "/ja/tags/%E9%AB%98%E5%BA%A6%E5%B0%82%E9%96%80%E8%81%B7/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E5%85%A5%E7%AE%A1%E6%B3%95%E6%94%B9%E6%AD%A3/",
+      "destination": "/ja/tags/%E5%85%A5%E7%AE%A1%E6%B3%95%E6%94%B9%E6%AD%A3/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E5%85%A5%E7%AE%A1%E6%B3%95%E6%94%B9%E6%AD%A3/",
+      "destination": "/ja/tags/%E5%85%A5%E7%AE%A1%E6%B3%95%E6%94%B9%E6%AD%A3/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E7%9B%B8%E7%B6%9A%E7%A8%8E/",
+      "destination": "/ja/tags/%E7%9B%B8%E7%B6%9A%E7%A8%8E/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E7%9B%B8%E7%B6%9A%E7%A8%8E/",
+      "destination": "/ja/tags/%E7%9B%B8%E7%B6%9A%E7%A8%8E/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E8%B4%88%E4%B8%8E%E7%A8%8E/",
+      "destination": "/ja/tags/%E8%B4%88%E4%B8%8E%E7%A8%8E/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E8%B4%88%E4%B8%8E%E7%A8%8E/",
+      "destination": "/ja/tags/%E8%B4%88%E4%B8%8E%E7%A8%8E/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E7%A8%8E%E5%8B%99%E8%A8%88%E7%94%BB/",
+      "destination": "/ja/tags/%E7%A8%8E%E5%8B%99%E8%A8%88%E7%94%BB/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E7%A8%8E%E5%8B%99%E8%A8%88%E7%94%BB/",
+      "destination": "/ja/tags/%E7%A8%8E%E5%8B%99%E8%A8%88%E7%94%BB/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%9D%B1%E4%BA%AC%E6%9A%AE%E3%82%89%E3%81%97/",
+      "destination": "/ja/tags/%E6%9D%B1%E4%BA%AC%E6%9A%AE%E3%82%89%E3%81%97/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%9D%B1%E4%BA%AC%E6%9A%AE%E3%82%89%E3%81%97/",
+      "destination": "/ja/tags/%E6%9D%B1%E4%BA%AC%E6%9A%AE%E3%82%89%E3%81%97/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%B5%9C%E7%94%BA/",
+      "destination": "/ja/tags/%E6%B5%9C%E7%94%BA/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%B5%9C%E7%94%BA/",
+      "destination": "/ja/tags/%E6%B5%9C%E7%94%BA/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E9%83%BD%E5%BF%83%E3%83%A9%E3%82%A4%E3%83%95/",
+      "destination": "/ja/tags/%E9%83%BD%E5%BF%83%E3%83%A9%E3%82%A4%E3%83%95/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E9%83%BD%E5%BF%83%E3%83%A9%E3%82%A4%E3%83%95/",
+      "destination": "/ja/tags/%E9%83%BD%E5%BF%83%E3%83%A9%E3%82%A4%E3%83%95/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%97%A5%E6%9C%AC%E7%94%9F%E6%B4%BB/",
+      "destination": "/ja/tags/%E6%97%A5%E6%9C%AC%E7%94%9F%E6%B4%BB/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%97%A5%E6%9C%AC%E7%94%9F%E6%B4%BB/",
+      "destination": "/ja/tags/%E6%97%A5%E6%9C%AC%E7%94%9F%E6%B4%BB/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E4%BA%BA%E5%BD%A2%E7%94%BA/",
+      "destination": "/ja/tags/%E4%BA%BA%E5%BD%A2%E7%94%BA/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E4%BA%BA%E5%BD%A2%E7%94%BA/",
+      "destination": "/ja/tags/%E4%BA%BA%E5%BD%A2%E7%94%BA/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E5%85%9C%E7%94%BA/",
+      "destination": "/ja/tags/%E5%85%9C%E7%94%BA/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E5%85%9C%E7%94%BA/",
+      "destination": "/ja/tags/%E5%85%9C%E7%94%BA/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%97%A5%E6%9C%AC%E5%86%8D%E9%96%8B%E7%99%BA/",
+      "destination": "/ja/tags/%E6%97%A5%E6%9C%AC%E5%86%8D%E9%96%8B%E7%99%BA/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%97%A5%E6%9C%AC%E5%86%8D%E9%96%8B%E7%99%BA/",
+      "destination": "/ja/tags/%E6%97%A5%E6%9C%AC%E5%86%8D%E9%96%8B%E7%99%BA/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E4%B8%89%E4%BA%95/",
+      "destination": "/ja/tags/%E4%B8%89%E4%BA%95/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E4%B8%89%E4%BA%95/",
+      "destination": "/ja/tags/%E4%B8%89%E4%BA%95/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E3%82%A8%E3%83%83%E3%82%BB%E3%82%A4/",
+      "destination": "/ja/tags/%E3%82%A8%E3%83%83%E3%82%BB%E3%82%A4/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E3%82%A8%E3%83%83%E3%82%BB%E3%82%A4/",
+      "destination": "/ja/tags/%E3%82%A8%E3%83%83%E3%82%BB%E3%82%A4/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/",
+      "destination": "/ja/tags/%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/",
+      "destination": "/ja/tags/%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%8A%95%E8%B3%87%E5%A4%B1%E6%95%97/",
+      "destination": "/ja/tags/%E6%8A%95%E8%B3%87%E5%A4%B1%E6%95%97/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%8A%95%E8%B3%87%E5%A4%B1%E6%95%97/",
+      "destination": "/ja/tags/%E6%8A%95%E8%B3%87%E5%A4%B1%E6%95%97/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E3%82%B5%E3%83%96%E3%83%AA%E3%83%BC%E3%82%B9/",
+      "destination": "/ja/tags/%E3%82%B5%E3%83%96%E3%83%AA%E3%83%BC%E3%82%B9/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E3%82%B5%E3%83%96%E3%83%AA%E3%83%BC%E3%82%B9/",
+      "destination": "/ja/tags/%E3%82%B5%E3%83%96%E3%83%AA%E3%83%BC%E3%82%B9/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E4%BF%AE%E7%B9%95%E7%A9%8D%E7%AB%8B%E9%87%91/",
+      "destination": "/ja/tags/%E4%BF%AE%E7%B9%95%E7%A9%8D%E7%AB%8B%E9%87%91/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E4%BF%AE%E7%B9%95%E7%A9%8D%E7%AB%8B%E9%87%91/",
+      "destination": "/ja/tags/%E4%BF%AE%E7%B9%95%E7%A9%8D%E7%AB%8B%E9%87%91/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E7%A8%8E%E5%8B%99%E8%AA%BF%E6%9F%BB/",
+      "destination": "/ja/tags/%E7%A8%8E%E5%8B%99%E8%AA%BF%E6%9F%BB/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E7%A8%8E%E5%8B%99%E8%AA%BF%E6%9F%BB/",
+      "destination": "/ja/tags/%E7%A8%8E%E5%8B%99%E8%AA%BF%E6%9F%BB/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E3%82%BD%E3%82%A6%E3%83%AB%E4%B8%8D%E5%8B%95%E7%94%A3/",
+      "destination": "/ja/tags/%E3%82%BD%E3%82%A6%E3%83%AB%E4%B8%8D%E5%8B%95%E7%94%A3/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E3%82%BD%E3%82%A6%E3%83%AB%E4%B8%8D%E5%8B%95%E7%94%A3/",
+      "destination": "/ja/tags/%E3%82%BD%E3%82%A6%E3%83%AB%E4%B8%8D%E5%8B%95%E7%94%A3/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%9D%B1%E4%BA%AC%E4%B8%8D%E5%8B%95%E7%94%A3/",
+      "destination": "/ja/tags/%E6%9D%B1%E4%BA%AC%E4%B8%8D%E5%8B%95%E7%94%A3/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%9D%B1%E4%BA%AC%E4%B8%8D%E5%8B%95%E7%94%A3/",
+      "destination": "/ja/tags/%E6%9D%B1%E4%BA%AC%E4%B8%8D%E5%8B%95%E7%94%A3/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E5%B8%82%E5%A0%B4%E7%9B%B8%E9%96%A2/",
+      "destination": "/ja/tags/%E5%B8%82%E5%A0%B4%E7%9B%B8%E9%96%A2/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E5%B8%82%E5%A0%B4%E7%9B%B8%E9%96%A2/",
+      "destination": "/ja/tags/%E5%B8%82%E5%A0%B4%E7%9B%B8%E9%96%A2/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E8%B3%87%E7%94%A3%E9%85%8D%E5%88%86/",
+      "destination": "/ja/tags/%E8%B3%87%E7%94%A3%E9%85%8D%E5%88%86/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E8%B3%87%E7%94%A3%E9%85%8D%E5%88%86/",
+      "destination": "/ja/tags/%E8%B3%87%E7%94%A3%E9%85%8D%E5%88%86/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%97%A5%E6%9C%AC%E5%8C%96/",
+      "destination": "/ja/tags/%E6%97%A5%E6%9C%AC%E5%8C%96/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%97%A5%E6%9C%AC%E5%8C%96/",
+      "destination": "/ja/tags/%E6%97%A5%E6%9C%AC%E5%8C%96/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E5%86%86%E5%AE%89%E6%88%A6%E7%95%A5/",
+      "destination": "/ja/tags/%E5%86%86%E5%AE%89%E6%88%A6%E7%95%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E5%86%86%E5%AE%89%E6%88%A6%E7%95%A5/",
+      "destination": "/ja/tags/%E5%86%86%E5%AE%89%E6%88%A6%E7%95%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E7%82%BA%E6%9B%BF%E3%83%AA%E3%82%B9%E3%82%AF/",
+      "destination": "/ja/tags/%E7%82%BA%E6%9B%BF%E3%83%AA%E3%82%B9%E3%82%AF/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E7%82%BA%E6%9B%BF%E3%83%AA%E3%82%B9%E3%82%AF/",
+      "destination": "/ja/tags/%E7%82%BA%E6%9B%BF%E3%83%AA%E3%82%B9%E3%82%AF/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E9%87%91%E8%9E%8D%E6%94%BF%E7%AD%96/",
+      "destination": "/ja/tags/%E9%87%91%E8%9E%8D%E6%94%BF%E7%AD%96/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E9%87%91%E8%9E%8D%E6%94%BF%E7%AD%96/",
+      "destination": "/ja/tags/%E9%87%91%E8%9E%8D%E6%94%BF%E7%AD%96/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E9%83%BD%E5%BF%83-6-%E5%8C%BA/",
+      "destination": "/ja/tags/%E9%83%BD%E5%BF%83-6-%E5%8C%BA/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E9%83%BD%E5%BF%83-6-%E5%8C%BA/",
+      "destination": "/ja/tags/%E9%83%BD%E5%BF%83-6-%E5%8C%BA/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%8A%95%E8%B3%87%E6%88%A6%E7%95%A5/",
+      "destination": "/ja/tags/%E6%8A%95%E8%B3%87%E6%88%A6%E7%95%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%8A%95%E8%B3%87%E6%88%A6%E7%95%A5/",
+      "destination": "/ja/tags/%E6%8A%95%E8%B3%87%E6%88%A6%E7%95%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E3%83%9E%E3%82%AF%E3%83%AD%E7%B5%8C%E6%B8%88/",
+      "destination": "/ja/tags/%E3%83%9E%E3%82%AF%E3%83%AD%E7%B5%8C%E6%B8%88/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E3%83%9E%E3%82%AF%E3%83%AD%E7%B5%8C%E6%B8%88/",
+      "destination": "/ja/tags/%E3%83%9E%E3%82%AF%E3%83%AD%E7%B5%8C%E6%B8%88/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E3%82%A4%E3%83%B3%E3%82%B5%E3%82%A4%E3%83%88/",
+      "destination": "/ja/tags/%E3%82%A4%E3%83%B3%E3%82%B5%E3%82%A4%E3%83%88/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E3%82%A4%E3%83%B3%E3%82%B5%E3%82%A4%E3%83%88/",
+      "destination": "/ja/tags/%E3%82%A4%E3%83%B3%E3%82%B5%E3%82%A4%E3%83%88/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E8%B3%BC%E5%85%A5%E6%89%8B%E7%B6%9A%E3%81%8D/",
+      "destination": "/ja/tags/%E8%B3%BC%E5%85%A5%E6%89%8B%E7%B6%9A%E3%81%8D/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E8%B3%BC%E5%85%A5%E6%89%8B%E7%B6%9A%E3%81%8D/",
+      "destination": "/ja/tags/%E8%B3%BC%E5%85%A5%E6%89%8B%E7%B6%9A%E3%81%8D/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E7%99%BB%E8%A8%98/",
+      "destination": "/ja/tags/%E7%99%BB%E8%A8%98/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E7%99%BB%E8%A8%98/",
+      "destination": "/ja/tags/%E7%99%BB%E8%A8%98/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E5%A4%96%E5%9B%BD%E4%BA%BA%E6%8A%95%E8%B3%87/",
+      "destination": "/ja/tags/%E5%A4%96%E5%9B%BD%E4%BA%BA%E6%8A%95%E8%B3%87/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E5%A4%96%E5%9B%BD%E4%BA%BA%E6%8A%95%E8%B3%87/",
+      "destination": "/ja/tags/%E5%A4%96%E5%9B%BD%E4%BA%BA%E6%8A%95%E8%B3%87/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E5%8F%B8%E6%B3%95%E6%9B%B8%E5%A3%AB/",
+      "destination": "/ja/tags/%E5%8F%B8%E6%B3%95%E6%9B%B8%E5%A3%AB/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E5%8F%B8%E6%B3%95%E6%9B%B8%E5%A3%AB/",
+      "destination": "/ja/tags/%E5%8F%B8%E6%B3%95%E6%9B%B8%E5%A3%AB/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E5%9C%B0%E9%9C%87/",
+      "destination": "/ja/tags/%E5%9C%B0%E9%9C%87/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E5%9C%B0%E9%9C%87/",
+      "destination": "/ja/tags/%E5%9C%B0%E9%9C%87/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E9%98%B2%E7%81%BD/",
+      "destination": "/ja/tags/%E9%98%B2%E7%81%BD/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E9%98%B2%E7%81%BD/",
+      "destination": "/ja/tags/%E9%98%B2%E7%81%BD/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%97%85%E8%A1%8C/",
+      "destination": "/ja/tags/%E6%97%85%E8%A1%8C/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%97%85%E8%A1%8C/",
+      "destination": "/ja/tags/%E6%97%85%E8%A1%8C/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB/",
+      "destination": "/ja/tags/%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB/",
+      "destination": "/ja/tags/%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E4%BB%A3%E5%AE%98%E5%B1%B1/",
+      "destination": "/ja/tags/%E4%BB%A3%E5%AE%98%E5%B1%B1/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E4%BB%A3%E5%AE%98%E5%B1%B1/",
+      "destination": "/ja/tags/%E4%BB%A3%E5%AE%98%E5%B1%B1/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%9D%B1%E4%BA%AC%E7%94%9F%E6%B4%BB/",
+      "destination": "/ja/tags/%E6%9D%B1%E4%BA%AC%E7%94%9F%E6%B4%BB/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%9D%B1%E4%BA%AC%E7%94%9F%E6%B4%BB/",
+      "destination": "/ja/tags/%E6%9D%B1%E4%BA%AC%E7%94%9F%E6%B4%BB/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E9%9F%93%E5%9B%BD%E4%BA%BA%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3/",
+      "destination": "/ja/tags/%E9%9F%93%E5%9B%BD%E4%BA%BA%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E9%9F%93%E5%9B%BD%E4%BA%BA%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3/",
+      "destination": "/ja/tags/%E9%9F%93%E5%9B%BD%E4%BA%BA%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%96%B0%E5%A4%A7%E4%B9%85%E4%BF%9D/",
+      "destination": "/ja/tags/%E6%96%B0%E5%A4%A7%E4%B9%85%E4%BF%9D/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%96%B0%E5%A4%A7%E4%B9%85%E4%BF%9D/",
+      "destination": "/ja/tags/%E6%96%B0%E5%A4%A7%E4%B9%85%E4%BF%9D/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E9%BA%BB%E5%B8%83%E5%8D%81%E7%95%AA/",
+      "destination": "/ja/tags/%E9%BA%BB%E5%B8%83%E5%8D%81%E7%95%AA/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E9%BA%BB%E5%B8%83%E5%8D%81%E7%95%AA/",
+      "destination": "/ja/tags/%E9%BA%BB%E5%B8%83%E5%8D%81%E7%95%AA/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E8%99%8E%E3%83%8E%E9%96%80/",
+      "destination": "/ja/tags/%E8%99%8E%E3%83%8E%E9%96%80/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E8%99%8E%E3%83%8E%E9%96%80/",
+      "destination": "/ja/tags/%E8%99%8E%E3%83%8E%E9%96%80/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/k%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97/",
+      "destination": "/ja/tags/k%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/k%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97/",
+      "destination": "/ja/tags/k%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3/",
+      "destination": "/ja/tags/%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3/",
+      "destination": "/ja/tags/%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E4%BE%A1%E6%A0%BC/",
+      "destination": "/ja/tags/%E4%BE%A1%E6%A0%BC/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E4%BE%A1%E6%A0%BC/",
+      "destination": "/ja/tags/%E4%BE%A1%E6%A0%BC/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E8%B3%83%E8%B2%B8%E5%80%9F%E5%A5%91%E7%B4%84/",
+      "destination": "/ja/tags/%E8%B3%83%E8%B2%B8%E5%80%9F%E5%A5%91%E7%B4%84/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E8%B3%83%E8%B2%B8%E5%80%9F%E5%A5%91%E7%B4%84/",
+      "destination": "/ja/tags/%E8%B3%83%E8%B2%B8%E5%80%9F%E5%A5%91%E7%B4%84/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%99%AE%E9%80%9A%E5%80%9F%E5%AE%B6/",
+      "destination": "/ja/tags/%E6%99%AE%E9%80%9A%E5%80%9F%E5%AE%B6/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%99%AE%E9%80%9A%E5%80%9F%E5%AE%B6/",
+      "destination": "/ja/tags/%E6%99%AE%E9%80%9A%E5%80%9F%E5%AE%B6/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E5%AE%9A%E6%9C%9F%E5%80%9F%E5%AE%B6/",
+      "destination": "/ja/tags/%E5%AE%9A%E6%9C%9F%E5%80%9F%E5%AE%B6/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E5%AE%9A%E6%9C%9F%E5%80%9F%E5%AE%B6/",
+      "destination": "/ja/tags/%E5%AE%9A%E6%9C%9F%E5%80%9F%E5%AE%B6/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E5%8E%9F%E7%8A%B6%E5%9B%9E%E5%BE%A9/",
+      "destination": "/ja/tags/%E5%8E%9F%E7%8A%B6%E5%9B%9E%E5%BE%A9/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E5%8E%9F%E7%8A%B6%E5%9B%9E%E5%BE%A9/",
+      "destination": "/ja/tags/%E5%8E%9F%E7%8A%B6%E5%9B%9E%E5%BE%A9/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E5%AD%90%E9%80%A3%E3%82%8C%E6%9D%B1%E4%BA%AC/",
+      "destination": "/ja/tags/%E5%AD%90%E9%80%A3%E3%82%8C%E6%9D%B1%E4%BA%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E5%AD%90%E9%80%A3%E3%82%8C%E6%9D%B1%E4%BA%AC/",
+      "destination": "/ja/tags/%E5%AD%90%E9%80%A3%E3%82%8C%E6%9D%B1%E4%BA%AC/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%9D%B1%E4%BA%AC%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%A2%E3%83%A0/",
+      "destination": "/ja/tags/%E6%9D%B1%E4%BA%AC%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%A2%E3%83%A0/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%9D%B1%E4%BA%AC%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%A2%E3%83%A0/",
+      "destination": "/ja/tags/%E6%9D%B1%E4%BA%AC%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%A2%E3%83%A0/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E3%83%81%E3%83%BC%E3%83%A0%E3%83%A9%E3%83%9C/",
+      "destination": "/ja/tags/%E3%83%81%E3%83%BC%E3%83%A0%E3%83%A9%E3%83%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E3%83%81%E3%83%BC%E3%83%A0%E3%83%A9%E3%83%9C/",
+      "destination": "/ja/tags/%E3%83%81%E3%83%BC%E3%83%A0%E3%83%A9%E3%83%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%9C%AA%E6%9D%A5%E9%A4%A8/",
+      "destination": "/ja/tags/%E6%9C%AA%E6%9D%A5%E9%A4%A8/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%9C%AA%E6%9D%A5%E9%A4%A8/",
+      "destination": "/ja/tags/%E6%9C%AA%E6%9D%A5%E9%A4%A8/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E3%82%AD%E3%83%83%E3%82%B6%E3%83%8B%E3%82%A2/",
+      "destination": "/ja/tags/%E3%82%AD%E3%83%83%E3%82%B6%E3%83%8B%E3%82%A2/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E3%82%AD%E3%83%83%E3%82%B6%E3%83%8B%E3%82%A2/",
+      "destination": "/ja/tags/%E3%82%AD%E3%83%83%E3%82%B6%E3%83%8B%E3%82%A2/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E3%82%AA%E3%83%95%E3%82%A3%E3%82%B9%E5%B8%82%E5%A0%B4/",
+      "destination": "/ja/tags/%E3%82%AA%E3%83%95%E3%82%A3%E3%82%B9%E5%B8%82%E5%A0%B4/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E3%82%AA%E3%83%95%E3%82%A3%E3%82%B9%E5%B8%82%E5%A0%B4/",
+      "destination": "/ja/tags/%E3%82%AA%E3%83%95%E3%82%A3%E3%82%B9%E5%B8%82%E5%A0%B4/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E7%A9%BA%E5%AE%A4%E7%8E%87/",
+      "destination": "/ja/tags/%E7%A9%BA%E5%AE%A4%E7%8E%87/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E7%A9%BA%E5%AE%A4%E7%8E%87/",
+      "destination": "/ja/tags/%E7%A9%BA%E5%AE%A4%E7%8E%87/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E4%B8%89%E9%AC%BC%E5%95%86%E4%BA%8B/",
+      "destination": "/ja/tags/%E4%B8%89%E9%AC%BC%E5%95%86%E4%BA%8B/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E4%B8%89%E9%AC%BC%E5%95%86%E4%BA%8B/",
+      "destination": "/ja/tags/%E4%B8%89%E9%AC%BC%E5%95%86%E4%BA%8B/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E3%83%94%E3%83%A9%E3%83%BC%E3%83%9A%E3%83%BC%E3%82%B8/",
+      "destination": "/ja/tags/%E3%83%94%E3%83%A9%E3%83%BC%E3%83%9A%E3%83%BC%E3%82%B8/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E3%83%94%E3%83%A9%E3%83%BC%E3%83%9A%E3%83%BC%E3%82%B8/",
+      "destination": "/ja/tags/%E3%83%94%E3%83%A9%E3%83%BC%E3%83%9A%E3%83%BC%E3%82%B8/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E5%AE%8C%E5%85%A8%E3%82%AC%E3%82%A4%E3%83%89/",
+      "destination": "/ja/tags/%E5%AE%8C%E5%85%A8%E3%82%AC%E3%82%A4%E3%83%89/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E5%AE%8C%E5%85%A8%E3%82%AC%E3%82%A4%E3%83%89/",
+      "destination": "/ja/tags/%E5%AE%8C%E5%85%A8%E3%82%AC%E3%82%A4%E3%83%89/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E5%88%A9%E5%9B%9E%E3%82%8A/",
+      "destination": "/ja/tags/%E5%88%A9%E5%9B%9E%E3%82%8A/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E5%88%A9%E5%9B%9E%E3%82%8A/",
+      "destination": "/ja/tags/%E5%88%A9%E5%9B%9E%E3%82%8A/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E3%82%AD%E3%83%A3%E3%83%94%E3%82%BF%E3%83%AB%E3%82%B2%E3%82%A4%E3%83%B3/",
+      "destination": "/ja/tags/%E3%82%AD%E3%83%A3%E3%83%94%E3%82%BF%E3%83%AB%E3%82%B2%E3%82%A4%E3%83%B3/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E3%82%AD%E3%83%A3%E3%83%94%E3%82%BF%E3%83%AB%E3%82%B2%E3%82%A4%E3%83%B3/",
+      "destination": "/ja/tags/%E3%82%AD%E3%83%A3%E3%83%94%E3%82%BF%E3%83%AB%E3%82%B2%E3%82%A4%E3%83%B3/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/23-%E5%8C%BA/",
+      "destination": "/ja/tags/23-%E5%8C%BA/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/23-%E5%8C%BA/",
+      "destination": "/ja/tags/23-%E5%8C%BA/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E5%A4%9A%E6%91%A9/",
+      "destination": "/ja/tags/%E5%A4%9A%E6%91%A9/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E7%A7%BB%E4%BD%8F/",
+      "destination": "/ja/tags/%E7%A7%BB%E4%BD%8F/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E7%A7%BB%E4%BD%8F/",
+      "destination": "/ja/tags/%E7%A7%BB%E4%BD%8F/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E5%9C%B0%E5%9F%9F%E3%82%AC%E3%82%A4%E3%83%89/",
+      "destination": "/ja/tags/%E5%9C%B0%E5%9F%9F%E3%82%AC%E3%82%A4%E3%83%89/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E5%9C%B0%E5%9F%9F%E3%82%AC%E3%82%A4%E3%83%89/",
+      "destination": "/ja/tags/%E5%9C%B0%E5%9F%9F%E3%82%AC%E3%82%A4%E3%83%89/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/jr%E3%83%91%E3%82%B9/",
+      "destination": "/ja/tags/jr%E3%83%91%E3%82%B9/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/jr%E3%83%91%E3%82%B9/",
+      "destination": "/ja/tags/jr%E3%83%91%E3%82%B9/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%A8%AA%E6%B5%9C/",
+      "destination": "/ja/tags/%E6%A8%AA%E6%B5%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%A8%AA%E6%B5%9C/",
+      "destination": "/ja/tags/%E6%A8%AA%E6%B5%9C/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E7%AF%89%E5%9C%B0%E5%B8%82%E5%A0%B4/",
+      "destination": "/ja/tags/%E7%AF%89%E5%9C%B0%E5%B8%82%E5%A0%B4/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E7%AF%89%E5%9C%B0%E5%B8%82%E5%A0%B4/",
+      "destination": "/ja/tags/%E7%AF%89%E5%9C%B0%E5%B8%82%E5%A0%B4/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E8%B1%8A%E6%B4%B2%E5%B8%82%E5%A0%B4/",
+      "destination": "/ja/tags/%E8%B1%8A%E6%B4%B2%E5%B8%82%E5%A0%B4/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E8%B1%8A%E6%B4%B2%E5%B8%82%E5%A0%B4/",
+      "destination": "/ja/tags/%E8%B1%8A%E6%B4%B2%E5%B8%82%E5%A0%B4/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E5%8D%83%E5%AE%A2%E4%B8%87%E6%9D%A5/",
+      "destination": "/ja/tags/%E5%8D%83%E5%AE%A2%E4%B8%87%E6%9D%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E5%8D%83%E5%AE%A2%E4%B8%87%E6%9D%A5/",
+      "destination": "/ja/tags/%E5%8D%83%E5%AE%A2%E4%B8%87%E6%9D%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E7%AF%89%E5%9C%B0%E5%86%8D%E9%96%8B%E7%99%BA/",
+      "destination": "/ja/tags/%E7%AF%89%E5%9C%B0%E5%86%8D%E9%96%8B%E7%99%BA/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E7%AF%89%E5%9C%B0%E5%86%8D%E9%96%8B%E7%99%BA/",
+      "destination": "/ja/tags/%E7%AF%89%E5%9C%B0%E5%86%8D%E9%96%8B%E7%99%BA/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E5%86%86/",
+      "destination": "/ja/tags/%E5%86%86/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E5%86%86/",
+      "destination": "/ja/tags/%E5%86%86/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E7%82%BA%E6%9B%BF/",
+      "destination": "/ja/tags/%E7%82%BA%E6%9B%BF/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E7%82%BA%E6%9B%BF/",
+      "destination": "/ja/tags/%E7%82%BA%E6%9B%BF/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E9%9F%93%E6%97%A5/",
+      "destination": "/ja/tags/%E9%9F%93%E6%97%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E9%9F%93%E6%97%A5/",
+      "destination": "/ja/tags/%E9%9F%93%E6%97%A5/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E9%85%8D%E5%88%86/",
+      "destination": "/ja/tags/%E9%85%8D%E5%88%86/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E9%85%8D%E5%88%86/",
+      "destination": "/ja/tags/%E9%85%8D%E5%88%86/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E6%8A%95%E8%B3%87%E5%93%B2%E5%AD%A6/",
+      "destination": "/ja/tags/%E6%8A%95%E8%B3%87%E5%93%B2%E5%AD%A6/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E6%8A%95%E8%B3%87%E5%93%B2%E5%AD%A6/",
+      "destination": "/ja/tags/%E6%8A%95%E8%B3%87%E5%93%B2%E5%AD%A6/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E3%83%AA%E3%82%B9%E3%82%AF%E7%AE%A1%E7%90%86/",
+      "destination": "/ja/tags/%E3%83%AA%E3%82%B9%E3%82%AF%E7%AE%A1%E7%90%86/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E3%83%AA%E3%82%B9%E3%82%AF%E7%AE%A1%E7%90%86/",
+      "destination": "/ja/tags/%E3%83%AA%E3%82%B9%E3%82%AF%E7%AE%A1%E7%90%86/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E8%B5%B7%E6%A5%AD%E5%AE%B6%E7%B2%BE%E7%A5%9E/",
+      "destination": "/ja/tags/%E8%B5%B7%E6%A5%AD%E5%AE%B6%E7%B2%BE%E7%A5%9E/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E8%B5%B7%E6%A5%AD%E5%AE%B6%E7%B2%BE%E7%A5%9E/",
+      "destination": "/ja/tags/%E8%B5%B7%E6%A5%AD%E5%AE%B6%E7%B2%BE%E7%A5%9E/",
+      "permanent": true
+    },
+    {
+      "source": "/tags/%E3%82%AF%E3%83%AD%E3%82%B9%E3%83%9C%E3%83%BC%E3%83%80%E3%83%BC%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9/",
+      "destination": "/ja/tags/%E3%82%AF%E3%83%AD%E3%82%B9%E3%83%9C%E3%83%BC%E3%83%80%E3%83%BC%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/tags/%E3%82%AF%E3%83%AD%E3%82%B9%E3%83%9C%E3%83%BC%E3%83%80%E3%83%BC%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9/",
+      "destination": "/ja/tags/%E3%82%AF%E3%83%AD%E3%82%B9%E3%83%9C%E3%83%BC%E3%83%80%E3%83%BC%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9/",
+      "permanent": true
+    }
+  ]
+}

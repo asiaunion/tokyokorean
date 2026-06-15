@@ -1,0 +1,77 @@
+---
+import AboutLayout from "@/layouts/AboutLayout.astro";
+import NewsletterForm from "@/components/NewsletterForm.astro";
+import { getEntry, render } from "astro:content";
+import type { UiLang } from "@/i18n/ui";
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: undefined } },
+    { params: { locale: "ko" } },
+    { params: { locale: "ja" } },
+  ];
+}
+
+const { locale } = Astro.params;
+const lang = (locale as "ko" | "ja" | undefined) ?? "en";
+const entryId = `tokyo-relocation-d90/${lang}` as const;
+
+const entry = await getEntry("resources", entryId);
+if (!entry) {
+  throw new Error(`Resource not found: ${entryId}`);
+}
+
+const { Content } = await render(entry);
+
+const downloadHref = `/downloads/${entry.data.downloadBasename}.md`;
+
+const subscribeLead: Record<UiLang, { title: string; body: string }> = {
+  en: {
+    title: "Get Tokyo relocation updates",
+    body: "Subscribe for weekly notes on living and investing in Tokyo—plus new checklist revisions.",
+  },
+  ko: {
+    title: "도쿄 이주·투자 인사이트 받기",
+    body: "주간 뉴스레터로 도쿄 생활·투자 프레임과 체크리스트 업데이트를 받아보세요.",
+  },
+  ja: {
+    title: "東京移住・投資の更新を受け取る",
+    body: "週刊ニュースレターで東京生活・投資のフレームとチェックリスト更新をお届けします。",
+  },
+};
+const sub = subscribeLead[lang as UiLang];
+---
+
+<AboutLayout
+  frontmatter={{ title: entry.data.title }}
+  schemaType="WebPage"
+>
+  <p class="text-sm leading-relaxed text-foreground/75">{entry.data.description}</p>
+  <div class="mt-6 mb-8 rounded-xl border border-accent/20 bg-accent/5 p-6">
+    <h3 class="text-base font-semibold mb-2">
+      {lang === "ja" ? "チェックリストをダウンロード" : lang === "ko" ? "체크리스트 다운로드" : "Download Checklist"}
+    </h3>
+    <p class="text-sm text-foreground/75 mb-4">
+      {lang === "ja" ? "メールアドレスを入力して購読すると、すぐにMarkdownファイルがダウンロードされます。" : lang === "ko" ? "이메일을 입력하고 구독하시면 즉시 마크다운 파일이 다운로드됩니다." : "Enter your email to subscribe and download the Markdown file immediately."}
+    </p>
+    <NewsletterForm 
+      variant="inline" 
+      lang={lang as UiLang} 
+      customCta={lang === "ja" ? "購読してダウンロード" : lang === "ko" ? "구독하고 다운로드" : "Subscribe to Download"}
+      downloadUrl={downloadHref}
+    />
+  </div>
+  <div class="prose prose-neutral dark:prose-invert mt-8 max-w-none">
+    <Content />
+  </div>
+  <section class="mt-10 border-t border-border pt-8">
+    <h2 class="text-lg font-semibold">{sub.title}</h2>
+    <p class="mt-2 text-sm text-foreground/75">{sub.body}</p>
+    <NewsletterForm 
+      variant="card" 
+      lang={lang as UiLang} 
+      customCta={lang === "ja" ? "購読してダウンロード" : lang === "ko" ? "구독하고 다운로드" : "Subscribe to Download"}
+      downloadUrl={downloadHref}
+    />
+  </section>
+</AboutLayout>

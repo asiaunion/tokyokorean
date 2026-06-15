@@ -1,0 +1,69 @@
+---
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Layout from "./Layout.astro";
+import { SITE } from "@/config";
+
+export interface Props {
+  frontmatter: {
+    title: string;
+    sameAs?: string[];
+  };
+  schemaType?: "AboutPage" | "ContactPage" | "WebPage";
+}
+
+const { frontmatter, schemaType = "AboutPage" } = Astro.props;
+const { locale } = Astro.params;
+const currentLang = (locale as string | undefined) || "en";
+
+const sameAs = frontmatter.sameAs ?? [];
+const authorImageUrl = new URL(
+  "/assets/images/gsf-author-profile.webp",
+  SITE.website
+).href;
+
+const pageUrl = new URL(Astro.url.pathname, Astro.url).href;
+
+const pageLd =
+  schemaType === "AboutPage"
+    ? {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        name: frontmatter.title,
+        url: pageUrl,
+        inLanguage: currentLang,
+        mainEntity: {
+          "@type": "Person",
+          name: "Joseph (GSF)",
+          url: SITE.profile,
+          image: authorImageUrl,
+          ...(sameAs.length > 0 && { sameAs }),
+        },
+      }
+    : {
+        "@context": "https://schema.org",
+        "@type": schemaType,
+        name: frontmatter.title,
+        url: pageUrl,
+        inLanguage: currentLang,
+      };
+---
+
+<Layout
+  title={`${frontmatter.title} | ${SITE.title}`}
+  overrideJsonLd={pageLd}
+>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content" class="app-layout">
+    <section
+      id="about"
+      class="app-prose mb-28 max-w-app prose-img:mx-auto prose-img:my-4 prose-img:size-28 sm:prose-img:size-32 prose-img:rounded-full prose-img:object-cover prose-img:border prose-img:border-border"
+    >
+      <h1 class="text-2xl tracking-wider sm:text-3xl">{frontmatter.title}</h1>
+      <slot />
+    </section>
+  </main>
+  <Footer />
+</Layout>

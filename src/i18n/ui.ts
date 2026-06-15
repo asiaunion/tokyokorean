@@ -1,0 +1,145 @@
+export type UiLang = "ko";
+
+const ui = {
+  ko: {
+    skipToContent: "본문으로 건너뛰기",
+    openMenu: "메뉴 열기",
+    closeMenu: "메뉴 닫기",
+    navPosts: "글 목록",
+    navTags: "태그",
+    navContact: "연락",
+    navAbout: "소개",
+    navTopics: "주제 허브",
+    navArchives: "아카이브",
+    navSearch: "검색",
+    themeToggleTitle: "라이트/다크 테마 전환",
+    themeToggleAria: "테마",
+    socialLinksLabel: "소셜 링크:",
+    footerAbout: "소개",
+    footerContact: "연락",
+    footerPrivacy: "개인정보 처리방침",
+    footerCopyright: "Copyright",
+    footerAllRights: "All rights reserved.",
+    heroTitleLine1: "도쿄 한인",
+    heroTitleLine2: "라이프,",
+    heroTitleLine3: "기록하다",
+    heroCtaRead: "글 읽기 →",
+    heroCtaAbout: "운영자 소개 →",
+    heroTagline: "일본 거주 8년차 한국인이 전하는",
+    heroDescription:
+      "일본 생활, 문화, 로컬 동네의 솔직한 경험담",
+    sectionFeatured: "추천 글",
+    sectionRecentPosts: "최근 글",
+    sectionExploreTopics: "주제별 바로가기",
+    sectionMoreRecent: "최신 글 더 보기",
+    topicHubPostsLabel: "핵심 글",
+    allPosts: "전체 글",
+    topicsPageTitle: "주제 허브",
+    topicsPageDesc:
+      "일본 생활 실용, 한일 문화 비교, 도쿄 로컬 이야기를 묶었습니다.",
+    topicsEmpty: "이 허브의 글을 준비 중입니다.",
+    topicsFromHome: "주제 허브 보기",
+    heroImageAlt: "도쿄 풍경 이미지",
+    postPrevious: "이전 글",
+    postNext: "다음 글",
+    breadcrumbAriaLabel: "경로 탐색",
+    breadcrumbHome: "홈",
+    breadcrumbPostsPage: "글 목록 (페이지 {page})",
+    breadcrumbTagPaged: "{tag} (페이지 {page})",
+    paginationAriaNav: "페이지 탐색",
+    paginationPrev: "이전",
+    paginationNext: "다음",
+    paginationPrevAria: "이전 페이지",
+    paginationNextAria: "다음 페이지",
+    pageTitleSearch: "검색",
+    pageDescSearch: "블로그 내 모든 글에서 검색합니다.",
+    pageTitleTags: "태그",
+    pageDescTags: "글에 사용된 태그 목록입니다.",
+    pageTitlePosts: "글 목록",
+    pageDescPosts: "발행한 글을 모았습니다.",
+    tagPageTitlePrefix: "태그:",
+    tagPageDesc: "‘{tag}’ 태그가 붙은 글입니다.",
+    pageTitleArchives: "아카이브",
+    pageDescArchives: "연·월별로 묶은 글 목록입니다.",
+    notFoundTitle: "404 — 찾을 수 없음",
+    notFoundHeading: "페이지를 찾을 수 없습니다",
+    notFoundBackHome: "홈으로 돌아가기",
+    sharePostLead: "이 글 공유:",
+    authorCardTitle: "작성자 소개",
+    authorCardBody:
+      "Joseph · 도쿄 니혼바시 거주 8년차. 일본어 N1. 일본 생활 실용 정보, 한일 문화 비교, 도쿄의 로컬 동네 이야기를 경험을 바탕으로 기록합니다.",
+    authorCardAboutCta: "작성자 프로필 보기",
+    authorCardContactCta: "문의하기",
+    authorCardLinkedInCta: "LinkedIn 연결",
+    authorCardXFollowCta: "X에서 팔로우",
+    postFollowTitle: "업데이트 받기",
+    postFollowBody:
+      "새로운 일본 생활 이야기와 로컬 리포트를 받아보세요 — RSS로 구독 가능합니다.",
+    postFollowRssCta: "RSS 구독",
+    copyCodeButton: "복사",
+    copyCodeDone: "복사됨",
+    devSearchWarnTitle: "개발 모드",
+    devSearchWarnBody:
+      "Pagefind 검색을 보려면 최소 한 번은 프로젝트를 빌드하세요.",
+    backButton: "뒤로",
+    dateUpdatedLabel: "수정:",
+    newsletterTitle: "업데이트 알림",
+    newsletterBody:
+      "새로운 도쿄 라이프 글을 가장 먼저 이메일로 받아보세요.",
+    newsletterEmailLabel: "이메일 주소",
+    newsletterPlaceholder: "your@email.com",
+    newsletterCta: "구독하기",
+    newsletterDisclaimer:
+      "스팸 없음. 언제든 구독 해지 가능. 이메일은 안전하게 보호됩니다.",
+    leadMagnetCta: "",
+    highIntentCtaTitle: "블로그 방문을 환영합니다",
+    highIntentCtaDisclosure:
+      "본 블로그는 순수 개인 경험담을 기록하는 비영리/생활 정보 블로그입니다.",
+    highIntentCtaBodyFreelance:
+      "궁금한 점이나 교류를 원하시면 이메일이나 소셜 미디어로 편하게 연락주세요.",
+    highIntentCtaBodyMagnetOnly:
+      "일본 생활에 도움이 되는 정보들을 꾸준히 업데이트 하겠습니다.",
+    highIntentCtaMagnetLink: "",
+    highIntentCtaContact: "문의하기",
+    highIntentCtaLinkedIn: "LinkedIn",
+    commentsTitle: "댓글",
+    commentsDescription:
+      "의견을 남겨주세요 — GitHub Discussions 기반입니다.",
+    langBannerClose: "닫기",
+    langBannerEn: "",
+    langBannerKo: "",
+    langBannerJa: "",
+    topicHubs: {
+      urbanInvestment: {
+        title: "일본 생활 실용 정보",
+        description:
+          "주민등록, 핸드폰 개통, 집 구하기 등 생활 팁.",
+      },
+      macroPolicy: {
+        title: "한일 문화 비교",
+        description:
+          "직장 문화, 식문화, 인간 관계 등 양국 문화 차이 고찰.",
+      },
+      tokyoLife: {
+        title: "도쿄 로컬 동네",
+        description:
+          "니혼바시를 비롯한 도쿄 구석구석 동네 산책과 로컬 맛집.",
+      },
+      essay: {
+        title: "에세이 및 일본어 팁",
+        description:
+          "개인적인 생각과 일본어 N1 합격 경험, 어학 팁.",
+      },
+    },
+  },
+} as const;
+
+export type UiKey = keyof typeof ui.ko;
+
+export function getUi(lang?: UiLang | string): (typeof ui)["ko"] {
+  return ui.ko;
+}
+
+export function defaultUiLang(): UiLang {
+  return "ko";
+}

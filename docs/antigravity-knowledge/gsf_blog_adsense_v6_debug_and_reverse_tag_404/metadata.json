@@ -1,0 +1,28 @@
+{
+  "title": "GSF-Blog AdSense V6: debug.astro 사이트맵 노출 + 역방향 cross-locale 태그 404 해결",
+  "summary": "AdSense 보류 통보 후 V6 진단에서 발견한 2가지 치명적 결함. (1) src/pages/debug.astro가 사이트맵에 포함되어 3756줄 raw JSON이 Google 봇에 크롤링 → Low Value Content 판정. (2) 이전 세션에서 EN→KO/JA cross-locale 태그만 처리했으나, 역방향(JA 경로에 KO 태그명, KO 경로에 JA 태그명, 루트에 비영어 태그) 404가 10건+ 잔존. 해결: debug.astro 삭제 + vercel.json에 11건 리다이렉트 추가 + /debug/ → / 리다이렉트. 전체 Search Console 404 48건에 대해 전부 308 리다이렉트 확인. 유효성 검사 '시작됨' 상태. 교훈: AdSense 감사 시 src/pages/ 디렉토리 전수 스캔 + 사이트맵 전체 URL curl 순회 필수.",
+  "created": "2026-05-13T10:21:00+09:00",
+  "updated": "2026-05-13T10:21:00+09:00",
+  "references": [
+    {
+      "type": "conversation",
+      "id": "fe254031-1a97-49d3-b44f-4ef44f4a7d3a",
+      "title": "Resolving GSF-Blog AdSense Rejection"
+    },
+    {
+      "type": "conversation",
+      "id": "06413869-d660-4026-bd27-9c8a7d04eb79",
+      "title": "Resolving GSF-Blog 404 Errors (이전 cross-locale 처리)"
+    },
+    {
+      "type": "file",
+      "path": "/Users/gsf/.gemini/antigravity/scratch/GSF-Blog/vercel.json"
+    },
+    {
+      "type": "commit",
+      "sha": "069eb05",
+      "message": "fix(adsense): remove debug page + add 11 missing redirect rules for GSC 404s"
+    }
+  ],
+  "tags": ["gsf-blog", "adsense", "vercel", "redirect", "404", "search-console", "sitemap", "debug"]
+}

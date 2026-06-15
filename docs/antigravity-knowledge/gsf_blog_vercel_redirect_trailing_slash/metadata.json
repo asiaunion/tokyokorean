@@ -1,0 +1,13 @@
+{
+  "title": "Astro Redirect + Vercel Trailing Slash 버그: 키에 trailing slash 있으면 매칭 실패",
+  "event_type": "hard_troubleshooting",
+  "created_at": "2026-05-13T02:55:00+09:00",
+  "summary": "Astro의 astro.config.ts redirects 설정에서 키(source)에 trailing slash를 포함하면 Vercel 배포 후 실제 요청과 매칭이 안 됨. Vercel은 Astro redirect 키를 ^/path$ 정규식으로 변환하는데, 키가 /ko/tags/travel/이면 ^/ko/tags/travel/$ 대신 ^/ko/tags/travel$로 변환되어 실제 요청 /ko/tags/travel/와 불일치. trailingSlash: 'always' 설정이 있어도 redirect 키에는 적용 안 됨. 해결: vercel.json의 정적 redirects를 사용하면 trailing slash 포함 URL도 정상 매칭됨.",
+  "references": [
+    "Conversation: 06413869-d660-4026-bd27-9c8a7d04eb79",
+    "File: /Users/gsf/.gemini/antigravity/scratch/GSF-Blog/vercel.json",
+    "File: /Users/gsf/.gemini/antigravity/scratch/GSF-Blog/src/build/crossLocaleTagRedirects.ts",
+    "File: /Users/gsf/.gemini/antigravity/scratch/GSF-Blog/astro.config.ts"
+  ],
+  "tags": ["astro", "vercel", "redirect", "trailing-slash", "gotcha"]
+}

@@ -1,0 +1,513 @@
+---
+import { render, type CollectionEntry } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Tag from "@/components/Tag.astro";
+import Datetime from "@/components/Datetime.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import EditPost from "@/components/EditPost.astro";
+import ShareLinks from "@/components/ShareLinks.astro";
+import BackButton from "@/components/BackButton.astro";
+import BackToTopButton from "@/components/BackToTopButton.astro";
+import Socials from "@/components/Socials.astro";
+import { getPath } from "@/utils/getPath";
+import { slugifyStr } from "@/utils/slugify";
+import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
+import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
+import { SITE } from "@/config";
+import { PUBLIC_PROFILES } from "@/config";
+import PostDisclaimer from "@/components/PostDisclaimer.astro";
+import { resolvePostDisclaimerCategory } from "@/lib/postDisclaimer";
+import NewsletterForm from "@/components/NewsletterForm.astro";
+import GiscusComments from "@/components/GiscusComments.astro";
+import RelatedPosts from "@/components/RelatedPosts.astro";
+import SourcesList from "@/components/SourcesList.astro";
+import HighIntentPostCta from "@/components/HighIntentPostCta.astro";
+import { postSlugFromId } from "@/data/highIntentCta";
+import { getUi, type UiLang } from "@/i18n/ui";
+import fs from "node:fs";
+import path from "node:path";
+import sharp from "sharp";
+
+type Props = {
+  post: CollectionEntry<"blog">;
+  posts: CollectionEntry<"blog">[];
+};
+
+const { post, posts } = Astro.props;
+
+const { locale } = Astro.params;
+const navLang = (locale || "en") as UiLang;
+const L = getUi(navLang);
+const localePrefix = navLang === "en" ? "" : `/${navLang}`;
+const authorProfileImage = "/assets/images/gsf-author-profile.webp";
+const linkedInCtaUrl = new URL(PUBLIC_PROFILES.linkedIn);
+linkedInCtaUrl.searchParams.set("utm_source", "gsf_blog");
+linkedInCtaUrl.searchParams.set("utm_medium", "author_card_cta");
+linkedInCtaUrl.searchParams.set("utm_campaign", "post-author-linkedin");
+const xCtaUrl = new URL(PUBLIC_PROFILES.x);
+xCtaUrl.searchParams.set("utm_source", "gsf_blog");
+xCtaUrl.searchParams.set("utm_medium", "author_card_cta");
+xCtaUrl.searchParams.set("utm_campaign", "post-author-x");
+const copyCodeLabel = L.copyCodeButton;
+const copyDoneLabel = L.copyCodeDone;
+
+const {
+  title,
+  author,
+  description,
+  ogImage: initOgImage,
+  canonicalURL,
+  pubDatetime,
+  modDatetime,
+  timezone,
+  tags,
+  hideEditPost,
+  category,
+  lang: postLang,
+  sources,
+  citeSources,
+} = post.data;
+
+const postDisclaimerCategory = resolvePostDisclaimerCategory(category);
+
+const postSlug = postSlugFromId(post.id);
+
+const disclaimerLang =
+  postLang ?? (post.id.startsWith("ko/") ? "ko" : post.id.startsWith("ja/") ? "ja" : "en");
+
+const { Content } = await render(post);
+
+let ogImageUrl: string | undefined;
+
+// Determine OG image source
+if (typeof initOgImage === "string") {
+  ogImageUrl = initOgImage; // Remote OG image (absolute URL)
+} else if (initOgImage?.src) {
+  ogImageUrl = initOgImage.src; // Local asset
+}
+
+// Use dynamic OG image if enabled and no remote|local ogImage
+if (!ogImageUrl && SITE.dynamicOgImage) {
+  const postBase = getPath(post.id, post.filePath).replace(/\/+$/, "");
+  ogImageUrl = `${postBase}/index.png`;
+}
+
+// Resolve OG image URL (or fallback to SITE.ogImage / default `og.png`)
+const ogImage = ogImageUrl
+  ? new URL(ogImageUrl, Astro.url.origin).href
+  : undefined;
+
+// If the image is hosted on Vercel Blob or external, we use it directly as heroSrc
+const isRemoteHero = ogImageUrl?.startsWith("http");
+const heroSrc = isRemoteHero
+  ? ogImageUrl
+  : ogImageUrl
+  ? (() => { try { return new URL(ogImageUrl).pathname; } catch { return ogImageUrl; } })()
+  : undefined;
+
+// SSG/Vercel: `import.meta.url` points at bundled chunks, not `src/layouts/`.
+// `process.cwd()` is the repo root during `astro build`.
+const publicDir = path.join(process.cwd(), "public");
+
+async function getHeroDims(heroSrcPath: string) {
+  if (isRemoteHero) return { w: 1200, h: 630 }; // Skip local sharp for remote images
+  
+  const heroPublicPath = heroSrcPath.startsWith("/")
+    ? heroSrcPath
+    : `/${heroSrcPath}`;
+  const local = path.join(publicDir, heroPublicPath.replace(/^\/+/, ""));
+  const m = await sharp(local).metadata();
+  return { w: m.width ?? 1200, h: m.height ?? 630 };
+}
+
+const heroDims =
+  heroSrc && (isRemoteHero || heroSrc.endsWith(".webp"))
+    ? await getHeroDims(heroSrc).catch(() => ({ w: 1200, h: 630 }))
+    : { w: 1200, h: 630 };
+
+function resolveHeroSrcSet(
+  heroSrcPath: string | undefined,
+  originalW: number,
+) {
+  if (!heroSrcPath) return { srcset: undefined as string | undefined, sizes: undefined as string | undefined };
+  if (isRemoteHero) return { srcset: undefined, sizes: undefined }; // No responsive srcset for remote blobs yet
+  
+  if (!heroSrcPath.endsWith(".webp"))
+    return { srcset: undefined as string | undefined, sizes: undefined as string | undefined };
+
+  const heroPublicPath = heroSrcPath.startsWith("/")
+    ? heroSrcPath
+    : `/${heroSrcPath}`;
+
+  const ext = ".webp";
+  const heroNoExt = heroPublicPath.slice(0, -ext.length); // "...-hero"
+
+  const candidates = [
+    { w: 480, p: `${heroNoExt}-480${ext}` },
+    { w: 672, p: `${heroNoExt}-672${ext}` },
+    { w: 768, p: `${heroNoExt}-768${ext}` },
+    // Original (use actual width from metadata)
+    { w: originalW, p: `${heroNoExt}${ext}` },
+  ];
+
+  const existing = candidates.filter(c => {
+    const local = path.join(publicDir, c.p.replace(/^\/+/, ""));
+    try {
+      return fs.existsSync(local);
+    } catch {
+      return false;
+    }
+  }).sort((a, b) => a.w - b.w);
+
+  if (!existing.length) {
+    return { srcset: undefined, sizes: undefined };
+  }
+
+  return {
+    srcset: existing.map(e => `${e.p} ${e.w}w`).join(", "),
+    // Lighthouse debug에서 hero 이미지 boundingRect 폭이 380px로 잡혀 `100vw`보다 작게 렌더링됩니다.
+    // sizes를 실제 렌더 폭에 맞춰 더 작은 변형이 선택되게 합니다.
+    sizes: `(max-width: 640px) 380px, ${originalW}px`,
+  };
+}
+
+const heroResolved = resolveHeroSrcSet(heroSrc, heroDims.w);
+
+const layoutProps = {
+  title: `${title} | ${SITE.title}`,
+  author,
+  description,
+  pubDatetime,
+  modDatetime,
+  canonicalURL,
+  ogImage,
+  scrollSmooth: true,
+  tags,
+  articleBody: description,
+};
+
+/* ========== Prev/Next Posts ========== */
+
+const allPosts = posts.map(({ data: { title }, id, filePath }) => ({
+  id,
+  title,
+  filePath,
+}));
+
+const currentPostIndex = allPosts.findIndex(a => a.id === post.id);
+
+const prevPost = currentPostIndex !== 0 ? allPosts[currentPostIndex - 1] : null;
+const nextPost =
+  currentPostIndex !== allPosts.length ? allPosts[currentPostIndex + 1] : null;
+
+---
+
+<Layout {...layoutProps}>
+  <Header />
+  <Breadcrumb />
+  <BackButton />
+  <main
+    id="main-content"
+    class:list={["app-layout pb-12", { "mt-8": !SITE.showBackButton }]}
+    data-pagefind-body
+    data-copy-label={copyCodeLabel}
+    data-copy-done-label={copyDoneLabel}
+  >
+    <h1
+      transition:name={slugifyStr(title.replaceAll(".", "-"))}
+      class="inline-block text-2xl font-bold text-accent sm:text-3xl"
+    >
+      {title}
+    </h1>
+    {heroSrc && (
+      <img
+        src={heroSrc}
+        srcset={heroResolved.srcset}
+        sizes={heroResolved.sizes}
+        alt={title}
+        class="mt-4 mb-2 w-full rounded-lg"
+        width={heroDims.w}
+        height={heroDims.h}
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+      />
+    )}
+    <div class="my-2 flex items-center gap-2">
+      <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" />
+      <span
+        aria-hidden="true"
+        class:list={[
+          "max-sm:hidden",
+          { hidden: !SITE.editPost.enabled || hideEditPost },
+        ]}>|</span
+      >
+      <EditPost {hideEditPost} {post} class="max-sm:hidden" />
+    </div>
+    <article
+      id="article"
+      class="app-prose mt-8 w-full max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"
+    >
+      <PostDisclaimer category={postDisclaimerCategory} lang={disclaimerLang} />
+      <Content />
+    </article>
+
+    {sources && sources.length > 0 && (
+      <SourcesList sources={sources} citeSources={citeSources} lang={disclaimerLang} />
+    )}
+
+    <HighIntentPostCta
+      lang={navLang}
+      localePrefix={localePrefix}
+      category={category}
+      slug={postSlug}
+    />
+
+    <hr class="my-8 border-border border-solid" />
+
+    <EditPost class="sm:hidden" {hideEditPost} {post} />
+
+    <ul class="mt-4 mb-8 flex flex-wrap gap-4 sm:my-8">
+      {tags.map(tag => <Tag tag={slugifyStr(tag)} tagName={tag} size="sm" />)}
+    </ul>
+
+    <BackToTopButton />
+
+    <ShareLinks />
+
+    <section class="mt-10 rounded-xl border border-border bg-card p-5">
+      <h2 class="text-lg font-semibold">{L.authorCardTitle}</h2>
+      <div class="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center">
+        <img
+          src={authorProfileImage}
+          alt="GSF author"
+          loading="lazy"
+          decoding="async"
+          class="size-20 rounded-full border border-border object-cover"
+        />
+        <div class="flex-1">
+          <p class="text-sm leading-relaxed text-foreground/80">{L.authorCardBody}</p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <a
+              href={`${localePrefix}/about/`}
+              class="rounded-full border border-border px-3 py-1 text-sm hover:border-accent"
+              data-cta="author-about"
+              data-cta-location="post-author-card"
+            >
+              {L.authorCardAboutCta}
+            </a>
+            <a
+              href={`${localePrefix}/contact/`}
+              class="rounded-full border border-border px-3 py-1 text-sm hover:border-accent"
+              data-cta="author-contact"
+              data-cta-location="post-author-card"
+            >
+              {L.authorCardContactCta}
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={linkedInCtaUrl.toString()}
+              class="rounded-full border border-border px-3 py-1 text-sm hover:border-accent"
+              data-cta="author-linkedin-connect"
+              data-cta-location="post-author-card"
+              data-cta-name="LinkedIn"
+            >
+              {L.authorCardLinkedInCta}
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={xCtaUrl.toString()}
+              class="rounded-full border border-border px-3 py-1 text-sm hover:border-accent"
+              data-cta="author-x-follow"
+              data-cta-location="post-author-card"
+              data-cta-name="X"
+            >
+              {L.authorCardXFollowCta}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-6 rounded-xl border border-border bg-card p-5">
+      <h2 class="text-lg font-semibold">{L.postFollowTitle}</h2>
+      <p class="mt-2 text-sm leading-relaxed text-foreground/75">{L.postFollowBody}</p>
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <a
+          target="_blank"
+          href={`${localePrefix}/rss.xml/`}
+          class="rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition-opacity hover:opacity-90"
+          data-cta="rss-subscribe"
+          data-cta-location="post-follow-card"
+        >
+          {L.postFollowRssCta}
+        </a>
+        <Socials trackingContext="post-follow" />
+      </div>
+    </section>
+
+    <NewsletterForm variant="card" lang={navLang} />
+
+    <RelatedPosts currentPost={post} allPosts={posts} lang={navLang} />
+
+    <GiscusComments lang={navLang} />
+
+    <hr class="my-6 border-border border-solid" />
+
+    <!-- Previous/Next Post Buttons -->
+    <div data-pagefind-ignore class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+      {
+        prevPost && (
+          <a
+            href={getPath(prevPost.id, prevPost.filePath)}
+            class="flex w-full gap-1 hover:opacity-75"
+          >
+            <IconChevronLeft class="inline-block flex-none rtl:rotate-180" />
+            <div>
+              <span>{L.postPrevious}</span>
+              <div class="text-sm text-accent/85">{prevPost.title}</div>
+            </div>
+          </a>
+        )
+      }
+      {
+        nextPost && (
+          <a
+            href={getPath(nextPost.id, nextPost.filePath)}
+            class="flex w-full justify-end gap-1 text-end hover:opacity-75 sm:col-start-2"
+          >
+            <div>
+              <span>{L.postNext}</span>
+              <div class="text-sm text-accent/85">{nextPost.title}</div>
+            </div>
+            <IconChevronRight class="inline-block flex-none rtl:rotate-180" />
+          </a>
+        )
+      }
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<script is:inline data-astro-rerun>
+  /** Create a progress indicator
+   *  at the top */
+  function createProgressBar() {
+    // Create the main container div
+    const progressContainer = document.createElement("div");
+    progressContainer.className =
+      "progress-container fixed top-0 z-10 h-1 w-full bg-background";
+
+    // Create the progress bar div
+    const progressBar = document.createElement("div");
+    progressBar.className = "progress-bar h-1 w-0 bg-accent";
+    progressBar.id = "myBar";
+
+    // Append the progress bar to the progress container
+    progressContainer.appendChild(progressBar);
+
+    // Append the progress container to the document body or any other desired parent element
+    document.body.appendChild(progressContainer);
+  }
+  createProgressBar();
+
+  /** Update the progress bar
+   *  when user scrolls */
+  function updateScrollProgress() {
+    let ticking = false;
+    document.addEventListener("scroll", () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+      const winScroll =
+        document.body.scrollTop || document.documentElement.scrollTop;
+      const height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      if (document) {
+        const myBar = document.getElementById("myBar");
+        if (myBar) {
+          myBar.style.width = scrolled + "%";
+        }
+      }
+        ticking = false;
+      });
+    }, { passive: true });
+  }
+
+  /** Attaches copy buttons to code blocks in the document,
+   * allowing users to copy code easily. */
+  function attachCopyButtons() {
+    const mainEl = document.querySelector("#main-content");
+    const copyButtonLabel =
+      mainEl?.dataset?.copyLabel ?? "Copy";
+    const copyDoneText = mainEl?.dataset?.copyDoneLabel ?? "Copied";
+    const codeBlocks = Array.from(document.querySelectorAll("pre"));
+
+    for (const codeBlock of codeBlocks) {
+      const wrapper = document.createElement("div");
+      wrapper.style.position = "relative";
+
+      // Check if --file-name-offset custom property exists
+      const computedStyle = getComputedStyle(codeBlock);
+      const hasFileNameOffset =
+        computedStyle.getPropertyValue("--file-name-offset").trim() !== "";
+
+      // Determine the top positioning class
+      const topClass = hasFileNameOffset
+        ? "top-(--file-name-offset)"
+        : "-top-3";
+
+      const copyButton = document.createElement("button");
+      copyButton.className = `copy-code absolute end-3 ${topClass} rounded bg-muted border border-muted px-2 py-1 text-xs leading-4 text-foreground font-medium`;
+      copyButton.innerHTML = copyButtonLabel;
+      codeBlock.setAttribute("tabindex", "0");
+      codeBlock.appendChild(copyButton);
+
+      // wrap codebock with relative parent element
+      codeBlock?.parentNode?.insertBefore(wrapper, codeBlock);
+      wrapper.appendChild(codeBlock);
+
+      copyButton.addEventListener("click", async () => {
+        await copyCode(codeBlock, copyButton);
+      });
+    }
+
+    async function copyCode(block, button) {
+      const code = block.querySelector("code");
+      const text = code?.innerText;
+
+      await navigator.clipboard.writeText(text ?? "");
+
+      // visual feedback that task is completed
+      button.innerText = copyDoneText;
+
+      setTimeout(() => {
+        button.innerText = copyButtonLabel;
+      }, 700);
+    }
+  }
+  function initEnhancements() {
+    updateScrollProgress();
+    const hasCodeBlocks = document.querySelector("pre code");
+    if (hasCodeBlocks) {
+      attachCopyButtons();
+    }
+  }
+
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(initEnhancements, { timeout: 1200 });
+  } else {
+    window.setTimeout(initEnhancements, 200);
+  }
+
+  /* Go to page start after page swap */
+  document.addEventListener("astro:after-swap", () =>
+    window.scrollTo({ left: 0, top: 0, behavior: "instant" })
+  );
+</script>

@@ -1,0 +1,52 @@
+# build output
+dist/
+
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment variables
+.env
+.env.production
+.env.production.local
+.env.vercel.local
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/
+
+# pagefind
+
+public/pagefind
+
+# trust verify fetch cache
+.cache/
+
+# blog-agent staging artifacts and preview renders
+.blog-agent-workflows/
+public/previews/
+.vercel
+artifacts/
+sns-drafts/
+
+# Ollama local models
+ollama_models/
+**/ollama_models/
+.env.deploy*
+
+# Notion CMS 파이프라인 — 스테이징 / 중간 산출물
+.blog-agent-stage/*.md
+output/
+scripts/notion-page-map.json
+workers/notion-poller/.wrangler/
+workers/notion-poller/node_modules/

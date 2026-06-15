@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" role="img" aria-label="Ginza-Marunouchi Walking Route Guide" style="max-width:100%;height:auto;border:1px solid #e5e7eb;border-radius:8px;background:#fff;margin: 20px 0;">
+  <text x="24" y="35" font-size="16" font-weight="700" fill="#111827">Ginza -&gt; Marunouchi -&gt; Otemachi Walking Guide (2026)</text>
+  
+  <!-- Ginza -->
+  <rect x="50" y="80" width="160" height="80" fill="#fef2f2" stroke="#f87171" rx="8" />
+  <text x="130" y="115" font-size="14" font-weight="700" fill="#991b1b" text-anchor="middle">Ginza</text>
+  <text x="130" y="135" font-size="11" fill="#b91c1c" text-anchor="middle">Luxury Retail / Top Land Value</text>
+  
+  <!-- Connection -->
+  <path d="M210 120 L270 120" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead-ginza)" />
+  
+  <!-- Marunouchi -->
+  <rect x="270" y="80" width="180" height="80" fill="#f0f9ff" stroke="#0ea5e9" rx="8" />
+  <text x="360" y="115" font-size="14" font-weight="700" fill="#0369a1" text-anchor="middle">Marunouchi</text>
+  <text x="360" y="135" font-size="11" fill="#075985" text-anchor="middle">Finance &amp; Biz / Tokyo Station</text>
+
+  <!-- Connection -->
+  <path d="M450 120 L510 120" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead-ginza)" />
+  
+  <!-- Otemachi -->
+  <rect x="510" y="80" width="200" height="80" fill="#f0fdf4" stroke="#22c55e" rx="8" />
+  <text x="610" y="115" font-size="14" font-weight="700" fill="#166534" text-anchor="middle">Otemachi</text>
+  <text x="610" y="135" font-size="11" fill="#15803d" text-anchor="middle">Global Hub / Torch Tower</text>
+
+  <defs>
+    <marker id="arrowhead-ginza" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+    </marker>
+  </defs>
+</svg>

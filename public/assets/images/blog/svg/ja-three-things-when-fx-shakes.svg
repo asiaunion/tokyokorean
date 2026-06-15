@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 260" role="img" aria-label="為替変動と投資収益の相関関係" style="max-width:100%;height:auto;border:1px solid #e5e7eb;border-radius:8px;background:#fff;margin: 20px 0;">
+  <text x="24" y="35" font-size="16" font-weight="700" fill="#111827">為替シナリオ別の戦略的対応</text>
+  
+  <!-- Yen Weakness -->
+  <rect x="60" y="80" width="300" height="120" fill="#fffbeb" stroke="#f59e0b" stroke-width="1" rx="8" />
+  <text x="145" y="110" font-size="14" font-weight="700" fill="#92400e">円安継続シナリオ</text>
+  <text x="80" y="145" font-size="12" fill="#b45309">● 追加取得・資産拡大の好機</text>
+  <text x="80" y="170" font-size="12" fill="#b45309">● 収益を日本国内で再投資 (送金回避)</text>
+  
+  <!-- Yen Strength -->
+  <rect x="420" y="80" width="300" height="120" fill="#f0fdf4" stroke="#22c55e" stroke-width="1" rx="8" />
+  <text x="505" y="110" font-size="14" font-weight="700" fill="#166534">円高転換シナリオ</text>
+  <text x="440" y="145" font-size="12" fill="#15803d">● 累積収益の海外送金 (為替差益の確定)</text>
+  <text x="440" y="170" font-size="12" fill="#15803d">● 一部資産の売却とリバランス</text>
+  
+  <!-- Center Logic -->
+  <path d="M360 140 L420 140" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrowhead)" />
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#9ca3af" />
+    </marker>
+  </defs>
+  <text x="390" y="225" font-size="11" fill="#6b7280" text-anchor="middle">現地負債（円建てローン）による為替リスクの自動相殺が鍵</text>
+</svg>

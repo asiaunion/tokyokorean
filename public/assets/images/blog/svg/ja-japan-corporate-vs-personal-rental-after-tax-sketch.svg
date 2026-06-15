@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 280" role="img" aria-label="個人 vs 法人 税務構造比較" style="max-width:100%;height:auto;border:1px solid #e5e7eb;border-radius:8px;background:#fff;margin: 20px 0;">
+  <text x="24" y="35" font-size="16" font-weight="700" fill="#111827">所有構造と税務効率の比較</text>
+  
+  <!-- Personal Side -->
+  <rect x="60" y="70" width="300" height="160" fill="#fef2f2" stroke="#f87171" stroke-width="1" rx="8" />
+  <text x="145" y="95" font-size="14" font-weight="700" fill="#991b1b">個人所有</text>
+  <text x="80" y="130" font-size="12" fill="#b91c1c">● 税率: 5% ~ 55% (累進)</text>
+  <text x="80" y="155" font-size="12" fill="#b91c1c">● 売却: 5年以下39% / 5年超20%</text>
+  <text x="80" y="180" font-size="12" fill="#b91c1c">● 設立コスト低、維持費低</text>
+  <text x="80" y="205" font-size="12" fill="#b91c1c" font-weight="700">推奨: 1戸所有 / 長期保有</text>
+  
+  <!-- Corporate Side -->
+  <rect x="400" y="70" width="300" height="160" fill="#eff6ff" stroke="#60a5fa" stroke-width="1" rx="8" />
+  <text x="480" y="95" font-size="14" font-weight="700" fill="#1e40af">法人所有 (GK / KK)</text>
+  <text x="420" y="130" font-size="12" fill="#1d4ed8">● 税率: 約30% (一定/定額的)</text>
+  <text x="420" y="155" font-size="12" fill="#1d4ed8">● 売却: 法人実効税率で合算</text>
+  <text x="420" y="180" font-size="12" fill="#1d4ed8">● 欠損金の10年繰越可能</text>
+  <text x="420" y="205" font-size="12" fill="#1d4ed8" font-weight="700">推奨: 複数所有 / 短期売却あり</text>
+</svg>

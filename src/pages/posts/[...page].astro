@@ -1,0 +1,39 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import Main from "@/layouts/Main.astro";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Card from "@/components/Card.astro";
+import Pagination from "@/components/Pagination.astro";
+import getSortedPosts from "@/utils/getSortedPosts";
+import { SITE } from "@/config";
+import { getUi, type UiLang } from "@/i18n/ui";
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  const langPosts = posts.filter(post => post.id.startsWith(`ko/`));
+  return paginate(getSortedPosts(langPosts), {
+    pageSize: SITE.postPerPage
+  });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+const L = getUi("ko");
+const isPaginated = page.currentPage > 1;
+const robotsMeta = isPaginated ? "noindex, follow" : undefined;
+---
+
+<Layout title={`${L.pageTitlePosts} | ${SITE.title}`} robotsMeta={robotsMeta}>
+  <Header />
+  <Main pageTitle={L.pageTitlePosts} pageDesc={L.pageDescPosts}>
+    <ul>
+      {page.data.map(data => <Card {...data} />)}
+    </ul>
+  </Main>
+
+  <Pagination {page} />
+
+  <Footer noMarginTop={page.lastPage > 1} />
+</Layout>

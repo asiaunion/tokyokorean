@@ -1,0 +1,119 @@
+---
+import { getLangUrl as _getLangUrl } from "@/utils/getLangUrl";
+import type { UiLang } from "@/i18n/ui";
+
+type Props = { uiLang?: UiLang; mobileId?: string };
+
+const { uiLang: uiLangProp, mobileId } = Astro.props as Props;
+const { pathname } = Astro.url;
+const { locale } = Astro.params;
+
+const currentLang: UiLang =
+  uiLangProp ??
+  (locale === "ko" || locale === "ja" ? locale : "en");
+
+const getLangUrl = (targetLang: string) =>
+  _getLangUrl(targetLang, pathname, locale);
+
+// id suffix: 모바일 인스턴스는 "-mobile", 데스크탑은 ""
+const suffix = mobileId ? `-${mobileId}` : "";
+---
+
+<div class="relative inline-block text-left ml-2 sm:ml-4">
+  <button
+    type="button"
+    class="focus-outline flex items-center gap-1.5 rounded-sm px-3 py-1.5 font-medium uppercase transition-colors hover:text-accent border border-transparent hover:border-border"
+    id={`lang-menu-button${suffix}`}
+    aria-expanded="false"
+    aria-haspopup="true"
+  >
+    <span>
+      {currentLang === "en"
+        ? "🇺🇸"
+        : currentLang === "ko"
+          ? "🇰🇷"
+          : "🇯🇵"}
+    </span>
+    <span class="text-sm">{currentLang.toUpperCase()}</span>
+    <svg
+      class="h-4 w-4 opacity-70"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+
+  <div
+    id={`lang-dropdown${suffix}`}
+    class="absolute right-0 mt-2 w-28 origin-top-right rounded-md bg-background shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden z-50 border border-border"
+    role="menu"
+    aria-orientation="vertical"
+    aria-labelledby={`lang-menu-button${suffix}`}
+    tabindex="-1"
+  >
+    <div class="py-1" role="none">
+      <a
+        href={getLangUrl("en")}
+        class:list={[
+          "block px-4 py-2 text-sm hover:bg-neutral-100 dark:hover:bg-neutral-800",
+          currentLang === "en" ? "font-bold text-accent" : "",
+        ]}
+        role="menuitem">🇺🇸 EN</a>
+      <a
+        href={getLangUrl("ko")}
+        class:list={[
+          "block px-4 py-2 text-sm hover:bg-neutral-100 dark:hover:bg-neutral-800",
+          currentLang === "ko" ? "font-bold text-accent" : "",
+        ]}
+        role="menuitem">🇰🇷 KO</a>
+      <a
+        href={getLangUrl("ja")}
+        class:list={[
+          "block px-4 py-2 text-sm hover:bg-neutral-100 dark:hover:bg-neutral-800",
+          currentLang === "ja" ? "font-bold text-accent" : "",
+        ]}
+        role="menuitem">🇯🇵 JA</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // 외부 클릭 핸들러: 모듈 최상단 1회만 등록 (astro:after-swap에서 재등록 안 됨)
+  document.addEventListener("click", () => {
+    document.querySelectorAll("[id^='lang-dropdown']").forEach((dd) => {
+      dd.classList.add("hidden");
+    });
+    document.querySelectorAll("[id^='lang-menu-button']").forEach((btn) => {
+      btn.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  function initLangDropdown() {
+    document.querySelectorAll("[id^='lang-menu-button']").forEach((oldBtn) => {
+      const suffix = oldBtn.id.replace("lang-menu-button", "");
+      const dropdown = document.getElementById(`lang-dropdown${suffix}`);
+      if (!dropdown) return;
+
+      // cloneNode로 기존 리스너 초기화 후 재등록
+      const newBtn = oldBtn.cloneNode(true) as HTMLElement;
+      oldBtn.replaceWith(newBtn);
+
+      newBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isOpen = !dropdown.classList.contains("hidden");
+        dropdown.classList.toggle("hidden", isOpen);
+        newBtn.setAttribute("aria-expanded", String(!isOpen));
+      });
+    });
+  }
+
+  initLangDropdown();
+  document.addEventListener("astro:after-swap", initLangDropdown);
+</script>

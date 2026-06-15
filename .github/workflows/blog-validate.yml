@@ -1,0 +1,64 @@
+name: Blog validate
+
+permissions:
+  contents: read
+
+on:
+  pull_request:
+    paths:
+      - "src/data/blog/**"
+      - "docs/fact-audit/**"
+      - "src/lib/validation/**"
+      - "scripts/validate-blog-post.ts"
+      - "scripts/batch-validate-posts.mjs"
+
+jobs:
+  validate-changed-slugs:
+    name: Validate changed blog slugs
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.11.1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Detect changed slugs
+        id: slugs
+        run: |
+          BASE="${{ github.event.pull_request.base.sha }}"
+          HEAD="${{ github.sha }}"
+          SLUGS=$(git diff --name-only "$BASE" "$HEAD" -- 'src/data/blog/*/*.md' \
+            | sed -n 's|.*/\([^/]*\)\.md|\1|p' | sort -u | tr '\n' ' ')
+          echo "list=$SLUGS" >> "$GITHUB_OUTPUT"
+          echo "Changed slugs: $SLUGS"
+
+      - name: Validate each changed slug
+        if: steps.slugs.outputs.list != ''
+        env:
+          SKIP_VALIDATE_BUILD: "1"
+          SKIP_TRUST_VERIFY: "1"
+        run: |
+          FAILED=0
+          for slug in ${{ steps.slugs.outputs.list }}; do
+            echo "=== $slug ==="
+            if ! pnpm validate:post "$slug"; then
+              FAILED=1
+            fi
+          done
+          exit $FAILED

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 280" role="img" aria-label="Seoul-Tokyo Investment Synergy Matrix" style="max-width:100%;height:auto;border:1px solid #e5e7eb;border-radius:8px;background:#fff;margin: 20px 0;">
+  <text x="24" y="35" font-size="16" font-weight="700" fill="#111827">Cross-Border Asset Allocation Strategy</text>
+  
+  <!-- Seoul Section -->
+  <rect x="60" y="70" width="300" height="160" fill="#f8fafc" stroke="#64748b" stroke-width="1" rx="8" />
+  <text x="160" y="95" font-size="14" font-weight="700" fill="#334155">Seoul (Growth Engine)</text>
+  <text x="80" y="130" font-size="12" fill="#475569">● Keyword: Supply shortage, Prime concentration</text>
+  <text x="80" y="155" font-size="12" fill="#475569">● Primary Return: Capital Gains</text>
+  <text x="80" y="180" font-size="12" fill="#475569">● Risk: Policy volatility, Household debt</text>
+  
+  <!-- Tokyo Section -->
+  <rect x="400" y="70" width="300" height="160" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="1" rx="8" />
+  <text x="495" y="95" font-size="14" font-weight="700" fill="#0369a1">Tokyo (Stability/Income)</text>
+  <text x="420" y="130" font-size="12" fill="#075985">● Keyword: Low-rate leverage, Weak Yen</text>
+  <text x="420" y="155" font-size="12" fill="#075985">● Primary Return: Income Gains (Yield)</text>
+  <text x="420" y="180" font-size="12" fill="#075985">● Risk: FX volatility, BOJ policy normalization</text>
+  
+  <!-- Synergy Arrow -->
+  <path d="M360 150 L400 150" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead)" />
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+    </marker>
+  </defs>
+  <text x="380" y="250" font-size="12" font-weight="700" fill="#1e293b" text-anchor="middle">"Seoul's Growth + Tokyo's Cash Flow = A Complete Portfolio"</text>
+</svg>

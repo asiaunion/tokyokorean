@@ -1,0 +1,67 @@
+---
+import { buildBreadcrumbItems } from "@/utils/buildBreadcrumbs";
+import { parseLocalizedPath } from "@/utils/hreflang";
+import { getUi, type UiLang } from "@/i18n/ui";
+
+const normalized =
+  Astro.url.pathname.replace(/\/+$/, "") === ""
+    ? "/"
+    : Astro.url.pathname.replace(/\/+$/, "");
+const { locale } = parseLocalizedPath(normalized);
+const L = getUi(locale as UiLang);
+const items = buildBreadcrumbItems(Astro.url.pathname);
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: items.map((item, index) => {
+    const href = item.href
+      ? new URL(item.href, Astro.url.origin).href
+      : Astro.url.href;
+    return {
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.label,
+      item: href,
+    };
+  }),
+};
+---
+
+<nav class="app-layout mt-8 mb-1" aria-label={L.breadcrumbAriaLabel}>
+  <ul
+    class="font-light [&>li]:inline [&>li:not(:last-child)>a]:hover:opacity-100"
+  >
+    {
+      items.map((item, index) => (
+        <li>
+          {item.href ? (
+            <>
+              <a
+                href={item.href}
+                class:list={[
+                  "opacity-80",
+                  index > 0 && "opacity-70 hover:opacity-100",
+                ]}
+              >
+                {item.label}
+              </a>
+              <span aria-hidden="true" class="opacity-80">
+                &raquo;
+              </span>
+            </>
+          ) : (
+            <span class="opacity-75" aria-current="page">
+              {item.label}
+            </span>
+          )}
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<script
+  type="application/ld+json"
+  is:inline
+  set:html={JSON.stringify(breadcrumbJsonLd)}
+/>

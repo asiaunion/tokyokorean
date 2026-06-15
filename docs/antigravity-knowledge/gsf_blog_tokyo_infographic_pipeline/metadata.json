@@ -1,0 +1,38 @@
+{
+  "summary": "GSF-Blog 도쿄 23구 인포그래픽 GeoJSON 파이프라인. dataofjapan/land GeoJSON → Mapshaper CLI 3% simplify → Python SVG 변환 → HTML 프로토타입 자동 생성. 색상 전략: 8색 무지개 → 2톤(Blue+Slate)+Gold. 라이트/다크 3중 패턴. 서울 강남구 비교 기준. E2~E11 12편 전체 동일 파이프라인 재사용 가능.",
+  "created_at": "2026-05-12T16:33:00+09:00",
+  "last_accessed": "2026-05-12T16:33:00+09:00",
+  "tags": ["gsf-blog", "tokyo-ward-guide", "infographic", "geojson", "mapshaper", "svg", "design-tokens", "dark-mode"],
+  "references": [
+    {
+      "type": "file",
+      "path": "apps/blog-agent/prototypes/geodata/gen_e0.py",
+      "description": "E0 23구 전체 지도 HTML 생성기"
+    },
+    {
+      "type": "file",
+      "path": "apps/blog-agent/prototypes/geodata/gen_e1.py",
+      "description": "E1 핵심 3구 인포그래픽 HTML 생성기"
+    },
+    {
+      "type": "file",
+      "path": "apps/blog-agent/prototypes/geodata/README.md",
+      "description": "파이프라인 재현 절차 문서"
+    },
+    {
+      "type": "file",
+      "path": "apps/blog-agent/prototypes/design-tokens.css",
+      "description": "v2 디자인 토큰 (라이트/다크 양립)"
+    },
+    {
+      "type": "file",
+      "path": "apps/blog-agent/spec-tokyo-infographic-system.md",
+      "description": "인포그래픽 시스템 전체 스펙 (Phase1 리뷰, 확정 결정, 자동화 아이디어 포함)"
+    },
+    {
+      "type": "url",
+      "path": "https://github.com/dataofjapan/land",
+      "description": "도쿄 23구 GeoJSON 원본 소스"
+    }
+  ]
+}

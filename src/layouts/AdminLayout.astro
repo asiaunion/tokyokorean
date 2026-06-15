@@ -1,0 +1,236 @@
+---
+/**
+ * Admin 공통 레이아웃
+ * 인증된 어드민 페이지에서 공유하는 헤더, 테마 토글, 로그아웃, 스타일을 통합.
+ * 2행 헤더: 브랜드/유저 행 + 탭 네비게이션 행
+ */
+import "@/styles/global.css";
+import IconMoon from "@/assets/icons/IconMoon.svg";
+import IconSunHigh from "@/assets/icons/IconSunHigh.svg";
+
+export const prerender = false;
+
+interface Props {
+  title: string;
+  user?: { email: string; name: string; picture?: string };
+}
+
+const { title, user } = Astro.props;
+const pathname = Astro.url.pathname;
+
+// 탭 활성 상태 판별
+const isActiveDashboard = !pathname.startsWith("/admin/memos") && !pathname.startsWith("/admin/posts");
+const isActiveMemos = pathname.startsWith("/admin/memos");
+const isActivePosts = pathname.startsWith("/admin/posts");
+---
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        min-height: 100dvh;
+        background: var(--color-background);
+        color: var(--color-foreground);
+        padding-bottom: 4rem;
+      }
+
+      /* 헤더 — 1행 구조로 통합 */
+      header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: var(--color-card-bg, #ffffff);
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        border-bottom: 1px solid var(--color-border);
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        height: 52px;
+        padding: 0 1.5rem;
+        gap: 0;
+      }
+
+      /* 브랜드 영역 */
+      .brand {
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--color-accent);
+        -webkit-text-fill-color: var(--color-accent);
+        letter-spacing: -0.02em;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        white-space: nowrap;
+        margin-right: 1.25rem;
+      }
+
+      /* 탭 네비게이션 — 헤더 안에서 flex-1 */
+      .header-tabs {
+        display: flex;
+        align-items: stretch;
+        gap: 0;
+        flex: 1;
+        height: 100%;
+      }
+
+      .nav-tab {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0 1rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--color-foreground);
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        transition: color 0.15s ease, border-color 0.15s ease;
+        white-space: nowrap;
+        opacity: 0.6;
+      }
+
+      .nav-tab:hover {
+        color: var(--color-accent);
+        opacity: 1;
+      }
+
+      .nav-tab.active {
+        color: var(--color-accent);
+        border-bottom-color: var(--color-accent);
+        opacity: 1;
+      }
+
+      /* 유저 정보 영역 */
+      .user-info {
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+        font-size: 0.8rem;
+        color: var(--color-foreground);
+        margin-left: auto;
+      }
+
+      .user-info img {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        border: 2px solid var(--color-border);
+      }
+
+      .btn-logout {
+        padding: 0.3rem 0.75rem;
+        background: transparent;
+        border: 1px solid var(--color-border);
+        border-radius: 10px;
+        color: var(--color-foreground);
+        font-size: 0.72rem;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .btn-logout:hover {
+        background: rgba(239, 68, 68, 0.18);
+        border-color: rgba(239, 68, 68, 0.4);
+      }
+
+
+      /* 전역 애니메이션 클래스 */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes scaleUp {
+        from { transform: scale(0.97); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+      }
+
+      :global(.animate-fadeIn) {
+        animation: fadeIn 0.2s ease-out forwards;
+      }
+      :global(.animate-scaleUp) {
+        animation: scaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+    </style>
+
+    <script is:inline>
+      (function () {
+        const themeValue = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.firstElementChild?.setAttribute("data-theme", themeValue);
+      })();
+    </script>
+  </head>
+  <body>
+    <header>
+      {/* 브랜드 */}
+      <a href="/admin/" class="brand">
+        <span style="font-size: 1.1rem">🛠️</span>
+        GSF-Blog Admin
+      </a>
+
+      {/* 탭 네비게이션 */}
+      <nav class="header-tabs">
+        <a
+          href="/admin/"
+          class={`nav-tab${isActiveDashboard ? " active" : ""}`}
+          id="tab-dashboard"
+        >
+          📊 대시보드
+        </a>
+        <a
+          href="/admin/memos/"
+          class={`nav-tab${isActiveMemos ? " active" : ""}`}
+          id="tab-memos"
+        >
+          📝 메모장
+        </a>
+        <a
+          href="/admin/posts/"
+          class={`nav-tab${isActivePosts ? " active" : ""}`}
+          id="tab-posts"
+        >
+          📚 포스트 라이브러리
+        </a>
+      </nav>
+
+      {/* 유저 정보 */}
+      <div class="user-info">
+        {user?.picture && <img src={user.picture} alt={user.name} />}
+        <span style="font-weight: 500;">{user?.name ?? user?.email ?? "관리자"}</span>
+
+        <button
+          id="theme-btn"
+          class="relative w-7 h-7 rounded-lg flex items-center justify-center hover:bg-muted transition-colors focus:outline-none focus:ring-2 focus:ring-accent text-foreground"
+          title="Toggles light & dark mode"
+          aria-label="auto"
+          aria-live="polite"
+        >
+          <IconMoon class="absolute top-[50%] left-[50%] -translate-[50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90 w-4 h-4" />
+          <IconSunHigh class="absolute top-[50%] left-[50%] -translate-[50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0 w-4 h-4" />
+        </button>
+        <form method="POST" action="/admin/api/auth/logout/">
+          <button id="btn-logout" type="submit" class="btn-logout">로그아웃</button>
+        </form>
+      </div>
+    </header>
+
+    <slot />
+
+    <script>
+      import "@/scripts/theme.ts";
+    </script>
+  </body>
+</html>

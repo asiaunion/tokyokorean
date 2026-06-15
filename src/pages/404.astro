@@ -1,0 +1,103 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import LinkButton from "@/components/LinkButton.astro";
+import { SITE } from "@/config";
+import { defaultUiLang, getUi } from "@/i18n/ui";
+
+const uiLang = defaultUiLang();
+const L = getUi(uiLang);
+---
+
+<Layout
+  title={`${L.notFoundTitle} | ${SITE.title}`}
+  htmlLang={uiLang}
+  robotsMeta="noindex, nofollow"
+>
+  <Header uiLang={uiLang} />
+
+  <main
+    id="main-content"
+    class="app-layout flex flex-1 items-center justify-center"
+  >
+    <div class="mb-14 flex flex-col items-center justify-center">
+      <h1 class="text-9xl font-bold text-accent">404</h1>
+      <span aria-hidden="true">¯\_(ツ)_/¯</span>
+      <p class="mt-4 text-2xl sm:text-3xl">{L.notFoundHeading}</p>
+      <LinkButton href="/" class="link-subtle my-6 text-lg">
+        {L.notFoundBackHome}
+      </LinkButton>
+    </div>
+  </main>
+
+  <Footer uiLang={uiLang} />
+</Layout>
+
+<script is:inline>
+  (function () {
+    var path = window.location.pathname;
+
+    // Korean character range detection
+    function hasKorean(str) {
+      return /[\uAC00-\uD7AF\u1100-\u11FF\u3130-\u318F]/.test(
+        decodeURIComponent(str)
+      );
+    }
+    // Japanese character range detection
+    function hasJapanese(str) {
+      return /[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF]/.test(
+        decodeURIComponent(str)
+      );
+    }
+
+    // Rule 1: /ko/tags/<non-KO-tag>/ → /tags/<tag>/ or /ja/tags/<tag>/
+    var koTagMatch = path.match(/^\/ko\/tags\/([^/]+)\/?$/);
+    if (koTagMatch) {
+      var tag = koTagMatch[1];
+      if (hasJapanese(tag)) {
+        window.location.replace("/ja/tags/" + tag + "/");
+        return;
+      }
+      if (!hasKorean(tag)) {
+        window.location.replace("/tags/" + tag + "/");
+        return;
+      }
+    }
+
+    // Rule 2: /ja/tags/<non-JA-tag>/ → /tags/<tag>/ or /ko/tags/<tag>/
+    var jaTagMatch = path.match(/^\/ja\/tags\/([^/]+)\/?$/);
+    if (jaTagMatch) {
+      var tag = jaTagMatch[1];
+      if (hasKorean(tag)) {
+        window.location.replace("/ko/tags/" + tag + "/");
+        return;
+      }
+      if (!hasJapanese(tag)) {
+        window.location.replace("/tags/" + tag + "/");
+        return;
+      }
+    }
+
+    // Rule 3: /tags/<non-EN-tag>/ → /ko/tags/<tag>/ or /ja/tags/<tag>/
+    var rootTagMatch = path.match(/^\/tags\/([^/]+)\/?$/);
+    if (rootTagMatch) {
+      var tag = rootTagMatch[1];
+      if (hasKorean(tag)) {
+        window.location.replace("/ko/tags/" + tag + "/");
+        return;
+      }
+      if (hasJapanese(tag)) {
+        window.location.replace("/ja/tags/" + tag + "/");
+        return;
+      }
+    }
+
+    // Rule 4: Root-level Korean post slugs → /ko/ (best-effort)
+    var rootKoMatch = path.match(/^\/([^/]+)\/?$/);
+    if (rootKoMatch && hasKorean(rootKoMatch[1])) {
+      window.location.replace("/ko/");
+      return;
+    }
+  })();
+</script>

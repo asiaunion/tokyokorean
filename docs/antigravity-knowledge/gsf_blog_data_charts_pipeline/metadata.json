@@ -1,0 +1,7 @@
+{
+  "id": "gsf_blog_data_charts_pipeline",
+  "title": "GSF-Blog data charts pipeline (CSV → WebP → MDX)",
+  "summary": "Approved pattern for quantitative blog charts; macro-barrier lessons including inline SVG failures, Economist-style direct labels, and GSF green palette.",
+  "tags": ["gsf-blog", "charts", "webp", "mdx", "matplotlib", "macro-barrier"],
+  "canonical_doc": "docs/CHARTS_AND_VISUALS.md"
+}
