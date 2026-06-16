@@ -25,7 +25,7 @@ const ui = {
     heroTitleLine3: "기록하다",
     heroCtaRead: "글 읽기 →",
     heroCtaAbout: "운영자 소개 →",
-    heroTagline: "일본 거주 8년차 한국인이 전하는",
+    heroTagline: "일본 거주 6년차 한국인이 전하는",
     heroDescription:
       "일본 생활, 문화, 로컬 동네의 솔직한 경험담",
     sectionFeatured: "추천 글",
@@ -67,7 +67,7 @@ const ui = {
     sharePostLead: "이 글 공유:",
     authorCardTitle: "작성자 소개",
     authorCardBody:
-      "Joseph · 도쿄 니혼바시 거주 8년차. 일본어 N1. 일본 생활 실용 정보, 한일 문화 비교, 도쿄의 로컬 동네 이야기를 경험을 바탕으로 기록합니다.",
+      "Joseph · 도쿄 니혼바시 거주 6년차. 일본어 N1. 일본 생활 실용 정보, 한일 문화 비교, 도쿄의 로컬 동네 이야기를 경험을 바탕으로 기록합니다.",
     authorCardAboutCta: "작성자 프로필 보기",
     authorCardContactCta: "문의하기",
     authorCardLinkedInCta: "LinkedIn 연결",
