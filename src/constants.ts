@@ -31,13 +31,13 @@ export const SOCIALS: Social[] = [
   },
   {
     name: "GitHub",
-    href: "https://github.com/asiaunion/GSF-Blog",
+    href: "https://github.com/asiaunion/tokyokorean",
     linkTitle: `${SITE.title} on GitHub`,
     icon: IconGitHub,
   },
   {
     name: "Mail",
-    href: "mailto:asiaunion@gmail.com",
+    href: "mailto:tokyokorean78@gmail.com",
     linkTitle: `Send an email to ${SITE.title}`,
     icon: IconMail,
   },
