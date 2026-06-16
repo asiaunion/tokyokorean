@@ -19,7 +19,6 @@ import { SITE } from "@/config";
 import { PUBLIC_PROFILES } from "@/config";
 import PostDisclaimer from "@/components/PostDisclaimer.astro";
 import { resolvePostDisclaimerCategory } from "@/lib/postDisclaimer";
-import NewsletterForm from "@/components/NewsletterForm.astro";
 import GiscusComments from "@/components/GiscusComments.astro";
 import RelatedPosts from "@/components/RelatedPosts.astro";
 import SourcesList from "@/components/SourcesList.astro";
@@ -350,7 +349,6 @@ const nextPost =
       </div>
     </section>
 
-    <NewsletterForm variant="card" lang={navLang} />
 
     <RelatedPosts currentPost={post} allPosts={posts} lang={navLang} />
 

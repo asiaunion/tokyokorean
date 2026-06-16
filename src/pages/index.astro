@@ -12,7 +12,6 @@ import { SITE } from "@/config";
 import { SOCIALS } from "@/constants";
 import { getUi, type UiLang } from "@/i18n/ui";
 import { TOPIC_HUB_SLUGS, type TopicHubKey } from "@/data/topicHubs";
-import NewsletterForm from "@/components/NewsletterForm.astro";
 
 const posts = await getCollection("blog", ({ id }) => id.startsWith(`ko/`));
 const L = getUi("ko");
@@ -125,20 +124,7 @@ const hubOrder: TopicHubKey[] = [
                 )
               }
 
-              <!-- 뉴스레터 (DOM 4번째) -->
-              <div class="-mt-3">
-                <NewsletterForm variant="inline" lang="ko" />
-                <p class="mt-2 text-center text-sm text-foreground/70">
-                  <a
-                    href={
-                      "/resources/tokyo-relocation-d90/"
-                    }
-                    class="underline decoration-accent/50 underline-offset-2 transition hover:text-accent"
-                  >
-                    {L.leadMagnetCta}
-                  </a>
-                </p>
-              </div>
+              <!-- 뉴스레터 제거됨 -->
 
             </div>
           </div>

@@ -20,7 +20,7 @@ export const SITE = {
   editPost: {
     enabled: false,
     text: "Edit page",
-    url: "https://github.com/asiaunion/GSF-Blog/edit/main/",
+    url: "https://github.com/asiaunion/tokyokorean/edit/main/",
   },
   dynamicOgImage: true,
   dir: "ltr", // "rtl" | "auto"
