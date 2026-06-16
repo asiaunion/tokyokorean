@@ -3,6 +3,8 @@ lang: ko
 title: "소개"
 ---
 
+![TokyoKorean Author Profile](/assets/images/gsf-author-profile.webp)
+
 > **도쿄 라이프, 일본 문화, 한일 비교**  
 > 니혼바시에 살며 경험하는 진짜 일본 생활 이야기
 
