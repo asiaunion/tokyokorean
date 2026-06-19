@@ -45,7 +45,7 @@ const hubOrder: TopicHubKey[] = [
             {L.heroTitleLine1}<br />{L.heroTitleLine2}{L.heroTitleLine3 ? <><br />{L.heroTitleLine3}</> : null}
           </h1>
           <p class="mt-auto pt-10 text-xs font-medium tracking-wide text-foreground/35 hidden lg:block">
-            TokyoKorean · Nihonbashi, Tokyo
+            Living in Nihonbashi, Tokyo
           </p>
         </div>
 
@@ -123,6 +123,19 @@ const hubOrder: TopicHubKey[] = [
                   </div>
                 )
               }
+
+              <!-- 프로필 배지 (DOM 4번째) -->
+              <div class="flex flex-wrap gap-2 mt-1">
+                <span class="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full bg-foreground/8 text-foreground/70">
+                  🏠 니혼바시 거주
+                </span>
+                <span class="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full bg-foreground/8 text-foreground/70">
+                  🇯🇵 일본 생활 8년차
+                </span>
+                <span class="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full bg-foreground/8 text-foreground/70">
+                  🗾 JLPT N1
+                </span>
+              </div>
 
               <!-- 뉴스레터 제거됨 -->
 
