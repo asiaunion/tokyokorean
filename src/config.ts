@@ -8,7 +8,7 @@ export const SITE = {
   website: "https://tokyokorean.net/", // replace this with your deployed domain
   author: "Joseph",
   profile: "https://tokyokorean.net/",
-  desc: "일본 거주 6년차 한국인이 전하는 일본 생활, 문화, 도쿄 로컬 이야기",
+  desc: "일본 거주 8년차 한국인이 전하는 일본 생활, 문화, 도쿄 로컬 이야기",
   title: "Tokyo Korean Life",
   ogImage: "gsf-og-default.jpg",
   lightAndDarkMode: true,
