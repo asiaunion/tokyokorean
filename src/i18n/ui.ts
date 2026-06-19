@@ -25,7 +25,7 @@ const ui = {
     heroTitleLine3: "",
     heroCtaRead: "글 읽기 →",
     heroCtaAbout: "운영자 소개 →",
-    heroTagline: "일본 생활 8년차.\n니혼바시에 사는 한국인 Joseph KIM이\n일본 생활과 문화,\n그리고 동네의 이야기를 기록합니다.",
+    heroTagline: "일본 생활 8년차.\n니혼바시에 사는 한국인 Joseph KIM이\n일본 생활과 문화,\n그리고 이 동네의 이야기를 기록합니다.",
     heroDescription: "",
     sectionFeatured: "추천 글",
     sectionRecentPosts: "최근 글",
