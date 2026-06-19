@@ -141,4 +141,10 @@ export const WP_LEGACY_ROUTES: VercelRoute[] = [
     src: "^/wp-(?:admin|content|includes|json|login\\.php)(?:/.*)?$",
     status: 410,
   },
+  /** /ko/posts/* → /posts/* : getPath.ts가 ko 콘텐츠에 /ko/ prefix를 붙이는 문제 우회 */
+  {
+    src: "^/ko/posts/(.+)$",
+    headers: { Location: "/posts/$1" },
+    status: 307,
+  },
 ];
