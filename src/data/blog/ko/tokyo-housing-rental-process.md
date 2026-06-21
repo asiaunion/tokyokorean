@@ -1,7 +1,7 @@
 ---
 title: "일본 집 구하기 — 외국인으로 도쿄에서 임대 도전한 이야기"
 description: "외국인으로 도쿄와 사이타마에서 집을 구하며 직접 경험한 일본 임대 시스템과 부동산 이용 노하우를 정리했습니다."
-pubDatetime: 2026-06-30T12:00:00+09:00
+pubDatetime: 2026-06-25T12:00:00+09:00
 author: Joseph KIM
 draft: false
 tags:

@@ -1,7 +1,7 @@
 ---
 title: "일본 은행 계좌 개설 방법 — 니혼바시에서 실제로 겪은 경험"
 description: "외국인으로 일본에서 은행 계좌를 개설하며 겪은 실제 경험을 정리했습니다. 유초은행, 미즈호은행, MUFG를 직접 이용하며 느낀 차이를 소개합니다."
-pubDatetime: 2026-06-24T12:00:00+09:00
+pubDatetime: 2026-06-19T12:00:00+09:00
 author: Joseph KIM
 draft: false
 tags:

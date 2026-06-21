@@ -1,7 +1,7 @@
 ---
 title: "일본 쓰레기 분리수거 방법 — 니혼바시로 이사 와서 가장 당황했던 것"
 description: "사이타마와 도쿄에서 직접 생활하며 경험한 일본 쓰레기 분리수거 규칙과 지역별 차이를 정리했습니다."
-pubDatetime: 2026-07-01T12:00:00+09:00
+pubDatetime: 2026-06-26T12:00:00+09:00
 author: Joseph KIM
 draft: false
 tags:

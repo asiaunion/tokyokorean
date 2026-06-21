@@ -19,37 +19,38 @@ GSF-Ark에서 이식한 한국어 전용 생활 블로그. P0 버그(admin siteU
 
 ---
 
-## 발행일 스케줄 (적용 완료 — 2026-06-22)
+## 발행일 스케줄 (적용 완료 — 2026-06-22, 6/18 시작)
 
-`pubDatetime`은 아래 표대로 **frontmatter에 반영됨**. AG는 **변경하지 말 것**.
+`pubDatetime`은 아래 표대로 **frontmatter에 반영됨**. AG는 **Joseph 지시 없이 변경하지 말 것**.  
+상세 지시서: [`docs/AG_TASK_2026-06-22_pubdatetime-shift.md`](./AG_TASK_2026-06-22_pubdatetime-shift.md)
 
 | 날짜 | slug | 글 제목 | 역할 |
 |------|------|---------|------|
-| 6/23 화 | `nihonbashi-why-i-live-here` | 왜 도쿄 니혼바시에 살게 되었나 | 사이트 정체성 |
-| 6/24 수 | `japan-banking-credit-card` | 일본 은행 계좌 개설 방법 | 실전 생활정보 |
-| 6/26 금 | `japan-life-8years-honest` | 일본 생활 8년 차 한국인이 솔직하게 말하는 것들 | 운영자 신뢰 |
-| 6/27 토 | `tokyo-life-cost-of-living` | 도쿄 생활비 현실 | 검색 유입 |
-| 6/28 일 | `nihonbashi-history-and-modern-life` | 니혼바시 역사와 현재 | 장소성 강화 |
-| 6/30 화 | `tokyo-housing-rental-process` | 일본 집 구하기 | 이주/임대 실전 |
-| 7/1 수 | `japan-garbage-disposal-rules` | 일본 쓰레기 분리수거 방법 | 생활 적응 |
-| 7/3 금 | `tokyo-public-transportation-tips` | 도쿄 대중교통 완전 정복 | 도쿄 생활 인프라 |
-| 7/4 토 | `japan-healthcare-hospital-visit` | 일본 병원 이용법 | 의료/생활 정보 |
-| 7/5 일 | `tokyo-supermarket-guide` | 니혼바시 마트 비교 | 로컬 생활감 |
-| 7/7 화 | `japan-married-to-japanese-culture-diff` | 일본인 아내와 살며 놀랐던 문화 차이 | 개인 서사 |
-| 7/8 수 | `japan-language-learning-survival-japanese` | 일본어 공부법 | 언어/자격 신뢰 |
-| 7/10 금 | `japan-korea-work-culture-diff` | 한국과 일본 직장 문화 차이 | 한일 비교 |
-| 7/11 토 | `nihonbashi-buying-property-foreigner` | 일본에서 집을 산다는 것 | 고관여 신뢰 글 |
-| 7/12 일 | `nihonbashi-hidden-cafes` | 니혼바시 카페 추천 | 로컬 다양성 |
-| 7/13 월 | `tokyo-weekend-getaway-spots` | 니혼바시 베이스 당일치기 추천 | 생활권 확장 |
-| 7/14 화 | `japan-elderly-care-frontline` | 개호 현장에서 본 일본의 고령사회 | 깊이/차별화 |
-| 7/15 수 09:00 | `japan-seasons-matsuri-culture` | 일본 마쓰리 문화 | 문화/계절감 |
+| 6/18 목 | `nihonbashi-why-i-live-here` | 왜 도쿄 니혼바시에 살게 되었나 | 사이트 정체성 |
+| 6/19 금 | `japan-banking-credit-card` | 일본 은행 계좌 개설 방법 | 실전 생활정보 |
+| 6/21 일 | `japan-life-8years-honest` | 일본 생활 8년 차 한국인이 솔직하게 말하는 것들 | 운영자 신뢰 |
+| 6/22 월 | `tokyo-life-cost-of-living` | 도쿄 생활비 현실 | 검색 유입 |
+| 6/23 화 | `nihonbashi-history-and-modern-life` | 니혼바시 역사와 현재 | 장소성 강화 |
+| 6/25 목 | `tokyo-housing-rental-process` | 일본 집 구하기 | 이주/임대 실전 |
+| 6/26 금 | `japan-garbage-disposal-rules` | 일본 쓰레기 분리수거 방법 | 생활 적응 |
+| 6/28 일 | `tokyo-public-transportation-tips` | 도쿄 대중교통 완전 정복 | 도쿄 생활 인프라 |
+| 6/29 월 | `japan-healthcare-hospital-visit` | 일본 병원 이용법 | 의료/생활 정보 |
+| 6/30 화 | `tokyo-supermarket-guide` | 니혼바시 마트 비교 | 로컬 생활감 |
+| 7/2 목 | `japan-married-to-japanese-culture-diff` | 일본인 아내와 살며 놀랐던 문화 차이 | 개인 서사 |
+| 7/3 금 | `japan-language-learning-survival-japanese` | 일본어 공부법 | 언어/자격 신뢰 |
+| 7/5 일 | `japan-korea-work-culture-diff` | 한국과 일본 직장 문화 차이 | 한일 비교 |
+| 7/6 월 | `nihonbashi-buying-property-foreigner` | 일본에서 집을 산다는 것 | 고관여 신뢰 글 |
+| 7/7 화 | `nihonbashi-hidden-cafes` | 니혼바시 카페 추천 | 로컬 다양성 |
+| 7/8 수 | `tokyo-weekend-getaway-spots` | 니혼바시 베이스 당일치기 추천 | 생활권 확장 |
+| 7/9 목 | `japan-elderly-care-frontline` | 개호 현장에서 본 일본의 고령사회 | 깊이/차별화 |
+| 7/10 금 09:00 | `japan-seasons-matsuri-culture` | 일본 마쓰리 문화 | 문화/계절감 |
 
-### 보류 (7/20 이후 — draft: true)
+### 보류 (draft: true)
 
 | slug | 글 제목 | 상태 |
 |------|---------|------|
-| `japan-convenience-store-must-buys` | 일본 편의점 추천 상품 | `draft: true`, pubDatetime 7/21 (임시) |
-| `tokyo-korean-community-culture` | 도쿄 한인 커뮤니티 | `draft: true`, pubDatetime 7/21 (임시) |
+| `japan-convenience-store-must-buys` | 일본 편의점 추천 상품 | `draft: true`, pubDatetime 7/16 (임시) |
+| `tokyo-korean-community-culture` | 도쿄 한인 커뮤니티 | `draft: true`, pubDatetime 7/16 (임시) |
 
 Joseph이 일정 확정 후 `draft: false` + pubDatetime 조정.
 
