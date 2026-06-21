@@ -1,7 +1,7 @@
 import { ADMIN_CONFIG } from "../config";
 
 const GITHUB_TOKEN = import.meta.env.GITHUB_TOKEN || process.env.GITHUB_TOKEN || "";
-const GITHUB_REPO = import.meta.env.GITHUB_REPO || "asiaunion/GSF-Blog";
+const GITHUB_REPO = import.meta.env.GITHUB_REPO || "asiaunion/tokyokorean";
 
 export type GitHubFile = {
   path: string;
@@ -18,7 +18,7 @@ function getHeaders(): Record<string, string> {
   
   const headers: Record<string, string> = {
     Accept: "application/vnd.github.v3+json",
-    "User-Agent": "GSF-Blog-Admin-CMS",
+    "User-Agent": "TokyoKorean-Admin-CMS",
   };
   if (token) {
     headers["Authorization"] = `Bearer ${token}`;

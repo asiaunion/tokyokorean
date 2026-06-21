@@ -10,7 +10,7 @@ export const SITE = {
   profile: "https://tokyokorean.net/",
   desc: "일본 거주 8년차 한국인이 전하는 일본 생활, 문화, 도쿄 로컬 이야기",
   title: "Tokyo Korean Life",
-  ogImage: "gsf-og-default.jpg",
+  ogImage: "tokyokorean-og-default.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
   postPerPage: 4,

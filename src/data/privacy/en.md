@@ -3,16 +3,16 @@ lang: en
 title: "Privacy Policy"
 ---
 
-**Last Updated: April 17, 2026**
+**Last Updated: June 21, 2026**
 **Effective Date: April 17, 2026**
 
-GSF Blog (`https://gsfark.com/`, hereinafter "this Site") is a personal publication that I — GSF (Joseph) — run from Nihonbashi, Tokyo. I care about the privacy of the people who stop by, and I publish this Privacy Policy so that what I collect, how it is used, and what rights you have are all stated plainly. This document also serves as the formal record required by applicable laws and by the Google AdSense program policies.
+Tokyo Korean (`https://tokyokorean.net/`, hereinafter "this Site") is a personal publication that I — Joseph KIM — run from Nihonbashi, Tokyo. I care about the privacy of the people who stop by, and I publish this Privacy Policy so that what I collect, how it is used, and what rights you have are all stated plainly. This document also serves as the formal record required by applicable laws and by the Google AdSense program policies.
 
 The operator of this Site is:
 
-- **Operator**: GSF (Joseph)
+- **Operator**: Joseph KIM
 - **Email**: asiaunion@gmail.com
-- **Address**: 2-24-8 Nihombashihamacho, Chuo-ku, Tokyo 103-0007, Japan
+- **Location**: Nihonbashi, Tokyo, Japan
 
 ---
 
@@ -123,6 +123,6 @@ This Policy may be revised in response to changes in applicable laws, Site servi
 By using this Site, you are deemed to consent to this Privacy Policy. If you have any questions about this Policy or about how your personal information is handled, please reach out using the details below.
 
 - **Email**: asiaunion@gmail.com
-- **Address**: 2-24-8 Nihombashihamacho, Chuo-ku, Tokyo 103-0007, Japan
+- **Location**: Nihonbashi, Tokyo, Japan
 
 I usually reply within 2–3 business days.

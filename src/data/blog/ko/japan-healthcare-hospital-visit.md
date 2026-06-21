@@ -1,7 +1,7 @@
 ---
 title: "일본 병원 이용법 — 외국인이 처음 아팠을 때 알게 된 것들"
 description: "일본 병원을 처음 이용하며 느꼈던 점과 건강검진, 복약수첩 제도에 대한 실제 경험을 정리했습니다."
-pubDatetime: 2026-06-20T12:00:00+09:00
+pubDatetime: 2026-07-04T12:00:00+09:00
 author: Joseph KIM
 draft: false
 tags:
@@ -10,11 +10,12 @@ tags:
   - 건강보험
   - 복약수첩
   - 건강검진
+sources:
+  - "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/kokusai/setsumei-ml.html"
+  - "https://www.kyoukaikenpo.or.jp/"
 ---
 
 # 일본 병원 이용법 — 외국인이 처음 아팠을 때 알게 된 것들
-
-[사진 필요: 일본 병원 접수 창구]
 
 ## 들어가며
 

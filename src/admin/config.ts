@@ -3,8 +3,8 @@
  * 아내 블로그 이식 시 이 파일만 변경하면 됨.
  */
 export const ADMIN_CONFIG = {
-  siteName: "GSF-Blog",
-  siteUrl: "https://gsfark.com",
+  siteName: "TokyoKorean",
+  siteUrl: "https://tokyokorean.net",
   adminPath: "/admin",
   defaultLocale: "ko" as const,
   supportedLocales: ["ko", "en", "ja"] as const,

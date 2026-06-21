@@ -1,7 +1,7 @@
 ---
 lang: en
 title: "Tokyo Relocation D-90 Checklist"
-description: "A practical 90-day checklist for visa, housing, and cross-border tax prep before moving to Tokyo—condensed from GSF's living-in-Tokyo guides."
+description: "A practical 90-day checklist for visa, housing, and cross-border tax prep before moving to Tokyo—condensed from TokyoKorean's living-in-Tokyo guides."
 downloadBasename: "tokyo-relocation-d90-checklist-en"
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "일본 집 구하기 — 외국인으로 도쿄에서 임대 도전한 이야기"
 description: "외국인으로 도쿄와 사이타마에서 집을 구하며 직접 경험한 일본 임대 시스템과 부동산 이용 노하우를 정리했습니다."
-pubDatetime: 2026-06-20T12:00:00+09:00
+pubDatetime: 2026-06-30T12:00:00+09:00
 author: Joseph KIM
 draft: false
 tags:
@@ -11,11 +11,12 @@ tags:
   - 도쿄이주
   - 일본월세
   - SUUMO
+sources:
+  - "https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk3_000017.html"
+  - "https://www.safetynet-jutaku.jp/"
 ---
 
 # 일본 집 구하기 — 외국인으로 도쿄에서 임대 도전한 이야기
-
-[사진 필요: 일본 부동산 중개업소 또는 임대 맨션]
 
 ## 들어가며
 
@@ -50,8 +51,6 @@ tags:
 중요한 점은 이 돈은 원칙적으로 반환되지 않는다는 것입니다.
 
 처음에는 다소 이상하게 느껴졌지만, 일본에서는 오랫동안 유지되어 온 임대 문화의 일부입니다.
-
-[사진 필요: 일본 임대 계약서]
 
 ## 부동산 사이트만 믿지 않는 것이 좋다
 

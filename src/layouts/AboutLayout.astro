@@ -19,7 +19,7 @@ const currentLang = (locale as string | undefined) || "en";
 
 const sameAs = frontmatter.sameAs ?? [];
 const authorImageUrl = new URL(
-  "/assets/images/gsf-author-profile.webp",
+  "/assets/images/joseph-kim-profile.webp",
   SITE.website
 ).href;
 
@@ -35,7 +35,7 @@ const pageLd =
         inLanguage: currentLang,
         mainEntity: {
           "@type": "Person",
-          name: "Joseph (GSF)",
+          name: "Joseph KIM",
           url: SITE.profile,
           image: authorImageUrl,
           ...(sameAs.length > 0 && { sameAs }),

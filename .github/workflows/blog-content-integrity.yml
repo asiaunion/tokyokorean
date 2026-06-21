@@ -1,5 +1,8 @@
 name: Blog content integrity
 
+# TokyoKorean — essay / lived-experience blog (not GSF-Ark investment fact sheets).
+# Sources in frontmatter are optional; when present, schema still enforces URL quality.
+
 permissions:
   contents: read
 
@@ -9,8 +12,8 @@ on:
       - "src/data/blog/**/*.md"
 
 jobs:
-  astro-check-strict:
-    name: Astro check with source integrity
+  astro-check-essay:
+    name: Astro check (TokyoKorean essay mode)
     runs-on: ubuntu-latest
     timeout-minutes: 8
 
@@ -28,8 +31,8 @@ jobs:
 
       - run: pnpm install
 
-      - name: Schema check (strict sources)
+      - name: Schema check (optional sources)
         env:
-          CONTENT_INTEGRITY_REQUIRE_SOURCES: "true"
+          CONTENT_INTEGRITY_REQUIRE_SOURCES: "false"
           CONTENT_INTEGRITY_MIN_SOURCES: "2"
         run: pnpm exec astro check

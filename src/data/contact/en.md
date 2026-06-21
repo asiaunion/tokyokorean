@@ -34,7 +34,6 @@ If you're considering buying property in Tokyo or navigating the Korea-Japan inv
 ### How to reach me
 
 - **Email**: asiaunion@gmail.com
-- **Address**: 2-24-8 Nihombashihamacho, Chuo-ku, Tokyo 103-0007, Japan
 
 I aim to respond **within 2–3 business days**. On weeks with travel or long writing sessions it may run a little longer, and I appreciate your patience.
 

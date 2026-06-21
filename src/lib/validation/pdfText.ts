@@ -10,7 +10,7 @@ export async function fetchPdfAsPlainText(
     const res = await fetch(url, {
       signal: controller.signal,
       headers: {
-        "User-Agent": "GSF-Blog-Trust-Verify/1.0 (fact-check pipeline)",
+        "User-Agent": "TokyoKorean-Trust-Verify/1.0 (fact-check pipeline)",
         Accept: "application/pdf,*/*",
       },
       redirect: "follow",

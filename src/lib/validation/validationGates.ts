@@ -143,6 +143,12 @@ function hasTierSource(urls: string[]) {
   return signals.some(signal => merged.includes(signal));
 }
 
+/** GSF-Ark investment posts vs TokyoKorean essay / lived-experience posts */
+function getValidationProfile(): "investment" | "essay" {
+  const profile = process.env.BLOG_VALIDATION_PROFILE?.trim().toLowerCase();
+  return profile === "essay" ? "essay" : "investment";
+}
+
 export function validateReferenceSubset(markdown: string) {
   const sources = new Set(extractFrontmatterList(markdown, "sources"));
   const references = extractFrontmatterList(markdown, "references");
@@ -178,6 +184,8 @@ export async function runBlogValidation(
   const hasJaContent = jaBody.trim().length > 40;
   const koSources = extractFrontmatterList(markdownCandidates[0] ?? "", "sources");
   const koTitle = extractFrontmatterValue(markdownCandidates[0] ?? "", "title");
+  const profile = getValidationProfile();
+  const isEssayProfile = profile === "essay";
 
   const externalLinks = countExternalLinks(koBody);
   scoreChecks.push({
@@ -203,10 +211,12 @@ export async function runBlogValidation(
   });
 
   const koLen = countKoreanChars(koBody);
+  const koLenMin = isEssayProfile ? 500 : 1200;
+  const koLenMax = isEssayProfile ? 8000 : 4000;
   hardGates.push({
     name: "ko-length-target",
-    ok: koLen >= 1200 && koLen <= 4000,
-    output: `ko chars: ${koLen} (target 1200~4000, disclaimer excluded)`,
+    ok: koLen >= koLenMin && koLen <= koLenMax,
+    output: `ko chars: ${koLen} (target ${koLenMin}~${koLenMax}, ${profile} profile, disclaimer excluded)`,
   });
 
   const koPolite = hasFormalKoEnding(koBody) && !hasInformalKoPattern(koBody);
@@ -237,10 +247,18 @@ export async function runBlogValidation(
     output: `title token overlap: ${titleOverlap.toFixed(2)}`,
   });
 
+  const tierSourceOk =
+    isEssayProfile
+      ? koSources.length === 0 || hasTierSource(koSources)
+      : hasTierSource(koSources);
   hardGates.push({
     name: "tier-source-minimum",
-    ok: hasTierSource(koSources),
-    output: hasTierSource(koSources) ? "ok" : "missing government/public/media source",
+    ok: tierSourceOk,
+    output: tierSourceOk
+      ? isEssayProfile && koSources.length === 0
+        ? "ok (essay profile; sources optional)"
+        : "ok"
+      : "missing government/public/media source in sources frontmatter",
   });
 
   const sourceQuality = scoreSourcesList(koSources);

@@ -40,7 +40,7 @@ const { locale } = Astro.params;
 const navLang = (locale || "en") as UiLang;
 const L = getUi(navLang);
 const localePrefix = navLang === "en" ? "" : `/${navLang}`;
-const authorProfileImage = "/assets/images/gsf-author-profile.webp";
+const authorProfileImage = "/assets/images/joseph-kim-profile.webp";
 const linkedInCtaUrl = new URL(PUBLIC_PROFILES.linkedIn);
 linkedInCtaUrl.searchParams.set("utm_source", "gsf_blog");
 linkedInCtaUrl.searchParams.set("utm_medium", "author_card_cta");
@@ -281,7 +281,7 @@ const nextPost =
       <div class="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center">
         <img
           src={authorProfileImage}
-          alt="GSF author"
+          alt="Joseph KIM"
           loading="lazy"
           decoding="async"
           class="size-20 rounded-full border border-border object-cover"

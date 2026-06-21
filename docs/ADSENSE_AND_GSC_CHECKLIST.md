@@ -22,6 +22,8 @@ Use this after deploying to production (e.g. Vercel). Phase 4 of the AdSense roa
 5. **Disclaimers**: each post shows **`PostDisclaimer`** at the **top** of the article body (`PostDetails.astro`) — not a markdown footer block. Contact via `/contact/` and author card.
 6. **Diagrams**: spot-check posts with charts — images under `/assets/images/blog/diagrams/*.webp` (see [`DIAGRAM_POST_SMOKE_CHECKLIST.md`](./DIAGRAM_POST_SMOKE_CHECKLIST.md)).
 
+TokyoKorean uses **essay-mode CI**: sources in frontmatter are optional. See [`CONTENT_INTEGRITY_GATES.md`](../CONTENT_INTEGRITY_GATES.md).
+
 ## Phase 4-13 — AdSense application
 
 1. **Do not** commit a real publisher ID. Set at build/deploy time:

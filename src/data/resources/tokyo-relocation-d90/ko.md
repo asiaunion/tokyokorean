@@ -1,7 +1,7 @@
 ---
 lang: ko
 title: "도쿄 이주 D-90 체크리스트"
-description: "도쿄 거주·비자·주거·세무를 90일 단위로 점검하는 실무 체크리스트. GSF 블로그 핵심 가이드를 한 페이지로 정리했습니다."
+description: "도쿄 거주·비자·주거·세무를 90일 단위로 점검하는 실무 체크리스트. TokyoKorean 블로그 핵심 가이드를 한 페이지로 정리했습니다."
 downloadBasename: "tokyo-relocation-d90-checklist-ko"
 ---
 

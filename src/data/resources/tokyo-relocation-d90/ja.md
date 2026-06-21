@@ -1,7 +1,7 @@
 ---
 lang: ja
 title: "東京移住 D-90 チェックリスト"
-description: "ビザ・住居・税務を90日単位で確認する実務チェックリスト。GSFブログの移住・生活ガイドを1ページに集約。"
+description: "ビザ・住居・税務を90日単位で確認する実務チェックリスト。TokyoKoreanの移住・生活ガイドを1ページに集約。"
 downloadBasename: "tokyo-relocation-d90-checklist-ja"
 ---
 
