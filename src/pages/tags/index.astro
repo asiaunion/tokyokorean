@@ -18,7 +18,7 @@ export function getStaticPaths() {
 }
 
 const { locale } = Astro.params;
-const lang = locale || "en";
+const lang = (locale === "ko" || locale === "ja") ? locale : "ko";
 const L = getUi(lang as UiLang);
 const posts = await getCollection("blog", ({ id }) => id.startsWith(`${lang}/`));
 
