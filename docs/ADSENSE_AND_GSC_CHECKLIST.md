@@ -1,56 +1,146 @@
-# AdSense & Search Console — pre-launch checklist
+# AdSense & Search Console — TokyoKorean 체크리스트
 
-Use this after deploying to production (e.g. Vercel). Phase 4 of the AdSense roadmap maps here.
+> **도메인:** tokyokorean.net · **AdSense 신청 목표:** 2026-07-13~15 (플랜 B)  
+> **사진 SSOT:** [`PHOTO_NEEDED_TRACKER.md`](./PHOTO_NEEDED_TRACKER.md) — 텍스트 `[사진 필요]`는 삭제 완료, **실제 이미지 0/61** 추적 중
 
-## Phase 4-11 — Search Console (manual)
+---
 
-1. Open [Google Search Console](https://search.google.com/search-console) for the production property (`SITE.website` in `src/config.ts`).
-2. **Sitemaps**: submit or confirm:
-   - `/sitemap-index.xml` (Astro sitemap integration should list locale sitemaps).
-   - After a crawl, verify child sitemap URLs appear without errors.
-3. **URL inspection**: pick ~6 random URLs (home, `/topics/`, a KO post, EN post, JA post, `/about/`). Ensure “URL is on Google” or request indexing for any “Discovered / Crawled not indexed” items you care about.
-4. **Coverage**: review “Excluded” reasons; fix duplicate/canonical issues (hreflang + canonical are implemented in `Layout.astro` / `HreflangLinks.astro`).
+## 권장 순서 (2026-06-24 확정)
 
-## Phase 4-12 — Quality gates
+| # | 작업 | 사진 필요? | 담당 | 시점 |
+|---|------|-----------|------|------|
+| 1 | GSC 소유권 인증 | ❌ | Joseph | **지금** |
+| 2 | GSC sitemap 제출 | ❌ | Joseph | 1 직후 |
+| 3 | Cookie Consent / AdSense meta 봇 허용 | ❌ | AG | **지금** |
+| 4 | GA4 속성 등록 | ❌ | Joseph | 2 직후 |
+| 5 | 루트 A 촬영 → ⭐⭐⭐ 6편 이미지 AG 삽입·배포 | ✅ | Joseph + AG | 순차 |
+| 6 | GSC URL 색인 요청 (~10–15 URL) | ✅ | Joseph | **5 후**, ~7/10 |
+| 7 | AdSense 신청 | ✅ | Joseph | 7/13~15 |
 
-1. **Topic hubs**: confirm `/topics/`, `/ko/topics/`, `/ja/topics/` render and match the four editorial axes; header + home link to them.
-2. **404 / broken assets**: smoke-test main routes; fix any missing images under `public/`.
-3. **External links**: spot-check official sources in investment posts; update if domains moved.
-4. **Lighthouse** (Chrome DevTools → Lighthouse):
-   - Run **Mobile** and **Desktop** on `/`, `/topics/`, and one long post.
-   - Target **≥ 90** Performance / Accessibility / Best Practices / SEO (adjust images, CLS, and LCP as needed).
-5. **Disclaimers**: each post shows **`PostDisclaimer`** at the **top** of the article body (`PostDetails.astro`) — not a markdown footer block. Contact via `/contact/` and author card.
-6. **Diagrams**: spot-check posts with charts — images under `/assets/images/blog/diagrams/*.webp` (see [`DIAGRAM_POST_SMOKE_CHECKLIST.md`](./DIAGRAM_POST_SMOKE_CHECKLIST.md)).
+**핵심:** GSC **인증·sitemap**은 사진과 무관하게 먼저. **URL 색인 요청**은 ⭐⭐⭐ 6편에 히어로·본문 이미지가 반영된 **최종 URL**로 요청.
 
-TokyoKorean uses **essay-mode CI**: sources in frontmatter are optional. See [`CONTENT_INTEGRITY_GATES.md`](../CONTENT_INTEGRITY_GATES.md).
+---
 
-## Phase 4-13 — AdSense application
+## Phase 1 — GSC 소유권 + sitemap (지금)
 
-1. **Do not** commit a real publisher ID. Set at build/deploy time:
-   - `PUBLIC_ADSENSE_PUBLISHER_ID=ca-pub-xxxxxxxxxxxxxxxx`
-2. Vercel (or host): add the variable to the project; redeploy. `Layout.astro` emits:
+1. [Google Search Console](https://search.google.com/search-console) → `tokyokorean.net` 속성 추가
+2. 소유권 확인 (DNS TXT 또는 HTML 태그 — Vercel DNS 사용 시 TXT 권장)
+3. **Sitemaps** 제출: `https://tokyokorean.net/sitemap-index.xml`
+4. 24~48h 후 Coverage·Sitemap 상태 확인 (오류 0 목표)
 
+사진·플레이스홀더와 **무관**. 일찍 할수록 크롤 데이터가 쌓임.
+
+---
+
+## Phase 2 — 기술 게이트 (병렬, AdSense 전)
+
+### Cookie Consent / AdSense meta
+- [ ] `<meta name="google-adsense-account">`가 consent 조건 **없이** 프로덕션 HTML에 항상 출력
+- [ ] AdSense 크롤러가 consent wall에 막히지 않음 (GSF-Ark 거절 패턴 참고)
+
+### ads.txt
+- [ ] `https://tokyokorean.net/ads.txt` — 200, `ca-pub-4729433282370174` 확인됨 (2026-06-21)
+
+### GA4
+- [ ] GSC 연동 속성 생성 · `PUBLIC_GA4_MEASUREMENT_ID` Vercel Production 설정 후 재배포
+
+### 품질 스모크
+- [ ] 홈 · `/about/` · `/contact/` · `/privacy-policy/` 200
+- [ ] KO 포스트 20편 200 · `[사진 필요]` 본문 0건
+- [ ] `pnpm run build` exit 0
+
+---
+
+## Phase 3 — 사진 (AdSense·색인 요청 전)
+
+SSOT: [`PHOTO_NEEDED_TRACKER.md`](./PHOTO_NEEDED_TRACKER.md)
+
+| 등급 | AdSense 7/13 전 | 비고 |
+|------|-----------------|------|
+| ⭐⭐⭐ 6편 (27곳) | **필수** | 루트 A 니혼바시 도보권 |
+| ⭐⭐ 7편 (18곳) | 권장 | 은행·교통·병원 등 |
+| ⭐ 7편 (16곳) | 선택 | #20 draft — 신청 후 가능 |
+
+이미지 규격: [`BLOG_IMAGE_RULES_1PAGE.md`](../BLOG_IMAGE_RULES_1PAGE.md)
+
+---
+
+## Phase 4 — GSC URL 색인 요청 (~7/10)
+
+**조건:** ⭐⭐⭐ 6편 배포 완료(히어로 + 대표 본문 이미지) · E-E-A-T 페이지 정상
+
+**GSC 조작:** URL 검사 → 붙여넣기 → 「색인 생성 허용됨」 → **색인 생성 요청** (하루 **10건** 권장)
+
+### 우선 URL (~10–15)
+
+| # | URL | 비고 |
+|---|-----|------|
+| 1 | `https://tokyokorean.net/` | 홈 |
+| 2 | `https://tokyokorean.net/about/` | E-E-A-T |
+| 3 | `https://tokyokorean.net/contact/` | E-E-A-T |
+| 4 | `https://tokyokorean.net/privacy-policy/` | AdSense 필수 |
+| 5 | `https://tokyokorean.net/ko/posts/nihonbashi-hidden-cafes/` | ⭐⭐⭐ |
+| 6 | `https://tokyokorean.net/ko/posts/japan-convenience-store-must-buys/` | ⭐⭐⭐ |
+| 7 | `https://tokyokorean.net/ko/posts/nihonbashi-history-and-modern-life/` | ⭐⭐⭐ |
+| 8 | `https://tokyokorean.net/ko/posts/nihonbashi-why-i-live-here/` | ⭐⭐⭐ |
+| 9 | `https://tokyokorean.net/ko/posts/tokyo-supermarket-guide/` | ⭐⭐⭐ |
+| 10 | `https://tokyokorean.net/ko/posts/tokyo-weekend-getaway-spots/` | ⭐⭐⭐ |
+
+「이미 색인됨」이면 스킵 → 같은 Day 다음 URL로 진행.
+
+⭐⭐·⭐ 편은 신청 전 여유 있으면 추가 요청.
+
+---
+
+## Phase 5 — AdSense 신청 (7/13~15)
+
+1. **Do not** commit a real publisher ID in git. Vercel Production:
+   - `PUBLIC_ADSENSE_PUBLISHER_ID=ca-pub-4729433282370174`
+2. Redeploy — `Layout.astro` emits:
    ```html
    <meta name="google-adsense-account" content="ca-pub-…" />
    ```
+3. AdSense UI에서 tokyokorean.net 사이트 추가·신청
+4. **승인 후:** `public/ads.txt` 최종 확인 · `https://tokyokorean.net/ads.txt` 200
 
-   only when the env var is set.
-3. Complete AdSense signup in the Google UI.
-4. **After approval**: create `public/ads.txt` with the exact lines Google provides (one line per instruction), deploy, and verify `https://your-domain/ads.txt`.
+### 신청 전 체크
+- [ ] ⭐⭐⭐ 6편 이미지 반영 라이브
+- [ ] GSC URL 색인 요청 10건+ 완료 (반영은 1~2주 소요 가능)
+- [ ] Cookie Consent / meta / ads.txt / Privacy / About / Contact OK
+- [ ] Non-YMYL — 선교·신앙 색채 없음
 
-## Deploy with analytics env (required for GA4/AdSense meta)
+---
 
-Astro inlines `PUBLIC_*` at **build time**. Prebuilt deploys must use:
+## Deploy with analytics env
+
+Astro inlines `PUBLIC_*` at **build time**:
 
 ```bash
 PUBLIC_GA4_MEASUREMENT_ID=G-XXXXXXXXXX \
-PUBLIC_ADSENSE_PUBLISHER_ID=ca-pub-xxxxxxxxxxxxxxxx \
-./scripts/deploy-prebuilt-prod.sh
+PUBLIC_ADSENSE_PUBLISHER_ID=ca-pub-4729433282370174 \
+pnpm run build
 ```
 
-Or redeploy from the Vercel dashboard so the remote build picks up Production env vars.
+Or redeploy from Vercel dashboard with Production env vars.
+
+---
 
 ## Optional maintenance
 
 - Re-run `pnpm exec astro check && pnpm run build` before each release.
-- If `CONTENT_INTEGRITY_REQUIRE_SOURCES=true` in CI, ensure new posts include enough unique source domains per `src/content.config.ts`.
+- TokyoKorean uses **essay-mode CI**: sources in frontmatter optional. See [`CONTENT_INTEGRITY_GATES.md`](../CONTENT_INTEGRITY_GATES.md).
+- Lighthouse Mobile on `/` + one ⭐⭐⭐ post — target ≥ 90 SEO (이미지 추가 후 CLS·LCP 재측정).
+
+---
+
+## 요청하지 않을 URL
+
+| URL 유형 | 이유 |
+|----------|------|
+| `/tags/*` | noindex 목록 |
+| draft 포스트 | `#20 tokyo-korean-community-culture` |
+| RSS / admin | 크롤 비대상 |
+
+---
+
+*2026-06-24 — WEEKLY_STATUS · PHOTO_NEEDED_TRACKER · Cursor SSOT 정렬*

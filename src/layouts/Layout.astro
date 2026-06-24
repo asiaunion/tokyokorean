@@ -288,18 +288,13 @@ const structuredData = overrideJsonLd ?? {
           />
           {/*
             AdSense loader — always injected for Google review bot visibility.
-            CookieConsent.astro may call window.__gsfEnableAdsense() on accept;
-            we expose a noop so that call is harmless.
           */}
           <script
             async
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${PUBLIC_ADSENSE_PUBLISHER_ID}`}
             crossorigin="anonymous"
           />
-          <script is:inline>
-            // noop — keeps CookieConsent.astro compatible
-            window.__gsfEnableAdsense = function () {};
-          </script>
+
         </>
       )
     }
