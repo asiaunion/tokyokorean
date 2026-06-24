@@ -19,7 +19,6 @@ import { SITE } from "@/config";
 import { PUBLIC_PROFILES } from "@/config";
 import PostDisclaimer from "@/components/PostDisclaimer.astro";
 import { resolvePostDisclaimerCategory } from "@/lib/postDisclaimer";
-import GiscusComments from "@/components/GiscusComments.astro";
 import RelatedPosts from "@/components/RelatedPosts.astro";
 import SourcesList from "@/components/SourcesList.astro";
 import HighIntentPostCta from "@/components/HighIntentPostCta.astro";
@@ -351,8 +350,6 @@ const nextPost =
 
 
     <RelatedPosts currentPost={post} allPosts={posts} lang={navLang} />
-
-    <GiscusComments lang={navLang} />
 
     <hr class="my-6 border-border border-solid" />
 
