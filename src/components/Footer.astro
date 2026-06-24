@@ -22,7 +22,7 @@ const lang = (
   uiLangProp ??
   (locale === "ko" || locale === "ja" ? locale : "en")
 ) as UiLang;
-const l = lang === "en" ? "" : `/${lang}`;
+const l = ""; // Legacy multilingual prefix removed
 const L = getUi(lang);
 ---
 

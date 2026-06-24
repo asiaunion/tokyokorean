@@ -20,7 +20,7 @@ const lang = (
   uiLangProp ??
   (locale === "ko" || locale === "ja" ? locale : "en")
 ) as UiLang;
-const l = lang === "en" ? "" : `/${lang}`;
+const l = ""; // Legacy multilingual prefix removed (site is ko-only at root)
 const L = getUi(lang);
 
 // Remove trailing slash from current pathname if exists
