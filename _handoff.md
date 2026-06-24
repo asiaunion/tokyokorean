@@ -37,3 +37,26 @@
 - build: `pnpm run build` exit 0
 - 범위: URL 색인 요청 **미실시** — SSOT 준수 ✅
 - 후속: Joseph GSC Sitemaps **24~48h 후** Success·발견 URL ~24 재확인 · GA4 등록
+
+## [2026-06-24 10:44] AG — TokyoKorean Phase 2A (AdSense Prep)
+- 작업 내용: Vercel 환경 변수 세팅 (`PUBLIC_ADSENSE_PUBLISHER_ID`, `PUBLIC_GA4_MEASUREMENT_ID`), CookieConsent dead code 정리
+- 커밋 해시: 1f23724
+- 배포 URL: https://tokyokorean.net
+- Claude 부재 여부: 아니오
+- 특이사항: Vercel CLI로 변수 주입 후 `main` 브랜치 커밋 푸시를 통해 Vercel 자동 배포 트리거. 라이브 사이트에서 `<meta name="google-adsense-account"...>` 및 `gtag/js?id=G-` 태그 출력 정상 확인.
+
+## [2026-06-24] Cursor 검증 — Phase 2A APPROVED
+- 판정: **APPROVED**
+- 라이브: `google-adsense-account` ca-pub-4729433282370174 · adsbygoogle.js · GA4 `G-86NS9E5Y20` · cookie-banner 0건
+- 코드: `CookieConsent.astro` → `_archived/components/` · Layout noop 제거 (`1f23724`)
+- build: exit 0
+- 미완: GSC sitemap Success UI 재확인(Joseph 48h) · ~~GA4 Realtime~~ ✅ · ⭐⭐⭐ 사진 · AdSense **신청** 7/13~15
+
+## [2026-06-24] Joseph 확인 — GA4 Realtime
+- Measurement ID: `G-86NS9E5Y20`
+- tokyokorean.net 방문 → GA4 Realtime active user 확인 완료
+- 다음: GSC sitemap Success (~6/25~26) · 루트 A 촬영 → Phase 2B
+
+## [2026-06-24] Cursor → Claude 인수인계
+- **Claude 필독:** [`docs/CLAUDE_HANDOFF_20260624.md`](docs/CLAUDE_HANDOFF_20260624.md)
+- 요약: GSC Phase 1 ✅ · Phase 2A ✅ · GA4 Realtime ✅ · 사진 0/61 ⏳ · AdSense 신청 7/13~15 ⏳

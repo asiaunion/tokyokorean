@@ -10,6 +10,7 @@ tags:
   - 니혼바시
   - 일본이주
   - 해외생활
+ogImage: "/assets/images/blog/nihonbashi-why-i-live-here-hero.webp"
 draft: false
 ---
 
@@ -61,6 +62,8 @@ draft: false
 
 도쿄의 중심에 있으면서도 지나치게 화려하지 않고, 역사와 현재가 자연스럽게 공존하는 모습이 마음에 들었습니다.
 
+![코레도 무로마치 거리 — 니혼바시를 선택한 이유 중 하나인 역사와 현재의 공존](/assets/images/blog/nihonbashi-why-i-live-here-1.webp)
+
 ## 도로원표가 있는 동네
 
 니혼바시를 이야기할 때 빼놓을 수 없는 것이 하나 있습니다.
@@ -80,6 +83,8 @@ draft: false
 그래서인지 니혼바시는 단순한 주거지가 아니라 하나의 상징처럼 느껴질 때가 있습니다.
 
 도쿄라는 거대한 도시 속에서도 역사와 현재가 만나는 지점이라고 해야 할까요.
+
+![니혼바시 강변의 기린 등불기둥 — 수백 년의 시간이 지금의 일상과 나란히 서 있다](/assets/images/blog/nihonbashi-why-i-live-here-2.webp)
 
 ## 실제로 겪어보니
 

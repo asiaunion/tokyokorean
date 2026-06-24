@@ -114,7 +114,7 @@
     }
 
     img {
-      @apply mx-auto border border-border;
+      @apply mx-auto w-auto max-w-[95%] sm:max-w-[85%] max-h-[45vh] sm:max-h-[55vh] object-contain border border-border rounded-lg;
     }
 
     figcaption {
