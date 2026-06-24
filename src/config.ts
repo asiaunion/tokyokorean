@@ -12,8 +12,8 @@ export const SITE = {
   title: "Tokyo Korean Life",
   ogImage: "tokyokorean-og-default.jpg",
   lightAndDarkMode: true,
-  postPerIndex: 4,
-  postPerPage: 4,
+  postPerIndex: 8,
+  postPerPage: 8,
   scheduledPostMargin: 15 * 60 * 60 * 1000, // 15 hours
   showArchives: true,
   showBackButton: true, // show back button in post detail

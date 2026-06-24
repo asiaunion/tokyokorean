@@ -3,8 +3,8 @@ lang: en
 title: "Privacy Policy"
 ---
 
-**Last Updated: June 21, 2026**
-**Effective Date: April 17, 2026**
+**Last Updated: June 25, 2026**
+**Effective Date: June 25, 2026**
 
 Tokyo Korean (`https://tokyokorean.net/`, hereinafter "this Site") is a personal publication that I — Joseph KIM — run from Nihonbashi, Tokyo. I care about the privacy of the people who stop by, and I publish this Privacy Policy so that what I collect, how it is used, and what rights you have are all stated plainly. This document also serves as the formal record required by applicable laws and by the Google AdSense program policies.
 
@@ -50,7 +50,7 @@ This Site uses server log files in accordance with standard hosting practice. Lo
 This Site uses cookies to improve the visitor experience and to serve advertising. Cookies fall into the following categories.
 
 - **Strictly necessary cookies**: minimal settings required for Site functionality, such as dark/light theme and language preference
-- **Analytics cookies**: aggregate-level visit statistics (none currently active; this policy will be updated if analytics tools are introduced)
+- **Analytics cookies**: used to collect aggregate-level visit statistics through Google Analytics 4
 - **Advertising cookies**: used by Google AdSense and its partners to deliver personalized advertising
 
 Visitors may block or delete cookies through their browser settings. Please note that blocking certain cookies may cause parts of the Site to malfunction.
@@ -75,7 +75,7 @@ At this time, this Site carries no advertising networks other than Google AdSens
 
 ## 7. Analytics
 
-This Site does not currently deploy any third-party analytics tool (such as Google Analytics). Aggregate traffic metrics provided at the server level by the hosting provider (Vercel) are used only for operational purposes. If any analytics tool is introduced in the future, this Policy will be updated and the Effective Date revised.
+This Site uses Google Analytics 4 (GA4, Measurement ID: G-86NS9E5Y20) to analyze traffic and user behavior. The collected data is anonymized, aggregated, and used solely for the purpose of improving the Site. You can opt out of Google Analytics data collection by installing the Google Analytics Opt-out Browser Add-on.
 
 ## 8. External Links
 
