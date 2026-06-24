@@ -81,7 +81,8 @@ export function buildTagCatchAlls(blogDir: string): VercelRoute[] {
   const routes: VercelRoute[] = [];
   for (const [slug, { labels, locale }] of slugMap) {
     const slugEnc = encodeURIComponent(slug);
-    const canonPrefix = locale === "en" ? "" : `/${locale}`;
+    // Use global /tags/ namespace for all tags (Astro generates them at root)
+    const canonPrefix = "";
     const dest = `${canonPrefix}/tags/${slugEnc}/`;
 
     const variantsAlt = alt(nonCanonicalForms(labels, slug));

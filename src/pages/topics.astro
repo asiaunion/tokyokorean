@@ -10,6 +10,7 @@ import {
   type TopicHubKey,
 } from "@/data/topicHubs";
 import { getUi, type UiLang } from "@/i18n/ui";
+import postFilter from "@/utils/postFilter";
 
 const L = getUi("ko");
 
@@ -26,7 +27,9 @@ const sections = await Promise.all(
     const entries = await Promise.all(
       slugs.map(slug => getEntry("blog", `ko/${slug}` as const))
     );
-    const posts = entries.filter((e): e is NonNullable<typeof e> => e != null);
+    const posts = entries
+      .filter((e): e is NonNullable<typeof e> => e != null)
+      .filter(postFilter);
     return { key, ...L.topicHubs[key], posts };
   })
 );

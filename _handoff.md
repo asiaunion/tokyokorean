@@ -60,3 +60,19 @@
 ## [2026-06-24] Cursor → Claude 인수인계
 - **Claude 필독:** [`docs/CLAUDE_HANDOFF_20260624.md`](docs/CLAUDE_HANDOFF_20260624.md)
 - 요약: GSC Phase 1 ✅ · Phase 2A ✅ · GA4 Realtime ✅ · 사진 0/61 ⏳ · AdSense 신청 7/13~15 ⏳
+
+## [2026-06-24 21:06] AG 배포 완료
+- 작업 내용: 사진 크기 일괄 조정 (Hero 이미지 및 세로 사진 축소)
+- 커밋 해시: 0b44d80
+- 배포 URL: Vercel 자동 배포 대기 (tokyokorean.net)
+- Claude 부재 여부: 아니오
+- 특이사항: IMG_3103.JPG는 보류됨.
+
+
+## [2026-06-24 22:14] AG 배포 완료
+- 작업 내용: /tags/ 페이지 빈 화면 수정, /topics/ 주제 허브 슬러그 최신화 및 라벨명 개선
+- 커밋 해시: ccce7e2
+- 배포 URL: Vercel 자동 배포 대기 (tokyokorean.net)
+- Claude 부재 여부: 아니오
+- 특이사항: 주제 허브 관련 모든 결함 수정 완료 (작업 1, 2, 3 모두 반영).
+
