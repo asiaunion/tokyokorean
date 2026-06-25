@@ -85,7 +85,7 @@ sources:
 ---
 
 > **관련 글**
-> - [일본 생활 8년 차 한국인이 솔직하게 말하는 것들](/ko/posts/japan-life-8years-honest/)
-> - [일본어 공부법 — N1 취득까지 실제로 도움된 것들](/ko/posts/japan-language-learning-survival-japanese/)
-> - [한국과 일본 직장 문화 차이](/ko/posts/japan-korea-work-culture-diff/)
-> - [일본인 아내와 살며 놀랐던 문화 차이](/ko/posts/japan-married-to-japanese-culture-diff/)
+> - [일본 생활 8년 차 한국인이 솔직하게 말하는 것들](/posts/japan-life-8years-honest/)
+> - [일본어 공부법 — N1 취득까지 실제로 도움된 것들](/posts/japan-language-learning-survival-japanese/)
+> - [한국과 일본 직장 문화 차이](/posts/japan-korea-work-culture-diff/)
+> - [일본인 아내와 살며 놀랐던 문화 차이](/posts/japan-married-to-japanese-culture-diff/)

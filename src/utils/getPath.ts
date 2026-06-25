@@ -25,10 +25,8 @@ export function getPath(
   
   if (pathSegments && pathSegments.length > 0) {
     const locale = pathSegments[0];
-    // Set locale prefix for routing
-    if (locale === "ko" || locale === "ja") {
-      prefix = `/${locale}`;
-    }
+    // No locale prefix for routing since all routes are flat
+    prefix = "";
     // Remove the locale from the segments so it isn't appended after /posts
     if (["en", "ko", "ja"].includes(locale)) {
       pathSegments.shift();

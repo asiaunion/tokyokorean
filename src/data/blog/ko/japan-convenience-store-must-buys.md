@@ -11,6 +11,7 @@ tags:
   - 로손
   - 패밀리마트
 draft: false
+ogImage: /assets/images/blog/japan-convenience-store-must-buys-hero.jpg
 sources:
   - "https://www.lawson.co.jp/"
   - "https://www.family.co.jp/"
@@ -47,6 +48,8 @@ sources:
 
 로손 디저트는 신상품이 보이면 한 번쯤 손이 갑니다. 아내가 주도적으로 집어 오는 편이지만, 저도 슈크림이나 푸딩은 자연스럽게 같이 먹게 됩니다. 가격 대비 퀄리티가 전문 카페와 비교해도 그다지 뒤지지 않습니다.
 
+![로손 편의점 외관](/assets/images/blog/japan-convenience-store-must-buys-1.jpg)
+
 ## 처음 일본 왔을 때 꼭 사보기 좋은 것들
 
 처음 일본에 온 사람에게 편의점에서 먼저 경험해 보라고 권하는 것들입니다.
@@ -79,6 +82,8 @@ sources:
 
 니혼바시에 살면서도 편의점은 단순한 소비 공간이 아니라 생활 동선의 일부가 되었습니다. 늦은 밤이나 바쁜 아침에 집 앞에 편의점이 있다는 사실은, 작은 여유를 만들어 주는 일종의 안전망처럼 느껴질 때도 있습니다.
 
+![패밀리마트 외관](/assets/images/blog/japan-convenience-store-must-buys-2.jpg)
+
 ---
 
 일본이라는 나라를 처음 이해하기 가장 쉬운 공간 중 하나가 편의점일지도 모릅니다. 화려한 관광지보다 오히려 편의점 안에서, 이 나라 사람들이 어떻게 일상을 꾸려가는지가 보이기 때문입니다. 8년이 지난 지금도 여전히 그렇게 생각합니다.
@@ -93,7 +98,7 @@ sources:
 > - 저의 경우는 사이타마 시절 로손, 니혼바시 이사 이후 패밀리마트 이용이 많아졌습니다
 >
 > **관련 글**
-> - [도쿄 생활비 현실 — 니혼바시에서 한 달 살면 얼마나 드나](/ko/posts/tokyo-life-cost-of-living/)
-> - [도쿄 마트 비교 — 니혼바시에서 장 보기](/ko/posts/tokyo-supermarket-guide/)
-> - [니혼바시 생활 — 왜 이 동네를 선택했나](/ko/posts/nihonbashi-why-i-live-here/)
-> - [일본 생활 8년 차 한국인이 솔직하게 말하는 것들](/ko/posts/japan-life-8years-honest/)
+> - [도쿄 생활비 현실 — 니혼바시에서 한 달 살면 얼마나 드나](/posts/tokyo-life-cost-of-living/)
+> - [도쿄 마트 비교 — 니혼바시에서 장 보기](/posts/tokyo-supermarket-guide/)
+> - [니혼바시 생활 — 왜 이 동네를 선택했나](/posts/nihonbashi-why-i-live-here/)
+> - [일본 생활 8년 차 한국인이 솔직하게 말하는 것들](/posts/japan-life-8years-honest/)

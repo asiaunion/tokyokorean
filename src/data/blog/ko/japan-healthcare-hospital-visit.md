@@ -5,6 +5,7 @@ pubDatetime: 2026-06-29T12:00:00+09:00
 author: Joseph KIM
 lang: ko
 draft: false
+ogImage: /assets/images/blog/japan-healthcare-hospital-visit-hero.jpg
 category: practical
 tags:
   - 일본생활
@@ -56,6 +57,8 @@ sources:
 
 ## 병원과 약국 이용 흐름
 
+![수이텐구마에 역과 토모즈 약국 주변 전경](/assets/images/blog/japan-healthcare-hospital-visit-1.jpg)
+
 일본은 **병원에서 진찰 → 처방전 발행 → 별도 약국에서 약 수령**하는 흐름이 기본입니다. 병원 내에서 바로 약을 주는 경우는 많지 않습니다.
 
 처음에는 처방전을 들고 약국까지 이동해야 한다는 점이 번거롭게 느껴졌습니다. 그런데 약국에서 복약수첩과 대조하며 약의 중복 처방이나 상호 작용을 확인해주는 구조라는 것을 나중에 알게 됐습니다. 약국 약사가 의외로 적극적으로 설명해주는 편이어서 안심이 됐습니다.
@@ -71,6 +74,8 @@ sources:
 일반적인 증상은 가까운 클리닉에 가는 것이 시간과 비용 면에서 현실적입니다. 큰 병원에 직접 가면 대기 시간이 길고 소개장 없이 방문 시 수천 엔의 선택 진료비가 추가되는 경우가 있습니다.
 
 ## 한국과 비슷하면서 다른 점
+
+![토모즈 약국 내부 모습](/assets/images/blog/japan-healthcare-hospital-visit-2.jpg)
 
 전체적인 흐름(접수 → 진료 → 수납 → 약국)은 한국과 크게 다르지 않습니다.
 
@@ -152,6 +157,6 @@ sources:
 >   3. 처방전은 별도 약국에서 약으로 교환
 > - **저의 경우는**: 위 검사 시 바리움 방식이 낯설었고, 다음부터는 내시경 클리닉을 직접 지정해서 예약했습니다
 > - **관련 글**:
->   - [일본 은행 계좌 개설 방법](/ko/posts/japan-banking-credit-card/)
->   - [도쿄 생활비 현실 — 니혼바시에서 한 달 살면 얼마나 드나](/ko/posts/tokyo-life-cost-of-living/)
->   - [일본어 공부법 — N1 취득까지 실제로 도움된 것들](/ko/posts/japan-language-learning-survival-japanese/)
+>   - [일본 은행 계좌 개설 방법](/posts/japan-banking-credit-card/)
+>   - [도쿄 생활비 현실 — 니혼바시에서 한 달 살면 얼마나 드나](/posts/tokyo-life-cost-of-living/)
+>   - [일본어 공부법 — N1 취득까지 실제로 도움된 것들](/posts/japan-language-learning-survival-japanese/)

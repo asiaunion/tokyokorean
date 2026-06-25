@@ -74,6 +74,8 @@ draft: false
 
 언어를 이해하는 것과 문화를 이해하는 것은 다른 문제였기 때문입니다.
 
+![닌교초 우체국 — 우편으로만 서류를 보내는 일본 특유의 업무 속도를 상징하는 풍경](/assets/images/blog/japan-life-8years-honest-2.jpg)
+
 또 하나는 인간관계입니다.
 
 한국에서는 비교적 자연스럽게 형성되던 관계가 일본에서는 조금 더 시간이 걸리는 경우가 많았습니다.
@@ -111,6 +113,8 @@ draft: false
 도쿄에는 제가 익숙하게 걸을 수 있는 길이 생겼고, 단골 가게가 생겼고, 이웃과 인사를 나누는 일상이 생겼습니다.
 
 그리고 니혼바시는 제가 가장 많은 시간을 보내는 동네가 되었습니다.
+
+![닌교초 상점가 거리 — 전통 음식점과 노렌이 늘어선 일상의 풍경](/assets/images/blog/japan-life-8years-honest-1.jpg)
 
 처음에는 낯선 도시였지만 지금은 생활의 배경이 되었습니다.
 
@@ -176,7 +180,7 @@ draft: false
 > - **일본 생활에서 힘들었던 점**: 외국인·계약직으로서의 추가 절차, 느린 일본의 업무 속도, 인간관계 형성의 어려움, 가족과의 거리
 > - **저의 경우는**: 어느 쪽이 더 좋다는 결론보다, 지금 여기서의 생활을 받아들이게 됐습니다
 > - **관련 글**:
->   - [왜 도쿄 니혼바시에 살게 되었나](/ko/posts/nihonbashi-why-i-live-here/)
->   - [개호 현장에서 본 일본의 고령사회](/ko/posts/japan-elderly-care-frontline/)
->   - [일본 마쓰리 문화 — 니혼바시에서 직접 겪은 계절 행사들](/ko/posts/japan-seasons-matsuri-culture/)
+>   - [왜 도쿄 니혼바시에 살게 되었나](/posts/nihonbashi-why-i-live-here/)
+>   - [개호 현장에서 본 일본의 고령사회](/posts/japan-elderly-care-frontline/)
+>   - [일본 마쓰리 문화 — 니혼바시에서 직접 겪은 계절 행사들](/posts/japan-seasons-matsuri-culture/)
 

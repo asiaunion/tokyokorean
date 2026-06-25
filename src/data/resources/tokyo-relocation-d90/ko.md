@@ -12,21 +12,21 @@ downloadBasename: "tokyo-relocation-d90-checklist-ko"
 ### D-90 (3개월 전) — 방향 결정
 
 - [ ] 체류 목적 정리: 취업·경영·배우자·고도인재·디지털 노마드 등 **경로 1개** 우선순위
-- [ ] 비자 요건 스케치: [일본 비자·영주 경로 가이드](/ko/posts/japan-visa-paths-permanent-business-manager-asset-holders/) 참고
+- [ ] 비자 요건 스케치: [일본 비자·영주 경로 가이드](/posts/japan-visa-paths-permanent-business-manager-asset-holders/) 참고
 - [ ] 예산: 보증금·중개료·생활비 6개월분 (엔화·원화 환율 시나리오 2종)
 - [ ] 구(區) 후보 2~3곳: 통근·학군·임대 시장 조사
 
 ### D-60 (2개월 전) — 주거·서류
 
 - [ ] 임대 검색 시작 (일본은 **선입금·보증인** 구조 확인)
-- [ ] [도쿄 이사·계약 체크](/ko/posts/tokyo-moving-contracts-two-notes/) 항목 읽기
+- [ ] [도쿄 이사·계약 체크](/posts/tokyo-moving-contracts-two-notes/) 항목 읽기
 - [ ] 해외 송금·일본 계좌 개설 경로 조사
-- [ ] 한·일 세무: [상속·증여 크로스보더](/ko/posts/korea-japan-inheritance-gift-tax-cross-border-basics/) 1차 스캔
+- [ ] 한·일 세무: [상속·증여 크로스보더](/posts/korea-japan-inheritance-gift-tax-cross-border-basics/) 1차 스캔
 
 ### D-30 (1개월 전) — 실행
 
 - [ ] 계약서 초안: 원상복구·갱신·해지 조항 하이라이트
-- [ ] 법인 vs 개인 명의: [임대·세무 스케치](/ko/posts/japan-corporate-vs-personal-rental-after-tax-sketch/) 검토
+- [ ] 법인 vs 개인 명의: [임대·세무 스케치](/posts/japan-corporate-vs-personal-rental-after-tax-sketch/) 검토
 - [ ] 인터넷·전기·가스 명의 변경 일정
 - [ ] 현지 병원·행정 구역(区役所) 등록 일정
 
@@ -40,7 +40,7 @@ downloadBasename: "tokyo-relocation-d90-checklist-ko"
 
 ## 블로그에서 더 읽기
 
-- [도쿄 5구 오피스 공실률](/ko/posts/tokyo-office-vacancy-five-wards-2026/) — 투자 관점
-- [니혼바시·浜町 생활](/ko/posts/nihonbashi-hamacho-walking-guide/) — 거주 감각
+- [도쿄 5구 오피스 공실률](/posts/tokyo-office-vacancy-five-wards-2026/) — 투자 관점
+- [니혼바시·浜町 생활](/posts/nihonbashi-hamacho-walking-guide/) — 거주 감각
 
 **인쇄용**: [Markdown 다운로드](/downloads/tokyo-relocation-d90-checklist-ko.md) (브라우저에서 PDF 저장 가능)

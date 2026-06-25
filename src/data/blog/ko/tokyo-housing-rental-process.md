@@ -159,6 +159,6 @@ sources:
 >   3. 외국인 계약 가능 여부와 보증회사 조건은 초반에 확인할 것
 > - **저의 경우는**: 지역 중개업소를 꾸준히 방문하며 담당자와 신뢰를 쌓은 것이 결정적으로 도움이 됐습니다
 > - **관련 글**:
->   - [일본에서 집을 산다는 것 — 외국인 부동산 매입 실전기](/ko/posts/nihonbashi-buying-property-foreigner/)
->   - [도쿄 생활비 현실 — 니혼바시에서 한 달 살면 얼마나 드나](/ko/posts/tokyo-life-cost-of-living/)
->   - [일본 은행 계좌 개설 방법](/ko/posts/japan-banking-credit-card/)
+>   - [일본에서 집을 산다는 것 — 외국인 부동산 매입 실전기](/posts/nihonbashi-buying-property-foreigner/)
+>   - [도쿄 생활비 현실 — 니혼바시에서 한 달 살면 얼마나 드나](/posts/tokyo-life-cost-of-living/)
+>   - [일본 은행 계좌 개설 방법](/posts/japan-banking-credit-card/)

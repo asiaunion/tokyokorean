@@ -92,7 +92,7 @@ sources:
 > - 생활비는 "도쿄 평균"보다 "내 생활권과 패턴"으로 계산하는 것이 더 도움이 됩니다
 >
 > **관련 글**
-> - [일본 집 구하기 — 외국인으로 도쿄에서 임대 도전한 이야기](/ko/posts/tokyo-housing-rental-process/)
-> - [일본 편의점 추천 상품 — 8년 차가 아직도 사는 것들](/ko/posts/japan-convenience-store-must-buys/)
-> - [도쿄 마트 비교 — 니혼바시에서 장 보기](/ko/posts/tokyo-supermarket-guide/)
-> - [일본 은행 계좌 개설 방법](/ko/posts/japan-banking-credit-card/)
+> - [일본 집 구하기 — 외국인으로 도쿄에서 임대 도전한 이야기](/posts/tokyo-housing-rental-process/)
+> - [일본 편의점 추천 상품 — 8년 차가 아직도 사는 것들](/posts/japan-convenience-store-must-buys/)
+> - [도쿄 마트 비교 — 니혼바시에서 장 보기](/posts/tokyo-supermarket-guide/)
+> - [일본 은행 계좌 개설 방법](/posts/japan-banking-credit-card/)

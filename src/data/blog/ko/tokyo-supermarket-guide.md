@@ -26,7 +26,7 @@ sources:
 
 결국 중요한 건 "어느 마트가 제일 좋은가"보다, **어떤 물건을 어디서 사는 게 가장 효율적인가**였습니다. 저희 집도 자연스럽게 패턴이 생겼습니다. 기본적인 장보기는 한 곳에서 하고, 조금 특별한 야채는 다른 곳에서 사고, 생필품은 드럭스토어를 이용하고, 고기는 정육점에서 따로 사는 식입니다. 오늘은 니혼바시에서 실제로 장을 보며 알게 된 그 구분을 정리해 보려고 합니다.
 
-![니혼바시 생활권의 피코크 마트 — 24시간 운영으로 도심 생활의 든든한 베이스가 된다](/assets/images/blog/tokyo-supermarket-guide-1.webp)
+![니혼바시 생활권의 피코크 마트 — 24시간 운영으로 도심 생활의 든든한 베이스가 된다](/assets/images/blog/tokyo-supermarket-guide-1.jpg)
 
 ---
 
@@ -41,6 +41,10 @@ sources:
 ---
 
 ## 2. 흔한 마트에 없는 채소는 와쿠와쿠에서 찾게 된다
+
+![わくわく広場 외관 — 닌교초의 지역 직판 채소 가게](/assets/images/blog/tokyo-supermarket-guide-2.jpg)
+
+![わくわく広場 전경 — 신선한 야채와 저렴한 가격이 장점](/assets/images/blog/tokyo-supermarket-guide-3.jpg)
 
 최근 들어 자주 가는 곳은 **와쿠와쿠**입니다. 처음에는 그냥 작은 야채 가게 정도로 생각했는데, 알고 보니 체인점이더군요. 예전에 사이타마현의 쇼핑몰 안에서 봤던 지역 농산물 직매장도 같은 이름이었던 기억이 있어서 조금 반가웠습니다. 아마 농산물 직거래에 가까운 방식으로 신선한 물건을 공급하면서 경쟁력을 유지하는 구조가 아닐까 싶습니다.
 
@@ -91,7 +95,7 @@ sources:
 ---
 
 > **관련 글**
-> - [도쿄 생활비 현실 — 니혼바시에서 한 달 살면 얼마나 드나](/ko/posts/tokyo-life-cost-of-living/)
-> - [일본 편의점 추천 상품 — 8년 차가 아직도 사는 것들](/ko/posts/japan-convenience-store-must-buys/)
-> - [니혼바시 카페 추천 — 2년 살면서 찾아낸 단골 5곳](/ko/posts/nihonbashi-hidden-cafes/)
-> - [왜 도쿄 니혼바시에 살게 되었나](/ko/posts/nihonbashi-why-i-live-here/)
+> - [도쿄 생활비 현실 — 니혼바시에서 한 달 살면 얼마나 드나](/posts/tokyo-life-cost-of-living/)
+> - [일본 편의점 추천 상품 — 8년 차가 아직도 사는 것들](/posts/japan-convenience-store-must-buys/)
+> - [니혼바시 카페 추천 — 2년 살면서 찾아낸 단골 5곳](/posts/nihonbashi-hidden-cafes/)
+> - [왜 도쿄 니혼바시에 살게 되었나](/posts/nihonbashi-why-i-live-here/)

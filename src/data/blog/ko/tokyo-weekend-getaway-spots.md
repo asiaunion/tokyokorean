@@ -94,7 +94,7 @@ sources:
 ---
 
 > **관련 글**
-> - [왜 도쿄 니혼바시에 살게 되었나](/ko/posts/nihonbashi-why-i-live-here/)
-> - [니혼바시 숨겨진 카페 추천](/ko/posts/nihonbashi-hidden-cafes/)
-> - [도쿄 대중교통 완전 정복](/ko/posts/tokyo-public-transportation-tips/)
-> - [도쿄 생활비 현실](/ko/posts/tokyo-life-cost-of-living/)
+> - [왜 도쿄 니혼바시에 살게 되었나](/posts/nihonbashi-why-i-live-here/)
+> - [니혼바시 숨겨진 카페 추천](/posts/nihonbashi-hidden-cafes/)
+> - [도쿄 대중교통 완전 정복](/posts/tokyo-public-transportation-tips/)
+> - [도쿄 생활비 현실](/posts/tokyo-life-cost-of-living/)

@@ -49,6 +49,8 @@ sources:
 
 ## 유카타와 봉오도리, 노점의 풍경
 
+![닌교초 전통 음식점 거리 — 노렌이 걸린 골목이 마쓰리 분위기와 닮아 있다](/assets/images/blog/japan-seasons-matsuri-culture-1.jpg)
+
 여름 마쓰리에서 특히 인상적이었던 것은 유카타를 입은 사람들이었습니다. 기모노라고 하면 격식 있는 행사를 먼저 떠올리는데, 유카타는 훨씬 일상적으로 입고 나옵니다. 젊은 커플들이 유카타 차림으로 노점을 둘러보고 사진을 찍는 모습은 외국인의 시선으로 봐도 자연스럽고 낭만적인 풍경이었습니다.
 
 봉오도리는 처음 볼 때는 멀리서 바라보기만 했습니다. 모든 사람이 같은 동작으로 천천히 원을 돌며 움직이는 모습이 인상적이었습니다. 규칙이 있는 것 같으면서도 참여 장벽은 생각보다 낮습니다. 제대로 추지 못해도 그냥 함께 돌고 있으면 됩니다.
@@ -104,7 +106,7 @@ sources:
 > - 저에게는 화려한 행사보다 작은 동네 마쓰리가 더 오래 기억에 남았습니다
 >
 > **관련 글**
-> - [일본 생활 8년 차 한국인이 솔직하게 말하는 것들](/ko/posts/japan-life-8years-honest/)
-> - [일본인 아내와 살며 놀랐던 문화 차이](/ko/posts/japan-married-to-japanese-culture-diff/)
-> - [왜 도쿄 니혼바시에 살게 되었나](/ko/posts/nihonbashi-why-i-live-here/)
-> - [니혼바시 베이스 당일치기 추천](/ko/posts/tokyo-weekend-getaway-spots/)
+> - [일본 생활 8년 차 한국인이 솔직하게 말하는 것들](/posts/japan-life-8years-honest/)
+> - [일본인 아내와 살며 놀랐던 문화 차이](/posts/japan-married-to-japanese-culture-diff/)
+> - [왜 도쿄 니혼바시에 살게 되었나](/posts/nihonbashi-why-i-live-here/)
+> - [니혼바시 베이스 당일치기 추천](/posts/tokyo-weekend-getaway-spots/)

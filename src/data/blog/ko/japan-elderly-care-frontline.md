@@ -151,6 +151,6 @@ sources:
 >   3. 언어보다 중요한 것은 태도와 기다림이었다
 > - **저의 경우는**: 외국인 직원으로 긴장하며 시작했지만, 현장에서 가장 많이 배운 건 언어 밖의 것들이었습니다
 > - **관련 글**:
->   - [일본 생활 8년 차 한국인이 솔직하게 말하는 것들](/ko/posts/japan-life-8years-honest/)
->   - [한국과 일본 직장 문화 차이](/ko/posts/japan-korea-work-culture-diff/)
+>   - [일본 생활 8년 차 한국인이 솔직하게 말하는 것들](/posts/japan-life-8years-honest/)
+>   - [한국과 일본 직장 문화 차이](/posts/japan-korea-work-culture-diff/)
 

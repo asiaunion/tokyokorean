@@ -105,7 +105,7 @@ draft: false
 ---
 
 > **관련 글**
-> - [일본 쓰레기 분리수거 방법](/ko/posts/japan-garbage-disposal-rules/)
-> - [도쿄 한인 커뮤니티 — 실제로 느낀 것들](/ko/posts/tokyo-korean-community-culture/)
-> - [일본 생활 8년 차 한국인이 솔직하게 말하는 것들](/ko/posts/japan-life-8years-honest/)
-> - [일본어 공부법 — N1 취득까지 실제로 도움된 것들](/ko/posts/japan-language-learning-survival-japanese/)
+> - [일본 쓰레기 분리수거 방법](/posts/japan-garbage-disposal-rules/)
+> - [도쿄 한인 커뮤니티 — 실제로 느낀 것들](/posts/tokyo-korean-community-culture/)
+> - [일본 생활 8년 차 한국인이 솔직하게 말하는 것들](/posts/japan-life-8years-honest/)
+> - [일본어 공부법 — N1 취득까지 실제로 도움된 것들](/posts/japan-language-learning-survival-japanese/)

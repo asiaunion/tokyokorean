@@ -5,6 +5,7 @@ pubDatetime: 2026-06-19T12:00:00+09:00
 author: Joseph KIM
 lang: ko
 draft: false
+ogImage: /assets/images/blog/japan-banking-credit-card-hero.jpg
 category: practical
 tags:
   - 일본생활
@@ -53,6 +54,8 @@ sources:
 
 ### 미즈호은행
 
+![미즈호은행 외관](/assets/images/blog/japan-banking-credit-card-2.jpg)
+
 제가 이용했던 은행 가운데 가장 깔끔한 인상을 받았습니다.
 
 절차도 비교적 명확했고 직원들의 안내 역시 체계적이었습니다.
@@ -60,6 +63,8 @@ sources:
 외국인이라는 이유로 특별히 어려움을 느끼지는 않았습니다.
 
 ### MUFG(三菱UFJ銀行)
+
+![MUFG 입구](/assets/images/blog/japan-banking-credit-card-1.jpg)
 
 반대로 가장 까다로웠던 곳은 MUFG였습니다.
 
@@ -100,6 +105,8 @@ sources:
 
 ## 실제로 겪어보니
 
+![미즈호은행의 깔끔한 외관](/assets/images/blog/japan-banking-credit-card-3.jpg)
+
 가장 기억에 남는 경험은 MUFG 창구에서 본 풍경이었습니다.
 
 직원이 태블릿 패드를 건네주며 정보를 입력해 달라고 했습니다. 저는 당연히 그 데이터가 전산으로 바로 들어가는 줄 알았습니다. 그런데 입력을 마친 뒤 직원이 제 화면을 보면서 같은 내용을 다시 수기로 옮겨 적기 시작했습니다.
@@ -130,6 +137,6 @@ sources:
 >   3. 카드·통장 수령까지 1~2주, 모두 우편으로 온다
 > - **저의 경우는**: MUFG 계좌를 재직 증명 없이 방문했다가 거절당하고, 재직 시작 후 재시도했습니다. 세 번째 방문 끝에 개설했습니다
 > - **관련 글**:
->   - [일본 집 구하기 — 외국인으로 도쿄에서 임대 도전한 이야기](/ko/posts/tokyo-housing-rental-process/)
->   - [도쿄 생활비 현실 — 니혼바시에서 한 달 살면 얼마나 드나](/ko/posts/tokyo-life-cost-of-living/)
->   - [일본 병원 이용법](/ko/posts/japan-healthcare-hospital-visit/)
+>   - [일본 집 구하기 — 외국인으로 도쿄에서 임대 도전한 이야기](/posts/tokyo-housing-rental-process/)
+>   - [도쿄 생활비 현실 — 니혼바시에서 한 달 살면 얼마나 드나](/posts/tokyo-life-cost-of-living/)
+>   - [일본 병원 이용법](/posts/japan-healthcare-hospital-visit/)

@@ -80,7 +80,7 @@ sources:
 ---
 
 > **관련 글**
-> - [왜 도쿄 니혼바시에 살게 되었나](/ko/posts/nihonbashi-why-i-live-here/)
-> - [도쿄 생활비 현실 — 니혼바시에서 한 달 살면 얼마나 드나](/ko/posts/tokyo-life-cost-of-living/)
-> - [니혼바시 베이스 당일치기 추천](/ko/posts/tokyo-weekend-getaway-spots/)
-> - [니혼바시 역사와 현재](/ko/posts/nihonbashi-history-and-modern-life/)
+> - [왜 도쿄 니혼바시에 살게 되었나](/posts/nihonbashi-why-i-live-here/)
+> - [도쿄 생활비 현실 — 니혼바시에서 한 달 살면 얼마나 드나](/posts/tokyo-life-cost-of-living/)
+> - [니혼바시 베이스 당일치기 추천](/posts/tokyo-weekend-getaway-spots/)
+> - [니혼바시 역사와 현재](/posts/nihonbashi-history-and-modern-life/)

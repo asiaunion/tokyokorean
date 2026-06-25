@@ -176,8 +176,8 @@ sources:
 >   3. 가격보다 생활 동선, 동네 분위기, 매일 걸을 거리가 장기적으로 더 중요할 수 있다
 > - **저의 경우는**: 약 2년간 매물을 지켜본 뒤 결정했고, 그 관찰 기간이 가장 중요한 준비였습니다
 > - **관련 글**:
->   - [일본 집 구하기 — 외국인으로 도쿄에서 임대 도전한 이야기](/ko/posts/tokyo-housing-rental-process/)
->   - [왜 도쿄 니혼바시에 살게 되었나](/ko/posts/nihonbashi-why-i-live-here/)
->   - [니혼바시 역사와 현재 — 실거주자가 바라본 이 동네](/ko/posts/nihonbashi-history-and-modern-life/)
->   - [도쿄 생활비 현실 — 니혼바시에서 한 달 살면 얼마나 드나](/ko/posts/tokyo-life-cost-of-living/)
+>   - [일본 집 구하기 — 외국인으로 도쿄에서 임대 도전한 이야기](/posts/tokyo-housing-rental-process/)
+>   - [왜 도쿄 니혼바시에 살게 되었나](/posts/nihonbashi-why-i-live-here/)
+>   - [니혼바시 역사와 현재 — 실거주자가 바라본 이 동네](/posts/nihonbashi-history-and-modern-life/)
+>   - [도쿄 생활비 현실 — 니혼바시에서 한 달 살면 얼마나 드나](/posts/tokyo-life-cost-of-living/)
 

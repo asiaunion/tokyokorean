@@ -63,7 +63,7 @@ draft: false
 
 도쿄의 중심에 있으면서도 지나치게 화려하지 않고, 역사와 현재가 자연스럽게 공존하는 모습이 마음에 들었습니다.
 
-![코레도 무로마치 거리 — 니혼바시를 선택한 이유 중 하나인 역사와 현재의 공존](/assets/images/blog/nihonbashi-why-i-live-here-1.webp)
+![닌교초 상점가 — 마타니티숍 옆에 맥도날드가 보이는, 생활과 상업이 섞인 니혼바시 주변의 일상 거리](/assets/images/blog/nihonbashi-why-i-live-here-1.jpg)
 
 ## 도로원표가 있는 동네
 
@@ -85,7 +85,7 @@ draft: false
 
 도쿄라는 거대한 도시 속에서도 역사와 현재가 만나는 지점이라고 해야 할까요.
 
-![니혼바시 강변의 기린 등불기둥 — 수백 년의 시간이 지금의 일상과 나란히 서 있다](/assets/images/blog/nihonbashi-why-i-live-here-2.webp)
+![水天宮 신사가 보이는 수이텐구마에 교차로 — 신사와 현대 빌딩이 공존하는 니혼바시 인근의 풍경](/assets/images/blog/nihonbashi-why-i-live-here-3.jpg)
 
 ## 실제로 겪어보니
 
@@ -129,5 +129,5 @@ draft: false
 >   3. 도로원표가 있는 동네라는 상징성도 작은 이유 중 하나였다
 > - **저의 경우는**: 사이타마에서 이동하며 자연스럽게 이 동네에 이끌렸고, 지금은 여기에 정착했습니다
 > - **관련 글**:
->   - [니혼바시 역사와 현재 — 실거주자가 바라본 이 동네](/ko/posts/nihonbashi-history-and-modern-life/)
->   - [일본에서 집을 산다는 것 — 외국인 부동산 매입 실전기](/ko/posts/nihonbashi-buying-property-foreigner/)
+>   - [니혼바시 역사와 현재 — 실거주자가 바라본 이 동네](/posts/nihonbashi-history-and-modern-life/)
+>   - [일본에서 집을 산다는 것 — 외국인 부동산 매입 실전기](/posts/nihonbashi-buying-property-foreigner/)

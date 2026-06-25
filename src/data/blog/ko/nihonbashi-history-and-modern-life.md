@@ -28,6 +28,8 @@ sources:
 
 그래서 저에게 니혼바시는 "보존된 과거"보다 **현재형으로 살아 있는 역사 공간**에 가깝습니다.
 
+![비 오는 날의 닌교초 상점가 — 오래된 가게들이 줄지어 서 있는 골목](/assets/images/blog/nihonbashi-history-and-modern-life-1.jpg)
+
 ## 코레도와 노포가 함께 있는 풍경
 
 니혼바시의 현재를 가장 잘 보여 주는 장면 중 하나는 코레도 무로마치 같은 상업시설과 오래된 가게들이 한 생활권 안에 공존하는 모습입니다.
@@ -38,7 +40,7 @@ sources:
 
 닌교초를 걷다 보면 이 점이 더 선명하게 느껴집니다. 정육점이나 화과자 가게, 절임 음식 가게처럼 생활과 맞닿은 업종의 노포들이 지금도 자리를 지키고 있습니다. 저의 경우는 닌교초를 지날 때마다 일부러 발걸음을 천천히 하게 됩니다. 관광 명소를 체크하듯 둘러보기보다, 생활권 안에서 반복해서 지나가며 익숙해질수록 이 동네의 역사성이 더 선명하게 들어왔습니다.
 
-![닌교초 일대의 거리 안내판 — 에도 시대부터 이어진 동네의 유래가 담겨 있다](/assets/images/blog/nihonbashi-history-and-modern-life-1.webp)
+![닌교초 전통 화과자 노포 双楽 — 에도 시대부터 이어진 노포가 지금도 이 거리에 자리를 지키고 있다](/assets/images/blog/nihonbashi-history-and-modern-life-5.jpg)
 
 ## 살면서 느끼는 니혼바시의 장점
 
@@ -56,7 +58,7 @@ sources:
 
 평일 낮에는 비즈니스 중심지의 얼굴이 강하지만, 골목 안으로 들어가면 전혀 다른 표정이 보입니다. 오래된 가게, 조용한 거리, 작은 신사, 계절 장식 같은 것들이 도심 한가운데서도 남아 있습니다. 이 "시간의 겹침"이 니혼바시를 다른 도쿄 중심지와 다르게 느끼게 합니다. 빌딩 사이로 초등학교가 보이고, 아이들 소리가 들리는 순간 이 동네는 단순한 비즈니스 지구로 보이지 않습니다.
 
-![코레도 무로마치 일대 — 현대적인 상업시설과 오래된 가게가 한 거리 안에 공존한다](/assets/images/blog/nihonbashi-history-and-modern-life-2.webp)
+![닌교초 거리 — 현대 빌딩 사이에 전통 일식당과 노포가 나란히 서 있다](/assets/images/blog/nihonbashi-history-and-modern-life-3.jpg)
 
 ## 왜 결국 니혼바시에 정착했는가
 
@@ -72,12 +74,12 @@ sources:
 
 이 동네를 걷다 보면 "역사가 남아 있다"는 느낌보다, **역사가 아직도 사용되고 있다**는 느낌을 받을 때가 있습니다. 그리고 아마 그것이 제가 니혼바시를 계속 좋아하게 된 가장 큰 이유일지도 모르겠습니다.
 
-![야간 조명 아래의 코레도 무로마치 거리](/assets/images/blog/nihonbashi-history-and-modern-life-3.webp)
+![닌교초 명물 인형야키 가게 重盛の人形院 — 에도 시대부터 이어진 인형야키는 이 동네를 상징하는 오래된 맛이다](/assets/images/blog/nihonbashi-history-and-modern-life-6.jpg)
 
 ---
 
 > **관련 글**
-> - [왜 도쿄 니혼바시에 살게 되었나](/ko/posts/nihonbashi-why-i-live-here/)
-> - [니혼바시 숨겨진 카페 추천](/ko/posts/nihonbashi-hidden-cafes/)
-> - [도쿄 마트 비교 — 니혼바시에서 장 보기](/ko/posts/tokyo-supermarket-guide/)
-> - [일본에서 집을 산다는 것 — 외국인 부동산 매입 실전기](/ko/posts/nihonbashi-buying-property-foreigner/)
+> - [왜 도쿄 니혼바시에 살게 되었나](/posts/nihonbashi-why-i-live-here/)
+> - [니혼바시 숨겨진 카페 추천](/posts/nihonbashi-hidden-cafes/)
+> - [도쿄 마트 비교 — 니혼바시에서 장 보기](/posts/tokyo-supermarket-guide/)
+> - [일본에서 집을 산다는 것 — 외국인 부동산 매입 실전기](/posts/nihonbashi-buying-property-foreigner/)

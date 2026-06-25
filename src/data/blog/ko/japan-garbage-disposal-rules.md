@@ -6,6 +6,7 @@ author: Joseph KIM
 category: practical
 lang: ko
 draft: false
+ogImage: /assets/images/blog/japan-garbage-disposal-rules-hero.jpg
 tags:
   - 일본생활
   - 일본이주
@@ -171,6 +172,6 @@ sources:
 >   3. 대형 쓰레기와 가전은 반드시 사전 신청 필요
 > - **저의 경우는**: 분리수거 규칙은 일본인 아내가 담당, 저는 지시에 따라 버리는 역할이 됐습니다. 몇 년이 지난 지금도 완벽하게는 외우지 못합니다
 > - **관련 글**:
->   - [일본인 아내와 살며 놀랐던 문화 차이](/ko/posts/japan-married-to-japanese-culture-diff/)
->   - [일본 집 구하기 — 외국인으로 도쿄에서 임대 도전한 이야기](/ko/posts/tokyo-housing-rental-process/)
->   - [도쿄 생활비 현실 — 니혼바시에서 한 달 살면 얼마나 드나](/ko/posts/tokyo-life-cost-of-living/)
+>   - [일본인 아내와 살며 놀랐던 문화 차이](/posts/japan-married-to-japanese-culture-diff/)
+>   - [일본 집 구하기 — 외국인으로 도쿄에서 임대 도전한 이야기](/posts/tokyo-housing-rental-process/)
+>   - [도쿄 생활비 현실 — 니혼바시에서 한 달 살면 얼마나 드나](/posts/tokyo-life-cost-of-living/)
