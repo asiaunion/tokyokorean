@@ -5,53 +5,58 @@
 
 ---
 
-## 권장 순서 (2026-06-24 확정)
+## 권장 순서 (2026-06-25 갱신)
 
 | # | 작업 | 사진 필요? | 담당 | 시점 |
 |---|------|-----------|------|------|
-| 1 | GSC 소유권 인증 | ❌ | Joseph | **지금** |
-| 2 | GSC sitemap 제출 | ❌ | Joseph | 1 직후 |
-| 3 | Cookie Consent / AdSense meta 봇 허용 | ❌ | AG | **지금** |
-| 4 | GA4 속성 등록 | ❌ | Joseph | 2 직후 |
-| 5 | 루트 A 촬영 → ⭐⭐⭐ 6편 이미지 AG 삽입·배포 | ✅ | Joseph + AG | 순차 |
-| 6 | GSC URL 색인 요청 (~10–15 URL) | ✅ | Joseph | **5 후**, ~7/10 |
-| 7 | AdSense 신청 | ✅ | Joseph | 7/13~15 |
+| 1 | GSC 소유권 인증 | ❌ | Joseph | ✅ 완료 (6/24) |
+| 2 | GSC sitemap 제출 | ❌ | Joseph | ✅ 완료 — 6/25~26 Success·~24 URL 확인 대기 |
+| 3 | Cookie Consent / AdSense meta 봇 허용 | ❌ | AG | ✅ 완료 (`1f23724`) |
+| 4 | GA4 속성 등록 | ❌ | Joseph | ✅ 완료 — Realtime 확인 |
+| 5 | 루트 A 촬영 → ⭐⭐⭐ 6편 이미지 AG 삽입·배포 | ✅ | Joseph + AG | ⏳ 이번 주 |
+| 6 | GSC URL 색인 요청 (~10–15 URL) | ✅ | Joseph | ⏳ **5 후**, ~7/10 |
+| 7 | AdSense 신청 | ✅ | Joseph | ⏳ 7/13~15 |
 
 **핵심:** GSC **인증·sitemap**은 사진과 무관하게 먼저. **URL 색인 요청**은 ⭐⭐⭐ 6편에 히어로·본문 이미지가 반영된 **최종 URL**로 요청.
 
 ---
 
-## Phase 1 — GSC 소유권 + sitemap (지금)
+## Phase 1 — GSC 소유권 + sitemap ✅ 완료
 
-1. [Google Search Console](https://search.google.com/search-console) → `tokyokorean.net` 속성 추가
-2. 소유권 확인 (DNS TXT 또는 HTML 태그 — Vercel DNS 사용 시 TXT 권장)
-3. **Sitemaps** 제출: `https://tokyokorean.net/sitemap-index.xml`
-4. 24~48h 후 Coverage·Sitemap 상태 확인 (오류 0 목표)
-
-사진·플레이스홀더와 **무관**. 일찍 할수록 크롤 데이터가 쌓임.
+1. Google Search Console → `tokyokorean.net` 속성 추가 ✅
+2. 소유권 확인 — `google21b29b3e517c0ba5.html` (GSF-Ark와 동일 계정 자동 통과) ✅
+3. **Sitemaps** 제출: `https://tokyokorean.net/sitemap-index.xml` ✅
+4. ⏳ 6/25~26 Success · ~24 URL UI 재확인 (Joseph)
 
 ---
 
-## Phase 2 — 기술 게이트 (병렬, AdSense 전)
+## Phase 2 — 기술 게이트 ✅ 완료
 
 ### Cookie Consent / AdSense meta
-- [ ] `<meta name="google-adsense-account">`가 consent 조건 **없이** 프로덕션 HTML에 항상 출력
-- [ ] AdSense 크롤러가 consent wall에 막히지 않음 (GSF-Ark 거절 패턴 참고)
+- [x] `<meta name="google-adsense-account">`가 consent 조건 **없이** 프로덕션 HTML에 항상 출력 ✅
+- [x] AdSense 크롤러가 consent wall에 막히지 않음 ✅
 
 ### ads.txt
-- [ ] `https://tokyokorean.net/ads.txt` — 200, `ca-pub-4729433282370174` 확인됨 (2026-06-21)
+- [x] `https://tokyokorean.net/ads.txt` — 200, `ca-pub-4729433282370174` ✅
 
 ### GA4
-- [ ] GSC 연동 속성 생성 · `PUBLIC_GA4_MEASUREMENT_ID` Vercel Production 설정 후 재배포
+- [x] GSC 연동 속성 생성 · `PUBLIC_GA4_MEASUREMENT_ID=G-86NS9E5Y20` Vercel Production 설정 ✅
+- [x] GA4 Realtime Joseph 확인 ✅
+
+### 신뢰도 (Trust Polish) — `1c33a25` ✅ 완료
+- [x] 공개 이메일 `asiaunion@gmail.com` 통일 (`tokyokorean78@gmail.com` 사이트 비노출)
+- [x] Privacy §4·§7 GA4 정합성 KO/EN/JA 반영 (발효일 6/25 갱신)
+- [x] postPerPage 8
+- [x] Giscus 언마운트 (`8ef0234`) — 포스트 하단 에러 제거 (신청 후 `GiscusComments.astro`로 재설정)
 
 ### 품질 스모크
-- [ ] 홈 · `/about/` · `/contact/` · `/privacy-policy/` 200
-- [ ] KO 포스트 20편 200 · `[사진 필요]` 본문 0건
-- [ ] `pnpm run build` exit 0
+- [x] 홈 · `/about/` · `/contact/` · `/privacy-policy/` 200 ✅
+- [x] KO 포스트 20편 200 · `[사진 필요]` 본문 0건 ✅
+- [ ] `pnpm run build` exit 0 (다음 배포 시 확인)
 
 ---
 
-## Phase 3 — 사진 (AdSense·색인 요청 전)
+## Phase 3 — 사진 (AdSense·색인 요청 전) ⏳
 
 SSOT: [`PHOTO_NEEDED_TRACKER.md`](./PHOTO_NEEDED_TRACKER.md)
 
@@ -65,7 +70,7 @@ SSOT: [`PHOTO_NEEDED_TRACKER.md`](./PHOTO_NEEDED_TRACKER.md)
 
 ---
 
-## Phase 4 — GSC URL 색인 요청 (~7/10)
+## Phase 4 — GSC URL 색인 요청 (~7/10) ⏳
 
 **조건:** ⭐⭐⭐ 6편 배포 완료(히어로 + 대표 본문 이미지) · E-E-A-T 페이지 정상
 
@@ -92,7 +97,7 @@ SSOT: [`PHOTO_NEEDED_TRACKER.md`](./PHOTO_NEEDED_TRACKER.md)
 
 ---
 
-## Phase 5 — AdSense 신청 (7/13~15)
+## Phase 5 — AdSense 신청 (7/13~15) ⏳
 
 1. **Do not** commit a real publisher ID in git. Vercel Production:
    - `PUBLIC_ADSENSE_PUBLISHER_ID=ca-pub-4729433282370174`
@@ -102,12 +107,14 @@ SSOT: [`PHOTO_NEEDED_TRACKER.md`](./PHOTO_NEEDED_TRACKER.md)
    ```
 3. AdSense UI에서 tokyokorean.net 사이트 추가·신청
 4. **승인 후:** `public/ads.txt` 최종 확인 · `https://tokyokorean.net/ads.txt` 200
+5. **승인 후:** Giscus 재설정 (Discussions 활성화 + giscus.app 설정)
 
 ### 신청 전 체크
 - [ ] ⭐⭐⭐ 6편 이미지 반영 라이브
 - [ ] GSC URL 색인 요청 10건+ 완료 (반영은 1~2주 소요 가능)
-- [ ] Cookie Consent / meta / ads.txt / Privacy / About / Contact OK
-- [ ] Non-YMYL — 선교·신앙 색채 없음
+- [x] Cookie Consent / meta / ads.txt / Privacy / About / Contact ✅
+- [x] 이메일 통일 / Privacy GA4 정합성 / Giscus 에러 제거 ✅
+- [x] Non-YMYL — 선교·신앙 색채 없음 ✅
 
 ---
 
@@ -116,7 +123,7 @@ SSOT: [`PHOTO_NEEDED_TRACKER.md`](./PHOTO_NEEDED_TRACKER.md)
 Astro inlines `PUBLIC_*` at **build time**:
 
 ```bash
-PUBLIC_GA4_MEASUREMENT_ID=G-XXXXXXXXXX \
+PUBLIC_GA4_MEASUREMENT_ID=G-86NS9E5Y20 \
 PUBLIC_ADSENSE_PUBLISHER_ID=ca-pub-4729433282370174 \
 pnpm run build
 ```
@@ -143,4 +150,4 @@ Or redeploy from Vercel dashboard with Production env vars.
 
 ---
 
-*2026-06-24 — WEEKLY_STATUS · PHOTO_NEEDED_TRACKER · Cursor SSOT 정렬*
+*2026-06-25 갱신 — trust polish 완료, Giscus 언마운트, Phase 1·2 체크 완료 반영*

@@ -83,3 +83,46 @@
 - 배포 URL: Vercel 자동 배포 대기 (tokyokorean.net)
 - Claude 부재 여부: 아니오
 - 특이사항: Header와 Footer에서 사용하는 다국어(/ko) prefix 생성 로직 완전 제거
+
+## [2026-06-24 22:58] AG 배포 완료
+- 작업 내용: 다국어 태그 리다이렉트 단방향화(TAG_SAFETY_NET) 및 Vercel 무한 리다이렉트 루프 원인(vercel.json 1881개 하드코딩 태그) 완전 제거. essay 허브 draft 필터 검증 완료.
+- 커밋 해시: 581350b
+- 배포 URL: https://tokyokorean.net
+- Claude 부재 여부: 아니오
+- 특이사항: 라이브에서 /tags/니혼바시/, /tags/도쿄/ 200 OK 모두 검증 완료.
+
+## [2026-06-24 23:02] AG 배포 완료
+- 작업 내용: 포스트 퍼블리시 날짜 조정 후 `modDatetime`이 `pubDatetime`보다 미래로 남아 "수정됨(Updated)" 라벨이 원치 않게 노출되는 버그 수정 (ko 블로그 16편의 `modDatetime` 일괄 제거)
+- 커밋 해시: dbbfc1b
+- 배포 URL: https://tokyokorean.net
+- Claude 부재 여부: 아니오
+- 특이사항: 사용자 제보로 즉시 핫픽스 진행.
+
+## [2026-06-24 23:04] AG 배포 완료
+- 작업 내용: `vercel.json` 내 GSF-Ark 시절의 구 WP 포스트 리다이렉트(j-reit 등) 일괄 정리
+- 커밋 해시: 42e25ab
+- 배포 URL: https://tokyokorean.net
+- Claude 부재 여부: 아니오
+- 특이사항: 사용되지 않는 레거시 라우팅 규칙 55줄을 삭제하여 Vercel 라우팅 설정 최적화.
+
+## [2026-06-24 23:23] AG 배포 완료 (AdSense Trust Polish)
+- 작업 내용: 
+  1. `src/constants.ts` 메일 주소 `asiaunion@gmail.com` 반영
+  2. 개인정보 처리방침(`ko`, `en`, `ja`) 내 GA4 지표 반영(ID: G-86NS9E5Y20) 및 날짜 갱신
+  3. `src/config.ts` 페이지네이션 8개로 상향
+- 커밋 해시: 1c33a25
+- 배포 URL: https://tokyokorean.net
+- Claude 부재 여부: 아니오
+- 특이사항: 지시서 범위 외 항목(사진, 색인, CookieConsent, env 등) 미수행 (SSOT 준수)
+
+## [2026-06-24 23:35] AG 배포 완료 (Giscus 언마운트)
+- 작업 내용: `src/layouts/PostDetails.astro`에서 `GiscusComments` import 및 렌더링 코드 제거
+- 커밋 해시: 8ef0234
+- 배포 URL: https://tokyokorean.net
+- Claude 부재 여부: 아니오
+- 특이사항: 지시서에 따라 `GiscusComments.astro` 파일은 삭제하지 않고 유지함.
+
+## [2026-06-25] Cursor → Claude 인수인계
+- **Claude 필독:** [`docs/CLAUDE_HANDOFF_20260625.md`](docs/CLAUDE_HANDOFF_20260625.md)
+- 요약: 라우팅·허브·태그 ✅ · modDatetime·vercel.json ✅ · trust polish (`1c33a25`) ✅ · Giscus 언마운트 (`8ef0234`) ✅ · 사진 0/61 ⏳ · AdSense 신청 7/13~15 ⏳
+- 선행 문서: [`CLAUDE_HANDOFF_20260624.md`](docs/CLAUDE_HANDOFF_20260624.md) — superseded by 2026-06-25

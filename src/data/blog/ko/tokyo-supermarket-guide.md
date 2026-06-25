@@ -82,3 +82,11 @@ draft: false
 결국 중요한 건 "니혼바시에 마트가 많으냐 적으냐"보다, **이 동네의 장보기 구조를 얼마나 빨리 파악하느냐**인 것 같습니다. 기본 장보기용 마트 하나, 특별한 식재료를 살 곳 하나, 생필품을 담당할 드럭스토어 하나 정도만 정해 두어도 생활이 훨씬 안정됩니다. 도쿄 중심부의 생활이 막연히 비싸고 불편할 거라고 생각했다면, 니혼바시는 의외로 그 선입견을 바꿔주는 동네일지도 모르겠습니다.
 
 — Joseph KIM, Tokyo Nihonbashi
+
+---
+
+> **관련 글**
+> - [도쿄 생활비 현실 — 니혼바시에서 한 달 살면 얼마나 드나](/ko/posts/tokyo-life-cost-of-living/)
+> - [일본 편의점 추천 상품 — 8년 차가 아직도 사는 것들](/ko/posts/japan-convenience-store-must-buys/)
+> - [니혼바시 카페 추천 — 2년 살면서 찾아낸 단골 5곳](/ko/posts/nihonbashi-hidden-cafes/)
+> - [왜 도쿄 니혼바시에 살게 되었나](/ko/posts/nihonbashi-why-i-live-here/)

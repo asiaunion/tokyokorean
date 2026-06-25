@@ -1,5 +1,7 @@
 # Claude 인수인계 — TokyoKorean (2026-06-24)
 
+> **⚠️ Superseded:** 최신 SSOT는 [`CLAUDE_HANDOFF_20260625.md`](./CLAUDE_HANDOFF_20260625.md) (2026-06-25).
+
 > **대상:** Claude Ark 세션 §7A · Joseph 후속 대화  
 > **작성:** Cursor (Joseph 요청)  
 > **저장소:** `/Users/gsf/.gemini/antigravity/scratch/projects/TokyoKorean`  
