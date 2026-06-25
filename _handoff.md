@@ -177,3 +177,22 @@
 - ⭐⭐⭐ 게이트 **6/6** 달성 · ogImage **13/20**
 - 빌드 PASS · 원본 UUID/IMG 파일 정리
 
+## [2026-06-25] Cursor — Astro 경고·이미지 관련성 (`1dfc0d5`)
+- `astro.config.ts` privacy redirect 중복 제거
+- `src/content.config.ts` loader `*/*.md` only
+- matsuri hero 교체 · work-culture · buying-property 이미지 정리
+- 빌드 PASS · push 완료
+
+## [2026-06-25] Cursor 세션 2 종료 — 포스트 등급·AdSense 최종
+- **Claude 재평가 교차검증:** A 15 / B 5 — **동의** (신청 가능)
+- **레포 현황:** ogImage **20/20** · 본문 **38건** · ⭐⭐⭐ **6/6** · 본문 0장 **2편** (garbage, housing-rental)
+- **신청 전 필수:** GSC 색인 + `japan-garbage-disposal-rules` 본문 1장 + healthcare 사진 (Joseph)
+- **권장:** `tokyo-life-cost-of-living` 긴자→일상 사진 · `tokyo-housing-rental-process` 본문 1장
+- **승인률 추정:** 85~90% (GSC+garbage 후)
+- **미커밋:** B급 5편 + α 텍스트 보강 9편 — 다음 세션 커밋·배포
+- **핸드오프:** [`docs/CURSOR_HANDOFF_20260625_SESSION2.md`](docs/CURSOR_HANDOFF_20260625_SESSION2.md)
+
+## [2026-06-25] Joseph — GSC URL 색인 요청 완료
+- E-E-A-T 페이지 + **published KO 포스트 전체** 색인 생성 요청 완료
+- 다음: Google 반영 대기 (수일~2주) · `garbage-disposal` 본문 1장 · AdSense 7/13~15
+

@@ -1,7 +1,7 @@
 # AdSense & Search Console — TokyoKorean 체크리스트
 
 > **도메인:** tokyokorean.net · **AdSense 신청 목표:** 2026-07-13~15 (플랜 B)  
-> **사진 SSOT:** [`PHOTO_NEEDED_TRACKER.md`](./PHOTO_NEEDED_TRACKER.md) — **ogImage 13/20 · 본문 25건 라이브** (6/25) · ⭐⭐⭐ **6/6**
+> **사진 SSOT:** [`PHOTO_NEEDED_TRACKER.md`](./PHOTO_NEEDED_TRACKER.md) — **ogImage 20/20 · 본문 38건 라이브** (6/25) · ⭐⭐⭐ **6/6** · 본문 0장 2편
 
 ---
 
@@ -14,7 +14,7 @@
 | 3 | Cookie Consent / AdSense meta 봇 허용 | ❌ | AG | ✅ 완료 (`1f23724`) |
 | 4 | GA4 속성 등록 | ❌ | Joseph | ✅ 완료 — Realtime 확인 |
 | 5 | 루트 A/B 촬영 → ⭐⭐⭐ 6편 이미지 삽입·배포 | ✅ | Joseph + AG | **2차** — weekend·NEXPECT 반영 (6/25) |
-| 6 | GSC URL 색인 요청 (~10–15 URL) | ✅ | Joseph | ⏳ **5 후**, ~7/10 |
+| 6 | GSC URL 색인 요청 | ✅ | Joseph | ✅ 완료 (6/25) — published 포스트까지 |
 | 7 | AdSense 신청 | ✅ | Joseph | ⏳ 7/13~15 |
 
 **핵심:** GSC **인증·sitemap**은 사진과 무관하게 먼저. **URL 색인 요청**은 ⭐⭐⭐ 6편에 히어로·본문 이미지가 반영된 **최종 URL**로 요청.
@@ -74,8 +74,8 @@ SSOT: [`PHOTO_NEEDED_TRACKER.md`](./PHOTO_NEEDED_TRACKER.md)
 
 | 항목 | 이전 (사진 전) | 현재 (6/25) |
 |------|----------------|-------------|
-| 종합 승인 가능성 | 65~75% | **78~85%** |
-| thin content 리스크 | 높음 (텍스트-only 다수) | **낮~중** (13편 hero) |
+| 종합 승인 가능성 | 65~75% | **85~90%** (GSC+garbage 후) |
+| thin content 리스크 | 높음 (텍스트-only 다수) | **낮** (hero 20/20, 본문 38건) |
 | ⭐⭐⭐ 게이트 | 0/6 | **6/6** ✅ |
 | E-E-A-T·기술 인프라 | ✅ | ✅ (변동 없음) |
 
@@ -85,39 +85,34 @@ SSOT: [`PHOTO_NEEDED_TRACKER.md`](./PHOTO_NEEDED_TRACKER.md)
 
 | 리스크 | 영향 | 조치 |
 |--------|------|------|
-| `tokyo-weekend-getaway-spots` 이미지 0 | ~~중~~ | ✅ hero+본문 4장 반영 |
-| ogImage 없는 7편 | 낮~중 | 신청 가능, 여유 시 보강 |
-| GSC URL 색인 미요청 | 중 | 사진 URL 확정 후 10건 (Joseph) |
+| `japan-garbage-disposal-rules` 본문 0장 | **중** | 🔴 신청 전 본문 1장 필수 |
+| `tokyo-housing-rental-process` 본문 0장 | 낮~중 | 권장 본문 1장 |
+| `tokyo-life-cost-of-living` 긴자 사진 | 낮~중 | 권장 일상 마트/동네 교체 |
+| GSC URL 색인 미요청 | ~~중~~ | ✅ Joseph 6/25 완료 — 반영 대기 중 |
 | 신규 도메인 (2026) | 낮 | 20편 고품질·실사진으로 상쇄 |
 
-**현재 추정:** **78~85%**
+**현재 추정:** **85~90%** (GSC 색인 + garbage 본문 1장 후)
+
+### 포스트 등급 (6/25 Claude·Cursor 합의)
+- **A 15 / B 5** — 상세: [`CURSOR_HANDOFF_20260625_SESSION2.md`](./CURSOR_HANDOFF_20260625_SESSION2.md)
 
 ---
 
-## Phase 4 — GSC URL 색인 요청 (~7/10) ⏳
+## Phase 4 — GSC URL 색인 요청 ✅ 완료 (6/25)
 
-**조건:** ⭐⭐⭐ 6편 배포 완료(히어로 + 대표 본문 이미지) · E-E-A-T 페이지 정상
+**Joseph 완료:** E-E-A-T 페이지 + **published 포스트 전체** 색인 생성 요청 완료.
 
-**GSC 조작:** URL 검사 → 붙여넣기 → 「색인 생성 허용됨」 → **색인 생성 요청** (하루 **10건** 권장)
+**참고:** 요청 ≠ 즉시 색인. Google 반영은 보통 **수일~2주**. GSC 「페이지」에서 색인 상태는 주기적으로 확인.
 
-### 우선 URL (~10–15)
+### 요청 완료 대상 (참고)
 
-| # | URL | 비고 |
-|---|-----|------|
-| 1 | `https://tokyokorean.net/` | 홈 |
-| 2 | `https://tokyokorean.net/about/` | E-E-A-T |
-| 3 | `https://tokyokorean.net/contact/` | E-E-A-T |
-| 4 | `https://tokyokorean.net/privacy-policy/` | AdSense 필수 |
-| 5 | `https://tokyokorean.net/ko/posts/nihonbashi-hidden-cafes/` | ⭐⭐⭐ |
-| 6 | `https://tokyokorean.net/ko/posts/japan-convenience-store-must-buys/` | ⭐⭐⭐ |
-| 7 | `https://tokyokorean.net/ko/posts/nihonbashi-history-and-modern-life/` | ⭐⭐⭐ |
-| 8 | `https://tokyokorean.net/ko/posts/nihonbashi-why-i-live-here/` | ⭐⭐⭐ |
-| 9 | `https://tokyokorean.net/ko/posts/tokyo-supermarket-guide/` | ⭐⭐⭐ |
-| 10 | `https://tokyokorean.net/ko/posts/tokyo-weekend-getaway-spots/` | ⭐⭐⭐ |
+| 구분 | URL 예시 |
+|------|----------|
+| E-E-A-T | `/`, `/about/`, `/contact/`, `/privacy-policy/`, `/posts/`, `/topics/` |
+| ⭐⭐⭐ 6편 | hidden-cafes, convenience-store, nihonbashi-history, why-i-live-here, supermarket, weekend |
+| 나머지 KO 포스트 | published 20편 전체 |
 
-「이미 색인됨」이면 스킵 → 같은 Day 다음 URL로 진행.
-
-⭐⭐·⭐ 편은 신청 전 여유 있으면 추가 요청.
+「이미 색인됨」은 스킵했을 수 있음 — 요청 자체는 완료.
 
 ---
 
@@ -135,12 +130,14 @@ SSOT: [`PHOTO_NEEDED_TRACKER.md`](./PHOTO_NEEDED_TRACKER.md)
 
 ### 신청 전 체크
 - [x] ⭐⭐⭐ 6편 이미지 반영 라이브 ✅
-- [ ] GSC URL 색인 요청 10건+ 완료 (반영은 1~2주 소요 가능)
+- [x] GSC URL 색인 요청 완료 — published 포스트 전체 (Joseph 6/25) ✅
 - [x] Cookie Consent / meta / ads.txt / Privacy / About / Contact ✅
 - [x] 이메일 통일 / Privacy GA4 정합성 / Giscus 에러 제거 ✅
 - [x] Topic·Category 뱃지 GSF 잔재 제거 (`f2b4141`) ✅
 - [x] Non-YMYL — 선교·신앙 색채 없음 ✅
-- [x] ogImage 13/20 + 본문 실사진 25건 라이브 ✅
+- [x] ogImage 20/20 + 본문 실사진 38건 라이브 ✅
+- [ ] `japan-garbage-disposal-rules` 본문 1장 🔴
+- [ ] 미커밋 텍스트 보강 9편 커밋·배포
 
 ---
 
@@ -176,4 +173,4 @@ Or redeploy from Vercel dashboard with Production env vars.
 
 ---
 
-*2026-06-25 갱신 — weekend·NEXPECT 사진 배포, ⭐⭐⭐ 6/6, 승인률 78~85%*
+*2026-06-25 — GSC URL 색인 요청 완료 (Joseph), AdSense 7/13~15 대기*
