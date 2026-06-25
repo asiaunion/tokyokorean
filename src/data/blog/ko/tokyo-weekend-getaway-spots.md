@@ -2,6 +2,7 @@
 title: "니혼바시 베이스 당일치기 추천 — 직접 다녀온 곳들"
 pubDatetime: 2026-07-08T12:00:00+09:00
 author: Joseph KIM
+lang: ko
 description: "니혼바시에 살며 실제로 다녀온 당일치기 코스를 정리했습니다. 요코하마, 가마쿠라, 오다와라, 가와고에까지, 도쿄 중심부를 베이스로 주말 하루 다녀오기 좋았던 곳들을 생활자의 시선으로 소개합니다."
 tags:
   - 일본생활
@@ -10,6 +11,9 @@ tags:
   - 당일치기
   - 일본여행
 draft: false
+sources:
+  - "https://www.yokohama-kanko.com/"
+  - "https://www.gotokyo.org/"
 ---
 
 # 니혼바시 베이스 당일치기 추천 — 직접 다녀온 곳들

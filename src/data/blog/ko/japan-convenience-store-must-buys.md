@@ -2,6 +2,7 @@
 title: "일본 편의점 추천 상품 — 8년 차가 아직도 사는 것들"
 pubDatetime: 2026-07-16T12:00:00+09:00
 author: Joseph KIM
+lang: ko
 description: "일본 생활 8년 동안 꾸준히 이용해 온 편의점. 오니기리부터 디저트, 커피까지 실제로 자주 사는 상품들을 소개합니다."
 tags:
   - 일본생활
@@ -9,6 +10,10 @@ tags:
   - 로손
   - 패밀리마트
 draft: false
+sources:
+  - "https://www.lawson.co.jp/"
+  - "https://www.family.co.jp/"
+  - "https://www.sej.co.jp/"
 ---
 
 # 일본 편의점 추천 상품 — 8년 차가 아직도 사는 것들

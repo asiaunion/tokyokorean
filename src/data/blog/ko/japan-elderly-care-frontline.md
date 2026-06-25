@@ -2,6 +2,7 @@
 title: "개호 현장에서 본 일본의 고령사회 — 직접 일해보며 느낀 것들"
 pubDatetime: 2026-07-09T12:00:00+09:00
 author: Joseph KIM
+lang: ko
 description: "도쿄의 개호 시설에서 근무하며 직접 경험한 일본의 고령사회. 통계로는 보이지 않는 노인들의 일상과 가족, 그리고 돌봄의 현실을 기록합니다."
 tags:
   - 일본생활
@@ -10,6 +11,9 @@ tags:
   - 일본복지
   - 도쿄생활
 draft: false
+sources:
+  - "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/kaigo_koureisha/index.html"
+  - "https://www.mhlw.go.jp/toukei/saikin/hw/kaigo/service23/index.html"
 ---
 
 # 개호 현장에서 본 일본의 고령사회 — 직접 일해보며 느낀 것들

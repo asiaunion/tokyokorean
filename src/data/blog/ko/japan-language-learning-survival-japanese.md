@@ -2,6 +2,7 @@
 title: "일본어 공부법 — N1 취득까지 실제로 도움된 것들"
 pubDatetime: 2026-07-03T12:00:00+09:00
 author: Joseph KIM
+lang: ko
 description: "JLPT N1을 취득하기까지 제가 실제로 경험한 일본어 학습 과정과 직장인이 현실적으로 활용할 수 있는 공부 방향에 대해 정리했습니다."
 tags:
   - 일본생활
@@ -9,6 +10,9 @@ tags:
   - JLPT
   - JLPTN1
 draft: false
+sources:
+  - "https://www.jlpt.jp/"
+  - "https://www3.nhk.or.jp/nhkworld/en/learnjapanese/"
 ---
 
 # 일본어 공부법 — N1 취득까지 실제로 도움된 것들

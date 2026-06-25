@@ -3,7 +3,9 @@ title: "일본 병원 이용법 — 외국인이 처음 아팠을 때 알게 된
 description: "일본 병원을 처음 이용하며 느꼈던 점과 건강검진, 복약수첩 제도에 대한 실제 경험을 정리했습니다."
 pubDatetime: 2026-06-29T12:00:00+09:00
 author: Joseph KIM
+lang: ko
 draft: false
+category: safety
 tags:
   - 일본생활
   - 일본병원

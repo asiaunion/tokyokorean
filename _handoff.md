@@ -133,3 +133,12 @@
 - 배포 URL: https://tokyokorean.net
 - Claude 부재 여부: 아니오 (현재 AG가 직접 배포 및 확인)
 - 특이사항: Vercel 배포 후 지정된 3개 URL 정상 렌더링 검증 완료.
+
+## [2026-06-25] Cursor — AdSense prep 검증·수정 (미배포)
+- Claude 7/20 승인률 재평가 교차검증: **75~85%는 사진 완료 가정 시** — 실제 사진 **10/62** (TRACKER) → **현실적 65~75%**
+- 수정: `resolvePostLang` — KO 포스트 면책문구·`<html lang>` 한국어 정상화 (투자/안전 category 4편)
+- 수정: KO 20편 `modDatetime` 일괄 제거 (동일 날짜 20건 "수정" 라벨 방지)
+- 수정: KO 20편 `lang: ko` frontmatter 추가
+- 수정: `CookieConsent` 배너 복원 (AdSense meta는 비차단 유지)
+- build: `npm run build` exit 0
+- 다음: Joseph 루트 A 촬영 → ⭐⭐⭐ 6편 이미지 · 배포 · GSC 색인 (~7/10)

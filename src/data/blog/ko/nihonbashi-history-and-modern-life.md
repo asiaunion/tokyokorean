@@ -2,6 +2,7 @@
 title: "니혼바시 역사와 현재 — 실거주자가 바라본 이 동네"
 pubDatetime: 2026-06-23T12:00:00+09:00
 author: Joseph KIM
+lang: ko
 description: "니혼바시의 오래된 노포와 재개발 빌딩, 조용한 밤 산책과 생활 인프라까지. 실거주자의 시선으로 본 니혼바시의 역사성과 현재의 풍경을 정리했습니다."
 tags:
   - 일본생활
@@ -11,6 +12,9 @@ tags:
   - 일본동네기록
 ogImage: "/assets/images/blog/nihonbashi-history-and-modern-life-hero.webp"
 draft: false
+sources:
+  - "https://www.nihonbashi-tokyo.jp/"
+  - "https://www.city.chuo.lg.jp/a0050/rekishi-bunka/chuo-ku-no-rekishi/nihonbashi/index.html"
 ---
 
 # 니혼바시 역사와 현재 — 실거주자가 바라본 이 동네

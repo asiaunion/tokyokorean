@@ -19,6 +19,7 @@ import { SITE } from "@/config";
 import { PUBLIC_PROFILES } from "@/config";
 import PostDisclaimer from "@/components/PostDisclaimer.astro";
 import { resolvePostDisclaimerCategory } from "@/lib/postDisclaimer";
+import { resolvePostLang } from "@/utils/postLang";
 import RelatedPosts from "@/components/RelatedPosts.astro";
 import SourcesList from "@/components/SourcesList.astro";
 import HighIntentPostCta from "@/components/HighIntentPostCta.astro";
@@ -63,7 +64,6 @@ const {
   tags,
   hideEditPost,
   category,
-  lang: postLang,
   sources,
   citeSources,
 } = post.data;
@@ -72,8 +72,7 @@ const postDisclaimerCategory = resolvePostDisclaimerCategory(category);
 
 const postSlug = postSlugFromId(post.id);
 
-const disclaimerLang =
-  postLang ?? (post.id.startsWith("ko/") ? "ko" : post.id.startsWith("ja/") ? "ja" : "en");
+const disclaimerLang = resolvePostLang(post);
 
 const { Content } = await render(post);
 
@@ -202,7 +201,7 @@ const nextPost =
 
 ---
 
-<Layout {...layoutProps}>
+<Layout {...layoutProps} htmlLang={disclaimerLang}>
   <Header />
   <Breadcrumb />
   <BackButton />

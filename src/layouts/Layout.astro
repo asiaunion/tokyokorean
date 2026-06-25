@@ -9,6 +9,7 @@ import { SITE, PUBLIC_PROFILES } from "@/config";
 import "@/styles/global.css";
 
 import type { UiLang } from "@/i18n/ui";
+import CookieConsent from "@/components/CookieConsent.astro";
 
 type Props = {
   /** When set (e.g. 404 /archives), overrides `Astro.params.locale` for `<html lang>`. */
@@ -411,7 +412,9 @@ const structuredData = overrideJsonLd ?? {
   <body>
     <slot />
 
-
+    {!isErrorPage && (
+      <CookieConsent lang={(htmlLangProp ?? (locale as UiLang | undefined) ?? "en") as UiLang} />
+    )}
 
     <!-- Load full theme logic -->
     <script src="../scripts/theme.ts"></script>

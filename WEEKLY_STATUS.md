@@ -6,7 +6,7 @@
 
 | 필드 | 값 |
 |------|-----|
-| 최종 업데이트 | 2026-06-25 (trust polish + Giscus 언마운트 + 라우팅 정리) |
+| 최종 업데이트 | 2026-06-25 (AdSense prep fixes — disclaimer lang, cookie banner, modDatetime) |
 | 프로젝트명 | TokyoKorean |
 | 상태 | 🟠 AdSense 준비 중 — GSC ✅ · Phase 2A ✅ · trust polish ✅ · 사진 0/61 |
 | 목표 + 기한 | AdSense 신청 (2026-07-13~15, 플랜 B) |
@@ -25,12 +25,12 @@
 | Privacy Policy 3개 (KO/EN/JA) | ✅ 수정 완료 | gsfark.com → tokyokorean.net (2026-06-21) |
 | About·포스트 `[사진 필요]` 텍스트 | ✅ 완료 | KO 20편 본문 0건 (2026-06-21~24 확인) |
 | 포스트 **실제 이미지** 삽입 | 🔜 Joseph + AG | **0/61** — [`PHOTO_NEEDED_TRACKER.md`](docs/PHOTO_NEEDED_TRACKER.md) |
-| Cookie Consent / AdSense meta | ✅ 완료 | Phase 2A `1f23724` — meta+adsbygoogle 라이브 · CookieConsent `_archived/` |
+| Cookie Consent / AdSense meta | ✅ 완료 | Phase 2A meta 라이브 · **CookieConsent 배너 복원** (AdSense 크롤러 비차단) |
 | 공개 이메일 | ✅ `asiaunion@gmail.com` 통일 | `1c33a25` — `tokyokorean78@gmail.com` 사이트 비노출 |
 | Privacy GA4 정합성 | ✅ §4·§7 KO/EN/JA 반영 | `1c33a25` — 발효일 6/25 갱신 |
 | Giscus 댓글 | ✅ 언마운트 완료 | `8ef0234` — `GiscusComments.astro` 보존, AdSense 신청 후 재설정 |
 | 태그·허브·메뉴 라우팅 | ✅ 정상 | `ccce7e2` · `0a19ce7` · `581350b` |
-| modDatetime 라벨 | ✅ 제거 | `dbbfc1b` — KO 16편 |
+| modDatetime 라벨 | ✅ 정리 | `dbbfc1b` 제거 후 `a87afab` 일괄 재추가 → **Cursor 6/25 재제거** (미래 pub 포스트 오표시 방지) |
 | vercel.json 레거시 리다이렉트 | ✅ 정리 | `42e25ab` — GSF-Ark 레거시 55줄 삭제 |
 | postPerPage | ✅ 8 | `1c33a25` |
 | GSC 소유권 인증 | ✅ 완료 | Joseph 대시보드 진입 확인 (2026-06-24) |
