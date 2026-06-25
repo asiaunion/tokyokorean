@@ -78,7 +78,6 @@ sources:
 
 ![니혼바시 다리 위 기린상 야경 — 에도 시대부터 자리를 지켜온 청동 기린 조각상이 고가도로 아래 황금빛 등불과 함께 서 있다](/assets/images/blog/nihonbashi-history-and-modern-life-4.jpg)
 
-![닌교초 명물 인형야키 가게 重盛の人形院 — 에도 시대부터 이어진 인형야키는 이 동네를 상징하는 오래된 맛이다](/assets/images/blog/nihonbashi-history-and-modern-life-6.jpg)
 
 ---
 
