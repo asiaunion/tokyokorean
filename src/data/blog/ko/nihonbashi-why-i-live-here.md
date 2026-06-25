@@ -11,7 +11,7 @@ tags:
   - 니혼바시
   - 일본이주
   - 해외생활
-ogImage: "/assets/images/blog/nihonbashi-why-i-live-here-hero.webp"
+ogImage: "/assets/images/blog/nihonbashi-why-i-live-here-hero.jpg"
 draft: false
 ---
 
