@@ -11,6 +11,7 @@ tags:
   - 고령사회
   - 일본복지
   - 도쿄생활
+ogImage: /assets/images/blog/japan-elderly-care-frontline-hero.jpg
 draft: false
 sources:
   - "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/kaigo_koureisha/index.html"
@@ -33,6 +34,8 @@ sources:
 
 이번 글은 전문가의 분석이 아니라, 현장에서 직접 보고 느낀 기록입니다.
 
+![킹스가든 도쿄 시설 외관 — 나무와 자연광이 인상적인 이 주거형 개호시설에서 2년간 근무하며 일본 고령사회를 가장 가까이에서 바라보았다](/assets/images/blog/japan-elderly-care-frontline-1.jpg)
+
 ## 일본 노인들이 보여준 의외의 모습
 
 일본의 고령자들을 처음 만났을 때 가장 놀랐던 점은 생각보다 매우 독립적이라는 것이었습니다.
@@ -54,6 +57,8 @@ sources:
 때로는 기다려주는 것이 더 중요한 돌봄이었습니다.
 
 ## 가족과 시설의 관계
+
+![국립암연구센터 중앙병원 — 개호 시설뿐 아니라 이런 대형 의료기관과의 연계가 일본 고령자 돌봄 체계의 중요한 축을 이룬다](/assets/images/blog/japan-elderly-care-frontline-2.jpg)
 
 한국에서는 부모를 직접 모시는 것이 효도라는 인식이 아직 강하게 남아 있습니다.
 

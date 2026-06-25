@@ -10,6 +10,7 @@ tags:
   - 도쿄교통
   - 지하철
   - PASMO
+ogImage: /assets/images/blog/tokyo-public-transportation-tips-hero.jpg
 draft: false
 sources:
   - "https://www.tokyometro.jp/"
@@ -54,6 +55,8 @@ sources:
 결국 도쿄 대중교통은 단순히 노선도를 외우는 문제가 아니라, **자기 생활권에 맞는 이동 습관을 만드는 문제**에 가깝다고 느꼈습니다.
 
 ## PASMO와 버스에 대해
+
+![도쿄 메트로 자동발매기 — 다국어(한국어 포함) 지원이 되며 IC카드 충전과 티켓 구매를 한 대에서 처리할 수 있다](/assets/images/blog/tokyo-public-transportation-tips-1.jpg)
 
 교통카드는 Suica 또는 PASMO를 사용하면 대부분 해결됩니다. 저는 예전에 실물 Suica를 쓰다가 지금은 모바일 PASMO로 전환했습니다. 충전도 스마트폰에서 바로 가능하고, 개찰구 통과도 빨라서 모바일 교통카드가 훨씬 편리합니다.
 
