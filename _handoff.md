@@ -156,3 +156,11 @@
 - 배포 URL: https://tokyokorean.net
 - Claude 부재 여부: 아니오
 - 특이사항: Vercel 자동 배포 트리거됨. admin schema 동기화 오류로 인한 db.sql 핫픽스 및 빌드 성공 확인 후 푸시.
+
+## [2026-06-25 14:31] AG 배포 완료 (사진 배치 및 /ko/posts/ 404 픽스)
+- 작업 내용: 블로그 포스트 3편 사진 재배치(双楽 사진 제거, 우체국 사진 이동, 마트 사진 본문 삽입), getPath.ts의 로컬 /ko/posts/ 404 오류 수정
+- 커밋 해시: $(git rev-parse --short HEAD)
+- 배포 URL: https://tokyokorean.net
+- Claude 부재 여부: 아니오
+- 특이사항: Claude가 사진 배치를 진행한 후, AG가 버그 수정(ko 링크 제거) 및 배포를 완료함.
+
