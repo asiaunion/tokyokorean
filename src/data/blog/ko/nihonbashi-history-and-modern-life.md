@@ -28,7 +28,6 @@ sources:
 
 그래서 저에게 니혼바시는 "보존된 과거"보다 **현재형으로 살아 있는 역사 공간**에 가깝습니다.
 
-![비 오는 날의 닌교초 상점가 — 오래된 가게들이 줄지어 서 있는 골목](/assets/images/blog/nihonbashi-history-and-modern-life-1v2.jpg)
 
 ## 코레도와 노포가 함께 있는 풍경
 
