@@ -4,6 +4,7 @@ pubDatetime: 2026-07-06T12:00:00+09:00
 author: Joseph KIM
 lang: ko
 category: essay
+ogImage: /assets/images/blog/nihonbashi-buying-property-foreigner-hero.jpg
 description: "도쿄 니혼바시에서 실제로 콘도를 매입한 경험을 바탕으로, 외국인이 일본에서 집을 사는 과정과 한국과 다른 부동산 문화에 대해 기록합니다."
 tags:
   - 일본생활

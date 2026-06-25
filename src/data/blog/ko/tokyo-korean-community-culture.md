@@ -3,6 +3,7 @@ title: "도쿄 한인 커뮤니티 — 실제로 느낀 것들"
 pubDatetime: 2026-07-17T12:00:00+09:00
 author: Joseph KIM
 category: essay
+ogImage: /assets/images/blog/tokyo-korean-community-culture-hero.jpg
 lang: ko
 description: "일본 생활 초기에 큰 도움이 되었던 도쿄 한인 커뮤니티. 한인 모임을 통해 경험한 관계와 도움, 그리고 일본에서 한국인으로 살아가며 느낀 점들을 정리했습니다."
 tags:

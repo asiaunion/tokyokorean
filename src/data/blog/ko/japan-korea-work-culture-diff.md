@@ -3,6 +3,7 @@ title: "한국과 일본 직장 문화 차이 — 두 나라에서 일해본 경
 pubDatetime: 2026-07-05T12:00:00+09:00
 author: Joseph KIM
 category: culture
+ogImage: /assets/images/blog/japan-korea-work-culture-diff-hero.jpg
 lang: ko
 description: "한국과 일본에서 모두 직장 생활을 해보며 느낀 보고 문화, 회의 문화, 회식 문화의 차이와 공통점을 정리했습니다."
 tags:
