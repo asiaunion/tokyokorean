@@ -52,9 +52,11 @@ sources:
 
 첫 계좌를 만들어야 한다면 가장 먼저 고려할 만한 선택지라고 생각합니다.
 
+![닌교초 우체국 — ゆうちょ銀行 ATM이 입구에 설치되어 있어 외국인도 비교적 접근하기 쉽다](/assets/images/blog/japan-banking-credit-card-4.jpg)
+
 ### 미즈호은행
 
-![미즈호은행 외관](/assets/images/blog/japan-banking-credit-card-2.jpg)
+![みずほ銀行 닌교초 지점 외관](/assets/images/blog/japan-banking-credit-card-3.jpg)
 
 제가 이용했던 은행 가운데 가장 깔끔한 인상을 받았습니다.
 
@@ -104,8 +106,6 @@ sources:
 주민등록(전입신고) 없이 은행을 먼저 방문했다가 거절당하는 경우가 있습니다. 주민등록이 선행 조건이라는 점은 반드시 기억해두시기 바랍니다.
 
 ## 실제로 겪어보니
-
-![미즈호은행의 깔끔한 외관](/assets/images/blog/japan-banking-credit-card-3.jpg)
 
 가장 기억에 남는 경험은 MUFG 창구에서 본 풍경이었습니다.
 
