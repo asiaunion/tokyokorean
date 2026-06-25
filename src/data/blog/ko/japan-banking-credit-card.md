@@ -66,7 +66,7 @@ sources:
 
 ### MUFG(三菱UFJ銀行)
 
-![MUFG 입구](/assets/images/blog/japan-banking-credit-card-1.jpg)
+![三菱UFJ銀行 지점 입구 — 화강암 외벽과 MUFG 로고가 인상적인 도심 점포](/assets/images/blog/japan-banking-credit-card-1.jpg)
 
 반대로 가장 까다로웠던 곳은 MUFG였습니다.
 

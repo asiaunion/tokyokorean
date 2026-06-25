@@ -57,7 +57,7 @@ sources:
 
 ## 병원과 약국 이용 흐름
 
-![수이텐구마에 역과 토모즈 약국 주변 전경](/assets/images/blog/japan-healthcare-hospital-visit-1.jpg)
+![수이텐구마에역 주변 — 토모즈 약국 간판이 보이는 닌교초 생활권 거리](/assets/images/blog/japan-healthcare-hospital-visit-1.jpg)
 
 일본은 **병원에서 진찰 → 처방전 발행 → 별도 약국에서 약 수령**하는 흐름이 기본입니다. 병원 내에서 바로 약을 주는 경우는 많지 않습니다.
 
@@ -74,8 +74,6 @@ sources:
 일반적인 증상은 가까운 클리닉에 가는 것이 시간과 비용 면에서 현실적입니다. 큰 병원에 직접 가면 대기 시간이 길고 소개장 없이 방문 시 수천 엔의 선택 진료비가 추가되는 경우가 있습니다.
 
 ## 한국과 비슷하면서 다른 점
-
-![토모즈 약국 내부 모습](/assets/images/blog/japan-healthcare-hospital-visit-2.jpg)
 
 전체적인 흐름(접수 → 진료 → 수납 → 약국)은 한국과 크게 다르지 않습니다.
 
