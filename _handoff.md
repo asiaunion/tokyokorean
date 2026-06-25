@@ -149,3 +149,10 @@
 - 배포 URL: https://tokyokorean.net
 - Claude 부재 여부: 아니오
 - 특이사항: Cursor 지시서 `docs/AG_TASK_2026-06-25_adsense-prep-deploy.md` 기준 라이브 curl 8항목 PASS.
+
+## [2026-06-25 12:12] AG 배포 완료 (Topic & Category Align)
+- 작업 내용: 토픽 허브 4개 정렬, 카테고리 뱃지/색상 매핑 업데이트, 면책문구 slug 기반으로 분리
+- 커밋 해시: f2b4141
+- 배포 URL: https://tokyokorean.net
+- Claude 부재 여부: 아니오
+- 특이사항: Vercel 자동 배포 트리거됨. admin schema 동기화 오류로 인한 db.sql 핫픽스 및 빌드 성공 확인 후 푸시.
