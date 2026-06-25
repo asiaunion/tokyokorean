@@ -142,3 +142,10 @@
 - 수정: `CookieConsent` 배너 복원 (AdSense meta는 비차단 유지)
 - build: `npm run build` exit 0
 - 다음: Joseph 루트 A 촬영 → ⭐⭐⭐ 6편 이미지 · 배포 · GSC 색인 (~7/10)
+
+## [2026-06-25 11:24] AG 배포 완료 (AdSense Prep)
+- 작업 내용: KO 면책 한국어 정상화 · modDatetime 20편 제거 · lang:ko · CookieConsent 복원
+- 커밋 해시: e88d3d3
+- 배포 URL: https://tokyokorean.net
+- Claude 부재 여부: 아니오
+- 특이사항: Cursor 지시서 `docs/AG_TASK_2026-06-25_adsense-prep-deploy.md` 기준 라이브 curl 8항목 PASS.
