@@ -126,3 +126,10 @@
 - **Claude 필독:** [`docs/CLAUDE_HANDOFF_20260625.md`](docs/CLAUDE_HANDOFF_20260625.md)
 - 요약: 라우팅·허브·태그 ✅ · modDatetime·vercel.json ✅ · trust polish (`1c33a25`) ✅ · Giscus 언마운트 (`8ef0234`) ✅ · 사진 0/61 ⏳ · AdSense 신청 7/13~15 ⏳
 - 선행 문서: [`CLAUDE_HANDOFF_20260624.md`](docs/CLAUDE_HANDOFF_20260624.md) — superseded by 2026-06-25
+
+## [2026-06-25 10:55] AG 배포 완료
+- 작업 내용: 한국어 블로그 포스트 20편 전체 콘텐츠 보강 (내부 메모 제거, 면책문구 포함, 링크 유효성 통과)
+- 커밋 해시: a87afab
+- 배포 URL: https://tokyokorean.net
+- Claude 부재 여부: 아니오 (현재 AG가 직접 배포 및 확인)
+- 특이사항: Vercel 배포 후 지정된 3개 URL 정상 렌더링 검증 완료.
