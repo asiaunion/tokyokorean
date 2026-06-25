@@ -1,7 +1,7 @@
 # AdSense & Search Console — TokyoKorean 체크리스트
 
 > **도메인:** tokyokorean.net · **AdSense 신청 목표:** 2026-07-13~15 (플랜 B)  
-> **사진 SSOT:** [`PHOTO_NEEDED_TRACKER.md`](./PHOTO_NEEDED_TRACKER.md) — 텍스트 `[사진 필요]`는 삭제 완료, **실제 이미지 0/61** 추적 중
+> **사진 SSOT:** [`PHOTO_NEEDED_TRACKER.md`](./PHOTO_NEEDED_TRACKER.md) — **ogImage 13/20 · 본문 25건 라이브** (6/25) · ⭐⭐⭐ **6/6**
 
 ---
 
@@ -13,7 +13,7 @@
 | 2 | GSC sitemap 제출 | ❌ | Joseph | ✅ 완료 — 6/25~26 Success·~24 URL 확인 대기 |
 | 3 | Cookie Consent / AdSense meta 봇 허용 | ❌ | AG | ✅ 완료 (`1f23724`) |
 | 4 | GA4 속성 등록 | ❌ | Joseph | ✅ 완료 — Realtime 확인 |
-| 5 | 루트 A 촬영 → ⭐⭐⭐ 6편 이미지 AG 삽입·배포 | ✅ | Joseph + AG | ⏳ 이번 주 |
+| 5 | 루트 A/B 촬영 → ⭐⭐⭐ 6편 이미지 삽입·배포 | ✅ | Joseph + AG | **2차** — weekend·NEXPECT 반영 (6/25) |
 | 6 | GSC URL 색인 요청 (~10–15 URL) | ✅ | Joseph | ⏳ **5 후**, ~7/10 |
 | 7 | AdSense 신청 | ✅ | Joseph | ⏳ 7/13~15 |
 
@@ -52,21 +52,45 @@
 ### 품질 스모크
 - [x] 홈 · `/about/` · `/contact/` · `/privacy-policy/` 200 ✅
 - [x] KO 포스트 20편 200 · `[사진 필요]` 본문 0건 ✅
-- [ ] `pnpm run build` exit 0 (다음 배포 시 확인)
+- [x] `npm run build` exit 0 (`3f70855` 배포 시 확인) ✅
 
 ---
 
-## Phase 3 — 사진 (AdSense·색인 요청 전) ⏳
+## Phase 3 — 사진 (AdSense·색인 요청 전) 🟡 2차 진행
 
 SSOT: [`PHOTO_NEEDED_TRACKER.md`](./PHOTO_NEEDED_TRACKER.md)
 
-| 등급 | AdSense 7/13 전 | 비고 |
-|------|-----------------|------|
-| ⭐⭐⭐ 6편 (27곳) | **필수** | 루트 A 니혼바시 도보권 |
-| ⭐⭐ 7편 (18곳) | 권장 | 은행·교통·병원 등 |
-| ⭐ 7편 (16곳) | 선택 | #20 draft — 신청 후 가능 |
+| 등급 | AdSense 7/13 전 | 6/25 상태 |
+|------|-----------------|-----------|
+| ⭐⭐⭐ 6편 (27곳) | **필수** | **6/6** hero+본문 ✅ |
+| ⭐⭐ 7편 (18곳) | 권장 | 은행·병원·임대·쓰레기·마쓰리·생활비 등 hero 반영 |
+| ⭐ 7편 (16곳) | 선택 | 대부분 미삽입 — 신청 후 가능 |
+
+**라이브 검증 (6/25):** `japan-banking-credit-card-hero.jpg` · `tokyo-housing-rental-process-hero.jpg` · `tokyo-life-cost-of-living-hero.jpg` → HTTP 200
 
 이미지 규격: [`BLOG_IMAGE_RULES_1PAGE.md`](../BLOG_IMAGE_RULES_1PAGE.md)
+
+### Cursor AdSense 승인률 재평가 (7/20 신청 기준)
+
+| 항목 | 이전 (사진 전) | 현재 (6/25) |
+|------|----------------|-------------|
+| 종합 승인 가능성 | 65~75% | **78~85%** |
+| thin content 리스크 | 높음 (텍스트-only 다수) | **낮~중** (13편 hero) |
+| ⭐⭐⭐ 게이트 | 0/6 | **6/6** ✅ |
+| E-E-A-T·기술 인프라 | ✅ | ✅ (변동 없음) |
+
+**강점:** 본인 촬영 실사진 다수 · 은행·병원 이미지 재교정(`d167b7e`) · 니혼바시 히스토리 4본문 · 슈퍼마켓 3본문
+
+**잔여 리스크**
+
+| 리스크 | 영향 | 조치 |
+|--------|------|------|
+| `tokyo-weekend-getaway-spots` 이미지 0 | ~~중~~ | ✅ hero+본문 4장 반영 |
+| ogImage 없는 7편 | 낮~중 | 신청 가능, 여유 시 보강 |
+| GSC URL 색인 미요청 | 중 | 사진 URL 확정 후 10건 (Joseph) |
+| 신규 도메인 (2026) | 낮 | 20편 고품질·실사진으로 상쇄 |
+
+**현재 추정:** **78~85%**
 
 ---
 
@@ -110,11 +134,13 @@ SSOT: [`PHOTO_NEEDED_TRACKER.md`](./PHOTO_NEEDED_TRACKER.md)
 5. **승인 후:** Giscus 재설정 (Discussions 활성화 + giscus.app 설정)
 
 ### 신청 전 체크
-- [ ] ⭐⭐⭐ 6편 이미지 반영 라이브
+- [x] ⭐⭐⭐ 6편 이미지 반영 라이브 ✅
 - [ ] GSC URL 색인 요청 10건+ 완료 (반영은 1~2주 소요 가능)
 - [x] Cookie Consent / meta / ads.txt / Privacy / About / Contact ✅
 - [x] 이메일 통일 / Privacy GA4 정합성 / Giscus 에러 제거 ✅
+- [x] Topic·Category 뱃지 GSF 잔재 제거 (`f2b4141`) ✅
 - [x] Non-YMYL — 선교·신앙 색채 없음 ✅
+- [x] ogImage 13/20 + 본문 실사진 25건 라이브 ✅
 
 ---
 
@@ -150,4 +176,4 @@ Or redeploy from Vercel dashboard with Production env vars.
 
 ---
 
-*2026-06-25 갱신 — trust polish 완료, Giscus 언마운트, Phase 1·2 체크 완료 반영*
+*2026-06-25 갱신 — weekend·NEXPECT 사진 배포, ⭐⭐⭐ 6/6, 승인률 78~85%*

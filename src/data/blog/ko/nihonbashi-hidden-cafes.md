@@ -33,6 +33,8 @@ ogImage: /assets/images/blog/nihonbashi-hidden-cafes-hero.jpg
 
 저의 경우는 아내와 함께 이곳을 자주 찾았습니다. 카페 전면을 열어 두고 영업하는 날이 많아서, 자리에 앉아 있으면 바람이 잘 통하고 바깥 동네 분위기를 자연스럽게 느낄 수 있습니다. 작지만 개방감이 있고, 동네를 바라보며 천천히 커피를 마시기에 좋은 곳입니다. 다만 유명해지면서 대기 시간이 점점 길어진 점은 조금 아쉽습니다.
 
+![니혼바시 코덴마초 NEXPECT Coffee 내부 — 핸드드립 카페](/assets/images/blog/nihonbashi-hidden-cafes-2.jpg)
+
 ---
 
 ## 2. 체인점인데 의외로 놀랐던 곳 — Veloce Coffee 니혼바시점

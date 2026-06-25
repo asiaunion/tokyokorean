@@ -164,3 +164,16 @@
 - Claude 부재 여부: 아니오
 - 특이사항: Claude가 사진 배치를 진행한 후, AG가 버그 수정(ko 링크 제거) 및 배포를 완료함.
 
+## [2026-06-25] Cursor — 사진 1차 배치 AdSense 재평가
+- 라이브 검증: ogImage **12/20** · 본문 **19건** · 깨진 이미지 **0** · hero jpg HTTP 200 (은행·임대·생활비)
+- ⭐⭐⭐ 게이트: **5/6** — `tokyo-weekend-getaway-spots` **이미지 0건** (신청 전 필수)
+- AdSense 승인률 추정: **74~82%** (weekend hero 후 **78~85%**)
+- SSOT 갱신: `WEEKLY_STATUS.md` · `ADSENSE_AND_GSC_CHECKLIST.md` · `PHOTO_NEEDED_TRACKER.md`
+- 다음: (1) weekend hero 1장 (2) Joseph GSC URL 색인 10건 (~7/10) (3) AdSense 신청 7/13~15
+
+## [2026-06-25] Cursor — weekend·NEXPECT 사진 삽입
+- `tokyo-weekend-getaway-spots`: hero(가마쿠라 대불) + 본문 4장(에노시마·오다와라성·가마보코·가와고에)
+- `nihonbashi-hidden-cafes`: NEXPECT 내부 (`nihonbashi-hidden-cafes-2.jpg`, IMG_2297, **인물 모자이크**)
+- ⭐⭐⭐ 게이트 **6/6** 달성 · ogImage **13/20**
+- 빌드 PASS · 원본 UUID/IMG 파일 정리
+
