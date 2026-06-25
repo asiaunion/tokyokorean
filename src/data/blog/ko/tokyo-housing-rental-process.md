@@ -6,6 +6,7 @@ author: Joseph KIM
 lang: ko
 draft: false
 category: practical
+ogImage: /assets/images/blog/tokyo-housing-rental-process-hero.jpg
 tags:
   - 일본생활
   - 일본부동산
