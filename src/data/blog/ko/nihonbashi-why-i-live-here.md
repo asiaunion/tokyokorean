@@ -85,8 +85,6 @@ draft: false
 
 도쿄라는 거대한 도시 속에서도 역사와 현재가 만나는 지점이라고 해야 할까요.
 
-![니혼바시 다리의 기린상 — 에도 시대부터 이 자리를 지켜온 청동상이 고가도로 아래 등불 빛을 받으며 서 있다](/assets/images/blog/nihonbashi-why-i-live-here-2.jpg)
-
 ![水天宮 신사가 보이는 수이텐구마에 교차로 — 신사와 현대 빌딩이 공존하는 니혼바시 인근의 풍경](/assets/images/blog/nihonbashi-why-i-live-here-3.jpg)
 
 ## 실제로 겪어보니
