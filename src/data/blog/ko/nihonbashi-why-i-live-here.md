@@ -2,6 +2,7 @@
 title: "왜 도쿄 니혼바시에 살게 되었나 — 한국인이 이 동네를 선택한 이유"
 pubDatetime: 2026-06-18T12:00:00+09:00
 author: Joseph KIM
+category: local
 lang: ko
 description: "강릉에서 시작해 치앙마이를 거쳐 도쿄 니혼바시에 정착하기까지. 일본 생활 8년 차 한국인이 이 동네를 선택한 이유를 기록합니다."
 tags:

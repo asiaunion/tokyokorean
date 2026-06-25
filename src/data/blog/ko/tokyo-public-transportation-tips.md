@@ -2,6 +2,7 @@
 title: "도쿄 대중교통 완전 정복 — 8년 생활자의 실전 팁"
 pubDatetime: 2026-06-28T12:00:00+09:00
 author: Joseph KIM
+category: practical
 lang: ko
 description: "2018년 일본 이주 후 8년 동안 직접 이용하며 느낀 도쿄 대중교통의 특징과 실전 팁을 정리했습니다."
 tags:

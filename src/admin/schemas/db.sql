@@ -6,7 +6,7 @@
 CREATE TABLE IF NOT EXISTS posts (
   id          TEXT PRIMARY KEY DEFAULT (lower(hex(randomblob(8)))),
   slug        TEXT NOT NULL,
-  category    TEXT NOT NULL CHECK (category IN ('investment','safety','life','local','essay')),
+  category    TEXT NOT NULL CHECK (category IN ('practical','culture','local','essay')),
   tags        TEXT NOT NULL DEFAULT '[]',        -- JSON 배열
   status      TEXT NOT NULL DEFAULT 'draft'
               CHECK (status IN ('memo','draft','editing','review','published')),

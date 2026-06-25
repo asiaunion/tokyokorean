@@ -4,13 +4,13 @@ import CustomSelect, { type SelectOption } from "./CustomSelect";
 
 export const frontmatterSchema = z.object({
   slug: z.string().regex(/^[a-z0-9-]+$/, "영문 소문자, 숫자, 하이픈(-)만 사용할 수 있어요."),
-  category: z.enum(["investment", "safety", "life", "local", "essay"]),
+  category: z.enum(["practical", "culture", "local", "essay"]),
   tags: z.array(z.string()),
 });
 
 interface FrontmatterEditorProps {
   slug: string;
-  category: "investment" | "safety" | "life" | "local" | "essay";
+  category: "practical" | "culture" | "local" | "essay";
   tags: string[];
   onChange: (data: { slug: string; category: any; tags: string[] }) => void;
   // 슬러그 자동생성용
@@ -140,9 +140,8 @@ export default function FrontmatterEditor({
         </label>
         <CustomSelect
           options={[
-            { value: "investment", label: "투자", emoji: "📈" },
-            { value: "safety", label: "안전", emoji: "🛡️" },
-            { value: "life", label: "라이프", emoji: "🌱" },
+            { value: "practical", label: "실용정보", emoji: "📋" },
+            { value: "culture", label: "문화비교", emoji: "🤝" },
             { value: "local", label: "로컬", emoji: "🇯🇵" },
             { value: "essay", label: "에세이", emoji: "✍️" },
           ]}

@@ -44,10 +44,8 @@ const blog = defineCollection({
       timezone: z.string().optional(),
       aiModel: z.string().optional(),
       lang: z.enum(["en", "ko", "ja"]).default("en"),
-      /** Post category: top PostDisclaimer copy (investment / safety / general) */
-      category: z
-        .enum(["investment", "safety", "life", "local", "essay"])
-        .optional(),
+      /** Editorial hub badge (matches topicHubs.ts) */
+      category: z.enum(["practical", "culture", "local", "essay"]).optional(),
       macroMicroMatrix: z
         .object({
           leftTitle: z.string(),

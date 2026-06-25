@@ -22,7 +22,7 @@ export type PostTranslation = {
 export type MergedPost = {
   id: string;
   slug: string;
-  category: "investment" | "safety" | "life" | "local" | "essay";
+  category: "practical" | "culture" | "local" | "essay";
   tags: string[];
   status: "memo" | "draft" | "editing" | "review" | "published";
   author: string;
@@ -50,7 +50,7 @@ export default function Editor({ id }: EditorProps) {
 
   // 프론트매터/메타데이터 로컬 편집 상태
   const [metaSlug, setMetaSlug] = useState("");
-  const [metaCategory, setMetaCategory] = useState<MergedPost["category"]>("investment");
+  const [metaCategory, setMetaCategory] = useState<MergedPost["category"]>("practical");
   const [metaTags, setMetaTags] = useState<string[]>([]);
 
   // 상태 동기화 및 자동저장 관리 상태

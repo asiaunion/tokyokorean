@@ -2,6 +2,7 @@
 title: "니혼바시 마트 비교 — 실제로 장 보며 알게 된 것들"
 pubDatetime: 2026-06-30T12:00:00+09:00
 author: Joseph KIM
+category: local
 lang: ko
 description: "니혼바시에서 실제로 장을 보며 정착한 마트 이용 패턴을 정리했습니다. 피코크, 와쿠와쿠, 드럭스토어, 정육점까지 각각 어떻게 활용하고 있는지 실거주자의 시선으로 담았습니다."
 tags:

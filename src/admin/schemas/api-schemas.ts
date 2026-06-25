@@ -32,9 +32,8 @@ export const postStatusSchema = z.enum([
 
 // 카테고리 스키마
 export const categorySchema = z.enum([
-  "investment",
-  "safety",
-  "life",
+  "practical",
+  "culture",
   "local",
   "essay",
 ] satisfies PostCategory[]);

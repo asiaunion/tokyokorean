@@ -2,21 +2,21 @@
  * Four editorial hubs (Phase 3 plan) — file slugs shared across en/ko/ja.
  */
 export const TOPIC_HUB_SLUGS = {
-  urbanInvestment: [
+  practical: [
     "japan-garbage-disposal-rules",
     "japan-banking-credit-card",
     "tokyo-housing-rental-process",
     "japan-healthcare-hospital-visit",
     "tokyo-public-transportation-tips",
   ],
-  macroPolicy: [
+  culture: [
     "japan-korea-work-culture-diff",
     "japan-married-to-japanese-culture-diff",
     "japan-life-8years-honest",
     "japan-language-learning-survival-japanese",
     "japan-seasons-matsuri-culture",
   ],
-  tokyoLife: [
+  local: [
     "nihonbashi-history-and-modern-life",
     "nihonbashi-why-i-live-here",
     "nihonbashi-hidden-cafes",
@@ -33,3 +33,11 @@ export const TOPIC_HUB_SLUGS = {
 } as const;
 
 export type TopicHubKey = keyof typeof TOPIC_HUB_SLUGS;
+export type HubCategory = "practical" | "culture" | "local" | "essay";
+
+export function hubCategoryForSlug(slug: string): HubCategory | undefined {
+  for (const [hub, slugs] of Object.entries(TOPIC_HUB_SLUGS) as [HubCategory, readonly string[]][]) {
+    if ((slugs as readonly string[]).includes(slug)) return hub;
+  }
+  return undefined;
+}

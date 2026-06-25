@@ -1,11 +1,16 @@
 export type PostDisclaimerCategory = "investment" | "safety" | "general";
 export type PostDisclaimerLang = "en" | "ko" | "ja";
 
-/** Resolved category for layout `PostDisclaimer` (top of article body). */
-export function resolvePostDisclaimerCategory(
-  category?: "investment" | "safety" | "life" | "local" | "essay" | null
-): PostDisclaimerCategory {
-  if (category === "investment" || category === "safety") return category;
+export const INVESTMENT_DISCLAIMER_SLUGS = [
+  "japan-banking-credit-card",
+  "tokyo-housing-rental-process",
+  "nihonbashi-buying-property-foreigner",
+] as const;
+
+export function resolvePostDisclaimerTier(slug: string): PostDisclaimerCategory {
+  if ((INVESTMENT_DISCLAIMER_SLUGS as readonly string[]).includes(slug)) {
+    return "investment";
+  }
   return "general";
 }
 

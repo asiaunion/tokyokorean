@@ -8,7 +8,7 @@ export const ADMIN_CONFIG = {
   adminPath: "/admin",
   defaultLocale: "ko" as const,
   supportedLocales: ["ko", "en", "ja"] as const,
-  categories: ["investment", "safety", "life", "local", "essay"] as const,
+  categories: ["practical", "culture", "local", "essay"] as const,
   /** 이미지 업로드 최대 크기 (MB) */
   maxImageSizeMB: 20,
   /** 이미지 리사이즈 최대 폭 (px) */

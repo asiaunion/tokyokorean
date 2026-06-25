@@ -2,6 +2,7 @@
 title: "일본인 아내와 살며 놀랐던 문화 차이 — 8년째 배우는 중"
 pubDatetime: 2026-07-02T12:00:00+09:00
 author: Joseph KIM
+category: culture
 lang: ko
 description: "일본인 아내와 함께 살며 경험한 한일 문화 차이. 가족관계부터 집안일, 식문화까지. 일본 생활 8년째인 지금도 여전히 배우고 있는 이야기입니다."
 tags:

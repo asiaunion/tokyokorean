@@ -2,6 +2,7 @@
 title: "일본 마쓰리 문화 — 니혼바시에서 직접 겪은 계절 행사들"
 pubDatetime: 2026-07-10T09:00:00+09:00
 author: Joseph KIM
+category: culture
 lang: ko
 description: "일본에서 생활하며 직접 경험한 마쓰리 문화. 동네 축제부터 봉오도리, 유카타, 불꽃놀이까지 일본의 계절 행사를 통해 느낀 점들을 기록했습니다."
 tags:

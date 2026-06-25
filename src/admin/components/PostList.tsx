@@ -3,9 +3,8 @@ import CustomSelect, { type SelectOption } from "./CustomSelect";
 
 // 카테고리 영어 → 한국어 매핑
 const categoryLabels: Record<string, string> = {
-  investment: "투자",
-  safety: "안전",
-  life: "라이프",
+  practical: "실용정보",
+  culture: "문화비교",
   local: "로컬",
   essay: "에세이",
 };
@@ -13,9 +12,8 @@ const categoryLabels: Record<string, string> = {
 // 드롭다운 옵션 정의
 const categoryOptions: SelectOption[] = [
   { value: "all", label: "전체", emoji: "📋" },
-  { value: "investment", label: "투자", emoji: "📈" },
-  { value: "safety", label: "안전", emoji: "🛡️" },
-  { value: "life", label: "라이프", emoji: "🌱" },
+  { value: "practical", label: "실용정보", emoji: "📋" },
+  { value: "culture", label: "문화비교", emoji: "🤝" },
   { value: "local", label: "로컬", emoji: "🇯🇵" },
   { value: "essay", label: "에세이", emoji: "✍️" },
 ];
@@ -32,9 +30,8 @@ const statusOptions: SelectOption[] = [
 ];
 
 const modalCategoryOptions: SelectOption[] = [
-  { value: "investment", label: "투자", emoji: "📈" },
-  { value: "safety", label: "안전", emoji: "🛡️" },
-  { value: "life", label: "라이프", emoji: "🌱" },
+  { value: "practical", label: "실용정보", emoji: "📋" },
+  { value: "culture", label: "문화비교", emoji: "🤝" },
   { value: "local", label: "로컬", emoji: "🇯🇵" },
   { value: "essay", label: "에세이", emoji: "✍️" },
 ];
@@ -52,7 +49,7 @@ export type PostTranslation = {
 export type MergedPost = {
   id: string;
   slug: string;
-  category: "investment" | "safety" | "life" | "local" | "essay";
+  category: "practical" | "culture" | "local" | "essay";
   tags: string[];
   status: "memo" | "draft" | "editing" | "review" | "published";
   author: string;
@@ -125,7 +122,7 @@ export default function PostList({ defaultStatusFilter = "all" }: PostListProps 
         body: JSON.stringify({
           slug: defaultSlug,
           title: "제목 입력", // API 스키마가 min(1)을 요구함
-          category: "investment",
+          category: "practical",
           lang: "ko",
         }),
       });
@@ -340,9 +337,8 @@ export default function PostList({ defaultStatusFilter = "all" }: PostListProps 
 
                   // 카테고리 이모지 변환
                   const categoryEmoji: Record<string, string> = {
-                    investment: "📈",
-                    safety: "🛡️",
-                    life: "🌱",
+                    practical: "📋",
+                    culture: "🤝",
                     local: "🇯🇵",
                     essay: "✍️",
                   };

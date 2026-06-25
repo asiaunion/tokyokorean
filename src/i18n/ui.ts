@@ -109,17 +109,17 @@ const ui = {
     langBannerKo: "",
     langBannerJa: "",
     topicHubs: {
-      urbanInvestment: {
+      practical: {
         title: "일본 생활 실용 정보",
         description:
           "비자·은행·집 구하기·병원·교통 등 일본 정착 실전 가이드.",
       },
-      macroPolicy: {
+      culture: {
         title: "한일 문화 비교",
         description:
           "직장·식문화·결혼·언어까지, 8년 거주자가 느낀 한일 차이.",
       },
-      tokyoLife: {
+      local: {
         title: "도쿄 니혼바시 로컬",
         description:
           "니혼바시 카페·마트·편의점·근교 여행까지 실거주 생활 정보.",

@@ -25,17 +25,15 @@ const wordCount = body?.split(/\s+/).length ?? 0;
 const readingTime = Math.max(1, Math.round(wordCount / 200));
 
 const categoryI18n: Record<string, string> = {
-  investment: "투자",
-  safety: "안전",
-  life: "생활",
+  practical: "실용정보",
+  culture: "문화비교",
   local: "로컬",
   essay: "에세이",
 };
 
 const categoryColors: Record<string, string> = {
-  investment: "bg-emerald-500/15 text-emerald-400 border-emerald-500/25",
-  safety: "bg-amber-500/15 text-amber-400 border-amber-500/25",
-  life: "bg-sky-500/15 text-sky-400 border-sky-500/25",
+  practical: "bg-sky-500/15 text-sky-400 border-sky-500/25",
+  culture: "bg-amber-500/15 text-amber-400 border-amber-500/25",
   local: "bg-violet-500/15 text-violet-400 border-violet-500/25",
   essay: "bg-rose-500/15 text-rose-400 border-rose-500/25",
 };

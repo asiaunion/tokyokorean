@@ -5,7 +5,7 @@ pubDatetime: 2026-06-19T12:00:00+09:00
 author: Joseph KIM
 lang: ko
 draft: false
-category: investment
+category: practical
 tags:
   - 일본생활
   - 일본은행

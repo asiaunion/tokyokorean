@@ -1,7 +1,11 @@
 /**
  * Rules for HighIntentPostCta — see docs/HIGH_INTENT_POST_CTA.md
  */
-export const HIGH_INTENT_FREELANCE_CATEGORIES = ["investment", "safety"] as const;
+export const HIGH_INTENT_FREELANCE_SLUGS = [
+  "japan-banking-credit-card",
+  "tokyo-housing-rental-process",
+  "nihonbashi-buying-property-foreigner",
+] as const;
 
 /** Posts that show the D-90 relocation checklist link */
 export const LEAD_MAGNET_SLUGS = [
@@ -22,11 +26,8 @@ export function postSlugFromId(postId: string): string {
   return postId.replace(/^(en|ko|ja)\//, "");
 }
 
-export function showsFreelanceCta(category: string | undefined): boolean {
-  if (!category) return false;
-  return (HIGH_INTENT_FREELANCE_CATEGORIES as readonly string[]).includes(
-    category
-  );
+export function showsFreelanceCta(slug: string): boolean {
+  return (HIGH_INTENT_FREELANCE_SLUGS as readonly string[]).includes(slug);
 }
 
 export function showsLeadMagnetCta(slug: string): boolean {
@@ -37,5 +38,5 @@ export function showsHighIntentBlock(
   category: string | undefined,
   slug: string
 ): boolean {
-  return showsFreelanceCta(category) || showsLeadMagnetCta(slug);
+  return showsFreelanceCta(slug) || showsLeadMagnetCta(slug);
 }

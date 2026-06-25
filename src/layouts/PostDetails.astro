@@ -18,7 +18,7 @@ import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 import { SITE } from "@/config";
 import { PUBLIC_PROFILES } from "@/config";
 import PostDisclaimer from "@/components/PostDisclaimer.astro";
-import { resolvePostDisclaimerCategory } from "@/lib/postDisclaimer";
+import { resolvePostDisclaimerTier } from "@/lib/postDisclaimer";
 import { resolvePostLang } from "@/utils/postLang";
 import RelatedPosts from "@/components/RelatedPosts.astro";
 import SourcesList from "@/components/SourcesList.astro";
@@ -68,9 +68,9 @@ const {
   citeSources,
 } = post.data;
 
-const postDisclaimerCategory = resolvePostDisclaimerCategory(category);
-
 const postSlug = postSlugFromId(post.id);
+
+const postDisclaimerCategory = resolvePostDisclaimerTier(postSlug);
 
 const disclaimerLang = resolvePostLang(post);
 

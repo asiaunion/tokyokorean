@@ -16,7 +16,7 @@ type Props = {
 
 const { lang, localePrefix, category, slug } = Astro.props;
 
-const showFreelance = showsFreelanceCta(category);
+const showFreelance = showsFreelanceCta(slug);
 const showMagnet = showsLeadMagnetCta(slug);
 
 if (!showFreelance && !showMagnet) {

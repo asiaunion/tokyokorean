@@ -2,6 +2,7 @@
 title: "니혼바시 카페 추천 — 2년 살면서 찾아낸 단골 5곳"
 pubDatetime: 2026-07-07T12:00:00+09:00
 author: Joseph KIM
+category: local
 lang: ko
 description: "니혼바시에 실제로 거주하며 2년 동안 반복해서 찾게 된 카페 5곳을 정리했습니다. 핸드드립 전문점부터 식사 겸 방문하기 좋은 체인 카페까지, 실거주자의 기준으로 고른 단골 리스트입니다."
 tags:
