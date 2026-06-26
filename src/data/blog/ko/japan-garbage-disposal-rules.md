@@ -15,7 +15,7 @@ tags:
   - 도쿄생활
   - 니혼바시
 sources:
-  - "https://www.city.chuo.lg.jp/a0021/shigoto/kankyou-seibi/kankyo/gomi/index.html"
+  - "https://city.chuo.lg.jp/kurashi/gomi/index.html"
   - "https://www.env.go.jp/recycle/waste/index.html"
 ---
 
