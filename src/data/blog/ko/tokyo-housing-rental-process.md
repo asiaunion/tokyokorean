@@ -19,7 +19,6 @@ sources:
   - "https://www.safetynet-jutaku.jp/"
 ---
 
-# 일본 집 구하기 — 외국인으로 도쿄에서 임대 도전한 이야기
 
 ## 들어가며
 

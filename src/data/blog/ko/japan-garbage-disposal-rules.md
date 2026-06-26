@@ -19,7 +19,6 @@ sources:
   - "https://www.env.go.jp/recycle/waste/index.html"
 ---
 
-# 일본 쓰레기 분리수거 방법 — 니혼바시로 이사 와서 가장 당황했던 것
 
 ## 들어가며
 
@@ -91,6 +90,8 @@ sources:
 이사할 때마다 새로운 규칙을 다시 확인해야 하는 이유이기도 합니다.
 
 ## 실제로 겪어보니
+
+![니혼바시 주오구 쓰레기 집하장 — 분리수거 종류별 안내판과 까마귀 방지 네트가 걸린 쓰레기 보관소](/assets/images/blog/japan-garbage-disposal-rules-1.jpg)
 
 니혼바시로 이사한 뒤 관리사무소에서 받은 안내문이 아직도 기억에 남습니다.
 

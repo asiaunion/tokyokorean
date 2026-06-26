@@ -18,7 +18,6 @@ sources:
   - "https://www.city.chuo.lg.jp/a0050/rekishi-bunka/chuo-ku-no-rekishi/nihonbashi/index.html"
 ---
 
-# 니혼바시 역사와 현재 — 실거주자가 바라본 이 동네
 
 ## '옛 도쿄'가 아니라, 지금도 계속 쓰이는 동네
 

@@ -18,7 +18,6 @@ sources:
   - "https://www.moj.go.jp/MINJI/minji05_00230.html"
 ---
 
-# 일본에서 집을 산다는 것 — 외국인 부동산 매입 실전기
 
 ## 들어가며
 

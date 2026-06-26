@@ -18,7 +18,6 @@ sources:
   - "https://www.lifecorp.jp/"
 ---
 
-# 니혼바시 마트 비교 — 실제로 장 보며 알게 된 것들
 
 ## 들어가며
 

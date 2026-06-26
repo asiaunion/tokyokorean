@@ -15,7 +15,6 @@ ogImage: /assets/images/blog/japan-married-to-japanese-culture-diff-hero.jpg
 draft: false
 ---
 
-# 일본인 아내와 살며 놀랐던 문화 차이 — 8년째 배우는 중
 
 ## 들어가며
 

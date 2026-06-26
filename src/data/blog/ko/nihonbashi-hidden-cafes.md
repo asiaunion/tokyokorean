@@ -15,7 +15,6 @@ draft: false
 ogImage: /assets/images/blog/nihonbashi-hidden-cafes-hero.jpg
 ---
 
-# 니혼바시 카페 추천 — 2년 살면서 찾아낸 단골 5곳
 
 ## 들어가며
 

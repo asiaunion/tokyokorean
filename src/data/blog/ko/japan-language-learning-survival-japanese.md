@@ -17,7 +17,6 @@ sources:
   - "https://www3.nhk.or.jp/nhkworld/en/learnjapanese/"
 ---
 
-# 일본어 공부법 — N1 취득까지 실제로 도움된 것들
 
 ## 일본어는 '공부'보다 '생활' 쪽에서 더 많이 늘었다
 

@@ -17,7 +17,6 @@ sources:
   - "https://www.gotokyo.org/jp/see-and-do/traditional-culture/festivals/"
 ---
 
-# 일본 마쓰리 문화 — 니혼바시에서 직접 겪은 계절 행사들
 
 ## 처음 본 동네 마쓰리의 기억
 

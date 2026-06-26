@@ -18,7 +18,6 @@ sources:
   - "https://www.mhlw.go.jp/toukei/saikin/hw/kaigo/service23/index.html"
 ---
 
-# 개호 현장에서 본 일본의 고령사회 — 직접 일해보며 느낀 것들
 
 ## 들어가며
 

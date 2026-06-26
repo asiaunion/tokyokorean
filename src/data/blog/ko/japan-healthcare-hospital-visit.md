@@ -18,7 +18,6 @@ sources:
   - "https://www.kyoukaikenpo.or.jp/"
 ---
 
-# 일본 병원 이용법 — 외국인이 처음 아팠을 때 알게 된 것들
 
 ## 들어가며
 
@@ -65,6 +64,8 @@ sources:
 
 ## 클리닉과 큰 병원의 차이
 
+![닌교초 えきまえ薬局(역전 약국) — 처방전 수령 후 들르는 조제약국의 전형적인 외관](/assets/images/blog/japan-healthcare-hospital-visit-3.jpg)
+
 일본에서 "병원"이라고 해도 규모와 성격이 다릅니다.
 
 - **클리닉(クリニック / 診療所)**: 소규모 의원. 감기, 내과, 피부과 등. 예약 없이 방문 가능한 경우도 많음
@@ -108,6 +109,10 @@ sources:
 같은 일본이라도 시설과 지역에 따라 차이가 있다는 점을 알게 되었습니다.
 
 ## 실제로 겪어보니
+
+![닌교초 빌딩 층별 안내판 — 형성외과, 치과, 약국 등 여러 클리닉이 입주해 있는 의료 빌딩 디렉터리](/assets/images/blog/japan-healthcare-hospital-visit-4.jpg)
+
+![日本橋内科クリニック 외관 — 비오는 날의 동네 내과 클리닉 입구. 내과라는 큰 글씨가 유리창에 새겨져 있다](/assets/images/blog/japan-healthcare-hospital-visit-5.jpg)
 
 병원에서 가장 놀랐던 장면은 간호사 공간 뒤편에 가득 쌓인 종이 서류 파일이었습니다.
 
