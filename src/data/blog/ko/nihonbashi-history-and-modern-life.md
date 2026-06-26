@@ -43,8 +43,6 @@ sources:
 
 ![닌교초 전통 화과자 노포 双楽 — 에도 시대부터 이어진 노포가 지금도 이 거리에 자리를 지키고 있다](/assets/images/blog/nihonbashi-history-and-modern-life-5.jpg)
 
-![수이텐구 신사 도리이와 코레도 무로마치 — 에도 시대의 상징인 붉은 도리이 너머로 현대 상업시설이 이어져 있어, 이 동네의 시간 감각을 한 장면에 담아낸다](/assets/images/blog/nihonbashi-history-and-modern-life-6.jpg)
-
 ## 살면서 느끼는 니혼바시의 장점
 
 니혼바시에 실제로 살면서 느낀 장점은 크게 세 가지였습니다.
