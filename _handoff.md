@@ -196,3 +196,29 @@
 - E-E-A-T 페이지 + **published KO 포스트 전체** 색인 생성 요청 완료
 - 다음: Google 반영 대기 (수일~2주) · `garbage-disposal` 본문 1장 · AdSense 7/13~15
 
+## [2026-06-26 11:52] AG 배포 완료
+- 작업 내용: 주오구 쓰레기 분리수거 관련 링크 수정 (Broken link -> New link)
+- 커밋 해시: 7d45e13
+- 배포 URL: https://tokyokorean.net (Vercel 배포 진행 중)
+- Claude 부재 여부: 아니오
+- 특이사항: 없음
+## [2026-06-26 11:56] AG 배포 완료
+- 작업 내용: 주오구 쓰레기 분리수거 관련 링크 수정 (www 추가)
+- 커밋 해시: 3a302fc
+- 배포 URL: https://tokyokorean.net (Vercel 배포 진행 중)
+- Claude 부재 여부: 아니오
+- 특이사항: www 누락으로 인한 접근 불가 문제 수정
+
+## [2026-06-26 20:08] AG 배포 완료
+- 작업 내용: 블로그 포스트 내 중복 제목 (H1) 삭제
+- 커밋 해시: 97af84e
+- 배포 URL: https://tokyokorean.net
+- Claude 부재 여부: 예
+- 특이사항: 20개 마크다운 파일 내 중복 H1 삭제
+
+## [2026-06-30 16:41] AG 배포 완료
+- 작업 내용: 예약 발행 포스트 (tokyo-supermarket-guide.md) 배포 트리거
+- 커밋 해시: 2b0b999
+- 배포 URL: https://tokyokorean.net
+- Claude 부재 여부: 예
+- 특이사항: 6월 30일자 예약 포스트 배포를 위해 Vercel 트리거 실행
