@@ -11,8 +11,8 @@
       "permanent": true
     },
     {
-      "source": "/ko/:path*",
-      "destination": "/:path*",
+      "source": "/ko/:path(.*)",
+      "destination": "/:path",
       "permanent": true
     },
     {
@@ -26,8 +26,8 @@
       "permanent": true
     },
     {
-      "source": "/ja/:path*",
-      "destination": "/:path*",
+      "source": "/ja/:path(.*)",
+      "destination": "/:path",
       "permanent": true
     },
     {
@@ -41,8 +41,8 @@
       "permanent": true
     },
     {
-      "source": "/en/:path*",
-      "destination": "/:path*",
+      "source": "/en/:path(.*)",
+      "destination": "/:path",
       "permanent": true
     },
     {
