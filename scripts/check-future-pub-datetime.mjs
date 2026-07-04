@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 
 /**
- * Fail the build if any non-draft blog post has pubDatetime in the future (JST).
- * Prevents live sitemap/RSS from showing future-dated posts (AdSense trust risk).
+ * Fail the build if any non-draft blog post has an invalid pubDatetime:
+ *  - after today (JST) — future-dated live posts
+ *  - before domain registration — predates tokyokorean.net existence
  *
  * Usage: node scripts/check-future-pub-datetime.mjs
- * Exit 1 if any future date found.
+ * Exit 1 on violation.
  */
 
 import { readFileSync, readdirSync } from "node:fs";
@@ -13,6 +14,15 @@ import { join } from "node:path";
 
 const BLOG_ROOT = "src/data/blog";
 const LOCALES = ["ko", "en", "ja"];
+
+/**
+ * tokyokorean.net registered 2026-06-16 (WHOIS).
+ * Earliest plausible publish = 2026-06-17 JST (first full day on domain).
+ * Override: TOKYOKOREAN_MIN_PUB_DATE=2026-06-17
+ */
+const MIN_PUB_DATE =
+  process.env.TOKYOKOREAN_MIN_PUB_DATE?.trim() || "2026-06-17T00:00:00+09:00";
+const minPubMs = new Date(MIN_PUB_DATE).getTime();
 
 /** End of today in JST — posts dated later are rejected. */
 function endOfTodayJstMs() {
@@ -40,7 +50,7 @@ function getPubDatetime(fm) {
   return m?.[1]?.trim() ?? null;
 }
 
-const cutoff = endOfTodayJstMs();
+const maxPubMs = endOfTodayJstMs();
 const violations = [];
 
 for (const locale of LOCALES) {
@@ -67,27 +77,39 @@ for (const locale of LOCALES) {
       continue;
     }
 
-    if (pub.getTime() > cutoff) {
+    const pubMs = pub.getTime();
+
+    if (pubMs > maxPubMs) {
       violations.push({
         path,
         pubDatetime: raw,
         reason: "future date (after today JST)",
+      });
+    } else if (pubMs < minPubMs) {
+      violations.push({
+        path,
+        pubDatetime: raw,
+        reason: `before domain min (${MIN_PUB_DATE})`,
       });
     }
   }
 }
 
 if (violations.length > 0) {
-  console.error("\n🚨 FUTURE pubDatetime DETECTED\n");
+  console.error("\n🚨 INVALID pubDatetime DETECTED\n");
   for (const v of violations) {
     console.error(`  ❌ ${v.path}`);
-    console.error(`     pubDatetime: ${v.pubDatetime} (${v.reason})\n`);
+    console.error(`     pubDatetime: ${v.pubDatetime}`);
+    console.error(`     reason: ${v.reason}\n`);
   }
   console.error(
-    "Fix dates to today or earlier, or set draft: true until ready to publish.\n"
+    "Dates must be on or after domain launch and not in the future.\n" +
+      "Use draft: true for scheduled posts, or adjust TOKYOKOREAN_MIN_PUB_DATE if domain date changes.\n"
   );
   process.exit(1);
 }
 
-console.log("✅ No future pubDatetime in published blog posts.");
+console.log(
+  `✅ pubDatetime OK (≥ ${MIN_PUB_DATE.split("T")[0]}, ≤ today JST).`
+);
 process.exit(0);

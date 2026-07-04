@@ -9,6 +9,7 @@
 
 | Fact | Value | Scope |
 |------|-------|--------|
+| Domain registered | **2026-06-16** (WHOIS) | Earliest post date: **2026-06-17** |
 | Japan move | **2018** | First arrival in Japan |
 | Japan tenure (2026) | **8 years** | Total time living in Japan |
 | Pre-Japan | Gangneung, Korea → **Chiang Mai ~2 years** | Before 2018 move |
@@ -47,6 +48,7 @@ Scanned 20 KO posts for **2018 / 8년 / 2년 / 니혼바시** usage.
 | 니혼바시 2년 | ✅ Scoped to local posts (cafes, supermarkets) — not total Japan years |
 | 개호 2년 | ✅ Scoped to care facility job — not Japan total |
 | Contradiction found | ❌ None blocking |
+| pubDatetime vs domain | ✅ All 20 posts ≥ 2026-06-17 (build gate enforced) |
 
 **Watch:** Any new post stating "Nihonbashi for 8 years" would break the sheet.
 
