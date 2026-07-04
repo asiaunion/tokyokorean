@@ -112,3 +112,14 @@ GSC에서 `https://tokyokorean.net/` 속성을 보고 있으므로 **소유권�
 
 - [`docs/LOCALE_SSOT.md`](./LOCALE_SSOT.md)
 - GSF-Ark 후속: `GSF-Ark/docs/DEFERRED_AFTER_ADSENSE.md` (별 사이트)
+
+---
+
+## AdSense prep (2026-07-05)
+
+| 항목 | 상태 |
+|------|------|
+| AdSense 사이트 추가 (tokyokorean.net) | ⏳ (Joseph 진행 대기) |
+| PUBLIC_ADSENSE_PUBLISHER_ID (ca-pub-4729433282370174) | ✅ |
+| 라이브 ads.txt · adsbygoogle.js | ✅ |
+| TokyoKorean 「검토 요청」제출 | ❌ 미실시 (의도적) |

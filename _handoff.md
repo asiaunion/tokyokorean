@@ -222,3 +222,10 @@
 - 배포 URL: https://tokyokorean.net
 - Claude 부재 여부: 예
 - 특이사항: 6월 30일자 예약 포스트 배포를 위해 Vercel 트리거 실행
+
+## [2026-07-05 00:20] AG 배포 완료 (AdSense Prep)
+- 작업 내용: GSF-Ark와 동일 계정/동일 ca-pub-4729433282370174로 Vercel 환경 변수 PUBLIC_ADSENSE_PUBLISHER_ID 설정 (Production/Preview) 및 재배포 완료
+- 커밋 해시: env 수정 redeploy (dpl_2ykpoSqkWkC2AApTYBw77Peag2eH)
+- 배포 URL: https://tokyokorean.net
+- Claude 부재 여부: 예
+- 특이사항: 라이브 curl 검증을 통해 ads.txt, 메타 태그, adsbygoogle.js 로드 및 locale 회귀가 전혀 없음(OK: no locale hrefs)을 확인 완료함. AdSense 사이트 추가는 Joseph가 하되, 정식 검토 요청(Request review)은 제출하지 않고 대기.
