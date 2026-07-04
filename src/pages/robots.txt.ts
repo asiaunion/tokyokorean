@@ -16,14 +16,8 @@ Disallow: /wp-login.php
 
 # Thin / utility listings (noindex in HTML) — save crawl budget for posts & topics
 Disallow: /tags/
-Disallow: /ko/tags/
-Disallow: /ja/tags/
 Disallow: /archives/
-Disallow: /ko/archives/
-Disallow: /ja/archives/
 Disallow: /search/
-Disallow: /ko/search/
-Disallow: /ja/search/
 
 Sitemap: ${sitemapURL.href}
 `;

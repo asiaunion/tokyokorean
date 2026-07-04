@@ -29,8 +29,18 @@ export default defineConfig({
     "/sitemap.xml": { status: 308, destination: "/sitemap-index.xml" },
     // AdSense / reviewers often probe /privacy/ — canonical page is privacy-policy
     "/privacy": { status: 308, destination: "/privacy-policy/" },
-    "/ko/privacy": { status: 308, destination: "/ko/privacy-policy/" },
-    "/ja/privacy": { status: 308, destination: "/ja/privacy-policy/" },
+    // Single-locale site: legacy GSF-Ark-style /ko|/ja prefixes → unprefixed
+    "/ko": { status: 308, destination: "/" },
+    "/ko/": { status: 308, destination: "/" },
+    "/ja": { status: 308, destination: "/" },
+    "/ja/": { status: 308, destination: "/" },
+    "/ko/privacy": { status: 308, destination: "/privacy-policy/" },
+    "/ja/privacy": { status: 308, destination: "/privacy-policy/" },
+    "/ko/privacy-policy": { status: 308, destination: "/privacy-policy/" },
+    "/ja/privacy-policy": { status: 308, destination: "/privacy-policy/" },
+    "/ko/privacy-policy/": { status: 308, destination: "/privacy-policy/" },
+    "/ja/privacy-policy/": { status: 308, destination: "/privacy-policy/" },
+
     // Korean legacy post slugs — explicit 1:1 mapping (18 rules)
     ...getLegacyPostRedirects(),
     // Tag URL normalization (locale × encoding × case × pagination × slash) and

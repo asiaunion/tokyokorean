@@ -1,69 +1,79 @@
-{"redirects":
-[
-  {
-    "source": "/ko/posts/:slug*",
-    "destination": "/posts/:slug*",
-    "permanent": false
-  },
-  {
-    "source": "/en",
-    "destination": "/",
-    "permanent": true
-  },
-  {
-    "source": "/en/",
-    "destination": "/",
-    "permanent": true
-  },
-  {
-    "source": "/en/:path*",
-    "destination": "/:path*",
-    "permanent": true
-  },
-  {
-    "source": "/author",
-    "destination": "/about/",
-    "permanent": true
-  },
-  {
-    "source": "/author/",
-    "destination": "/about/",
-    "permanent": true
-  },
-  {
-    "source": "/author/:path*",
-    "destination": "/about/",
-    "permanent": true
-  },
-  {
-    "source": "/privacy/",
-    "destination": "/privacy-policy/",
-    "permanent": true
-  },
-  {
-    "source": "/ko/privacy/",
-    "destination": "/ko/privacy-policy/",
-    "permanent": true
-  },
-  {
-    "source": "/ja/privacy/",
-    "destination": "/ja/privacy-policy/",
-    "permanent": true
-  },
-  {
-    "source": "/:path*/feed/",
-    "destination": "/",
-    "permanent": true
-  },
-  {
-    "source": "/feed/",
-    "destination": "/rss.xml",
-    "permanent": true
-  },
-  {
-    "source": "/en/:path(.*)",
-    "destination": "/:path",
-    "permanent": true
-  }
-]
+{
+  "redirects": [
+    {
+      "source": "/ko",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ko/:path*",
+      "destination": "/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/ja",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ja/:path*",
+      "destination": "/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/en",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/en/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/en/:path*",
+      "destination": "/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/author",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/author/",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/author/:path*",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy/",
+      "destination": "/privacy-policy/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*/feed/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/feed/",
+      "destination": "/rss.xml",
+      "permanent": true
+    }
+  ]
 }
