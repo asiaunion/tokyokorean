@@ -1,5 +1,5 @@
 import { parseLocalizedPath } from "@/utils/hreflang";
-import { defaultUiLang, getUi, type UiLang } from "@/i18n/ui";
+import { defaultUiLang, getUi } from "@/i18n/ui";
 
 export type BreadcrumbItem = {
   label: string;
@@ -8,19 +8,15 @@ export type BreadcrumbItem = {
 };
 
 /**
- * Locale-aware crumbs from URL (matches [...locale] routing: en unprefixed).
+ * Single-locale site: public URLs are always unprefixed.
+ * Content folder `ko/` is not a URL prefix.
  */
 export function buildBreadcrumbItems(pathname: string): BreadcrumbItem[] {
   const normalized =
     pathname.replace(/\/+$/, "") === "" ? "/" : pathname.replace(/\/+$/, "");
-  const { locale, pathWithoutLocale } = parseLocalizedPath(normalized);
-  const isArchivesPath =
-    pathWithoutLocale === "/archives" ||
-    pathWithoutLocale.startsWith("/archives/");
-  /** /archives/ has no locale prefix; align crumb + home link with SITE.lang chrome. */
-  const chromeLang = (isArchivesPath ? defaultUiLang() : locale) as UiLang;
-  const L = getUi(chromeLang);
-  const base = chromeLang === "en" ? "" : `/${chromeLang}`;
+  const { pathWithoutLocale } = parseLocalizedPath(normalized);
+  const L = getUi(defaultUiLang());
+  const base = "";
 
   const segments =
     pathWithoutLocale === "/"

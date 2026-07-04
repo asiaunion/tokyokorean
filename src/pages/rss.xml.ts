@@ -4,17 +4,11 @@ import { getPath } from "@/utils/getPath";
 import getSortedPosts from "@/utils/getSortedPosts";
 import { SITE } from "@/config";
 
-export function getStaticPaths() {
-  return [
-    { params: { locale: undefined } },
-    { params: { locale: "ko" } },
-    { params: { locale: "ja" } },
-  ];
-}
-
-export async function GET({ params }: any) {
-  const lang = params.locale || "en";
-  const posts = await getCollection("blog", ({ id }) => id.startsWith(`${lang}/`));
+/** Single-locale site: all posts live under content folder `ko/` but public URLs are unprefixed. */
+export async function GET() {
+  const posts = await getCollection("blog", ({ id }) =>
+    id.startsWith(`${SITE.lang}/`)
+  );
   const sortedPosts = getSortedPosts(posts);
   return rss({
     title: SITE.title,

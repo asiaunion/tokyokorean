@@ -14,8 +14,7 @@ export interface Props {
 }
 
 const { frontmatter, schemaType = "AboutPage" } = Astro.props;
-const { locale } = Astro.params;
-const currentLang = (locale as string | undefined) || "en";
+const currentLang = SITE.lang;
 
 const sameAs = frontmatter.sameAs ?? [];
 const authorImageUrl = new URL(
@@ -52,6 +51,7 @@ const pageLd =
 
 <Layout
   title={`${frontmatter.title} | ${SITE.title}`}
+  htmlLang={SITE.lang}
   overrideJsonLd={pageLd}
 >
   <Header />

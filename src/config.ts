@@ -6,8 +6,8 @@ export const PUBLIC_PROFILES = {
 
 export const SITE = {
   website: "https://tokyokorean.net/", // replace this with your deployed domain
-  author: "Joseph",
-  profile: "https://tokyokorean.net/",
+  author: "Joseph KIM",
+  profile: "https://tokyokorean.net/about/",
   desc: "일본 거주 8년차 한국인이 전하는 일본 생활, 문화, 도쿄 로컬 이야기",
   title: "Tokyo Korean Life",
   ogImage: "tokyokorean-og-default.jpg",

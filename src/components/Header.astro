@@ -6,21 +6,16 @@ import IconArchive from "@/assets/icons/IconArchive.svg";
 import IconSunHigh from "@/assets/icons/IconSunHigh.svg";
 import IconMenuDeep from "@/assets/icons/IconMenuDeep.svg";
 import LinkButton from "./LinkButton.astro";
-import LanguageSwitcher from "./LanguageSwitcher.astro";
-import LangBanner from "./LangBanner.astro";
 import { SITE } from "@/config";
-import { getUi, type UiLang } from "@/i18n/ui";
+import { defaultUiLang, getUi, type UiLang } from "@/i18n/ui";
 
 type Props = { uiLang?: UiLang };
 
 const { uiLang: uiLangProp } = Astro.props as Props;
 const { pathname } = Astro.url;
-const { locale } = Astro.params;
-const lang = (
-  uiLangProp ??
-  (locale === "ko" || locale === "ja" ? locale : "en")
-) as UiLang;
-const l = ""; // Legacy multilingual prefix removed (site is ko-only at root)
+// Single-locale site: UI is always Korean; public URLs are unprefixed.
+const lang = (uiLangProp ?? defaultUiLang()) as UiLang;
+const l = "";
 const L = getUi(lang);
 
 // Remove trailing slash from current pathname if exists
@@ -50,7 +45,6 @@ const isActive = (path: string) => {
   {L.skipToContent}
 </a>
 
-<LangBanner uiLang={lang} pathname={pathname} locale={locale} />
 <header
   class="app-layout flex flex-col items-center justify-between sm:flex-row"
 >

@@ -53,8 +53,8 @@ const {
 const isErrorPage = !!robotsMeta;
 
 const { locale } = Astro.params;
-/** Unprefixed routes = default locale (en), per astro.config i18n */
-const currentLang = (htmlLangProp ?? locale ?? "en") as string;
+/** Single-locale site: public URLs are unprefixed; content/UI language is SITE.lang (ko). */
+const currentLang = (htmlLangProp ?? locale ?? SITE.lang) as string;
 
 const socialImageURL = new URL(ogImage, Astro.url);
 const canonicalHref =
@@ -327,8 +327,7 @@ const structuredData = overrideJsonLd ?? {
 
     <!--
       View transitions replace body content but keep the live <html> element.
-      Sync lang from the incoming document so Pagefind / i18n match the URL
-      (e.g. /search/ must use lang="en", not a stale "ko" from /ko/...).
+      Sync lang from the incoming document so Pagefind / i18n stay consistent.
     -->
     <script is:inline>
       document.addEventListener("astro:before-swap", function (ev) {
@@ -413,7 +412,7 @@ const structuredData = overrideJsonLd ?? {
     <slot />
 
     {!isErrorPage && (
-      <CookieConsent lang={(htmlLangProp ?? (locale as UiLang | undefined) ?? "en") as UiLang} />
+      <CookieConsent lang={(htmlLangProp ?? (locale as UiLang | undefined) ?? SITE.lang) as UiLang} />
     )}
 
     <!-- Load full theme logic -->

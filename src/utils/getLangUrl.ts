@@ -1,33 +1,28 @@
 import { canonicalizePathname } from "@/utils/hreflang";
+import { SITE } from "@/config";
 
 /**
- * 대상 언어 코드와 현재 pathname을 받아 해당 언어의 URL을 반환합니다.
- * archives 페이지에서는 언어 전환 시 /archives/로 유지합니다.
+ * Single-locale site (tokyokorean.net): public URLs are always unprefixed.
+ * Content language lives in `src/data/blog/ko/` (folder ≠ URL prefix).
+ * Never invent `/ko/…` or `/ja/…` links — those caused GSC 404 discovery.
  */
 export function getLangUrl(
-  targetLang: string,
+  _targetLang: string,
   pathname: string,
-  locale: string | undefined
+  _locale: string | undefined
 ): string {
   const normPath = pathname.replace(/\/+$/, "") || "/";
-  const onArchivesOnly =
-    normPath === "/archives" || normPath.startsWith("/archives/");
-
-  if (onArchivesOnly) return "/archives/";
-
-  let relativePath = pathname;
-
-  // Strip out current locale prefix if we are in a sub-locale
-  if (locale && pathname.startsWith(`/${locale}`)) {
-    relativePath = pathname.replace(`/${locale}`, "") || "/";
+  if (normPath === "/archives" || normPath.startsWith("/archives/")) {
+    return "/archives/";
   }
 
-  relativePath = relativePath || "/";
+  let relativePath = pathname || "/";
+  // Strip any accidental legacy locale prefix
+  relativePath = relativePath.replace(/^\/(ko|ja|en)(?=\/|$)/, "") || "/";
   if (!relativePath.startsWith("/")) relativePath = `/${relativePath}`;
-
   relativePath = canonicalizePathname(relativePath);
 
-  if (targetLang === "en") return relativePath;
-  if (relativePath === "/") return `/${targetLang}/`;
-  return `/${targetLang}${relativePath}`;
+  // SITE.lang is the only content language; all targets resolve to the same URL.
+  void SITE.lang;
+  return relativePath;
 }

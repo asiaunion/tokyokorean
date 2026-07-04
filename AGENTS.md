@@ -22,6 +22,14 @@ Global rules: `~/.gemini/config/rules/agent_rules.md`
 | `pnpm validate:post <slug>` | **Cursor** |
 | git commit / deploy | **User** (unless explicitly asked) |
 
+## Locale SSOT (HARD — 2026-07-04)
+
+**Public URLs are unprefixed only.** Content lives in `src/data/blog/ko/` (folder = language, **not** URL prefix).
+
+- **Never** emit `/ko/…` or `/ja/…` links in HTML, RSS, sitemap, or UI.
+- Edge 308s for legacy `/ko|/ja` are insurance only — do not regenerate those URLs.
+- Full rules: [`docs/LOCALE_SSOT.md`](docs/LOCALE_SSOT.md)
+
 ---
 
 ## ⚙️ GSF-Blog 고정 아키텍처 규칙 (SSOT) — 2026-05-25+

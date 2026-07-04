@@ -10,7 +10,7 @@ type Props = {
   lang?: UiLang;
 };
 
-const { lang = "en" } = Astro.props;
+const { lang = "ko" } = Astro.props;
 
 const labels: Record<string, { message: string; accept: string; decline: string; learnMore: string }> = {
   en: {
@@ -33,8 +33,9 @@ const labels: Record<string, { message: string; accept: string; decline: string;
   },
 };
 
-const t = labels[lang] ?? labels.en;
-const privacyHref = lang === "en" ? "/privacy-policy/" : `/${lang}/privacy-policy/`;
+const t = labels[lang] ?? labels.ko;
+// Single-locale site: never invent /ko/ or /ja/ privacy URLs.
+const privacyHref = "/privacy-policy/";
 ---
 
 <div

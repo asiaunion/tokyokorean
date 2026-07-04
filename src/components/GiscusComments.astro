@@ -9,15 +9,14 @@
  * 2. Install the Giscus app: https://github.com/apps/giscus
  * 3. Configure at https://giscus.app/ and update repo/repoId/categoryId below
  */
-import { getUi, type UiLang } from "@/i18n/ui";
+import { defaultUiLang, getUi, type UiLang } from "@/i18n/ui";
 
 type Props = {
   lang?: UiLang;
 };
 
 const { lang: langProp } = Astro.props;
-const { locale } = Astro.params;
-const navLang = (langProp ?? locale ?? "en") as UiLang;
+const navLang = (langProp ?? defaultUiLang()) as UiLang;
 const L = getUi(navLang);
 
 // Giscus configuration — update these after setting up at https://giscus.app/
@@ -33,7 +32,7 @@ const giscusLangMap: Record<string, string> = {
   ko: "ko",
   ja: "ja",
 };
-const giscusLang = giscusLangMap[navLang] ?? "en";
+const giscusLang = giscusLangMap[navLang] ?? "ko";
 ---
 
 <section id="giscus-comments" class="mt-8">
