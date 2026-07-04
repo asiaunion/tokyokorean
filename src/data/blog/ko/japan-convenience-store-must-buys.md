@@ -1,6 +1,6 @@
 ---
 title: "일본 편의점 추천 상품 — 8년 차가 아직도 사는 것들"
-pubDatetime: 2026-07-16T12:00:00+09:00
+pubDatetime: 2026-06-14T12:00:00+09:00
 author: Joseph KIM
 category: local
 lang: ko
