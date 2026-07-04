@@ -30,6 +30,11 @@ Global rules: `~/.gemini/config/rules/agent_rules.md`
 - Edge 308s for legacy `/ko|/ja` are insurance only — do not regenerate those URLs.
 - Full rules: [`docs/LOCALE_SSOT.md`](docs/LOCALE_SSOT.md)
 
+## GSC / AdSense status (Cursor)
+
+- Live checklist & Joseph actions: [`docs/GSC_ADSENSE_STATUS_20260704.md`](docs/GSC_ADSENSE_STATUS_20260704.md)
+- On TokyoKorean sessions: read that file for open Joseph actions and indexed-page snapshot.
+
 ---
 
 ## ⚙️ GSF-Blog 고정 아키텍처 규칙 (SSOT) — 2026-05-25+

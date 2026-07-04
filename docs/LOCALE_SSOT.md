@@ -41,3 +41,5 @@
 | Contact | `/contact/` |
 
 **Deferred (optional, not blocking application):** separate DMCA page; CWV re-measure after ads script live.
+
+GSC/AdSense Joseph checklist & indexed pages: [`GSC_ADSENSE_STATUS_20260704.md`](./GSC_ADSENSE_STATUS_20260704.md)
