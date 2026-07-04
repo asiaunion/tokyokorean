@@ -30,3 +30,14 @@
 ## GSC note
 
 404s on `/ko/` and `/ja/` were caused by **internal links** (LangBanner + CookieConsent), not missing static pages. Redirects alone are insufficient if HTML keeps emitting locale prefixes.
+
+## AdSense trust pages (2026-07-04)
+
+| Page | URL |
+|------|-----|
+| Privacy | `/privacy-policy/` |
+| Terms | `/terms/` (alias `/terms-of-service/` → 308) |
+| About | `/about/` |
+| Contact | `/contact/` |
+
+**Deferred (optional, not blocking application):** separate DMCA page; CWV re-measure after ads script live.

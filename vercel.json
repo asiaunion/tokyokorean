@@ -66,6 +66,16 @@
       "permanent": true
     },
     {
+      "source": "/terms-of-service",
+      "destination": "/terms/",
+      "permanent": true
+    },
+    {
+      "source": "/terms-of-service/",
+      "destination": "/terms/",
+      "permanent": true
+    },
+    {
       "source": "/:path*/feed/",
       "destination": "/",
       "permanent": true

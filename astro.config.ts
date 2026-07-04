@@ -41,6 +41,10 @@ export default defineConfig({
     "/ko/privacy-policy/": { status: 308, destination: "/privacy-policy/" },
     "/ja/privacy-policy/": { status: 308, destination: "/privacy-policy/" },
 
+    // Terms of service alias — canonical page is /terms/
+    "/terms-of-service": { status: 308, destination: "/terms/" },
+    "/terms-of-service/": { status: 308, destination: "/terms/" },
+
     // Korean legacy post slugs — explicit 1:1 mapping (18 rules)
     ...getLegacyPostRedirects(),
     // Tag URL normalization (locale × encoding × case × pagination × slash) and

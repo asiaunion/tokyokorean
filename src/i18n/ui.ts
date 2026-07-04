@@ -18,6 +18,7 @@ const ui = {
     footerAbout: "소개",
     footerContact: "연락",
     footerPrivacy: "개인정보 처리방침",
+    footerTerms: "이용약관",
     footerCopyright: "Copyright",
     footerAllRights: "All rights reserved.",
     heroTitleLine1: "도쿄 니혼바시에서",

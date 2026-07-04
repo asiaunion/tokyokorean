@@ -72,6 +72,7 @@ export function buildBreadcrumbItems(pathname: string): BreadcrumbItem[] {
     topics: L.navTopics,
     contact: L.footerContact,
     "privacy-policy": L.footerPrivacy,
+    terms: L.footerTerms,
     archives: L.navArchives,
   };
 

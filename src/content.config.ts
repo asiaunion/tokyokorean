@@ -159,4 +159,12 @@ const resources = defineCollection({
   }),
 });
 
-export const collections = { blog, about, privacy, contact, resources };
+const terms = defineCollection({
+  loader: glob({ pattern: "**/[^_]*.md", base: "./src/data/terms" }),
+  schema: z.object({
+    lang: z.enum(["en", "ko", "ja"]),
+    title: z.string(),
+  }),
+});
+
+export const collections = { blog, about, privacy, contact, resources, terms };
