@@ -1,6 +1,6 @@
 ---
 title: "일본 마쓰리 문화 — 니혼바시에서 직접 겪은 계절 행사들"
-pubDatetime: 2026-06-12T12:00:00+09:00
+pubDatetime: 2026-07-01T12:00:00+09:00
 author: Joseph KIM
 category: culture
 ogImage: /assets/images/blog/japan-seasons-matsuri-culture-hero.jpg

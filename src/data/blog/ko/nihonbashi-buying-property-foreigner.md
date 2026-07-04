@@ -1,6 +1,6 @@
 ---
 title: "일본에서 집을 산다는 것 — 외국인 부동산 매입 실전기"
-pubDatetime: 2026-06-02T12:00:00+09:00
+pubDatetime: 2026-06-17T12:00:00+09:00
 author: Joseph KIM
 lang: ko
 category: essay

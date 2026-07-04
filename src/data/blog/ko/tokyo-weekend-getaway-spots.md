@@ -1,6 +1,6 @@
 ---
 title: "니혼바시 베이스 당일치기 추천 — 직접 다녀온 곳들"
-pubDatetime: 2026-06-08T12:00:00+09:00
+pubDatetime: 2026-06-24T12:00:00+09:00
 author: Joseph KIM
 category: local
 lang: ko

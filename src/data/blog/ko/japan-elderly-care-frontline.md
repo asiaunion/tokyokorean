@@ -1,6 +1,6 @@
 ---
 title: "개호 현장에서 본 일본의 고령사회 — 직접 일해보며 느낀 것들"
-pubDatetime: 2026-06-10T12:00:00+09:00
+pubDatetime: 2026-06-27T12:00:00+09:00
 author: Joseph KIM
 category: essay
 lang: ko

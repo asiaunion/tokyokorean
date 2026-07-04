@@ -1,6 +1,6 @@
 ---
 title: "니혼바시 카페 추천 — 2년 살면서 찾아낸 단골 5곳"
-pubDatetime: 2026-06-05T12:00:00+09:00
+pubDatetime: 2026-06-20T12:00:00+09:00
 author: Joseph KIM
 category: local
 lang: ko
