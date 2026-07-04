@@ -15,7 +15,21 @@ tags:
   - 건강검진
 sources:
   - "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/kokusai/setsumei-ml.html"
+  - "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/e-okusuritecho.html"
+  - "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/denshishohousen_kokumin.html"
   - "https://www.kyoukaikenpo.or.jp/"
+  - "https://www.fdma.go.jp/publication/rescue/post-3.html"
+citeSources:
+  - label: "MHLW — 외국인을 위한 일본 의료제도 안내"
+    url: "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/kokusai/setsumei-ml.html"
+  - label: "MHLW — 전자版お薬手帳(복약수첩) 안내"
+    url: "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/e-okusuritecho.html"
+  - label: "MHLW — 전자처방전(국민용): 병원·약국 이용"
+    url: "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/denshishohousen_kokumin.html"
+  - label: "소방청 — 119 신고·구조 요청"
+    url: "https://www.fdma.go.jp/publication/rescue/post-3.html"
+  - label: "전국健康保険協会(協会けんぽ)"
+    url: "https://www.kyoukaikenpo.or.jp/"
 ---
 
 
@@ -48,7 +62,7 @@ sources:
 
 | 항목 | 설명 |
 |---|---|
-| **건강보험증(健康保険証)** | 직장 건강보험 또는 국민건강보험. 없으면 전액 자부담 |
+| **건강보험증(健康保険証)** | 직장 건강보험 또는 국민건강보험. 없으면 전액 자부담<sup class="source-ref"><a href="#source-5" id="cite-5">5</a></sup> |
 | **마이넘버카드** | 최근 보험증 기능 통합 진행 중. 병원에 따라 카드리더 있음 |
 | **복약수첩(お薬手帳)** | 복용 중인 약 기록. 첫 방문 시에도 지참 권장 |
 | **진찰권(診察券)** | 재방문 시 지참. 처음 방문이면 접수 시 발급됨 |
@@ -57,7 +71,7 @@ sources:
 
 ![수이텐구마에역 주변 — 토모즈 약국 간판이 보이는 닌교초 생활권 거리](/assets/images/blog/japan-healthcare-hospital-visit-1.jpg)
 
-일본은 **병원에서 진찰 → 처방전 발행 → 별도 약국에서 약 수령**하는 흐름이 기본입니다. 병원 내에서 바로 약을 주는 경우는 많지 않습니다.
+일본은 **병원에서 진찰 → 처방전 발행 → 별도 약국에서 약 수령**하는 흐름이 기본입니다.<sup class="source-ref"><a href="#source-3" id="cite-3">3</a></sup> 병원 내에서 바로 약을 주는 경우는 많지 않습니다.
 
 처음에는 처방전을 들고 약국까지 이동해야 한다는 점이 번거롭게 느껴졌습니다. 그런데 약국에서 복약수첩과 대조하며 약의 중복 처방이나 상호 작용을 확인해주는 구조라는 것을 나중에 알게 됐습니다. 약국 약사가 의외로 적극적으로 설명해주는 편이어서 안심이 됐습니다.
 
@@ -68,7 +82,7 @@ sources:
 일본에서 "병원"이라고 해도 규모와 성격이 다릅니다.
 
 - **클리닉(クリニック / 診療所)**: 소규모 의원. 감기, 내과, 피부과 등. 예약 없이 방문 가능한 경우도 많음
-- **병원(病院)**: 20병상 이상. 전문 진료나 입원 대응
+- **병원(病院)**: 20병상 이상. 전문 진료나 입원 대응<sup class="source-ref"><a href="#source-1" id="cite-1">1</a></sup>
 - **대학병원**: 소개장(紹介状) 없이 방문하면 초진 시 별도 추가 비용 발생
 
 일반적인 증상은 가까운 클리닉에 가는 것이 시간과 비용 면에서 현실적입니다. 큰 병원에 직접 가면 대기 시간이 길고 소개장 없이 방문 시 수천 엔의 선택 진료비가 추가되는 경우가 있습니다.
@@ -81,7 +95,7 @@ sources:
 
 ## 복약수첩(お薬手帳)
 
-일본 생활을 하면서 가장 자주 듣게 되는 단어 중 하나입니다.
+일본 생활을 하면서 가장 자주 듣게 되는 단어 중 하나입니다.<sup class="source-ref"><a href="#source-2" id="cite-2">2</a></sup>
 
 병원이나 약국에서 처방받은 약 기록을 관리하는 수첩입니다.
 
@@ -143,9 +157,9 @@ sources:
 
 ## 응급 상황은 다르게 대응해야 합니다
 
-갑작스러운 심한 통증, 호흡 곤란, 의식 저하 같은 응급 상황에서는 클리닉을 찾기보다 **119에 연락하거나 응급 대응을 받는 것**이 우선입니다.
+갑작스러운 심한 통증, 호흡 곤란, 의식 저하 같은 응급 상황에서는 클리닉을 찾기보다 **119에 연락하거나 응급 대응을 받는 것**이 우선입니다.<sup class="source-ref"><a href="#source-4" id="cite-4">4</a></sup>
 
-이 글은 일본에서 병원과 건강검진을 실제로 이용하며 느낀 **개인 경험**을 정리한 기록입니다. 의료적 판단이나 치료 방법을 안내하는 글이 아니며, 증상이 있거나 건강상 문제가 있다면 반드시 **의료기관에 직접 상담**하시기 바랍니다. 병원 운영 방식, 비용, 건강검진 항목은 병원·보험 종류·지자체 정책에 따라 달라질 수 있으므로, 실제 방문 전에는 각 의료기관 또는 **공식 기관의 최신 안내**를 확인하시기 바랍니다.
+이 글은 일본에서 병원과 건강검진을 실제로 이용하며 느낀 **개인 경험**을 정리한 기록입니다. 의료적 판단이나 치료 방법을 안내하는 글이 아니며, 증상이 있거나 건강상 문제가 있다면 **의료기관에 직접 상담**하시기 바랍니다. 병원 운영 방식, 비용, 건강검진 항목은 병원·보험 종류·지자체 정책에 따라 달라질 수 있으므로, 실제 방문 전에는 각 의료기관 또는 **공식 기관의 최신 안내**를 확인하시기 바랍니다.
 
 ## 아프기 전에 알아두면 좋은 것
 
@@ -158,7 +172,7 @@ sources:
 ---
 
 > ## 진료 흐름 요약
-> **일본 병원은 클리닉 → 처방전 → 약국의 흐름을 이해하면 어렵지 않다.**
+> **일본 병원은 클리닉 → 처방전 → 약국의 흐름을 이해하면 어렵지 않습니다.**
 >
 > - **이런 분께 추천**: 일본에서 처음 병원 가는 분 / 건강보험증 사용법이나 건강검진 절차가 궁금한 분
 > - **핵심 포인트**:

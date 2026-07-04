@@ -85,16 +85,45 @@ GSC에서 `https://tokyokorean.net/` 속성을 보고 있으므로 **소유권�
 
 ---
 
-## Joseph 남은 액션 (우선순위)
+## Joseph 남은 액션 (우선순위) — 2026-07-05 갱신
 
-| 우선 | 액션 |
-|------|------|
-| 1 | URL 검사: `/terms/` + 주요 `/posts/...` **색인 생성 요청** |
-| 2 | (선택) 설정 → 소유권 확인에서 방법·상태 스크린샷만 보관 |
-| 3 | AdSense prep (사이트 추가 + env + Redeploy) | AG_TASK: `GSF-OS/AG_TASK_tokyokorean-adsense-prep-20260705.md` · pub=`ca-pub-4729433282370174` (GSF-Ark 동일) · **검토 요청은 아직 하지 않음** |
-| 4 | 신청서: Joseph KIM, 도쿄 거주 8년, 포스트 샘플 |
+| 우선 | 액션 | 담당 |
+|------|------|------|
+| **1** | GSC **색인 생성 요청** — 아래 Batch 1·2 (일 ~10건) | Joseph |
+| 2 | AdSense **검토 요청** — 포스트 색인 10건+ 후 | Joseph |
+| 3 | (선택) 소유권 확인 스크린샷 보관 | Joseph |
 
-**코드 추가 작업 없음** (locale 근본 수정·이용약관·리다이렉트 완료).
+AdSense prep(ads.txt·ca-pub·소유권 파일)은 **2026-07-05 Cursor PASS** 완료.
+
+### GSC 색인 요청 — Batch 1 (Day 1, ~10건)
+
+GSC → URL 검사 → URL 입력 → **색인 생성 요청**
+
+1. https://tokyokorean.net/terms/
+2. https://tokyokorean.net/posts/
+3. https://tokyokorean.net/posts/nihonbashi-buying-property-foreigner/
+4. https://tokyokorean.net/posts/nihonbashi-hidden-cafes/
+5. https://tokyokorean.net/posts/nihonbashi-why-i-live-here/
+6. https://tokyokorean.net/posts/japan-banking-credit-card/
+7. https://tokyokorean.net/posts/japan-healthcare-hospital-visit/
+8. https://tokyokorean.net/posts/japan-garbage-disposal-rules/
+9. https://tokyokorean.net/posts/tokyo-housing-rental-process/
+10. https://tokyokorean.net/posts/japan-life-8years-honest/
+
+### GSC 색인 요청 — Batch 2 (Day 2, ~10건)
+
+1. https://tokyokorean.net/posts/nihonbashi-history-and-modern-life/
+2. https://tokyokorean.net/posts/tokyo-life-cost-of-living/
+3. https://tokyokorean.net/posts/tokyo-supermarket-guide/
+4. https://tokyokorean.net/posts/tokyo-public-transportation-tips/
+5. https://tokyokorean.net/posts/japan-korea-work-culture-diff/
+6. https://tokyokorean.net/posts/japan-elderly-care-frontline/
+7. https://tokyokorean.net/posts/japan-convenience-store-must-buys/
+8. https://tokyokorean.net/posts/japan-seasons-matsuri-culture/
+9. https://tokyokorean.net/posts/tokyo-weekend-getaway-spots/
+10. https://tokyokorean.net/posts/japan-language-learning-survival-japanese/
+
+나머지 2편: `japan-married-to-japanese-culture-diff`, `tokyo-korean-community-culture` — Batch 2 여유 시 또는 Day 3.
 
 ---
 
