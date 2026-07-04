@@ -91,7 +91,7 @@ GSC에서 `https://tokyokorean.net/` 속성을 보고 있으므로 **소유권�
 |------|------|
 | 1 | URL 검사: `/terms/` + 주요 `/posts/...` **색인 생성 요청** |
 | 2 | (선택) 설정 → 소유권 확인에서 방법·상태 스크린샷만 보관 |
-| 3 | AdSense 계정 생성·사이트 추가 후 `PUBLIC_ADSENSE_PUBLISHER_ID` → Vercel env → 재배포 |
+| 3 | AdSense prep (사이트 추가 + env + Redeploy) | AG_TASK: `GSF-OS/AG_TASK_tokyokorean-adsense-prep-20260705.md` · pub=`ca-pub-4729433282370174` (GSF-Ark 동일) · **검토 요청은 아직 하지 않음** |
 | 4 | 신청서: Joseph KIM, 도쿄 거주 8년, 포스트 샘플 |
 
 **코드 추가 작업 없음** (locale 근본 수정·이용약관·리다이렉트 완료).
