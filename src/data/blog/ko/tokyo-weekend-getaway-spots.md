@@ -65,8 +65,6 @@ sources:
 
 ![오다와라 성 천수각](/assets/images/blog/tokyo-weekend-getaway-spots-2.jpg)
 
-![오다와라 가마보코 정식](/assets/images/blog/tokyo-weekend-getaway-spots-3.jpg)
-
 ## 가와고에 — 멀어졌지만 여전히 가고 싶은 곳
 
 가와고에는 조금 특이한 위치의 추천지입니다. 예전에 사이타마에 살 때는 더 가까웠는데, 니혼바시로 이사한 뒤에는 오히려 더 멀어진 장소입니다. 그래도 여전히 당일치기로 다녀올 만하다고 생각하는 이유는, 코에도(小江戸) 거리를 걷는 재미가 분명하기 때문입니다.
