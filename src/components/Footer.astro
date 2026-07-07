@@ -20,6 +20,7 @@ const {
 const lang = (uiLangProp ?? defaultUiLang()) as UiLang;
 const l = "";
 const L = getUi(lang);
+const sisterSiteLabel = "도쿄 부동산·J-REIT 분석은 GSFArk";
 ---
 
 <footer
@@ -43,6 +44,15 @@ const L = getUi(lang);
       <span>{L.footerCopyright} &#169; {currentYear} TokyoKorean.</span>
       <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
       <span>{L.footerAllRights}</span>
+    </div>
+    <div class="text-xs opacity-70 text-center sm:text-left">
+      <a
+        href="https://gsfark.com/"
+        class="link-subtle"
+        rel="noopener noreferrer"
+      >
+        {sisterSiteLabel}
+      </a>
     </div>
   </div>
 </footer>
