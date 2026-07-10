@@ -275,57 +275,30 @@ const prevPost =
 
     <section class="mb-8 grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Left: Author Card -->
-      <div class="rounded-xl border border-border bg-card p-5 flex flex-col items-center text-center">
+      <div class="rounded-xl border border-border bg-card p-5 flex items-center sm:items-start text-left gap-4">
         <img
           src={authorProfileImage}
           alt={author}
           loading="lazy"
           decoding="async"
-          class="size-16 sm:size-20 rounded-full border border-border object-cover mb-3"
+          class="size-16 rounded-full border border-border object-cover shrink-0"
         />
-        <h2 class="text-lg font-semibold">{author}</h2>
-        <p class="mt-2 text-sm leading-relaxed text-foreground/80">{L.authorCardBody}</p>
-        <div class="mt-4 flex flex-wrap justify-center gap-2">
-          <a
-            href={`${localePrefix}/about/`}
-            class="text-sm text-accent hover:underline flex items-center gap-1"
-          >
-            &rarr; {L.authorCardAboutCta}
-          </a>
+        <div class="flex flex-col">
+          <h2 class="text-base font-semibold">{author}</h2>
+          <p class="mt-1 text-sm leading-relaxed text-foreground/80" set:html={L.authorCardBody} />
+          <div class="mt-2">
+            <a
+              href={`${localePrefix}/about/`}
+              class="text-sm text-accent hover:underline inline-flex items-center gap-1"
+            >
+              &rarr; {L.authorCardAboutCta}
+            </a>
+          </div>
         </div>
       </div>
 
-      <!-- Right: Updates & Social -->
+      <!-- Right: Share & Companion -->
       <div class="rounded-xl border border-border bg-card p-5 flex flex-col justify-center">
-        <h2 class="text-base sm:text-lg font-semibold mb-2">{L.postFollowTitle}</h2>
-        
-        <!-- Buttondown Form -->
-        <form
-          action="https://buttondown.email/api/emails/embed-subscribe/gsfark"
-          method="post"
-          target="popupwindow"
-          onsubmit="window.open('https://buttondown.email/gsfark', 'popupwindow')"
-          class="embeddable-buttondown-form mb-4"
-        >
-          <div class="flex gap-2 w-full max-w-sm">
-            <input
-              type="email"
-              name="email"
-              id="bd-email"
-              placeholder={L.newsletterPlaceholder}
-              required
-              class="flex-1 rounded-md border border-border bg-background px-3 py-2 text-sm focus:border-accent focus:outline-none"
-            />
-            <button
-              type="submit"
-              class="rounded-md bg-accent px-4 py-2 text-sm font-medium text-background transition-opacity hover:opacity-90"
-            >
-              {L.newsletterCta}
-            </button>
-          </div>
-          <p class="text-xs text-foreground/60 mt-2">{L.newsletterDisclaimer}</p>
-        </form>
-        
         <div class="mb-4">
           <ShareLinks />
         </div>
@@ -333,12 +306,13 @@ const prevPost =
         <hr class="border-border my-4" />
         
         <!-- Companion Link -->
-        <div class="text-sm">
+        <div class="text-sm text-foreground/80">
+          {L.companionLine}
           <a
             href="https://gsfark.com/"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-accent hover:underline font-medium flex items-center gap-1"
+            class="text-accent hover:underline font-medium inline-flex items-center gap-1 ml-1"
           >
             &rarr; {L.companionLinkText}
           </a>

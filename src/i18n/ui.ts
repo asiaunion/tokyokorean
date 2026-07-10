@@ -67,7 +67,7 @@ const ui = {
     sharePostLead: "이 글 공유:",
     authorCardTitle: "작성자 소개",
     authorCardBody:
-      "Joseph · 도쿄 니혼바시 거주 8년차. 일본어 N1. 일본 생활 실용 정보, 한일 문화 비교, 도쿄의 로컬 동네 이야기를 경험을 바탕으로 기록합니다.",
+      "도쿄 니혼바시 거주 중<br/>일본 생활 · 문화 · 도쿄 로컬 이야기를 기록합니다",
     authorCardAboutCta: "작성자 프로필 보기",
     authorCardContactCta: "문의하기",
     authorCardLinkedInCta: "LinkedIn 연결",
@@ -92,7 +92,7 @@ const ui = {
     newsletterDisclaimer:
       "스팸 없음. 언제든 구독 해지 가능. 이메일은 안전하게 보호됩니다.",
     footerAdsNotice: "이 사이트는 Google AdSense를 사용합니다.",
-    companionLine: "도쿄 부동산·J-REIT 분석이 궁금하시다면,",
+    companionLine: "도쿄 부동산 분석이 궁금하다면",
     companionLinkText: "GSFArk 방문하기",
     leadMagnetCta: "",
     highIntentCtaTitle: "블로그 방문을 환영합니다",

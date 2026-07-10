@@ -14,7 +14,6 @@ const L = getUi(locale as UiLang);
 {
   SHARE_LINKS.length > 0 && (
     <div class="flex flex-none flex-col items-center justify-center gap-1 md:items-start">
-      <span class="italic">{L.sharePostLead}</span>
       <div class="text-center">
         {SHARE_LINKS.map(social => (
           <LinkButton
