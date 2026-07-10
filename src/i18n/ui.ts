@@ -64,10 +64,10 @@ const ui = {
     notFoundTitle: "404 — 찾을 수 없음",
     notFoundHeading: "페이지를 찾을 수 없습니다",
     notFoundBackHome: "홈으로 돌아가기",
-    sharePostLead: "이 글 공유:",
+    sharePostLead: "공유하기",
     authorCardTitle: "작성자 소개",
     authorCardBody:
-      "도쿄 니혼바시 거주 중<br/>일본 생활 · 문화 · 도쿄 로컬 이야기를 기록합니다",
+      "도쿄 니혼바시 거주<br/>일본 생활과 도쿄 로컬 이야기를 기록합니다.",
     authorCardAboutCta: "작성자 프로필 보기",
     authorCardContactCta: "문의하기",
     authorCardLinkedInCta: "LinkedIn 연결",
@@ -91,7 +91,7 @@ const ui = {
     newsletterCta: "구독하기",
     newsletterDisclaimer:
       "스팸 없음. 언제든 구독 해지 가능. 이메일은 안전하게 보호됩니다.",
-    footerAdsNotice: "이 사이트는 Google AdSense를 사용합니다.",
+    footerAdsNotice: "Google AdSense 사용",
     companionLine: "도쿄 부동산 분석이 궁금하다면",
     companionLinkText: "GSFArk 방문하기",
     leadMagnetCta: "",

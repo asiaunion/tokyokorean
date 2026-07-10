@@ -229,3 +229,61 @@
 - 배포 URL: https://tokyokorean.net
 - Claude 부재 여부: 예
 - 특이사항: 라이브 curl 검증을 통해 ads.txt, 메타 태그, adsbygoogle.js 로드 및 locale 회귀가 전혀 없음(OK: no locale hrefs)을 확인 완료함. AdSense 사이트 추가는 Joseph가 하되, 정식 검토 요청(Request review)은 제출하지 않고 대기.
+
+## [2026-07-09 15:59] AG 배포 완료
+- 작업 내용: TokyoKorean 기본 OG 이미지가 GSFArk 리소스를 바라보던 이슈 수정 (Satori 자동 생성 `og.png`로 교체 및 구 파일 삭제)
+- 커밋 해시: c64eca6
+- 배포 URL: https://tokyokorean.net
+- Claude 부재 여부: 예
+- 특이사항: `config.ts`의 `ogImage` 속성값을 `og.png`로 수정하여 Satori가 자동 생성한 타이포그래피 기반 OG 템플릿(`site.js`)을 적용함.
+
+## [2026-07-10 13:55] AG 배포 완료
+- 작업 내용: Footer 레이아웃 정리 및 PostDetails 2열 그리드 교체
+- 커밋 해시: d300931
+- 배포 URL: https://tokyokorean.net
+- Claude 부재 여부: 예
+- 특이사항: 지시서 AG_TASK_tokyokorean-post-footer-cleanup-20260710.md 내용 100% 반영
+
+## [2026-07-10 14:04] AG 배포 완료 (PostDetails Layout Refine)
+- 작업 내용: PostDetails의 Tag, Grid, Related Posts 사이에 hr 적용, 화살표 방향 좌측 이동 (다이어그램 요구사항 완벽 반영)
+- 커밋 해시: f21cfda
+- 배포 URL: https://tokyokorean.net
+- Claude 부재 여부: 아니오
+
+## [2026-07-10 14:14] AG 배포 완료 (PostDetails Author & Share Cards Refinement)
+- 작업 내용: 프로필 사진 축소 및 좌측 정렬(가로 flex), 뉴스레터 영역 제거 및 카드 높이 최적화
+- 커밋 해시: bba5868
+- 배포 URL: https://tokyokorean.net
+- Claude 부재 여부: 아니오
+
+## [2026-07-10 14:18] AG 배포 완료 (PostDetails Author Card Compact Mode)
+- 작업 내용: 작성자 프로필 카드를 더 컴팩트하게 조정 (아바타 축소, About 링크 우측 정렬, 여백 최소화)하여 다이어그램에 최대한 부합하게 수정
+- 커밋 해시: 055f2cc
+- 배포 URL: https://tokyokorean.net (Vercel 자동 배포 중)
+- Claude 부재 여부: 예
+
+## [2026-07-10 14:23] AG 배포 완료 (PostDetails Author Card Padding Adjust)
+- 작업 내용: 작성자 프로필 카드 및 공유 박스 내부 여백 축소
+- 커밋 해시: e682704
+- 배포 URL: https://tokyokorean.net (Vercel 자동 배포 중)
+- Claude 부재 여부: 예
+
+## [2026-07-10 14:27] AG 배포 완료 (PostDetails Section Margins Reduce)
+- 작업 내용: 태그 영역 및 본문 하단(구분선, 작성자 카드, 관련 글)의 상하 여백 대폭 축소
+- 커밋 해시: b507ccf
+- 배포 URL: https://tokyokorean.net (Vercel 자동 배포 중)
+- Claude 부재 여부: 예
+
+
+## [2026-07-10 14:32] AG 배포 완료 (태그 여백 축소 및 관련 글 요약 삭제)
+- 작업 내용: 태그 위 여백 축소 및 관련 포스트 섹션의 제목만 남기고 2줄 설명 삭제
+- 커밋 해시: 08d8795
+- 배포 URL: https://tokyokorean.net
+- Claude 부재 여부: 아니오
+
+
+## [2026-07-10 14:38] AG 배포 완료 (PostDetails 하단 박스 정렬 버그 수정)
+- 작업 내용: BackToTop 버튼의 float 속성으로 인해 그리드가 축소되던 문제 해결 (hr 요소에 clear-both 추가)
+- 커밋 해시: ff38462
+- 배포 URL: https://tokyokorean.net
+- Claude 부재 여부: 아니오
