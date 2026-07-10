@@ -265,15 +265,15 @@ const prevPost =
 
     <EditPost class="sm:hidden" {hideEditPost} {post} />
 
-    <ul class="mt-4 mb-4 flex flex-wrap gap-4 sm:my-6">
+    <ul class="mt-2 mb-2 flex flex-wrap gap-2 sm:my-3">
       {tags.map(tag => <Tag tag={slugifyStr(tag)} tagName={tag} size="sm" />)}
     </ul>
 
     <BackToTopButton />
 
-    <hr class="my-8 border-border border-solid" />
+    <hr class="my-4 border-border border-solid" />
 
-    <section class="mb-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+    <section class="mb-4 grid grid-cols-1 md:grid-cols-2 gap-4">
       <!-- Left: Author Card -->
       <div class="rounded-xl border border-border bg-card p-3 sm:p-4 flex items-center sm:items-start text-left gap-3 sm:gap-4">
         <img
@@ -320,11 +320,11 @@ const prevPost =
       </div>
     </section>
 
-    <hr class="my-8 border-border border-solid" />
+    <hr class="my-4 border-border border-solid" />
 
     <RelatedPosts currentPost={post} allPosts={posts} lang={navLang} />
 
-    <hr class="my-8 border-border border-solid" />
+    <hr class="my-4 border-border border-solid" />
 
     <!-- Previous/Next Post Buttons -->
     <div data-pagefind-ignore class="grid grid-cols-1 gap-6 sm:grid-cols-2">
