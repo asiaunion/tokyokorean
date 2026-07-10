@@ -265,13 +265,13 @@ const prevPost =
 
     <EditPost class="sm:hidden" {hideEditPost} {post} />
 
-    <ul class="mt-2 mb-2 flex flex-wrap gap-2 sm:my-3">
+    <BackToTopButton />
+
+    <ul class="mt-2 mb-1 flex flex-wrap gap-2 sm:mt-3 sm:mb-2">
       {tags.map(tag => <Tag tag={slugifyStr(tag)} tagName={tag} size="sm" />)}
     </ul>
 
-    <BackToTopButton />
-
-    <hr class="clear-both my-4 border-border border-solid" />
+    <hr class="clear-both my-3 border-border border-solid" />
 
     <section class="mb-4 grid grid-cols-1 md:grid-cols-2 gap-4">
       <!-- Left: Author Card -->
