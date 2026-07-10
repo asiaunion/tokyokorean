@@ -275,38 +275,38 @@ const prevPost =
 
     <section class="mb-8 grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Left: Author Card -->
-      <div class="rounded-xl border border-border bg-card p-5 flex items-center sm:items-start text-left gap-4">
+      <div class="rounded-xl border border-border bg-card p-4 sm:p-5 flex items-center sm:items-start text-left gap-4">
         <img
           src={authorProfileImage}
           alt={author}
           loading="lazy"
           decoding="async"
-          class="size-16 rounded-full border border-border object-cover shrink-0"
+          class="size-14 sm:size-16 rounded-full border border-border object-cover shrink-0"
         />
-        <div class="flex flex-col">
-          <h2 class="text-base font-semibold">{author}</h2>
-          <p class="mt-1 text-sm leading-relaxed text-foreground/80" set:html={L.authorCardBody} />
-          <div class="mt-2">
+        <div class="flex flex-col flex-1">
+          <div class="flex items-center justify-between">
+            <h2 class="text-base font-semibold">{author}</h2>
             <a
               href={`${localePrefix}/about/`}
-              class="text-sm text-accent hover:underline inline-flex items-center gap-1"
+              class="text-xs sm:text-sm text-accent hover:underline inline-flex items-center gap-1"
             >
-              &rarr; {L.authorCardAboutCta}
+              {L.authorCardAboutCta} &rarr;
             </a>
           </div>
+          <p class="mt-1 text-xs sm:text-sm leading-relaxed text-foreground/80" set:html={L.authorCardBody} />
         </div>
       </div>
 
       <!-- Right: Share & Companion -->
-      <div class="rounded-xl border border-border bg-card p-5 flex flex-col justify-center">
-        <div class="mb-4">
+      <div class="rounded-xl border border-border bg-card p-4 sm:p-5 flex flex-col justify-center">
+        <div class="mb-3">
           <ShareLinks />
         </div>
         
-        <hr class="border-border my-4" />
+        <hr class="border-border my-3" />
         
         <!-- Companion Link -->
-        <div class="text-sm text-foreground/80">
+        <div class="text-xs sm:text-sm text-foreground/80">
           {L.companionLine}
           <a
             href="https://gsfark.com/"
