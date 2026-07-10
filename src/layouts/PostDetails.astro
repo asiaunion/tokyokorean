@@ -265,30 +265,32 @@ const prevPost =
 
     <EditPost class="sm:hidden" {hideEditPost} {post} />
 
-    <ul class="mt-4 mb-8 flex flex-wrap gap-4 sm:my-8">
+    <ul class="mt-4 mb-4 flex flex-wrap gap-4 sm:my-6">
       {tags.map(tag => <Tag tag={slugifyStr(tag)} tagName={tag} size="sm" />)}
     </ul>
 
     <BackToTopButton />
 
-    <section class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+    <hr class="my-8 border-border border-solid" />
+
+    <section class="mb-8 grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Left: Author Card -->
       <div class="rounded-xl border border-border bg-card p-5 flex flex-col items-center text-center">
         <img
           src={authorProfileImage}
-          alt="Joseph KIM"
+          alt={author}
           loading="lazy"
           decoding="async"
           class="size-16 sm:size-20 rounded-full border border-border object-cover mb-3"
         />
-        <h2 class="text-base sm:text-lg font-semibold">{L.authorCardTitle}</h2>
+        <h2 class="text-lg font-semibold">{author}</h2>
         <p class="mt-2 text-sm leading-relaxed text-foreground/80">{L.authorCardBody}</p>
         <div class="mt-4 flex flex-wrap justify-center gap-2">
           <a
             href={`${localePrefix}/about/`}
-            class="link-subtle text-sm"
+            class="text-sm text-accent hover:underline flex items-center gap-1"
           >
-            {L.authorCardAboutCta}
+            &rarr; {L.authorCardAboutCta}
           </a>
         </div>
       </div>
@@ -324,8 +326,7 @@ const prevPost =
           <p class="text-xs text-foreground/60 mt-2">{L.newsletterDisclaimer}</p>
         </form>
         
-        <!-- Share & Socials -->
-        <div class="flex items-center gap-4 mb-4">
+        <div class="mb-4">
           <ShareLinks />
         </div>
         
@@ -333,23 +334,23 @@ const prevPost =
         
         <!-- Companion Link -->
         <div class="text-sm">
-          <span class="text-foreground/80">{L.companionLine}</span>
           <a
             href="https://gsfark.com/"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-accent hover:underline font-medium ml-1"
+            class="text-accent hover:underline font-medium flex items-center gap-1"
           >
-            {L.companionLinkText}
+            &rarr; {L.companionLinkText}
           </a>
         </div>
       </div>
     </section>
 
+    <hr class="my-8 border-border border-solid" />
 
     <RelatedPosts currentPost={post} allPosts={posts} lang={navLang} />
 
-    <hr class="my-6 border-border border-solid" />
+    <hr class="my-8 border-border border-solid" />
 
     <!-- Previous/Next Post Buttons -->
     <div data-pagefind-ignore class="grid grid-cols-1 gap-6 sm:grid-cols-2">
