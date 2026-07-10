@@ -91,6 +91,9 @@ const ui = {
     newsletterCta: "구독하기",
     newsletterDisclaimer:
       "스팸 없음. 언제든 구독 해지 가능. 이메일은 안전하게 보호됩니다.",
+    footerAdsNotice: "이 사이트는 Google AdSense를 사용합니다.",
+    companionLine: "도쿄 부동산·J-REIT 분석이 궁금하시다면,",
+    companionLinkText: "GSFArk 방문하기",
     leadMagnetCta: "",
     highIntentCtaTitle: "블로그 방문을 환영합니다",
     highIntentCtaDisclosure:
