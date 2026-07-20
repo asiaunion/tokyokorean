@@ -6,13 +6,13 @@
 
 | 필드 | 값 |
 |------|-----|
-| 최종 업데이트 | 2026-07-20 |
+| 최종 업데이트 | 2026-07-21 |
 | 프로젝트명 | TokyoKorean |
-| 상태 | 🟡 AdSense **게이트B 대기** — 포스트 색인 **0/20 (0%)** (2026-07-20 실측) · 핵심페이지 색인됨 · 네이버 레퍼럴 기산 **2026-07-20** |
-| 목표 + 기한 | 발행 포스트 색인 ≥70% + 네이버/다음 레퍼럴 2주 → 게이트B |
-| 이번 주 최우선 액션 | **미색인 포스트 URL 재요청** (GSC) + 네이버 배포 유지 (기산 유지) |
-| 다음 체크포인트 | 색인% 재실측 (~1주) · 레퍼럴 2주 (~8/3) · **색인&lt;70%면 신청 금지** |
-| 블로커 | 포스트 색인 0% — 게이트 B-1 미충족 (신청 시계 ≠ 색인 시계) |
+| 상태 | 🟡 AdSense **게이트B** — 색인 **19~20/20 (≥95%, 2026-07-21)** · **B-1 ≥70% 충족** · 레퍼럴 기산 **2026-07-20** → 목표 ~**2026-08-03** |
+| 목표 + 기한 | 색인 ≥70% ✅ + 네이버/다음 레퍼럴 **2주 연속** (잔여) → 게이트B 신청 |
+| 이번 주 최우선 액션 | 네이버 배포 케이던스 유지(~8/3) · `nihonbashi-buying-property-foreigner` 색인 재확인 |
+| 다음 체크포인트 | 레퍼럴 2주 (~8/3) · 잔여 1편 색인 확인 · **동시 Ark 신청 금지** |
+| 블로커 | 없음 (색인) — 잔여 = **레퍼럴 2주** (Gate B-4) |
 
 ---
 
@@ -36,7 +36,7 @@
 | postPerPage | ✅ 8 | `1c33a25` |
 | GSC 소유권 인증 | ✅ 완료 | Joseph 대시보드 진입 확인 (2026-06-24) |
 | GSC sitemap 제출 | ✅ 제출됨 | Joseph **6/25~26** Success·~24 URL 재확인 |
-| GSC URL 색인 요청 | ✅ 완료 | Joseph — E-E-A-T + published 포스트 전체 요청 완료 (6/25) |
+| GSC URL 색인 요청 | ✅ 재요청 완료 | 6/25 구URL 무효화(7/4 `/posts/` 전환) → **7/20~21** 현행 URL 20편 재요청 · **19/20 색인 확인** · 잔여 `nihonbashi-buying-property-foreigner` |
 | GA4 | ✅ `G-86NS9E5Y20` | gtag 라이브 · **Realtime Joseph 확인 완료** (2026-06-24) |
 | AdSense Publisher ID | ✅ 라이브 | `ca-pub-4729433282370174` |
 | AdSense 신청 | ⏳ 7/13~15 | 승인률 추정 **85~90%** (GSC+garbage 후) — [`ADSENSE_AND_GSC_CHECKLIST.md`](docs/ADSENSE_AND_GSC_CHECKLIST.md) |
@@ -257,7 +257,13 @@ GSC URL 검사로 색인. 날짜 인위적 소급은 신뢰도 리스크.
 - 초안 15편 생성
 - tokyokorean.net 도메인 등록
 
+### 2026-07-21
+- GSC 색인 **반등**: 포스트 **19~20/20 (≥95%)** — 7/20~21 현행 `/posts/...` URL 검사·색인 생성 요청 결과 (Claude 진단: 7/4 locale prefix 제거 후 6/25 요청 무효화 → 재요청으로 해소).
+- **게이트 B-1 (색인 ≥70%) 충족**. 잔여 1편 `nihonbashi-buying-property-foreigner` 요청 제출·결과 대기.
+- **pubDatetime 소급 재조정**: WEEKLY 금지 유지 · Claude/Cursor **거부** (조치 없음). 사이트맵 재제출·404 코드 조치 불필요.
+- 잔여 Gate B: 네이버 레퍼럴 2주 (기산 2026-07-20 → ~2026-08-03).
+
 ### 2026-07-20
 - YMYL 인접 4편 (japan-elderly-care-frontline, japan-healthcare-hospital-visit, japan-banking-credit-card, nihonbashi-buying-property-foreigner) 모두 개인 경험 프레임 및 면책 조항 정상 존재 확인 완료 (✓). 추가 수정 불필요.
-- GSC 색인 실측: 포스트 0/20 (0%) · 핵심 페이지(/, about, contact, privacy) 색인 완료.
+- GSC 색인 실측(당시): 포스트 0/20 (0%) · 핵심 페이지(/, about, contact, privacy) 색인 완료. → **7/21에 갱신됨(위)**.
 - 네이버 레퍼럴 시계 2주 기산일: 2026-07-20 (네이버 포스트 누적 3건 발행 확인 완료)
