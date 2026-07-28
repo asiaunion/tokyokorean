@@ -116,7 +116,10 @@ SSOT: [`PHOTO_NEEDED_TRACKER.md`](./PHOTO_NEEDED_TRACKER.md)
 
 ---
 
-## Phase 5 — AdSense 신청 (7/13~15) ⏳
+## Phase 5 — AdSense 신청 (**2026-08-03**) ⏳
+
+> **잠금 (2026-07-21 Joseph):** `tokyokorean.net`만 신청 · **gsfark.com 재신청 보류** · 동시 신청 금지.  
+> 실행 SSOT: [`ADSENSE_8_3_RUNBOOK.md`](./ADSENSE_8_3_RUNBOOK.md)
 
 1. **Do not** commit a real publisher ID in git. Vercel Production:
    - `PUBLIC_ADSENSE_PUBLISHER_ID=ca-pub-4729433282370174`
@@ -124,20 +127,22 @@ SSOT: [`PHOTO_NEEDED_TRACKER.md`](./PHOTO_NEEDED_TRACKER.md)
    ```html
    <meta name="google-adsense-account" content="ca-pub-…" />
    ```
-3. AdSense UI에서 tokyokorean.net 사이트 추가·신청
+3. AdSense UI에서 **tokyokorean.net만** 사이트 추가·신청 (gsfark 신청 버튼 금지)
 4. **승인 후:** `public/ads.txt` 최종 확인 · `https://tokyokorean.net/ads.txt` 200
 5. **승인 후:** Giscus 재설정 (Discussions 활성화 + giscus.app 설정)
 
 ### 신청 전 체크
 - [x] ⭐⭐⭐ 6편 이미지 반영 라이브 ✅
-- [x] GSC URL 색인 요청 완료 — published 포스트 전체 (Joseph 6/25) ✅
+- [x] GSC URL 색인 요청 완료 — published 포스트 전체 (Joseph 6/25) ✅ · 7/21 B-1 ≥95%
 - [x] Cookie Consent / meta / ads.txt / Privacy / About / Contact ✅
 - [x] 이메일 통일 / Privacy GA4 정합성 / Giscus 에러 제거 ✅
 - [x] Topic·Category 뱃지 GSF 잔재 제거 (`f2b4141`) ✅
 - [x] Non-YMYL — 선교·신앙 색채 없음 ✅
 - [x] ogImage 20/20 + 본문 실사진 38건 라이브 ✅
-- [ ] `japan-garbage-disposal-rules` 본문 1장 🔴
-- [ ] 미커밋 텍스트 보강 9편 커밋·배포
+- [x] 기술·콘텐츠 재검증 PASS (2026-07-21) — 사이트 신규 포스팅 불필요
+- [ ] ~~`japan-garbage-disposal-rules` 본문 1장~~ → **블로커 아님** (8/3 스프린트 범위 밖 · 여력 시)
+- [ ] 8/2 Cursor 스모크 GO (런북)
+- [ ] 8/3 Joseph 신청 제출 + hub:log
 
 ---
 

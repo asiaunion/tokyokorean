@@ -337,3 +337,8 @@
 - 커밋 해시: ac32dcf
 - 배포 URL: https://tokyokorean.com
 - 특이사항: 없음
+
+## [2026-07-28 12:15] Cursor 검증 (GSC·AdSense 조기신청)
+- 작업 내용: GSC 26/29 재검증 — 미색인 3건(`/ja/` `/ko/` 308, `/tags/` robots) 무해 확인, 코드 변경 없음. 라이브 스모크 GO. GA4 개선 수치 런북 반영. 8/3 동결 해제 가능 판정(Joseph 명시 시 · 창=오늘~8/3 · gsfark 금지).
+- 문서: `docs/ADSENSE_8_3_RUNBOOK.md` · `WEEKLY_STATUS.md` [HUB]
+- refs: ACTIVITY_LOG 2026-07-28 12:15 · Claude 12:08

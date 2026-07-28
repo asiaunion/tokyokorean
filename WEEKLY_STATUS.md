@@ -6,13 +6,13 @@
 
 | 필드 | 값 |
 |------|-----|
-| 최종 업데이트 | 2026-07-21 |
+| 최종 업데이트 | 2026-07-28 |
 | 프로젝트명 | TokyoKorean |
-| 상태 | 🟢 **8/3 신청 목표** — 색인 **19~20/20 (B-1✅)** · 기술·콘텐츠 재검증 **PASS** · 레퍼럴은 **약함**(GA4 naver≈1) · 기산 7/20→~8/3 감시 |
-| 목표 + 기한 | **2026-08-03** AdSense 신청 (Ark와 동시 신청 금지). B-4(레퍼럴2주)=팀 안전장치 — 8/3에 Joseph 최종 판단 |
-| 이번 주 최우선 액션 | 네이버 **추가 발행**(사이트 신규글 아님) · GA4 레퍼럴 감시 · `nihonbashi-buying-property-foreigner` 색인 재확인 · GA4 404 경로 특정 |
-| 다음 체크포인트 | ~8/3: 레퍼럴 붙음 여부 → 신청 / 대기 재판단 · **승인 보장 아님** |
-| 블로커 | 없음(기술) — 약점 = **네이버 노출·레퍼럴 분자** (CTA/UTM은 정상) |
+| 상태 | 🟡 **AdSense 검토 중** — `tokyokorean.net` 연결·제출 완료 (2026-07-28) · 온보딩 전원 완료 · Ark 재신청 **보류** |
+| 목표 + 기한 | **심사 대기** (**tokyokorean.net만**). 승인 시 hub:close · gsfark 추가 = Joseph 보류 해제 후 |
+| 이번 주 최우선 액션 | **표면 대량 변경 금지** · 네이버 발행은 분자용으로 계속 OK · 승인/거절 결과 오면 Cursor에 알림 |
+| 다음 체크포인트 | AdSense 결과 수령 → `hub:log` / 승인이면 `hub:close --milestone` |
+| 블로커 | 없음 — Google 심사 대기 |
 
 ---
 
@@ -39,7 +39,7 @@
 | GSC URL 색인 요청 | ✅ 재요청 완료 | 6/25 구URL 무효화(7/4 `/posts/` 전환) → **7/20~21** 현행 URL 20편 재요청 · **19/20 색인 확인** · 잔여 `nihonbashi-buying-property-foreigner` |
 | GA4 | ✅ `G-86NS9E5Y20` | gtag 라이브 · **Realtime Joseph 확인 완료** (2026-06-24) |
 | AdSense Publisher ID | ✅ 라이브 | `ca-pub-4729433282370174` |
-| AdSense 신청 | ⏳ 7/13~15 | 승인률 추정 **85~90%** (GSC+garbage 후) — [`ADSENSE_AND_GSC_CHECKLIST.md`](docs/ADSENSE_AND_GSC_CHECKLIST.md) |
+| AdSense 신청 | 🟡 **검토 중** (2026-07-28 제출) | **tokyokorean.net만** · 온보딩 완료 · Ark 보류 · 런북 [`docs/ADSENSE_8_3_RUNBOOK.md`](docs/ADSENSE_8_3_RUNBOOK.md) |
 
 ---
 
@@ -256,6 +256,13 @@ GSC URL 검사로 색인. 날짜 인위적 소급은 신뢰도 리스크.
 - 사이트 구조 완성 (Astro + Vercel)
 - 초안 15편 생성
 - tokyokorean.net 도메인 등록
+
+### 2026-07-21 (밤 — 8/3 신청 잠금 · Phase 0)
+
+- **Joseph 승인**: TK AdSense **8/3 신청** · **gsfark 재신청 보류** · Ark+TK 동시 신청 금지 유지.
+- **B-4 잠금**: 레퍼럴 미달이어도 **기본 GO** · 연장=당일 Joseph 명시만 · 스냅샷만 기록.
+- 문서: OPEN_QUEUE G4 · Playbook Gate A 보류 · D-001 · 본 HUB · [`docs/ADSENSE_8_3_RUNBOOK.md`](docs/ADSENSE_8_3_RUNBOOK.md).
+- 사이트 신규 포스팅·garbage 본문 필수화 = 범위 밖. 분자 = 네이버 주 2~4편.
 
 ### 2026-07-21 (저녁 — AdSense 신청 준비 재검증)
 - **WEEKLY 색인 수치**: 이미 갱신됨 (19~20/20, B-1 충족) — 재확인 OK.
