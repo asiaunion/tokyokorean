@@ -6,13 +6,13 @@
 
 | 필드 | 값 |
 |------|-----|
-| 최종 업데이트 | 2026-07-28 |
+| 최종 업데이트 | 2026-09-13 — D-006: 재신청=정주자 접수 후로 연기 |
 | 프로젝트명 | TokyoKorean |
-| 상태 | 🟡 **AdSense 검토 중** — `tokyokorean.net` 연결·제출 완료 (2026-07-28) · 온보딩 전원 완료 · Ark 재신청 **보류** |
-| 목표 + 기한 | **심사 대기** (**tokyokorean.net만**). 승인 시 hub:close · gsfark 추가 = Joseph 보류 해제 후 |
-| 이번 주 최우선 액션 | **표면 대량 변경 금지** · 네이버 발행은 분자용으로 계속 OK · 승인/거절 결과 오면 Cursor에 알림 |
-| 다음 체크포인트 | AdSense 결과 수령 → `hub:log` / 승인이면 `hub:close --milestone` |
-| 블로커 | 없음 — Google 심사 대기 |
+| 상태 | 🟠 Suspended-maint (T3·D-006) — AdSense 반려(8/4) · **9/15 재신청 안 함**(하한≠마감·콘텐츠 미축적) |
+| 목표 + 기한 | **정주자 접수(11월) 후** Gate B 재측정 → GO/NO · Ark 동시신청 금지 |
+| 이번 주 최우선 액션 | 없음 (11월 전 재신청·대량 신규 ❌) |
+| 다음 체크포인트 | 11월 정주자 접수 후 Gate B |
+| 블로커 | 오가닉 미축적(8/4~) · D-006이 신청 시점 연기 |
 
 ---
 
@@ -39,7 +39,7 @@
 | GSC URL 색인 요청 | ✅ 재요청 완료 | 6/25 구URL 무효화(7/4 `/posts/` 전환) → **7/20~21** 현행 URL 20편 재요청 · **19/20 색인 확인** · 잔여 `nihonbashi-buying-property-foreigner` |
 | GA4 | ✅ `G-86NS9E5Y20` | gtag 라이브 · **Realtime Joseph 확인 완료** (2026-06-24) |
 | AdSense Publisher ID | ✅ 라이브 | `ca-pub-4729433282370174` |
-| AdSense 신청 | 🟡 **검토 중** (2026-07-28 제출) | **tokyokorean.net만** · 온보딩 완료 · Ark 보류 · 런북 [`docs/ADSENSE_8_3_RUNBOOK.md`](docs/ADSENSE_8_3_RUNBOOK.md) |
+| AdSense 신청 | 🔴 **반려** (2026-08-04 · 7/28 제출) | 재창 ≥**2026-09-15** · 즉시 재제출 ❌ · Ark 보류 · 런북 [`docs/ADSENSE_8_3_RUNBOOK.md`](docs/ADSENSE_8_3_RUNBOOK.md) Phase 4 |
 
 ---
 
@@ -256,6 +256,14 @@ GSC URL 검사로 색인. 날짜 인위적 소급은 신뢰도 리스크.
 - 사이트 구조 완성 (Astro + Vercel)
 - 초안 15편 생성
 - tokyokorean.net 도메인 등록
+
+### 2026-08-04 (AdSense 반려 · 재창 잠금)
+
+- **결과**: 7/28 조기 신청 → **반려** (정형 템플릿·구체 사유 없음). 대상=`tokyokorean.net`만 (gsfark 해당 없음).
+- **진단**: 기술·색인 PASS(26/29) · 병목=**미검증 가치**(도메인 등록 6/15→신청 시 ~6주 · 오가닉 약함 · B-4 미완주 조기 제출). 콘텐츠 전면 개편 = 오답.
+- **재신청**: ≥**2026-09-15** = max(콜오프 4주 9/1, 도메인 3개월 9/15). B-4를 다시 엄격 안전장치로 적용. 즉시 재제출 ❌ · Ark+TK 동시 ❌.
+- **운영**: 신규 포스트 **동결 해제**(20→30+) · 최우선 레버=GSC 오가닉(노출·클릭0 title/메타) · 네이버=채널 다각화.
+- **문서**: [`docs/ADSENSE_8_3_RUNBOOK.md`](docs/ADSENSE_8_3_RUNBOOK.md) Phase 4 · D-001 · Ark OPEN_QUEUE G4.
 
 ### 2026-07-21 (밤 — 8/3 신청 잠금 · Phase 0)
 
