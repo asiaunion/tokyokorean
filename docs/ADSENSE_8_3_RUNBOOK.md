@@ -1,6 +1,7 @@
 # TokyoKorean AdSense — 8/3 신청 런북
 
-> **잠금 (2026-07-21 Joseph):** `tokyokorean.net`만 · **gsfark.com 재신청 보류** · B-4 미달도 **기본 GO**  
+> **잠금 (2026-08-04 Cursor):** 7/28 신청 → **반려(8/4)** · 재신청 ≥**2026-09-15** · 즉시 재제출 ❌ · **gsfark.com 신청 UI 금지** · Ark+TK 동시 ❌  
+> **이력 잠금 (2026-07-21 Joseph):** `tokyokorean.net`만 · B-4 미달도 기본 GO로 조기 제출(결과=반려)  
 > **상위:** [`WEEKLY_STATUS.md`](../WEEKLY_STATUS.md) · Ark [`ADSENSE_APPROVAL_PLAYBOOK_2026-07.md`](../../GSF-Ark/docs/ADSENSE_APPROVAL_PLAYBOOK_2026-07.md) · OPEN_QUEUE G4
 
 ---
@@ -150,16 +151,89 @@ done
 
 ---
 
-## Phase 3 — 신청 (Joseph) — ✅ 2026-07-28 조기 제출
+## Phase 3 — 신청 (Joseph) — ✅ 2026-07-28 조기 제출 → 🔴 반려 2026-08-04
 
 1. [x] 스모크 `GO` (7/28 Early smoke)
 2. [x] AdSense → **tokyokorean.net만** 연결·제출 — 「사이트의 광고 게재 가능 여부 검토 중」
 3. [x] **gsfark.com 미제출** 확인
 4. [x] Cursor `hub:log` (2026-07-28)
-5. [ ] **승인 시** `hub:close` 또는 `hub:log --milestone` 필수
-6. [ ] 거절 시 — 사유 캡처 후 Playbook/진단 규칙으로 재평가 (즉시 재제출 ❌)
+5. [ ] **승인 시** `hub:close` 또는 `hub:log --milestone` 필수 — *미해당(반려)*
+6. [x] **거절 (2026-08-04)** — 정형 템플릿(구체 사유 없음) · 진단=미검증 가치 · 즉시 재제출 ❌ · Phase 4로
+
+### 거절 기록 (2026-08-04)
+
+| 항목 | 값 |
+|------|-----|
+| 신청일 | 2026-07-28 (목표 8/3 대비 조기) |
+| 결과일 | 2026-08-04 (~7일 · 과거 패턴 5~14일과 일치) |
+| 메일 | 사유 없는 정형 템플릿 («몇 가지 수정» + 콘텐츠 부족 예시 팁만) — Ark 7회 반려와 동일 양식 |
+| 기술·색인 (신청 시점) | 26/29 · ads.txt·핵심4 PASS · 미색인 3=무해 |
+| GA4 (6/30–7/27) | naver/organic 11 · google/organic 6 · naver/blog 5 · direct 65 |
+| B-4 | 기산 7/20 → 신청일 8일차(미완주) · 잠금상 GO였으나 승인 보장 아님 확인됨 |
+| 도메인 | 등록 2026-06-15 → 신청 시 ~6주 (팀 하한 3개월 미달) |
+| 진단 | **미검증 가치**(연령·오가닉) — 콘텐츠 전면 개편/미색인「수정」= 오답 |
 
 승인 후(별 세션): ads.txt 재확인 · Giscus 선택 재설정 · Ark는 같은 pub **사이트 추가**(Gate A 면제 아님 · Joseph 보류 해제 후)
+
+---
+
+## Phase 4 — 재신청 창 (2026-08-04 Cursor 잠금)
+
+### 창 계산
+
+| 조건 | 날짜 | 비고 |
+|------|------|------|
+| 콜오프 ≥4주 (기산 8/4 반려) | ≥ **2026-09-01** | |
+| 도메인 연령 ≥3개월 (등록 6/15) | ≥ **2026-09-15** | **운영 HARD** (Google 공식 아님 · Ark 학습) |
+| **다음 신청 가능일** | ≥ **2026-09-15** | max(콜오프, 연령) |
+
+### Gate B 재실측 (신청 직전 · 전부 충족)
+
+| # | 조건 | 비고 |
+|---|------|------|
+| 1 | 발행 포스트 색인 ≥70% | |
+| 2 | 핵심 `/` about contact privacy 색인 | |
+| 3 | **B-4 엄격**: 네이버/티스토리 **또는 오가닉** 2주 연속 | 8/3「미달도 GO」면제 **폐기** |
+| 4 | ads.txt·메타·법적 페이지 | Phase 2 curl |
+| 5 | Ark와 **동시 신규 신청 금지** | HARD |
+| 7 | 포스트 **≥30** (실질 · 덤프 금지) | Playbook v2.3 B-7 |
+| 8 | GSC **노출** 연속(클릭 0 OK) | B-8 · 「검색 존재」신호 |
+| 9 | 대량 변경 후 **7–14일** crawl 대기 | B-9 |
+| 10 | (권장) AdSense Privacy & messaging **Google CMP** | B-10 · EEA/TCF · 승인 후도 OK |
+
+### 운영 레버 (창까지 · 「콘텐츠 고치기」아님)
+
+1. **최우선**: GSC 성과 — **노출** 추세 + 클릭0 쿼리 → title/메타만 (§1–4식)
+2. **신규 포스트 동결 해제** — 20→30+ **꾸준히**(주 소량 FLEX · 일괄 러시 금지)
+3. 네이버 = 채널 다각화 유지 · **승인 신호의 주축 = 오가닉/노출**
+4. Astro/기술 핫픽스 **불필요**(2026-08-04 헬스 PASS) — 스택 교체 금지
+
+### Joseph 체크리스트 (신청 전)
+
+- [ ] AdSense **정책 센터** — TK 반려 구체 사유 표시 여부 (없으면 템플릿 확정)
+- [ ] TK GSC 성과 — **노출·클릭** 스크린샷 (노출만 있어도 기록)
+- [ ] GA4 — organic 또는 referral 2주 연속 스냅샷
+- [ ] 포스트 편수 ≥30 · 색인 ≥70%
+- [ ] 마지막 대량 변경으로부터 ≥7일
+- [ ] Phase 2 curl 재실행 → `GO`
+- [ ] (권장) Privacy & messaging Google CMP on
+- [ ] **gsfark.com 미제출** 재확인
+
+### 금지
+
+- **2026-09-15 전** TK 재제출
+- 본문 전면 재작성 · 니치 피벗 · 미색인 3건「수정」· Astro 이주
+- Ark·TK 동시 신규 신청 · 「슬롯 비었으니 Ark 지금」
+- 변경 직후(7일 미만) 재신청
+
+### Astro 헬스 요약 (2026-08-04)
+
+라이브: ads.txt 200·plain·redirect0 · adsense meta+script 상시 · trust footer · Privacy AdSense 명시 · `/tags/` Disallow. 상세=Ark Playbook §1b.
+---
+
+## 교차검증 (2026-08-04, Claude — Cursor 09:39와 독립 분석)
+
+Claude가 GSF-OS 저장소 미열람 상태로 별도 분석했으나, 진단(미검증 가치·도메인연령·오가닉부족)·재신청일(9/15)·운영레버(동결해제·GSC전환)까지 위 Phase 4와 완전 일치 — 교차검증 통과. 신규 결정사항 없음. refs: Claude 메모리 `project-tokyokorean.md` 2026-08-04.
 
 ---
 
@@ -167,8 +241,11 @@ done
 
 ```bash
 cd ~/.gemini/antigravity/scratch/projects/GSF-Hub
-npm run hub:log -- --author=Cursor --project=TokyoKorean \
-  --line="AdSense 8/3 잠금: TK만 신청 · Ark 보류 · B-4 기본 GO · 런북 ADSENSE_8_3_RUNBOOK"
+npm run hub:log -- --author=Cursor --project=TokyoKorean --milestone \
+  --action="TK AdSense 반려(7/28신청→8/4)" \
+  --priority="재신청≥2026-09-15 · 오가닉 레버 · 동결해제" \
+  --line="원인: 미검증가치(연령·organic) · 기술/색인 PASS" \
+  --line="refs: ADSENSE_8_3_RUNBOOK · WEEKLY · D-001"
 npm run hub:log -- --author=Cursor --project=GSF-Ark \
-  --line="OPEN_QUEUE G4: gsfark 재신청 보류 · TK 8/3 우선 · Gate A 시계 감시만"
+  --line="OPEN_QUEUE G4: TK 반려·재창≥9/15 · Ark 신청 UI 금지 until Joseph+Gate A 실측"
 ```
