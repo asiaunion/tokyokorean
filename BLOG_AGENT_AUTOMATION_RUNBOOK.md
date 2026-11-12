@@ -158,9 +158,9 @@ Full flow: [`docs/BLOG_AG_CURSOR_WORKFLOW.md`](docs/BLOG_AG_CURSOR_WORKFLOW.md) 
 
 ## Public preview link (mobile/external)
 - Static preview server:
-  - `python3 -m http.server 4343 --directory /Users/gsf/GSF/apps/blog-agent/public`
+  - `python3 -m http.server 4343 --directory /Users/gsf/Workspace/apps/blog-agent/public`
 - Public tunnel:
   - `cloudflared tunnel --url http://localhost:4343 --no-autoupdate`
 - Save tunnel URL to:
-  - `/Users/gsf/GSF/GSF-Research/.preview_public_url`
+  - `/Users/gsf/Workspace/GSF-Research/.preview_public_url`
 - `/blog_preview` reads this URL file and sends external preview link.

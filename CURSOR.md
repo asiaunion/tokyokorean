@@ -1,10 +1,10 @@
 # Cursor workspace (안티그래비티 기준 단일 원본)
 
-**정본(canonical) 경로:** `/Users/gsf/GSF/projects/GSF-Blog`
+**정본(canonical) 경로:** `/Users/gsf/Workspace/projects/GSF-Blog`
 
 | | 경로 |
 |---|---|
-| **안티그래비티 (정본)** | `/Users/gsf/GSF/projects/GSF-Blog` |
+| **안티그래비티 (정본)** | `/Users/gsf/Workspace/projects/GSF-Blog` |
 | **Cursor (symlink)** | `/Users/gsf/dev/Cursor/gsf-blog` → 정본 |
 | **아카이브 (2026-05-19)** | `/Users/gsf/dev/_archive-20260519/gsf-blog-cursor-clone` |
 | **Git remote** | `git@github.com:asiaunion/GSF-Blog.git` |

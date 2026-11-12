@@ -72,7 +72,7 @@ def create_buffer_post(channel_id, text, platform_name):
             return "manual"
 
 def main():
-    log_path = "/Users/gsf/GSF/projects/GSF-Blog/sns-drafts/sns-log.json"
+    log_path = "/Users/gsf/Workspace/projects/GSF-Blog/sns-drafts/sns-log.json"
     with open(log_path, "r", encoding="utf-8") as f:
         logs = json.load(f)
 

@@ -3,7 +3,7 @@ import re
 import json
 import subprocess
 
-PROJECT_DIR = '/Users/gsf/GSF/projects/GSF-Blog'
+PROJECT_DIR = '/Users/gsf/Workspace/projects/GSF-Blog'
 DATA_DIR = os.path.join(PROJECT_DIR, 'src/data/blog')
 AUDIT_DIR = os.path.join(PROJECT_DIR, 'docs/fact-audit')
 

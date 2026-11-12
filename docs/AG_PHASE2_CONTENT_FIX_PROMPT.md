@@ -2,7 +2,7 @@
 
 > **용도:** Cursor 2차 게이트 통과 후, AG가 **클레임·번역·출처**를 실제로 고치는 단계.  
 > **다음 단계:** AG 완료 → **Cursor 3차 재검증** ([`CURSOR_PHASE3_REVERIFY_PROMPT.md`](./CURSOR_PHASE3_REVERIFY_PROMPT.md))  
-> **정본 레포:** `/Users/gsf/GSF/projects/GSF-Blog`  
+> **정본 레포:** `/Users/gsf/Workspace/projects/GSF-Blog`  
 > **선행 산출물:** `docs/fact-audit/INDEX.md`, `docs/fact-audit/<slug>.md`, [`CURSOR_PHASE2_REPORT.md`](./fact-audit/CURSOR_PHASE2_REPORT.md)
 
 ---
@@ -43,7 +43,7 @@ GSF-Blog Track 1. Cursor 2차까지 **validate 게이트 35/35 PASS** 상태.
 - `docs/fact-audit/CURSOR_PHASE2_REPORT.md` — 이미 적용된 항목 중복 작업 금지
 
 ## 프로젝트
-- Repo: `/Users/gsf/GSF/projects/GSF-Blog`
+- Repo: `/Users/gsf/Workspace/projects/GSF-Blog`
 - 포스트: `src/data/blog/{ko,en,ja}/<slug>.md`
 - 시트: `docs/fact-audit/<slug>.md`
 - **제외:** `_integrity-example-*`, `_template-*`
@@ -92,7 +92,7 @@ GSF-Blog Track 1. Cursor 2차까지 **validate 게이트 35/35 PASS** 상태.
 
 ### 4) 로컬 확인 (읽기·기록만)
 ```bash
-cd /Users/gsf/GSF/projects/GSF-Blog
+cd /Users/gsf/Workspace/projects/GSF-Blog
 pnpm validate:post <slug>
 ```
 - `failed` 목록을 시트 **Automation** 섹션에 복사 (PASS라도 Cursor가 다시 돌림)

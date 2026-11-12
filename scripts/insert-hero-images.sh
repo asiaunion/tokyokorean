@@ -2,7 +2,7 @@
 # Hero image insertion script
 # Maps generated images from brain sessions to blog posts
 
-BLOG_DIR="/Users/gsf/GSF/GSF-Blog"
+BLOG_DIR="/Users/gsf/Workspace/GSF-Blog"
 IMG_DIR="$BLOG_DIR/public/assets/images/blog"
 SESSION1="/Users/gsf/.gemini/antigravity/brain/67678d06-f94e-4644-af65-36815d119fae"
 SESSION2="/Users/gsf/.gemini/antigravity/brain/095e7493-1523-4c0b-96bf-ebc05ace184e"
