@@ -2,7 +2,7 @@
 
 > **용도:** 아래 `## AG에 붙여넣기` 블록을 Antigravity에 **그대로 복사**해 실행한다.  
 > **역할:** 1차 조사·팩트 시트 + **번역 감사 초안**만. **Cursor가 2차 재검증·md 수정·배포.**  
-> **정본 레포:** `/Users/gsf/.gemini/antigravity/scratch/projects/GSF-Blog`
+> **정본 레포:** `/Users/gsf/GSF/projects/GSF-Blog`
 
 ---
 
@@ -27,7 +27,7 @@ GSF-Blog Track 1 담당. **이미 발행된** ko/en/ja 마크다운 **35 slug �
 - `BLOG_AGENT_AUTOMATION_RUNBOOK.md` § Gate failure remediation
 
 ## 프로젝트 경로
-- Repo: `/Users/gsf/.gemini/antigravity/scratch/projects/GSF-Blog`
+- Repo: `/Users/gsf/GSF/projects/GSF-Blog`
 - 포스트: `src/data/blog/{ko,en,ja}/<slug>.md`
 - **제외:** `_integrity-example-*`, `_template-*`
 
@@ -43,7 +43,7 @@ GSF-Blog Track 1 담당. **이미 발행된** ko/en/ja 마크다운 **35 slug �
 
 ### A. 기계 스캔 (읽기만)
 ```bash
-cd /Users/gsf/.gemini/antigravity/scratch/projects/GSF-Blog
+cd /Users/gsf/GSF/projects/GSF-Blog
 pnpm validate:post <slug>
 ```
 `failed` / `scoreChecks` 중 아래 **번역·톤 관련**을 fact-audit에 복사:

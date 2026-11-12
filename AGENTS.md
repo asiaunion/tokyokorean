@@ -1,6 +1,6 @@
 # GSF-Blog — Antigravity agent notes
 
-**Canonical path:** `/Users/gsf/.gemini/antigravity/scratch/projects/GSF-Blog`
+**Canonical path:** `/Users/gsf/GSF/projects/GSF-Blog`
 
 ## Image work (auto — no extra user command)
 

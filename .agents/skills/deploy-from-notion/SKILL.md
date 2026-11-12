@@ -32,7 +32,7 @@ Notion 페이지(또는 slug)를 입력받아 다음 순서로 처리합니다:
 ### 0-B. Page Map 확인
 
 ```bash
-cat /Users/gsf/.gemini/antigravity/scratch/projects/GSF-Blog/scripts/notion-page-map.json 2>/dev/null || echo "{}"
+cat /Users/gsf/GSF/projects/GSF-Blog/scripts/notion-page-map.json 2>/dev/null || echo "{}"
 ```
 
 slug만 주어졌고 Page Map에 없으면:
@@ -53,7 +53,7 @@ echo "BLOB_READ_WRITE_TOKEN 또는 VERCEL_BLOB_TOKEN: ${BLOB_READ_WRITE_TOKEN:0:
 ## Step 1. Notion → KO .md 변환
 
 ```bash
-cd /Users/gsf/.gemini/antigravity/scratch/projects/GSF-Blog
+cd /Users/gsf/GSF/projects/GSF-Blog
 npx tsx scripts/notion-to-md.ts --page-id <PAGE_ID> --slug <SLUG>
 ```
 

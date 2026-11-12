@@ -11,15 +11,15 @@
     },
     {
       "type": "file",
-      "path": "/Users/gsf/.gemini/antigravity/scratch/apps/blog-agent/astro.config.ts"
+      "path": "/Users/gsf/GSF/apps/blog-agent/astro.config.ts"
     },
     {
       "type": "file",
-      "path": "/Users/gsf/.gemini/antigravity/scratch/apps/blog-agent/src/pages/[...locale]/tags/[tag]/[...page].astro"
+      "path": "/Users/gsf/GSF/apps/blog-agent/src/pages/[...locale]/tags/[tag]/[...page].astro"
     },
     {
       "type": "file",
-      "path": "/Users/gsf/.gemini/antigravity/scratch/apps/blog-agent/src/pages/[...locale]/tags/index.astro"
+      "path": "/Users/gsf/GSF/apps/blog-agent/src/pages/[...locale]/tags/index.astro"
     },
     {
       "type": "commit",

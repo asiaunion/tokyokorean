@@ -1,7 +1,7 @@
 import os
 import glob
 
-directory = "/Users/gsf/.gemini/antigravity/scratch/projects/TokyoKorean/src/data/blog/ko/"
+directory = "/Users/gsf/GSF/projects/TokyoKorean/src/data/blog/ko/"
 md_files = glob.glob(os.path.join(directory, "*.md"))
 
 for file_path in md_files:

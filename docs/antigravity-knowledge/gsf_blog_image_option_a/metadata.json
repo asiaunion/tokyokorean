@@ -6,9 +6,9 @@
   "severity": "high",
   "created_at": "2026-05-25T00:35:00+09:00",
   "references": [
-    "file:///Users/gsf/.gemini/antigravity/scratch/projects/GSF-Blog/BLOG_IMAGE_RULES_1PAGE.md",
-    "file:///Users/gsf/.gemini/antigravity/scratch/projects/GSF-Blog/BLOG_IMAGE_INTENT_RULES.md",
-    "file:///Users/gsf/.gemini/antigravity/scratch/projects/GSF-Blog/.cursor/rules/blog-images-option-a.mdc",
+    "file:///Users/gsf/GSF/projects/GSF-Blog/BLOG_IMAGE_RULES_1PAGE.md",
+    "file:///Users/gsf/GSF/projects/GSF-Blog/BLOG_IMAGE_INTENT_RULES.md",
+    "file:///Users/gsf/GSF/projects/GSF-Blog/.cursor/rules/blog-images-option-a.mdc",
     "https://gsfark.com/ko/posts/ginza-weekend-walking-guide/"
   ]
 }

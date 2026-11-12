@@ -6,7 +6,7 @@ import glob
 import os
 import re
 
-BLOG_DIR = "/Users/gsf/.gemini/antigravity/scratch/GSF-Blog"
+BLOG_DIR = "/Users/gsf/GSF/GSF-Blog"
 IMG_DIR = os.path.join(BLOG_DIR, "public/assets/images/blog")
 SESSION1 = "/Users/gsf/.gemini/antigravity/brain/67678d06-f94e-4644-af65-36815d119fae"
 SESSION2 = "/Users/gsf/.gemini/antigravity/brain/095e7493-1523-4c0b-96bf-ebc05ace184e"

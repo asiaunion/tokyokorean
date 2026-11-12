@@ -66,7 +66,7 @@ buffer_ids["LinkedIn-KO"] = post_to_channel(BUFFER_LINKEDIN_CHANNEL_ID, texts["L
 buffer_ids["Threads-EN"] = post_to_channel(BUFFER_THREADS_CHANNEL_ID, texts["Threads-EN"], "Threads-EN")
 buffer_ids["Threads-KO"] = post_to_channel(BUFFER_THREADS_CHANNEL_ID, texts["Threads-KO"], "Threads-KO")
 
-log_path = "/Users/gsf/.gemini/antigravity/scratch/projects/GSF-Blog/sns-drafts/sns-log.json"
+log_path = "/Users/gsf/GSF/projects/GSF-Blog/sns-drafts/sns-log.json"
 with open(log_path, "r", encoding="utf-8") as f:
     logs = json.load(f)
 

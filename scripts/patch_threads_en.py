@@ -70,7 +70,7 @@ def create_post(text, date_str):
     return None
 
 def main():
-    log_path = "/Users/gsf/.gemini/antigravity/scratch/projects/GSF-Blog/sns-drafts/sns-log.json"
+    log_path = "/Users/gsf/GSF/projects/GSF-Blog/sns-drafts/sns-log.json"
     with open(log_path, "r", encoding="utf-8") as f:
         logs = json.load(f)
 

@@ -240,7 +240,7 @@ Claude가 GSF-OS 저장소 미열람 상태로 별도 분석했으나, 진단(�
 ## hub:log 예시
 
 ```bash
-cd ~/.gemini/antigravity/scratch/projects/GSF-Hub
+cd ~/GSF/projects/GSF-Hub
 npm run hub:log -- --author=Cursor --project=TokyoKorean --milestone \
   --action="TK AdSense 반려(7/28신청→8/4)" \
   --priority="재신청≥2026-09-15 · 오가닉 레버 · 동결해제" \
